@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aprenda em 5 passos práticos como montar um orçamento financeiro que funciona de verdade, usando a regra 50-30-20 e dicas para lidar com imprevistos."/>
+  <title>5 passos para montar um orçamento que você vai seguir | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--gold">Orçamento</span>
+      <h1 class="article-title">5 passos para montar um orçamento que você vai seguir</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 18 Jul 2026</span>
+        <span>⏱️ 6 min de leitura</span>
+      </div>
+      <p class="article-summary">Pare de tentar controlar cada centavo e desistir no meio do mês. Aprenda um método simples e direto para organizar suas finanças, focar no que importa e fazer o seu dinheiro sobrar.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/orcamento.jpg" alt="Pessoa anotando orçamento em caderno com calculadora ao lado" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Você já passou pela frustração de sentar num domingo à noite, criar uma planilha linda, prometer que "agora vai" e, duas semanas depois, abandonar tudo porque esqueceu de anotar um café? Se isso soa familiar, saiba que você não está sozinho.</p>
+
+        <p>A verdade nua e crua é que a maioria das pessoas desiste de fazer orçamento porque tenta ser perfeccionista. Querem controlar cada balinha, cada pão de queijo na padaria, e isso vira um segundo emprego. Nós do <strong>Dinheiro Nu</strong> acreditamos que finanças têm que ser simples, senão ninguém faz.</p>
+
+        <p>Neste artigo, vamos mostrar 5 passos diretos e sem enrolação para você montar um orçamento que funciona na vida real. Um planejamento que dá espaço para os imprevistos e, acima de tudo, que você <em>realmente</em> vai conseguir seguir todos os meses. Vamos lá?</p>
+
+        <h2>1. Conheça sua realidade: Liste receitas e despesas</h2>
+        
+        <p>Você não consegue consertar o que não enxerga. O primeiro passo é fazer um raio-x honesto da sua situação financeira. Pegue os extratos bancários e as faturas do cartão de crédito dos últimos dois ou três meses.</p>
+        
+        <p>A ideia aqui não é julgar onde você gastou, mas entender para onde o seu dinheiro está indo naturalmente. Divida tudo em duas grandes caixas:</p>
+
+        <ul>
+            <li><strong>Receitas:</strong> O dinheiro que entra. Seu salário líquido (o que cai na conta, não o bruto!), bicos, renda extra, aluguéis recebidos, etc.</li>
+            <li><strong>Despesas:</strong> O dinheiro que sai. Aluguel, contas de consumo (água, luz, internet), mercado, transporte, cartão de crédito, assinaturas de streaming e o cafezinho.</li>
+        </ul>
+
+        <div class="article-callout article-callout--red">
+          <strong>Atenção: A ilusão do cartão de crédito</strong>
+          <p>Não anote "Cartão de Crédito - R$ 1.500" como uma despesa única. Você precisa abrir a fatura e ver o que está lá dentro: quanto foi supermercado, quanto foi Ifood e quanto foi Uber. O cartão é só a forma de pagamento, não a categoria do gasto.</p>
+        </div>
+
+        <h2>2. Aplique a Regra 50-30-20</h2>
+
+        <p>Agora que você sabe o que ganha e o que gasta, é hora de organizar isso de uma forma inteligente. Esqueça planilhas com 40 categorias diferentes. Use a consagrada <strong>Regra 50-30-20</strong>. Ela divide o seu dinheiro em apenas três grandes blocos:</p>
+
+        <h3>50% para Necessidades (Sobrevivência)</h3>
+        <p>Metade da sua renda deve cobrir o que é essencial para você viver e trabalhar. Isso inclui moradia (aluguel/prestação, condomínio), contas básicas (água, luz, gás, internet), supermercado (comida básica, produtos de higiene) e transporte (ônibus, gasolina, prestação do carro).</p>
+
+        <h3>30% para Desejos (Estilo de Vida)</h3>
+        <p>Sim, você trabalha para viver, não só para pagar boletos. Até 30% da sua renda pode (e deve!) ser destinada ao que te faz feliz: sair para jantar, pedir delivery, assinar Netflix e Spotify, comprar roupas novas, hobbies e viagens. Cortar isso a zero é a receita certa para a frustração e o fracasso do orçamento.</p>
+
+        <h3>20% para Metas Financeiras (Futuro e Dívidas)</h3>
+        <p>Os 20% finais são para o seu "eu do futuro". É aqui que entra o dinheiro para quitar dívidas atrasadas, montar sua reserva de emergência ou investir (Tesouro Direto, CDBs, ações) para a aposentadoria ou compra de um imóvel.</p>
+
+        <p>Vamos ver como isso funciona na prática para alguém que ganha um salário líquido de R$ 3.500 por mês:</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Categoria (Regra 50-30-20)</th>
+              <th>Porcentagem</th>
+              <th>Valor Ideal (R$ 3.500)</th>
+              <th>Exemplos Práticos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Necessidades</strong></td>
+              <td>50%</td>
+              <td>R$ 1.750,00</td>
+              <td>Aluguel, Luz, Mercado, Ônibus</td>
+            </tr>
+            <tr>
+              <td><strong>Desejos</strong></td>
+              <td>30%</td>
+              <td>R$ 1.050,00</td>
+              <td>Ifood, Cinema, Roupas, Barzinho</td>
+            </tr>
+            <tr>
+              <td><strong>Metas Financeiras</strong></td>
+              <td>20%</td>
+              <td>R$ 700,00</td>
+              <td>Reserva, Tesouro Selic, Quitar empréstimo</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Se as suas necessidades hoje estão em 70% da renda, você tem um sinal de alerta. Será preciso tentar reduzir o padrão de moradia ou buscar uma renda extra para equilibrar as contas com o tempo.</p>
+
+        <h2>3. Escolha a ferramenta certa (e automatize)</h2>
+
+        <p>Um bom marceneiro precisa de boas ferramentas. Nas finanças não é diferente. Escolha o método que funciona melhor para a sua personalidade:</p>
+
+        <ul>
+            <li><strong>Aplicativos de celular:</strong> Se você gosta de tecnologia e quer tudo na mão, apps como <strong>Mobills</strong> ou <strong>Organizze</strong> são excelentes. Eles permitem categorizar os gastos facilmente e até conectar contas bancárias.</li>
+            <li><strong>Planilha do Google ou Excel:</strong> Para quem gosta de customizar tudo e ver os números em uma tela grande. O Google Sheets é ótimo porque fica salvo na nuvem e você pode acessar do celular.</li>
+            <li><strong>Caderno:</strong> Não subestime o poder de uma caneta e um papel. Se a tecnologia te distrai, um caderninho de anotações funciona perfeitamente bem.</li>
+        </ul>
+
+        <div class="article-callout article-callout--green">
+          <strong>Dica de Ouro: Automatize o 20% do Futuro</strong>
+          <p>Não espere o fim do mês para ver se "sobrou" dinheiro para investir ou poupar. No dia que o salário cair, já transfira os 20% (ou o valor que você definiu) direto para a corretora, Poupança ou caixinha do Nubank. Pague a si mesmo primeiro!</p>
+        </div>
+
+        <h2>4. Crie um "fundo de imprevistos" no orçamento mensal</h2>
+
+        <p>A maior causa de abandono de orçamentos é o famoso imprevisto. O pneu furou, o chuveiro queimou, um amigo convidou para um aniversário de última hora. E aí, a planilha perfeita vai por água abaixo e você joga tudo pro alto.</p>
+
+        <p>A solução? <strong>Orce o imprevisto.</strong></p>
+        
+        <p>Dentro da categoria de Necessidades ou Desejos, crie uma linha chamada "Gordura" ou "Imprevistos Mensais". Deixe ali um valor, digamos, de R$ 150 a R$ 200. Se nada quebrar ou nada der errado naquele mês, maravilha! Esse dinheiro vira investimento extra ou pode ser usado para um jantar especial. Se a farmácia cobrar mais caro pelos remédios naquele mês, o dinheiro já estava lá esperando.</p>
+
+        <p>Aceite que meses atípicos são, ironicamente, típicos. Todo mês tem alguma coisa "fora do normal". Planeje-se para o anormal.</p>
+
+        <h2>5. Faça uma revisão mensal (sem peso na consciência)</h2>
+
+        <p>Orçamento não é prisão, é mapa. E mapas precisam de correção de rota.</p>
+        
+        <p>Separe 30 minutos, um domingo por mês, e faça a sua "Reunião Financeira". Se você mora com um parceiro(a), façam juntos (de preferência com uma pizza). O objetivo não é brigar porque alguém gastou R$ 50 a mais no Uber, mas sim analisar:</p>
+        
+        <ul>
+            <li>Nós gastamos mais do que devíamos em delivery esse mês? Sim? OK, vamos tentar cozinhar mais no mês que vem.</li>
+            <li>Conseguimos poupar o valor planejado? Sim! Comemorar a pequena vitória.</li>
+            <li>Tem algum gasto anual grande chegando mês que vem (IPVA, IPTU, rematrícula)? Como vamos ajustar o resto para pagar isso sem usar limite especial?</li>
+        </ul>
+
+        <p>O foco é sempre no ajuste para o próximo mês, e não no arrependimento pelo que já passou. O passado serve apenas como dados; o futuro é onde a mudança acontece.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>Lembrete final</strong>
+          <p>Consistência vence a intensidade. É melhor ter um orçamento "meia boca" que você acompanha todo mês, do que uma planilha perfeita que você olha uma vez por ano. Comece hoje, faça o simples, e ajuste com o tempo.</p>
+        </div>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Continue lendo</span>
+        <h2 class="section-title">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="poupanca.html" style="text-decoration: none; color: inherit;">
+          <div class="article-card">
+            <h3>Como guardar R$ 5.000</h3>
+            <p>O passo a passo para juntar seus primeiros R$ 5 mil e sair do zero, sem precisar cortar tudo que você gosta.</p>
+          </div>
+        </a>
+        <a href="habitos.html" style="text-decoration: none; color: inherit;">
+          <div class="article-card">
+            <h3>5 hábitos financeiros</h3>
+            <p>Pequenas mudanças no seu dia a dia que trazem grandes resultados no final do mês e no seu futuro.</p>
+          </div>
+        </a>
+        <a href="reserva.html" style="text-decoration: none; color: inherit;">
+          <div class="article-card">
+            <h3>Reserva de emergência</h3>
+            <p>O que é, por que todo mundo deveria ter uma e onde guardar esse dinheiro para render e ter segurança.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

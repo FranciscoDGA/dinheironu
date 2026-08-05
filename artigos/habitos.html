@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra os 5 hábitos poderosos de quem nunca fica no vermelho e aprenda como aplicar na sua vida financeira para ter mais dinheiro no bolso."/>
+  <title>5 hábitos de quem nunca fica no vermelho — e como copiar | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+    
+    /* Card Styles for Related Section */
+    .article-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e2e8f0;
+      text-decoration: none;
+      color: inherit;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+    .article-card-img {
+      height: 180px;
+      background: #cbd5e1;
+      width: 100%;
+      object-fit: cover;
+    }
+    .article-card-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .article-card-category { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #2563eb; margin-bottom: 8px; }
+    .article-card-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; line-height: 1.3; }
+    .article-card-excerpt { font-size: 0.9rem; color: #64748b; line-height: 1.6; margin-bottom: 20px; flex: 1; }
+    .article-card-footer { border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; font-size: 0.8rem; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (same as index) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--green">Hábitos</span>
+      <h1 class="article-title">5 hábitos de quem nunca fica no vermelho — e como copiar</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 25 Jun 2026</span>
+        <span>⏱️ 4 min de leitura</span>
+      </div>
+      <p class="article-summary">Quer sair do ciclo de dívidas e começar a ver seu dinheiro sobrar todo mês? Descubra os cinco hábitos práticos que as pessoas financeiramente saudáveis têm em comum e aprenda como implementá-los na sua rotina a partir de hoje.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/habitos.jpg" alt="Pessoa sorrindo e anotando seus hábitos financeiros em um caderno" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Você já parou para pensar por que algumas pessoas, mesmo não ganhando rios de dinheiro, parecem nunca passar aperto no final do mês? Enquanto isso, outras que até têm um salário considerável vivem com a corda no pescoço, rezando para o quinto dia útil chegar logo.</p>
+        
+        <p>A resposta quase sempre não está no tamanho do contracheque, mas sim nos <strong>hábitos financeiros</strong>. O que separa quem vive no azul de quem vive no vermelho é uma série de pequenos comportamentos repetidos dia após dia. É a velha história: não é sobre quanto você ganha, mas sobre como você administra o que ganha.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>O Mindset de Abundância vs. Escassez</strong>
+          <p>Muitas vezes, nossa dificuldade com o dinheiro começa na cabeça. O "mindset de escassez" faz a gente acreditar que o dinheiro nunca será suficiente, gerando ansiedade e decisões impulsivas. Já o "mindset de abundância" nos permite focar em planejamento, crescimento e em criar oportunidades. Trocar a frase "eu não posso pagar por isso" por "como eu posso me organizar para pagar por isso?" é o primeiro passo para a mudança.</p>
+        </div>
+
+        <p>A boa notícia é que hábitos podem ser aprendidos, moldados e copiados. Nós separamos os cinco principais hábitos de quem nunca fica no vermelho. E mais importante: explicamos como você pode começar a copiá-los hoje mesmo, usando a nossa realidade e o nosso bom e velho Real (R$). Vamos lá?</p>
+
+        <h2>1. Pagar-se Primeiro (A Regra de Ouro)</h2>
+        <p>O erro mais comum do brasileiro é receber o salário, pagar todos os boletos, comprar as coisas do mês e, se sobrar alguma coisa, guardar. O problema? <strong>Nunca sobra.</strong> Sempre vai aparecer uma promoção imperdível, um jantar com os amigos ou uma comprinha não planejada no shopping.</p>
+        
+        <p>Pessoas que nunca ficam no vermelho fazem exatamente o oposto: elas <strong>se pagam primeiro</strong>. Isso significa que, no momento em que o salário cai na conta, a primeira "conta" a ser paga é o investimento delas mesmas. Pode ser para a reserva de emergência, para a aposentadoria ou para aquela viagem dos sonhos.</p>
+
+        <h3>Como copiar na prática:</h3>
+        <p>Se você ganha R$ 4.000 líquidos, não espere o fim do mês para ver se sobram R$ 400 (10%). Assim que o dinheiro cair na conta do seu bancão ou no Nubank, transfira imediatamente esses R$ 400 para a sua conta de investimentos. Trate esse valor como se fosse a conta de luz: inegociável. Você vai descobrir rapidamente que consegue sobreviver muito bem com os R$ 3.600 restantes.</p>
+
+        <h2>2. Revisar os Gastos Mensalmente</h2>
+        <p>Você sabe exatamente quanto gastou de Ifood no mês passado? Ou de Uber? Quem não entra no cheque especial não vive no escuro. Essas pessoas têm total clareza sobre para onde o dinheiro delas está indo. Elas não têm medo de olhar a fatura do cartão de crédito; pelo contrário, elas a encaram de frente.</p>
+
+        <p>Fugir da sua realidade financeira não faz as dívidas sumirem. Pelo contrário, só alimenta a bola de neve. Revisar os gastos não precisa ser um martírio cheio de planilhas complexas, mas é um exercício fundamental de autoconhecimento.</p>
+
+        <div class="article-callout article-callout--blue">
+          <strong>Dica Prática</strong>
+          <p>Tire 30 minutos no primeiro fim de semana do mês. Abra o aplicativo do seu banco e categorize seus gastos principais. Muitas vezes, só de olhar para trás e ver que você gastou R$ 350 só em "besteirinhas" na farmácia já é o choque de realidade necessário para frear os gastos no mês seguinte.</p>
+        </div>
+
+        <h3>Como copiar na prática:</h3>
+        <p>Crie um ritual. Pode ser no domingo de manhã tomando um café. Anote seus gastos fixos (aluguel, condomínio, luz, internet) e some seus gastos variáveis (lazer, restaurantes, compras). Ao fazer isso mês a mês, você percebe padrões e consegue cortar o que não te traz alegria real antes que a conta chegue no vermelho.</p>
+
+        <h2>3. Evitar Compras por Impulso (A Regra das 24h)</h2>
+        <p>Todo mundo sofre tentações. A diferença é que quem tem as finanças em dia desenvolveu mecanismos de defesa contra o próprio cérebro. O marketing moderno é feito para nos fazer comprar agora, com um clique, aproveitando o "frete grátis" ou a "oferta relâmpago".</p>
+
+        <p>Para combater isso, os financeiramente saudáveis usam a famosa <strong>Regra das 24 horas</strong>.</p>
+
+        <h3>Como copiar na prática:</h3>
+        <p>Digamos que você está rolando o Instagram e vê aquele tênis incrível que custa R$ 450. O dedo já coça para clicar em "Comprar". A regra é simples: feche o aplicativo e espere 24 horas. Se no dia seguinte você ainda quiser o tênis, se ele couber no seu orçamento e se você realmente precisar dele, aí sim você compra.</p>
+        
+        <p>Você vai se assustar com a quantidade de coisas que você "precisava desesperadamente" na terça-feira à noite, mas que na quarta-feira de manhã já nem lembrava que existiam. Esse simples hábito pode salvar centenas (ou milhares) de reais por ano.</p>
+
+        <h2>4. Automatizar os Investimentos</h2>
+        <p>O ser humano é falho e preguiçoso por natureza. Se você depender exclusivamente da sua força de vontade todos os meses para entrar na corretora, escolher um produto, digitar o valor, colocar a senha e investir... vai ter mês que você não vai fazer.</p>
+
+        <p>Quem tem sucesso financeiro não confia na própria memória ou disposição: eles automatizam tudo. A tecnologia joga a favor da riqueza.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Método Manual</th>
+              <th>Método Automatizado (O Hábito Vencedor)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lembrar de pagar as contas antes do vencimento.</td>
+              <td>Colocar contas essenciais (Luz, Água, Internet) em Débito Automático.</td>
+            </tr>
+            <tr>
+              <td>Decidir se vai investir esse mês e quanto.</td>
+              <td>Agendar uma transferência recorrente (PIX ou TED) para o dia do salário.</td>
+            </tr>
+            <tr>
+              <td>Entrar no app do Tesouro Direto todo mês.</td>
+              <td>Configurar a compra programada do Tesouro Selic direto na corretora.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Como copiar na prática:</h3>
+        <p>Vá agora no aplicativo do seu banco ou corretora. Se você definiu que vai investir R$ 300 todo mês no Tesouro Selic para a sua reserva de emergência, procure a opção de "Investimento Programado" ou agende um PIX recorrente para todo dia 05 (ou dia que você recebe). Tire o trabalho humano da equação e deixe os robôs cuidarem do seu futuro.</p>
+
+        <h2>5. Ter Metas Financeiras Escritas</h2>
+        <p>Poupar dinheiro apenas por poupar é chato e desmotivador. Quem guarda dinheiro sem um propósito costuma torrá-lo na primeira frustração que acontece na vida. "Tive um dia horrível no trabalho, eu mereço gastar esse dinheiro que está parado."</p>
+
+        <p>Quem nunca fica no vermelho tem clareza do <strong>porquê</strong> está guardando. Eles têm metas claras, reais e... escritas.</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>A Diferença Entre um Desejo e uma Meta</strong>
+          <p><strong>Desejo:</strong> "Quero viajar pro Nordeste algum dia."<br>
+          <strong>Meta:</strong> "Vou viajar para Maragogi em novembro do ano que vem. Preciso de R$ 3.600. Isso significa que vou poupar R$ 300 por mês durante 12 meses."</p>
+        </div>
+
+        <h3>Como copiar na prática:</h3>
+        <p>Pegue um papel e caneta (ou o bloco de notas do celular) e divida suas metas em 3 tempos:</p>
+        <ul>
+          <li><strong>Curto prazo (até 1 ano):</strong> Quitar a dívida do cartão de crédito de R$ 1.500 ou montar a reserva de emergência de R$ 5.000.</li>
+          <li><strong>Médio prazo (1 a 5 anos):</strong> Juntar R$ 30.000 para a entrada de um apartamento ou trocar de carro.</li>
+          <li><strong>Longo prazo (mais de 5 anos):</strong> Acumular patrimônio para gerar R$ 3.000 de renda passiva por mês na aposentadoria.</li>
+        </ul>
+        <p>Dê nomes aos seus investimentos. Em vez de abrir a conta e ver "CDB Banco XYZ", muitas corretoras permitem renomear o objetivo para "Viagem de Férias 2027". Isso cria uma barreira psicológica: é muito mais difícil você resgatar o dinheiro de forma impulsiva se você sabe que está literalmente roubando as suas próprias férias.</p>
+
+        <h2>Conclusão: O Segredo é a Constância</h2>
+        <p>Nenhum desses cinco hábitos exige que você seja um gênio da matemática ou um expert de Wall Street. Eles não exigem que você ganhe R$ 20.000 por mês. Eles são, na verdade, exercícios diários de disciplina e intencionalidade.</p>
+
+        <p>Se você se sente sobrecarregado, não tente mudar tudo hoje. Escolha <strong>apenas um hábito</strong> dessa lista. Que tal começar pela Regra das 24 horas? Ou programar o seu primeiro "Pagar-se primeiro" para o próximo salário? Aos poucos, você vai percebendo que estar no azul é, acima de tudo, uma questão de escolha e repetição.</p>
+        
+        <p>Lembre-se: no jogo do dinheiro, ganha quem tem a melhor estratégia, e não apenas quem corre mais rápido. Boa sorte e boas finanças!</p>
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px;">
+      <div style="text-align: center;">
+        <span class="article-category article-cat--blue">Continue lendo</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #0f172a; margin-top: 10px;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="orcamento.html" class="article-card">
+          <div class="article-card-img" style="background: url('../images/orcamento.jpg') center/cover;"></div>
+          <div class="article-card-content">
+            <span class="article-card-category">Planejamento</span>
+            <h3 class="article-card-title">5 passos definitivos para montar o seu orçamento</h3>
+            <p class="article-card-excerpt">Aprenda a mapear suas receitas e despesas de forma prática, garantindo que o seu dinheiro seja direcionado para o que realmente importa.</p>
+            <div class="article-card-footer">
+              <span>Ler artigo</span>
+              <span>→</span>
+            </div>
+          </div>
+        </a>
+        <a href="poupanca.html" class="article-card">
+          <div class="article-card-img" style="background: url('../images/poupanca.jpg') center/cover;"></div>
+          <div class="article-card-content">
+            <span class="article-card-category">Economia</span>
+            <h3 class="article-card-title">Como guardar seus primeiros R$ 5.000</h3>
+            <p class="article-card-excerpt">Um guia prático para quem nunca conseguiu juntar dinheiro. Veja o passo a passo para construir sua primeira reserva sem sofrimento.</p>
+            <div class="article-card-footer">
+              <span>Ler artigo</span>
+              <span>→</span>
+            </div>
+          </div>
+        </a>
+        <a href="renda-passiva.html" class="article-card">
+          <div class="article-card-img" style="background: url('../images/renda-passiva.jpg') center/cover;"></div>
+          <div class="article-card-content">
+            <span class="article-card-category">Investimentos</span>
+            <h3 class="article-card-title">O guia prático da Renda Passiva</h3>
+            <p class="article-card-excerpt">Descubra como colocar o seu dinheiro para trabalhar para você e criar fontes de renda que não dependem do seu suor diário.</p>
+            <div class="article-card-footer">
+              <span>Ler artigo</span>
+              <span>→</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="footer">
+    <div style="max-width:1200px; margin:0 auto; padding:0 24px;">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding: 60px 0; border-top: 1px solid #e2e8f0;">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo" style="display:flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:16px;">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text" style="font-size:1.4rem; font-weight:800; color:#0f172a; letter-spacing:-0.03em;">Dinheiro<span class="logo-accent" style="color:#f59e0b;">Nu</span></span>
+          </a>
+          <p class="footer-tagline" style="color:#64748b; font-size:0.95rem; line-height:1.6; max-width:280px;">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color:#0f172a; font-weight:700; margin-bottom:20px;">Artigos</h4>
+          <ul class="footer-links" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+            <li><a href="poupanca.html" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Investimentos básicos</a></li>
+            <li><a href="dividas.html" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Sair das dívidas</a></li>
+            <li><a href="tesouro.html" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Tesouro Direto</a></li>
+            <li><a href="orcamento.html" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color:#0f172a; font-weight:700; margin-bottom:20px;">Ferramentas</h4>
+          <ul class="footer-links" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+            <li><a href="../index.html#ferramentas" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color:#0f172a; font-weight:700; margin-bottom:20px;">Blog</h4>
+          <ul class="footer-links" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+            <li><a href="../index.html" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Início</a></li>
+            <li><a href="../index.html#sobre" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Sobre</a></li>
+            <li><a href="../index.html#newsletter" style="color:#64748b; text-decoration:none; font-size:0.95rem;">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:24px 0; border-top:1px solid #e2e8f0; color:#94a3b8; font-size:0.85rem;">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:30px; right:30px; width:44px; height:44px; border-radius:50%; background:#0f172a; color:#fff; border:none; cursor:pointer; display:none; align-items:center; justify-content:center; box-shadow:0 10px 15px -3px rgba(0,0,0,0.1); z-index:99;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+    
+    // Simple scroll to top logic just in case main.js doesn't handle it the same way
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 500) btn.style.display = 'flex';
+      else btn.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

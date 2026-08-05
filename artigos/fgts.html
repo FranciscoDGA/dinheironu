@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra o que é o FGTS, como funcionam os saques, o saque-aniversário, e como você pode usar esse dinheiro para investir ou comprar sua casa própria."/>
+  <title>FGTS: como usar o seu dinheiro esquecido a seu favor | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--blue">FGTS</span>
+      <h1 class="article-title">FGTS: como usar o seu dinheiro esquecido a seu favor</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 10 Jul 2026</span>
+        <span>⏱️ 7 min de leitura</span>
+      </div>
+      <p class="article-summary">O Fundo de Garantia por Tempo de Serviço (FGTS) é muitas vezes esquecido pelos brasileiros. Entenda como as regras de saque funcionam, os riscos do saque-aniversário, e como aplicar esse saldo em oportunidades reais, como o FGTS Futuro, para alavancar suas finanças.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/fgts.jpg" alt="Dinheiro em moedas representando o FGTS acumulado" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>A maioria de nós começa a trabalhar, assina a carteira e, em algum momento, esquece de uma parcela importante do próprio dinheiro: o famoso <strong>FGTS</strong>. Seja pela falta de costume de olhar o extrato no aplicativo ou por achar que "aquele dinheiro não é bem nosso" enquanto está preso lá, milhões de brasileiros deixam de aproveitar oportunidades valiosas de otimizar sua vida financeira.</p>
+
+        <p>O Fundo de Garantia do Tempo de Serviço, ou FGTS, não é um presente do empregador, mas um direito seu. Ele foi criado em 1966 pelo governo federal como uma forma de proteger o trabalhador demitido sem justa causa. Hoje, no entanto, ele se transformou em uma poupança forçada que pode ser a chave para você realizar o sonho da casa própria ou, em alguns casos, dar um gás nos seus investimentos.</p>
+
+        <p>Mas será que deixar o dinheiro parado lá é um bom negócio? Vale a pena aderir ao saque-aniversário? Como funciona essa nova modalidade do FGTS Futuro? Neste artigo do Dinheiro Nu, vamos tirar todas as suas dúvidas, direto ao ponto e sem enrolação.</p>
+
+        <h2>O que é o FGTS e como ele funciona na prática?</h2>
+
+        <p>De forma simples e direta, o FGTS é uma reserva de dinheiro criada para proteger o trabalhador com carteira assinada (CLT). Todo mês, o seu empregador é obrigado por lei a depositar o equivalente a <strong>8% do seu salário bruto</strong> em uma conta vinculada ao seu nome na Caixa Econômica Federal. Importante ressaltar: esse valor não é descontado do seu salário, ele é um custo adicional arcado pelo patrão.</p>
+
+        <p>Se você tem um salário bruto de R$ 3.000,00, a empresa depositará R$ 240,00 por mês no seu FGTS. Ao longo de um ano, isso soma R$ 2.880,00, sem contar a rentabilidade. Cada emprego que você tem gera uma conta de FGTS diferente. As contas de empregos antigos, das quais você já saiu e não pôde sacar o saldo, são chamadas de "contas inativas". A do emprego atual é a "conta ativa". O saldo total que você possui é a soma de todas essas contas.</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>⚠️ Dica Nu</strong>
+          <p>O jovem aprendiz também tem direito ao FGTS, mas a alíquota é menor: 2% do salário. Já para trabalhadores domésticos, a contribuição é de 8% de FGTS mais 3,2% de antecipação do recolhimento rescisório.</p>
+        </div>
+
+        <h2>O calcanhar de Aquiles: Rendimento do FGTS vs. Outros Investimentos</h2>
+
+        <p>Se tem algo que tira o sono dos educadores financeiros é a rentabilidade padrão do FGTS. Por lei, o dinheiro depositado no Fundo rende exatos <strong>3% ao ano + a Taxa Referencial (TR)</strong>. Historicamente, a TR tem ficado muito próxima de zero, e até o momento, a regra continua amarrando o rendimento do fundo a um patamar bastante baixo.</p>
+
+        <p>Para você ter uma ideia da gravidade, 3% ao ano costuma perder constantemente para a inflação (IPCA), o que significa que o seu dinheiro no FGTS perde poder de compra ano após ano. Em anos recentes, o Governo passou a distribuir parte do lucro do fundo aos trabalhadores (a chamada distribuição de lucros do FGTS), o que melhorou um pouco o cenário, levando a rentabilidade a bater ou empatar com a poupança.</p>
+
+        <p>Porém, quando comparamos com opções conservadoras de Renda Fixa, como o <strong>Tesouro Selic</strong> ou CDBs que pagam 100% do CDI, o FGTS fica comendo poeira. Se a Taxa Selic está acima de 10% ao ano, deixar um grande volume financeiro preso no FGTS rendendo míseros 3% + TR (mais um trocado de lucro) é rasgar dinheiro. Por isso, a regra de ouro é: <strong>se puder sacar, saque e invista melhor.</strong></p>
+
+        <h2>Quando é possível sacar o FGTS?</h2>
+
+        <p>Apesar de o dinheiro ser seu, o governo restringe as condições de saque para evitar que o fundo se esvazie. Você não pode simplesmente ir até o caixa eletrônico e sacar o dinheiro para pagar um boleto atrasado ou comprar uma TV. As situações mais comuns para liberação do saldo são:</p>
+
+        <ul>
+          <li><strong>Demissão sem justa causa:</strong> É o cenário mais clássico. Você é mandado embora e, além de sacar todo o saldo da conta ativa daquele emprego, recebe uma multa de 40% sobre o total depositado pela empresa.</li>
+          <li><strong>Aposentadoria:</strong> Ao se aposentar, você pode sacar todos os saldos de contas ativas e inativas.</li>
+          <li><strong>Doenças graves:</strong> Trabalhadores ou seus dependentes acometidos por doenças graves (como câncer ou HIV) têm o direito de retirar os fundos para auxiliar no tratamento.</li>
+          <li><strong>Três anos fora do regime CLT:</strong> Se você ficou três anos seguidos sem carteira assinada (abriu um CNPJ, virou servidor público estatutário ou não trabalhou), pode sacar o saldo de contas inativas.</li>
+          <li><strong>Calamidade pública:</strong> Em situações de desastres naturais reconhecidos pelo governo, é liberado o saque para ajudar na reconstrução.</li>
+        </ul>
+
+        <h2>Moradia: o grande trunfo do seu FGTS</h2>
+
+        <p>Se você não foi demitido, não está doente e não se aposentou, a melhor e mais inteligente forma de acessar o FGTS é através da <strong>habitação</strong>. O sistema permite que você use o seu saldo acumulado de três formas principais quando o assunto é imóvel:</p>
+
+        <ol>
+          <li><strong>Compra à vista ou entrada:</strong> Você pode usar o saldo para dar de entrada na compra de um imóvel residencial pronto ou na planta, reduzindo o valor que precisará financiar com o banco.</li>
+          <li><strong>Amortização de dívida:</strong> Se você já tem um financiamento imobiliário no Sistema Financeiro de Habitação (SFH), pode usar o FGTS para amortizar a dívida (reduzir o saldo devedor) ou diminuir o valor das parcelas por até 12 meses. Essa é uma jogada de mestre, pois os juros de um financiamento são sempre maiores do que a rentabilidade do FGTS. Você literalmente troca uma dívida cara por um dinheiro que rendia pouco.</li>
+        </ol>
+
+        <div class="article-callout article-callout--gold">
+          <strong>🚀 Novidade: FGTS Futuro</strong>
+          <p>O programa FGTS Futuro é uma modalidade recente que permite ao trabalhador de baixa renda (inicialmente focado em famílias da Faixa 1 do Minha Casa Minha Vida) usar os <strong>depósitos futuros</strong> que o empregador ainda vai fazer como parte da comprovação de renda para conseguir um financiamento imobiliário. Isso aumenta o seu poder de compra. Mas cuidado: se você for demitido, os depósitos cessam e o valor que vinha do FGTS passa a ser cobrado diretamente no seu bolso, na parcela mensal.</p>
+        </div>
+
+        <h2>Saque-Aniversário: A armadilha disfarçada de oportunidade?</h2>
+
+        <p>O <strong>Saque-Aniversário</strong> foi criado em 2019 e dividiu a opinião dos especialistas financeiros. A premissa é simples: em vez de sacar tudo quando é demitido (o Saque-Rescisão), você opta por sacar uma porcentagem do seu saldo todo ano, no mês do seu aniversário.</p>
+
+        <p>A alíquota de saque anual varia de 5% a 50%, dependendo do seu saldo total (quem tem menos, saca uma porcentagem maior). A vantagem? Você coloca a mão no dinheiro e pode investi-lo em algo que renda mais, como o Tesouro Direto.</p>
+
+        <p><strong>A desvantagem (e é uma bem grande):</strong> Ao aderir ao Saque-Aniversário, se você for demitido sem justa causa, você <strong>NÃO</strong> poderá sacar o saldo total da conta. Você receberá apenas a multa de 40%, mas o resto do dinheiro continuará preso, sendo liberado apenas em suaves prestações anuais. Para quem não tem uma reserva de emergência, isso pode ser um desastre completo.</p>
+
+        <p>Outro problema que muitos enfrentam é a <strong>antecipação do saque-aniversário</strong>. Muitos bancos oferecem empréstimos tendo os saques futuros do FGTS como garantia. <strong>Não faça isso!</strong> Trata-se de um empréstimo com juros, o que significa que você vai antecipar o seu próprio dinheiro pagando uma taxa ao banco. Se o seu objetivo é enriquecer e não se endividar, fuja da antecipação.</p>
+
+        <h3>Tabela Resumo: Saque Rescisão vs. Saque-Aniversário</h3>
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Situação</th>
+              <th>Saque-Rescisão (Padrão)</th>
+              <th>Saque-Aniversário</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Na demissão sem justa causa</td>
+              <td>Saca <strong>TODO</strong> o saldo da conta ativa + multa de 40%.</td>
+              <td>Saca <strong>APENAS</strong> a multa de 40%. O saldo fica preso.</td>
+            </tr>
+            <tr>
+              <td>No mês do seu aniversário</td>
+              <td>Não saca nada.</td>
+              <td>Saca uma parcela (5% a 50%) + parcela adicional fixa.</td>
+            </tr>
+            <tr>
+              <td>Compra da casa própria</td>
+              <td>Pode usar o saldo integralmente.</td>
+              <td>Pode usar o saldo integralmente (regras mantidas).</td>
+            </tr>
+            <tr>
+              <td>Período para voltar ao modelo padrão</td>
+              <td>-</td>
+              <td>É preciso solicitar a volta, que leva <strong>2 anos (25 meses)</strong> para efetivar.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Como consultar o seu saldo sem dor de cabeça</h2>
+
+        <p>No passado, consultar o saldo do Fundo de Garantia exigia fila na Caixa Econômica, um número de PIS em mãos e muita paciência. Hoje, você resolve isso em dois minutos do sofá da sala.</p>
+        
+        <p>Basta baixar o aplicativo oficial <strong>"FGTS" da Caixa</strong>, disponível para Android e iOS. O login é feito com o seu CPF e uma senha que você cadastra na hora (ou usa a senha unificada do sistema gov.br). No app, você consegue ver o saldo de todas as contas, os extratos mensais (para verificar se o patrão está depositando direitinho) e até mesmo simular empréstimos, solicitar o uso para habitação ou fazer a troca de modalidade de saque.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>Alerta de Golpe</strong>
+          <p>O governo nunca envia links por WhatsApp, SMS ou e-mail pedindo para você atualizar seus dados para "liberar um saque extraordinário do FGTS". Isso é golpe. Sempre utilize apenas o aplicativo oficial da Caixa ou acesse o site de um computador seguro.</p>
+        </div>
+
+        <h2>Conclusão: Tome as rédeas do seu FGTS</h2>
+
+        <p>O FGTS é uma parte fundamental da vida financeira de todo brasileiro sob o regime da CLT. Embora seu rendimento não seja dos melhores, ele continua sendo uma ferramenta de estabilidade, seja servindo como um porto seguro contra uma demissão repentina, seja sendo o empurrão que faltava para a compra do seu primeiro imóvel.</p>
+
+        <p>A nossa recomendação máxima é que você monitore esse saldo mensalmente. Entenda as suas opções, não caia no conto da antecipação de saque para gastos supérfluos, e considere fortemente usar esse montante para quitar dívidas de financiamento imobiliário. Cada real amortizado da sua dívida é um juro que você deixa de pagar ao banco — e essa, sim, é a melhor "rentabilidade" que o seu dinheiro pode ter!</p>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Continue lendo</span>
+        <h2 class="section-title">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        
+        <div class="article-card">
+          <div class="article-card-content">
+            <span class="article-card-cat article-cat--gold">Investimentos</span>
+            <h3 class="article-card-title"><a href="investimentos.html" style="text-decoration: none; color: inherit;">Onde Investir seu Dinheiro: Guia para Iniciantes</a></h3>
+            <p class="article-card-exc">Descubra as opções mais seguras e rentáveis para fazer o seu dinheiro crescer longe da poupança.</p>
+            <a href="investimentos.html" class="article-card-link">Ler artigo →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-content">
+            <span class="article-card-cat article-cat--red">Imóveis</span>
+            <h3 class="article-card-title"><a href="imovel.html" style="text-decoration: none; color: inherit;">Comprar Imóvel ou Viver de Aluguel?</a></h3>
+            <p class="article-card-exc">Entenda matematicamente qual é a melhor decisão para o seu bolso na hora de escolher a moradia.</p>
+            <a href="imovel.html" class="article-card-link">Ler artigo →</a>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-content">
+            <span class="article-card-cat article-cat--green">Poupança</span>
+            <h3 class="article-card-title"><a href="poupanca.html" style="text-decoration: none; color: inherit;">O Plano Exato para Juntar os Primeiros R$ 5.000</a></h3>
+            <p class="article-card-exc">Um passo a passo prático para você sair do zero e construir a sua primeira reserva de emergência sólida.</p>
+            <a href="poupanca.html" class="article-card-link">Ler artigo →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

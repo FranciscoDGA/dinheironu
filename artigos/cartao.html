@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra a verdade sobre o cartão de crédito: como usar a seu favor, fugir do rotativo e aproveitar cashback e milhas sem se endividar."/>
+  <title>Cartão de crédito: vilão ou aliado? A verdade nua e crua | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (same as index) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--red">Dívidas</span>
+      <h1 class="article-title">Cartão de crédito: vilão ou aliado? A verdade nua e crua</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 14 Jul 2026</span>
+        <span>⏱️ 5 min de leitura</span>
+      </div>
+      <p class="article-summary">Muitos brasileiros têm medo do cartão de crédito, enquanto outros não vivem sem ele. Mas afinal, ele é o mocinho ou o vilão das suas finanças? Aprenda a usar o cartão a seu favor, fugir dos juros abusivos e até lucrar com ele.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/cartao.jpg" alt="Pessoa segurando um cartão de crédito com expressão de dúvida" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Ah, o cartão de crédito. Aquele pedaço de plástico (ou de metal, para os mais chiques) que tem o poder mágico de fazer você se sentir rico... até o dia do vencimento da fatura. No Brasil, o cartão de crédito é responsável por uma boa parte do endividamento das famílias, mas ele não precisa ser o vilão da história.</p>
+        
+        <p>A verdade nua e crua é que o cartão de crédito não é bom nem ruim. Ele é apenas uma <strong>ferramenta de pagamento</strong>, assim como o dinheiro ou o Pix. O que determina se ele vai ajudar ou destruir a sua vida financeira é <em>como você o usa</em>.</p>
+
+        <h2>Crédito, Débito ou Dinheiro? O que escolher?</h2>
+        
+        <p>Antes de mergulharmos no funcionamento do cartão, vamos esclarecer as diferenças. Quando você paga no <strong>débito</strong> (ou no Pix/dinheiro), o dinheiro sai da sua conta na mesma hora. Se você tem R$ 100 na conta e gasta R$ 80, sobram R$ 20. Simples e direto. Não tem como gastar o que você não tem.</p>
+
+        <p>Já no <strong>crédito</strong>, você está pegando um empréstimo de curtíssimo prazo com o banco. Você faz a compra agora e o banco paga a loja. No fim do mês, o banco te manda a conta (a fatura) para você pagar tudo de uma vez. O perigo aqui é a falsa sensação de que você tem mais dinheiro do que realmente tem.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Dinheiro / Pix / Débito</th>
+              <th>Cartão de Crédito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Momento do pagamento</strong></td>
+              <td>Imediato. O dinheiro sai na hora.</td>
+              <td>Posterior. Você paga só no vencimento.</td>
+            </tr>
+            <tr>
+              <td><strong>Risco de endividamento</strong></td>
+              <td>Baixo (limitado ao saldo que você tem).</td>
+              <td>Alto (fácil gastar além do que ganha).</td>
+            </tr>
+            <tr>
+              <td><strong>Benefícios extras</strong></td>
+              <td>Quase nenhum (talvez um desconto à vista).</td>
+              <td>Pontos, milhas, cashback, seguros gratuitos.</td>
+            </tr>
+            <tr>
+              <td><strong>Histórico (Score)</strong></td>
+              <td>Não impacta o seu Score de crédito.</td>
+              <td>Ajuda a aumentar o seu Score se pago em dia.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>O monstro do armário: O Juro Rotativo</h2>
+
+        <p>Sabe aquele ditado "O que os olhos não veem, o coração não sente"? No caso da fatura do cartão, o que os olhos não veem vira um pesadelo gigantesco. E o nome desse pesadelo é <strong>Juro Rotativo</strong>.</p>
+        
+        <p>O rotativo é ativado quando você paga qualquer valor menor que o total da fatura. Pode ser o pagamento mínimo, ou até mesmo 99% da fatura. Aquele "restinho" que ficou faltando entra no rotativo. E meus amigos, os juros rotativos no Brasil não são brincadeira. Estamos falando de taxas absurdas, que frequentemente passam dos 399% ao ano.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>A Mágica Sombria dos Juros</strong>
+          <p>Imagine que você tem uma fatura de R$ 1.000. Por algum motivo, você decide não pagar nada e deixa rolar por 1 ano, sujeito a juros rotativos de 399% ao ano. Ao final de 12 meses, aquela sua dívida original de R$ 1.000 vai se transformar em inacreditáveis <strong>R$ 4.990</strong>. Em apenas um ano, você multiplicou sua dívida por quase cinco! É assim que as pessoas perdem o controle e o sono.</p>
+        </div>
+
+        <p><strong>Regra de ouro:</strong> NUNCA, em hipótese alguma, pague apenas o mínimo da fatura ou deixe de pagá-la. Se você não tem o dinheiro para pagar o total, é melhor tentar pegar um empréstimo pessoal (cujas taxas são bem menores, tipo 3% a 5% ao mês) para quitar o cartão, do que deixar no rotativo (que cobra 12% a 15% ao mês).</p>
+        
+        <h2>Parcelamentos: Amigos ou Inimigos?</h2>
+        
+        <p>A cultura do "parcelamento sem juros" é fortíssima no Brasil. Comprar uma geladeira em 12x "sem juros" parece um excelente negócio, não é? E de fato, se a loja não oferece um desconto significativo para pagamento à vista, parcelar pode ser vantajoso (você deixa seu dinheiro rendendo enquanto paga aos poucos).</p>
+        
+        <p>Mas, cuidado: o grande risco do parcelamento é a <strong>falsa sensação de espaço no orçamento</strong>. Você compra uma blusinha em 3x de R$ 30. Depois, um tênis em 5x de R$ 50. Depois, um jantar em 2x de R$ 80. Quando você junta tudo isso, sua fatura dos próximos meses já nasce com R$ 500 comprometidos, antes mesmo do mês começar! O ideal é parcelar apenas bens duráveis ou compras realmente grandes que não cabem no seu orçamento mensal à vista.</p>
+
+        <h2>Como transformar o cartão em seu aliado (Cashback e Milhas)</h2>
+        
+        <p>Se você tem disciplina para gastar apenas o que pode pagar, o cartão de crédito pode se tornar uma verdadeira máquina de benefícios. Aqui estão os principais:</p>
+
+        <h3>1. Cashback (Dinheiro de volta)</h3>
+        <p>Muitos cartões oferecem cashback em todas as suas compras. Normalmente varia de 0,5% a 2% do valor gasto. Parece pouco? Pense assim: se você concentra todos os seus gastos do mês (supermercado, farmácia, contas, combustível) no cartão, digamos uns R$ 3.000, com 1% de cashback você recebe <strong>R$ 30 de volta todo mês</strong> sem fazer nenhum esforço extra. Em um ano, são R$ 360 de "dinheiro grátis".</p>
+
+        <h3>2. Programas de Pontos e Milhas</h3>
+        <p>Os pontos que você acumula no cartão podem ser trocados por produtos, descontos na fatura ou transferidos para companhias aéreas (milhas). Com estratégia e usando promoções de transferência bonificada (quando você ganha bônus ao mandar os pontos pro programa da companhia aérea), dá para emitir passagens para suas férias pagando apenas as taxas de embarque.</p>
+
+        <h3>3. Seguros Gratuitos e Benefícios Ocultos</h3>
+        <p>Você sabia que seu cartão pode oferecer seguro viagem internacional gratuito? E seguro para carros alugados? Ou a "Proteção de Preço", onde se você comprar algo e achar o mesmo produto mais barato depois de uns dias, o cartão te devolve a diferença? Vale a pena ler os benefícios associados à bandeira do seu cartão (Visa Gold, Platinum, Infinite; Mastercard Gold, Platinum, Black; etc).</p>
+
+        <h3>4. Construindo um Score Forte</h3>
+        <p>Bancos adoram clientes que usam crédito e pagam em dia. Ter um cartão, usá-lo com frequência e pagar sempre o valor total até o vencimento é uma das formas mais eficientes de construir um bom histórico financeiro e aumentar o seu <strong>Score de Crédito</strong>. Com um score alto, no futuro, quando você quiser financiar um carro ou uma casa, conseguirá taxas de juros muito menores.</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>O Truque dos Milheiros</strong>
+          <p>Muitas pessoas com alto controle financeiro concentram TUDO no cartão de crédito. Elas não pagam nada no débito ou Pix. O dinheiro delas fica rendendo na conta (ou no Tesouro Selic) durante os 30 dias até o vencimento da fatura. No dia do vencimento, elas pagam o cartão. Assim, ganham o rendimento do dinheiro parado E os pontos/cashback do cartão. <strong>Mas atenção:</strong> só faça isso se você for extremamente organizado e tiver o dinheiro na conta.</p>
+        </div>
+
+        <h2>5 Dicas Práticas para não cair em armadilhas</h2>
+
+        <ol>
+          <li><strong>O limite do cartão não é o seu limite de gastos:</strong> Se você ganha R$ 3.000, e o Nubank te dá R$ 10.000 de limite, isso NÃO significa que você tem R$ 10.000 para gastar. Seu limite de gastos continua sendo a sua renda (na verdade, bem menos que isso, para sobrar espaço para investir e para suas despesas fixas).</li>
+          <li><strong>Pague sempre o total da fatura:</strong> Se você não conseguiu pagar o total, acendeu o sinal vermelho gigante. Reveja todo o seu orçamento imediatamente.</li>
+          <li><strong>Evite ter 10 cartões diferentes:</strong> É muito fácil se perder com múltiplos cartões, datas de vencimento diferentes e anuidades espalhadas. Tenha 1 ou no máximo 2 cartões. Um principal e um reserva.</li>
+          <li><strong>Anuidade alta? Fuja:</strong> Hoje em dia existem dezenas de excelentes cartões sem anuidade. Você só deve pagar anuidade se os benefícios (milhas, acessos a salas VIP) que você realmente USA superarem de longe o custo.</li>
+          <li><strong>Acompanhe os gastos ao longo do mês:</strong> Não espere a fatura fechar para ver quanto gastou. Abra o app do banco toda semana e confira como estão os gastos para não ter uma "surpresinha" no fim do mês.</li>
+        </ol>
+
+        <h2>Conclusão: Você no Controle</h2>
+        <p>O cartão de crédito é como fogo. Nas mãos certas, serve para cozinhar e aquecer. Nas mãos erradas, pode queimar a sua casa. Não tenha medo de usar, mas use com consciência. Transforme-o em uma ferramenta de comodidade, acúmulo de pontos e construção de patrimônio (com o dinheiro que você economiza nos benefícios).</p>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Continue lendo</span>
+        <h2 class="section-title">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <div class="article-card">
+          <a href="dividas.html">
+            <h4>Como sair das dívidas</h4>
+            <p>Estratégias práticas para limpar seu nome e recuperar a paz financeira.</p>
+          </a>
+        </div>
+        <div class="article-card">
+          <a href="orcamento.html">
+            <h4>5 passos para montar orçamento</h4>
+            <p>Aprenda a controlar seu dinheiro antes que ele controle você.</p>
+          </a>
+        </div>
+        <div class="article-card">
+          <a href="nome-sujo.html">
+            <h4>Como negociar dívidas</h4>
+            <p>O que fazer quando a situação aperta e as dívidas saem do controle.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

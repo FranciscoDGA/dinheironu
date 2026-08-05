@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra a verdade sobre os fundos de investimento. Aprenda como funcionam as taxas, o come-cotas e se realmente vale a pena deixar seu dinheiro nas mãos de um gestor."/>
+  <title>Fundos de investimento: vale a pena? O que ninguém te conta | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (same as index) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--blue">Investimentos</span>
+      <h1 class="article-title">Fundos de investimento: vale a pena? O que ninguém te conta</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 25 Mai 2026</span>
+        <span>⏱️ 9 min de leitura</span>
+      </div>
+      <p class="article-summary">Muitos brasileiros começam a investir através de fundos oferecidos pelo gerente do banco, mas não fazem ideia das taxas e impostos que corroem seus rendimentos. Entenda como funcionam, os tipos disponíveis e se realmente vale a pena terceirizar a gestão do seu dinheiro.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/investimentos.jpg" alt="Gráficos subindo e moedas empilhadas" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Se você já abriu o aplicativo do seu banco ou corretora, provavelmente foi bombardeado com dezenas de opções de "Fundos de Investimento". Promessas de alta rentabilidade, gestão profissional e diversificação fácil são os principais atrativos. Mas será que é tudo tão simples assim? A resposta curta é: não. A resposta longa envolve taxas ocultas, impostos antecipados e uma grande possibilidade de que você estaria melhor fazendo as coisas por conta própria.</p>
+        
+        <p>O objetivo deste artigo é tirar o "financês" do caminho e explicar exatamente como os fundos de investimento funcionam, os custos envolvidos e quando eles podem (ou não) fazer sentido na sua carteira de investimentos.</p>
+
+        <h2>O que é um Fundo de Investimento? (A analogia do condomínio)</h2>
+        <p>Pense num fundo de investimento como um condomínio residencial. Em vez de você comprar um terreno, contratar pedreiros, comprar os materiais e cuidar de toda a manutenção da piscina sozinho, você se junta com outras pessoas. Vocês pagam uma taxa (o condomínio) para que um síndico (o gestor do fundo) cuide de tudo. Ele decide onde alocar o dinheiro para manter o prédio funcionando bem e tentar valorizar os apartamentos.</p>
+
+        <p>No mercado financeiro, as "cotas" de um fundo são como os apartamentos. Você compra uma cota, e o gestor do fundo pega o seu dinheiro (e o de milhares de outras pessoas) para investir em ações, títulos do governo, CDBs ou até em imóveis, dependendo da estratégia daquele condomínio.</p>
+
+        <div class="article-callout article-callout--blue">
+          <strong>A grande questão é:</strong>
+          <p>Você confia no síndico? E mais importante, a taxa que ele está cobrando justifica o trabalho dele, ou você conseguiria um resultado melhor comprando seus próprios "materiais" (títulos e ações) no mercado?</p>
+        </div>
+
+        <h2>Os Principais Tipos de Fundos</h2>
+        <p>Nem todo fundo é igual. Alguns são extremamente conservadores, enquanto outros são montanhas-russas de emoções. A CVM (Comissão de Valores Mobiliários) divide os fundos em várias categorias, mas aqui estão as principais que você vai encontrar nas plataformas de corretoras como XP, BTG Pactual, NuInvest, Rico, etc.</p>
+
+        <h3>1. Fundos DI (ou Fundos de Renda Fixa Simples)</h3>
+        <p>São os mais básicos. O gestor pega o seu dinheiro e empresta majoritariamente para o Governo Federal (Tesouro Selic) ou bancos (CDBs). Eles buscam render próximo a 100% do CDI.</p>
+        <p><strong>A verdade nua e crua:</strong> Na grande maioria das vezes, você <strong>não precisa</strong> pagar alguém para fazer isso. Você mesmo pode comprar o Tesouro Selic no app da corretora, pagando zero ou quase zero de taxas. Muitos fundos DI de grandes bancos cobram até 1% ou mais de taxa de administração, o que é um roubo legalizado para um trabalho tão simples.</p>
+
+        <h3>2. Fundos de Renda Fixa (Ativos)</h3>
+        <p>Diferente do Fundo DI, o gestor de um fundo de renda fixa mais "ativo" tenta ganhar mais do que o CDI misturando papéis como debêntures (dívidas de empresas), CRIs, CRAs e títulos públicos atrelados à inflação (IPCA). Eles podem ter oscilações (marcação a mercado), mas geralmente são focados em proteção e ganho real acima da inflação.</p>
+
+        <h3>3. Fundos Multimercado</h3>
+        <p>O nome já diz tudo. O gestor pode fazer o que quiser (dentro das regras do regulamento do fundo): comprar ações, moedas (dólar, euro), operar taxa de juros futura, ouro, investir fora do Brasil. São fundos onde você aposta puramente no "cérebro" do gestor. Podem dar retornos espetaculares ou tomar grandes tombos. Risco moderado a alto.</p>
+
+        <h3>4. Fundos de Ações (FIA)</h3>
+        <p>No mínimo 67% do patrimônio precisa estar em ações na Bolsa de Valores. O objetivo é superar o Ibovespa (o índice principal da bolsa brasileira). O risco é alto, e o ideal é colocar um dinheiro que você não vai precisar usar nos próximos 5 ou 10 anos.</p>
+
+        <h3>5. Fundos Imobiliários (FIIs)</h3>
+        <p>Embora tenham "fundo" no nome, eles funcionam de forma um pouco diferente. Eles são negociados como ações na bolsa (você compra e vende pelo Home Broker). Eles compram galpões logísticos, shoppings e lajes corporativas, e distribuem os aluguéis mensalmente na sua conta, <strong>isentos de Imposto de Renda</strong> para pessoa física.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Tipo de Fundo</th>
+              <th>Risco</th>
+              <th>Rentabilidade Alvo (Benchmark)</th>
+              <th>Para que serve?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fundo DI</td>
+              <td>Muito Baixo</td>
+              <td>100% do CDI</td>
+              <td>Reserva de emergência (se a taxa for menor que 0.3%)</td>
+            </tr>
+            <tr>
+              <td>Renda Fixa Ativo</td>
+              <td>Baixo a Moderado</td>
+              <td>CDI + X% ou IPCA + X%</td>
+              <td>Proteger contra inflação no médio prazo</td>
+            </tr>
+            <tr>
+              <td>Multimercado</td>
+              <td>Moderado a Alto</td>
+              <td>CDI + X% (Superar o CDI com folga)</td>
+              <td>Diversificação e tentativa de ganhos maiores</td>
+            </tr>
+            <tr>
+              <td>Fundos de Ações</td>
+              <td>Alto</td>
+              <td>Ibovespa (IBOV)</td>
+              <td>Construção de patrimônio no longo prazo</td>
+            </tr>
+            <tr>
+              <td>FIIs (Imobiliários)</td>
+              <td>Moderado</td>
+              <td>IFIX (Índice de FIIs)</td>
+              <td>Gerar renda passiva mensal (aluguéis)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>O Vilão Oculto: A Taxa de Administração (e a Taxa de Performance)</h2>
+        <p>Aqui é onde a mágica dos juros compostos pode trabalhar contra você. Quando você investe em um fundo, a gestora precisa ganhar dinheiro para pagar a equipe de analistas, a luz do escritório na Faria Lima e o café expresso.</p>
+
+        <p>Eles cobram a <strong>Taxa de Administração</strong>, um percentual anual sobre <em>todo o dinheiro que você tem investido</em>, independentemente se o fundo deu lucro ou prejuízo. Um fundo de ações costuma cobrar 2% ao ano.</p>
+
+        <p>Além disso, muitos fundos ativos cobram a <strong>Taxa de Performance</strong>: geralmente 20% do que exceder o "benchmark" (o índice de referência, como o CDI ou Ibovespa). Ou seja, se o fundo render mais que o combinado, eles ficam com uma fatia do "lucro extra".</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>A regra de ouro (ou de bolso):</strong>
+          <p>O famoso modelo "2 com 20" (2% de administração e 20% de performance) é muito pesado para o investidor de longo prazo. Em prazos maiores, essas taxas comem uma fatia colossal do seu patrimônio.</p>
+        </div>
+
+        <h3>A Matemática do Vilão: Um Exemplo Prático</h3>
+        <p>Vamos usar a matemática financeira para ilustrar. Imagine que você tem <strong>R$ 50.000</strong> e investe por <strong>10 anos</strong>. Vamos supor que o mercado, na média, renda 10% ao ano.</p>
+        
+        <p><strong>Cenário A (Você mesmo investe):</strong><br>
+        Você compra ações ou ETFs (fundos de índice que cobram quase nada, tipo 0.2% ao ano) e consegue os 10% a.a.<br>
+        - Valor após 10 anos (bruto): <strong>R$ 129.687,12</strong></p>
+
+        <p><strong>Cenário B (Fundo de Ações de bancão):</strong><br>
+        O fundo consegue os mesmos 10% brutos do mercado, mas cobra absurdos 2% de taxa de administração ao ano. Sua rentabilidade líquida da taxa cai para 8% ao ano.<br>
+        - Valor após 10 anos (bruto): <strong>R$ 107.946,25</strong></p>
+
+        <p>A diferença de R$ 21.740,87 foi parar direto no bolso da gestora. Eles ficaram com <strong>mais de 27% do seu rendimento total</strong> só por causa desses "inofensivos" 2% ao ano.</p>
+
+        <h2>O Fantasma do "Come-Cotas"</h2>
+        <p>Se a taxa de administração não fosse suficiente, no Brasil temos uma invenção diabólica da Receita Federal chamada <strong>Come-Cotas</strong>. Ele afeta os fundos de Renda Fixa, DI e Multimercados (Fundos de Ações e FIIs escapam dessa).</p>
+
+        <p>O que é isso? Duas vezes por ano, nos últimos dias úteis de maio e novembro, o governo entra lá na sua conta e morde uma antecipação do Imposto de Renda sobre o lucro que você teve no semestre (15% ou 20%, dependendo da classificação do fundo). O nome é esse porque o sistema literalmemte "come" (reduz) a quantidade de cotas que você possui.</p>
+
+        <p><strong>Por que isso é péssimo?</strong> Porque o dinheiro que foi para o governo em maio ou novembro deixa de render juros compostos para você nos próximos anos. Quando você compra um CDB ou o Tesouro Direto por conta própria, o Imposto de Renda só é cobrado no dia que você resgatar o dinheiro ou no vencimento. Com o come-cotas, o imposto é pago antecipadamente, matando a magia dos juros sobre juros no longo prazo.</p>
+
+        <h2>Benchmarks: O que é essa palavra difícil?</h2>
+        <p>Você vai ouvir muito a palavra "Benchmark" quando olhar para fundos. É basicamente o "alvo" que o fundo quer bater, a referência. Se o fundo diz que o benchmark é o CDI, ele vai tentar render mais que o CDI. Se é o IBOVESPA, vai tentar dar mais lucro que a média das ações brasileiras.</p>
+
+        <p>Nunca avalie a rentabilidade de um fundo sem olhar o benchmark. Se um fundo de ações rendeu 20% no ano, parece incrível, certo? Mas e se o Ibovespa (a média do mercado) rendeu 30% no mesmo ano? Isso significa que o gestor, mesmo cobrando taxas, foi muito pior do que a média. Ele entregou menos do que você conseguiria apenas comprando as ações mais comuns da bolsa.</p>
+
+        <h2>Plataformas: Onde encontrar os melhores?</h2>
+        <p>Se você decidir que quer ter fundos na sua carteira, evite os grandes bancos tradicionais (Caixa, Banco do Brasil, Bradesco, Itaú). Normalmente, os fundos que eles oferecem para o varejo (público geral) têm taxas de administração altíssimas (às vezes 2% a 4% ao ano em renda fixa, o que é um absurdo).</p>
+
+        <p>Você encontrará fundos muito mais qualificados e competitivos em corretoras independentes e bancos digitais de investimento, como:</p>
+        <ul>
+          <li><strong>BTG Pactual:</strong> A maior plataforma da América Latina, com excelente curadoria de fundos.</li>
+          <li><strong>XP Investimentos (e Rico/Clear):</strong> O "supermercado" de fundos, com milhares de opções.</li>
+          <li><strong>Nubank / NuInvest:</strong> Plataforma simplificada, com opções razoáveis, incluindo fundos próprios de baixo custo.</li>
+          <li><strong>Órama, Genial, Inter:</strong> Outras opções sólidas com plataformas abertas.</li>
+        </ul>
+
+        <h2>Fazer Você Mesmo (DIY) vs. Terceirizar (Fundos)</h2>
+        <p>A pergunta final: vale a pena?</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>Quando NÃO vale a pena (Faça você mesmo):</strong>
+          <ul>
+            <li><strong>Renda fixa simples e reserva de emergência:</strong> Se é para colocar em Tesouro Selic, CDB de liquidez diária ou LCI/LCA, faça você mesmo. Não pague taxa de administração e fuja do come-cotas.</li>
+            <li><strong>Se você quer investir em bolsa mas tem preguiça de estudar empresas:</strong> Nesse caso, em vez de fundos de ações (que cobram 2% a.a.), prefira os <strong>ETFs</strong> (Exchange Traded Funds), como o BOVA11 ou o IVVB11 (que investe nas 500 maiores empresas dos EUA). Eles têm taxas baixíssimas (0.2% a 0.3%) e não tentam bater o mercado, apenas acompanhá-lo. Historicamente, mais de 80% dos fundos de ações perdem para os ETFs no longo prazo.</li>
+          </ul>
+        </div>
+
+        <div class="article-callout article-callout--gold">
+          <strong>Quando PODE valer a pena:</strong>
+          <ul>
+            <li><strong>Fundos Multimercado sofisticados:</strong> Estratégias que envolvem operar dólar futuro, juros, ouro e posições vendidas (short) são difíceis para a pessoa física replicar. Se você gosta da gestão de uma equipe renomada (como a Verde Asset, SPX, Adam, etc.), pode valer a pena alocar uma pequena parte da carteira.</li>
+            <li><strong>Falta de tempo absurda:</strong> Se você não quer nem entrar no app da corretora a cada dois meses e ganha bem o suficiente para não se importar em perder 1% ou 2% ao ano para não ter dor de cabeça (mas lembre-se: a dor de cabeça custa caro!).</li>
+          </ul>
+        </div>
+
+        <h2>Conclusão: O Controle é Seu</h2>
+        <p>A indústria de fundos de investimento ganha bilhões vendendo a ideia de que o mercado financeiro é muito complicado para você, mero mortal. Embora isso possa ser verdade para operações avançadas, construir um patrimônio sólido de longo prazo usando renda fixa simples, ETFs e alguns FIIs é algo que qualquer brasileiro pode aprender dedicando algumas horas por mês.</p>
+
+        <p>Se for investir através de fundos, sempre leia a lâmina (documento com as regras), olhe a taxa de administração, verifique o histórico do gestor e questione se o fundo bate o seu benchmark de forma consistente nos últimos 5 anos. E, principalmente, fuja dos fundos de renda fixa do seu bancão que perdem da poupança disfarçados de "oportunidade exclusiva".</p>
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Continue lendo</span>
+        <h2 class="section-title">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="investimentos.html" class="article-card">
+          <div class="article-card-img-wrap">
+            <img src="../images/bolsa.jpg" alt="Gráficos de mercado financeiro" class="article-card-img" />
+          </div>
+          <div class="article-card-content">
+            <span class="article-card-cat article-cat--blue">Investimentos</span>
+            <h3 class="article-card-title">Por onde começar: Os melhores investimentos para iniciantes</h3>
+            <p class="article-card-excerpt">Um guia prático para quem está dando os primeiros passos no mundo dos investimentos.</p>
+          </div>
+        </a>
+        <a href="imovel.html" class="article-card">
+          <div class="article-card-img-wrap">
+            <img src="../images/imovel.jpg" alt="Chaves de uma casa sobre a mesa" class="article-card-img" />
+          </div>
+          <div class="article-card-content">
+            <span class="article-card-cat article-cat--gold">Patrimônio</span>
+            <h3 class="article-card-title">Comprar imóvel ou investir em renda fixa?</h3>
+            <p class="article-card-excerpt">Análise matemática para descobrir qual a melhor decisão financeira para o seu futuro.</p>
+          </div>
+        </a>
+        <a href="renda-passiva.html" class="article-card">
+          <div class="article-card-img-wrap">
+            <img src="../images/renda.jpg" alt="Dinheiro na carteira" class="article-card-img" />
+          </div>
+          <div class="article-card-content">
+            <span class="article-card-cat article-cat--green">Liberdade</span>
+            <h3 class="article-card-title">Renda passiva: como fazer o dinheiro trabalhar por você</h3>
+            <p class="article-card-excerpt">Construindo fontes de renda que não dependem do seu suor diário.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

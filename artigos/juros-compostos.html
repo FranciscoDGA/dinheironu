@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra o poder dos juros compostos. Aprenda a fórmula de forma simples, a regra do 72 e veja como multiplicar seu patrimônio começando com R$ 100."/>
+  <title>Juros compostos: o segredo que os ricos não contam | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+    
+    /* Additional Article Card styles for the related section */
+    .article-card {
+      background: #fff; border-radius: 12px; padding: 24px;
+      border: 1px solid #e2e8f0; transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none; display: flex; flex-direction: column;
+    }
+    .article-card:hover {
+      box-shadow: 0 10px 25px rgba(15,23,42,.05); transform: translateY(-3px);
+    }
+    .article-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #0f172a;
+      margin-top: 12px; margin-bottom: 8px; line-height: 1.3;
+    }
+    .article-card p {
+      color: #64748b; font-size: 0.9rem; line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (same as index) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--gold">Investimentos</span>
+      <h1 class="article-title">Juros compostos: o segredo que os ricos não contam</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 10 Jun 2026</span>
+        <span>⏱️ 6 min de leitura</span>
+      </div>
+      <p class="article-summary">Albert Einstein supostamente disse que os juros compostos são a oitava maravilha do mundo. Quem entende, ganha; quem não entende, paga. Neste artigo completo, você vai descobrir como essa força matemática pode multiplicar seu dinheiro e por que o tempo é o seu maior aliado na construção de patrimônio.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/poupanca.jpg" alt="Gráfico de crescimento financeiro com moedas" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Muitas pessoas passam a vida inteira acreditando que a única forma de enriquecer de verdade é trabalhando 12, 14 horas por dia, dando a sorte de ganhar na loteria, ou quem sabe recebendo uma bolada inesperada de herança. Se você está aqui no <strong>Dinheiro Nu</strong> lendo isso, provavelmente já percebeu que essa não é toda a verdade. Existe um mecanismo silencioso, um verdadeiro "segredo" financeiro que as pessoas mais ricas do mundo utilizam a seu favor de maneira consistente todos os dias: <strong>os juros compostos</strong>.</p>
+        
+        <p>A famosa frase atribuída a Albert Einstein resume bem a situação: <em>"Os juros compostos são a oitava maravilha do mundo. Aquele que entende, ganha; aquele que não entende, paga."</em> E não há nada mais verdadeiro no universo das finanças. Se você já atrasou a fatura do cartão de crédito ou entrou no limite do cheque especial, já conheceu o lado sombrio dessa força. Mas, quando você vira o jogo e coloca os juros compostos para trabalhar <em>para</em> você e não <em>contra</em> você, o resultado é a multiplicação do seu patrimônio de uma forma que parece quase mágica.</p>
+
+        <h2>Juros Simples vs. Juros Compostos: Qual é a diferença?</h2>
+        <p>Antes de mergulharmos nas maravilhas da multiplicação do dinheiro, precisamos entender a diferença básica entre juros simples e juros compostos. Afinal, é essa diferença que faz toda a mágica acontecer.</p>
+        
+        <p>Os <strong>Juros Simples</strong> são calculados sempre, e apenas, sobre o valor inicial (chamado de "principal"). Se você investir R$ 1.000,00 com um rendimento de 10% ao ano em juros simples, no primeiro ano você ganha R$ 100,00. No segundo ano, você ganha novamente R$ 100,00 (10% de mil). No terceiro, mais R$ 100,00. Seu ganho é linear. Não há surpresas, não há explosão de crescimento.</p>
+
+        <p>Já os <strong>Juros Compostos</strong> são os famosos "juros sobre juros". Eles incidem sobre o valor inicial somado aos juros acumulados dos períodos anteriores. Usando o mesmo exemplo: no primeiro ano de juros compostos, você ganha R$ 100,00 sobre os seus R$ 1.000,00 iniciais. Você agora tem R$ 1.100,00. No segundo ano, os 10% não são mais aplicados sobre os mil originais, mas sim sobre os R$ 1.100,00! Ou seja, você ganha R$ 110,00. Seu saldo vai para R$ 1.210,00. No terceiro ano, 10% sobre R$ 1.210,00 dá R$ 121,00, elevando o montante a R$ 1.331,00.</p>
+
+        <p>No curto prazo, a diferença parece pequena. Mas no longo prazo, é a diferença entre chegar à aposentadoria dependendo do INSS ou ter liberdade financeira.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>Atenção!</strong>
+          <p>O Brasil, historicamente, é o "paraíso" dos juros. Com taxas de juros básicas (a nossa Taxa Selic) muitas vezes em patamares elevados (acima de dois dígitos), o efeito dos juros compostos por aqui é ainda mais forte do que em países desenvolvidos. Investir no Tesouro Direto ou em CDBs é a forma mais fácil de ver isso acontecendo.</p>
+        </div>
+
+        <h2>A Fórmula Mágica (M = C(1+i)ⁿ) sem trauma</h2>
+        <p>Eu sei, nós dissemos "Finanças sem enrolação", e de repente aparece uma fórmula matemática. Mas calma! Não precisa pegar a calculadora científica, nós vamos apenas destrinchar o que cada letra dessa famosa equação significa para que você entenda a lógica por trás do crescimento do seu dinheiro.</p>
+
+        <p>A fórmula é: <strong>M = C × (1 + i)ⁿ</strong></p>
+
+        <ul>
+            <li><strong>M (Montante Final):</strong> É o dinheiro total que você vai ter no final do período. É a linha de chegada.</li>
+            <li><strong>C (Capital Inicial):</strong> É o dinheiro que você tem hoje para investir. Seja R$ 100 ou R$ 10.000, é o seu ponto de partida.</li>
+            <li><strong>i (Taxa de Juros - Interest rate):</strong> É a taxa de rentabilidade que o seu investimento paga (por exemplo, 1% ao mês, 12% ao ano).</li>
+            <li><strong>n (Tempo/Período):</strong> O número de meses ou anos que o dinheiro vai ficar investido.</li>
+        </ul>
+
+        <p>Percebeu um detalhe crucial? O tempo (<strong>n</strong>) não está multiplicando, ele está no <strong>expoente</strong>. Na matemática, um número elevado a uma potência cresce de forma exponencial, formando uma curva que dispara para cima. É exatamente por isso que o tempo é muito mais poderoso do que o valor que você tem para investir inicialmente ou até mesmo do que a taxa de juros.</p>
+
+        <h2>A Regra do 72: Um truque mental poderoso</h2>
+        <p>Se você não quer fazer cálculos complexos, existe um atalho muito prático usado por grandes investidores chamado <strong>Regra do 72</strong>. Essa regra serve para você descobrir aproximadamente quanto tempo o seu dinheiro vai levar para dobrar de valor, dada uma taxa de juros anual fixa.</p>
+
+        <p>Basta dividir o número 72 pela taxa de juros que você está conseguindo. Por exemplo:</p>
+        
+        <ul>
+            <li>Se o seu investimento rende <strong>6% ao ano</strong>: 72 ÷ 6 = <strong>12 anos</strong> para o dinheiro dobrar.</li>
+            <li>Se o seu investimento rende <strong>9% ao ano</strong>: 72 ÷ 9 = <strong>8 anos</strong> para o dinheiro dobrar.</li>
+            <li>Se você encontrou um investimento rendendo incríveis <strong>12% ao ano</strong> (o que é bem factível na renda fixa do Brasil, dependendo da Selic e do IPCA): 72 ÷ 12 = <strong>6 anos</strong> para dobrar seu capital.</li>
+        </ul>
+
+        <p>Isso significa que, a 12% ao ano, se você investir R$ 10.000 hoje, sem colocar mais nenhum centavo, terá R$ 20.000 em 6 anos, R$ 40.000 em 12 anos, R$ 80.000 em 18 anos e R$ 160.000 em 24 anos. E o trabalho que você teve? Nenhum. Esse é o poder dos juros compostos trabalhando no piloto automático.</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>Dica Prática</strong>
+          <p>Você pode testar esse poder agora mesmo usando o simulador do Tesouro Direto ou a calculadora de juros compostos que temos disponível na nossa página inicial. Faça testes com pequenos valores mensais e veja a mágica dos 10, 20 ou 30 anos.</p>
+        </div>
+
+        <h2>O Efeito do Tempo vs. Valor Investido: Por que começar AGORA importa</h2>
+        <p>Um dos maiores mitos das finanças pessoais é a frase: <em>"Eu vou começar a investir quando sobrar mais dinheiro"</em>. Essa é a armadilha perfeita para a mediocridade financeira. Graças àquele 'n' no expoente da fórmula, o tempo em que o seu dinheiro fica investido é infinitamente mais importante do que o valor absoluto dos seus aportes.</p>
+
+        <p>Vamos imaginar dois amigos: João e Maria.</p>
+        <p><strong>Maria</strong> percebeu a importância dos investimentos cedo. Aos 20 anos, ela começou a investir R$ 300 por mês a uma taxa de 1% ao mês. Aos 30 anos (após apenas 10 anos de aportes), ela parou de investir mensalmente e apenas deixou o dinheiro render até seus 60 anos.</p>
+        
+        <p><strong>João</strong> achou que R$ 300 era muito pouco para começar e decidiu curtir a vida. Aos 30 anos, ele resolveu levar a sério e começou a investir. Como estava "atrasado", ele decidiu colocar R$ 500 todos os meses até os 60 anos, ininterruptamente, também a 1% ao mês.</p>
+
+        <p>No final, João tirou muito mais dinheiro do próprio bolso ao longo de 30 anos do que a Maria ao longo de 10. No entanto, quando ambos completam 60 anos, o patrimônio acumulado de Maria é muito maior que o de João! Isso acontece porque os rendimentos de Maria tiveram 10 anos de "vantagem" para gerar juros sobre juros. O bolo dela já estava crescendo vertiginosamente enquanto João ainda estava na linha de largada.</p>
+
+        <h2>Exemplo Prático: O poder dos pequenos valores</h2>
+        <p>Para deixar ainda mais claro, vamos ver o impacto prático de investir um valor pequeno mensalmente. A tabela abaixo ilustra o que acontece se você investir apenas <strong>R$ 200,00 por mês</strong> a uma rentabilidade de <strong>1% ao mês</strong> (uma taxa frequentemente alcançável no Brasil via Tesouro IPCA+, fundos imobiliários, CDBs prefixados de prazo mais longo ou uma boa carteira de ações e dividendos).</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Tempo de Investimento</th>
+              <th>Total Investido (Dinheiro do seu bolso)</th>
+              <th>Total Ganho em Juros</th>
+              <th>Montante Final Acumulado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>10 anos (120 meses)</strong></td>
+              <td>R$ 24.000,00</td>
+              <td>R$ 22.007,74</td>
+              <td><strong>R$ 46.007,74</strong></td>
+            </tr>
+            <tr>
+              <td><strong>20 anos (240 meses)</strong></td>
+              <td>R$ 48.000,00</td>
+              <td>R$ 150.187,63</td>
+              <td><strong>R$ 198.187,63</strong></td>
+            </tr>
+            <tr>
+              <td><strong>30 anos (360 meses)</strong></td>
+              <td>R$ 72.000,00</td>
+              <td>R$ 627.914,64</td>
+              <td><strong>R$ 699.914,64</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Olhe bem para a última linha dessa tabela. Em 30 anos, investindo apenas o equivalente a uma pizza por semana (R$ 200/mês), você tira do seu próprio bolso um total de R$ 72.000. Mas o resultado final beira os inacreditáveis <strong>700 mil reais</strong>! Percebeu de onde veio a maior parte desse dinheiro? Dos <strong>627 mil reais em puro juros</strong>. É o seu dinheiro trabalhando por você enquanto você dorme, assiste Netflix ou toma uma cerveja com os amigos.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>O lado negro da força</strong>
+          <p>Da mesma forma que os juros compostos a 1% ao mês enriquecem você em 30 anos, uma dívida no cartão de crédito que cobra, muitas vezes, 10% a 15% AO MÊS, tem um poder destrutivo monstruoso. Se você deve R$ 1.000 no cartão e não paga por 2 anos a 12% ao mês, a sua dívida chega a passar dos R$ 15.000. Por isso, a regra de ouro das finanças é: quite dívidas caras antes de focar em grandes investimentos.</p>
+        </div>
+
+        <h2>Como usar essa força a seu favor hoje mesmo</h2>
+        <p>Você não precisa ser um expert em economia para começar a colher os frutos dos juros compostos. Aqui estão os passos essenciais que você pode dar ainda hoje:</p>
+
+        <ol>
+            <li><strong>Quite dívidas de juros altos:</strong> Como mencionamos, nenhum investimento seguro vai render mais do que os juros do cheque especial ou do rotativo do cartão. Livre-se deles primeiro.</li>
+            <li><strong>Abra conta em uma corretora:</strong> Bancos tradicionais (os "bancões") muitas vezes escondem a taxa real cobrando tarifas e oferecendo produtos ruins (como títulos de capitalização ou a própria poupança velha de guerra). Corretoras e bancos digitais (como Nubank, Inter, BTG, XP) dão acesso aos melhores CDBs, LCIs e ao Tesouro Direto a um clique de distância.</li>
+            <li><strong>Automatize os aportes mensais:</strong> O segredo do sucesso não é a intensidade de investir muito de uma vez, mas a consistência. Programe uma transferência mensal do seu salário direto para o investimento logo no dia que você recebe. <em>Pague-se primeiro</em>.</li>
+            <li><strong>Reinvista tudo o que receber:</strong> Se seus investimentos começarem a pagar dividendos (no caso de fundos imobiliários e ações) ou rendimentos, não os gaste. Reinvista para aumentar a base sobre a qual os juros vão incidir.</li>
+            <li><strong>Tenha paciência infinita:</strong> Como a curva é exponencial, os primeiros 5 a 10 anos parecem lentos e desanimadores. A "barriga" da curva demora um pouco para empinar para cima. Aguente firme, porque quando ela sobe, ela decola.</li>
+        </ol>
+
+        <p>Lembre-se da lição principal: o melhor momento para plantar uma árvore foi há 20 anos. O segundo melhor momento é agora. Não espere sobrar milhões para começar. Os ricos não esperaram ficar ricos para começar a investir e colher os juros compostos. Eles ficaram ricos, em grande parte, justamente <em>porque</em> começaram a investir e deixaram o tempo fazer o trabalho pesado.</p>
+
+        <p>Abra sua conta, invista seus primeiros 100 reais, entenda a plataforma e comece a girar a engrenagem da máquina de gerar riqueza. O seu "eu" do futuro certamente agradecerá!</p>
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="display:inline-block; font-size:0.75rem; font-weight:700; color:#f59e0b; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Continue lendo</span>
+        <h2 class="section-title" style="font-family:'Playfair Display', serif; font-size:2rem; color:#0f172a;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="investimentos.html" class="article-card">
+          <span class="article-category article-cat--blue" style="width: fit-content; margin-bottom: 12px;">Iniciantes</span>
+          <h3>Melhores investimentos para quem está começando</h3>
+          <p>Descubra os passos iniciais para tirar seu dinheiro da poupança com segurança e mais rentabilidade.</p>
+        </a>
+        <a href="tesouro.html" class="article-card">
+          <span class="article-category article-cat--green" style="width: fit-content; margin-bottom: 12px;">Renda Fixa</span>
+          <h3>Tesouro Direto: O guia definitivo sem enrolação</h3>
+          <p>O que é, como funciona e qual título do Tesouro escolher de acordo com seus objetivos.</p>
+        </a>
+        <a href="renda-passiva.html" class="article-card">
+          <span class="article-category article-cat--gold" style="width: fit-content; margin-bottom: 12px;">Liberdade Financeira</span>
+          <h3>Renda passiva: Onde investir para receber dividendos</h3>
+          <p>Monte uma carteira focada em te pagar um salário extra todos os meses, sem esforço adicional.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

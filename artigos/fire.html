@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tudo o que você precisa saber sobre o movimento FIRE no Brasil. Descubra o que é, como calcular o seu número, estratégias de retirada e como alcançar a independência financeira."/>
+  <title>Independência financeira: o guia completo para o FIRE brasileiro | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--gold">Investimentos</span>
+      <h1 class="article-title">Independência financeira: o guia completo para o FIRE brasileiro</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 15 Mai 2026</span>
+        <span>⏱️ 12 min de leitura</span>
+      </div>
+      <p class="article-summary">Você já imaginou poder parar de trabalhar por obrigação antes dos 60 anos? O movimento FIRE prega exatamente isso. Descubra como calcular seu número, a regra dos 4%, e as particularidades de buscar a independência financeira no Brasil, onde os juros altos e a inflação ditam as regras do jogo.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/investimentos.jpg" alt="Gráfico de crescimento de investimentos rumo à independência financeira" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <h2>O que é o movimento FIRE?</h2>
+        <p>A sigla <strong>FIRE</strong> significa <em>Financial Independence, Retire Early</em> (Independência Financeira, Aposentadoria Antecipada). O movimento surgiu com força nos Estados Unidos nos anos 2010 e rapidamente se espalhou pelo mundo. Mas, ao contrário do que muitos pensam, não se trata de ficar de pijama no sofá o dia todo bebendo água de coco (embora você possa, se quiser!).</p>
+
+        <p>O foco real do FIRE é a primeira parte: <strong>Independência Financeira</strong>. Isso significa ter ativos o suficiente gerando renda passiva para cobrir todos os seus custos de vida. Quando seus rendimentos superam suas despesas, o trabalho passa a ser opcional, não uma necessidade para sobrevivência. Você retoma o controle sobre o seu tempo e pode escolher trabalhar apenas com o que gosta, fazer trabalho voluntário, viajar ou focar na família.</p>
+        
+        <p>É uma mudança radical de mentalidade em relação ao modelo tradicional, onde trabalhamos por 40 anos para nos aposentar (talvez) aos 65, dependendo do INSS. No FIRE, o objetivo é economizar de forma agressiva (frequentemente poupando de 30% a 70% da renda) e investir com consistência, para antecipar essa liberdade em 10, 20 ou até 30 anos.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>💡 DICA DINHEIRO NU</strong>
+          <p>O foco do FIRE não é parar de trabalhar. É ganhar o poder de escolha. Se o seu chefe for chato ou a empresa for tóxica, você pode simplesmente pedir as contas, porque não depende mais daquele salário para pagar os boletos.</p>
+        </div>
+
+        <h2>Como calcular seu Número FIRE? A Regra dos 25x</h2>
+        <p>A pergunta de um milhão de dólares é: quanto dinheiro eu preciso ter investido para ser livre? A resposta é mais simples do que parece e depende diretamente do seu custo de vida. O cálculo base do movimento FIRE utiliza a <strong>Regra dos 25x</strong>.</p>
+        
+        <p>A regra diz que você atinge a independência financeira quando o seu patrimônio investido for igual a <strong>25 vezes o seu custo de vida anual</strong>. A lógica por trás disso está profundamente ligada à famosa "Regra dos 4%" (que veremos logo a seguir). A matemática básica é:</p>
+
+        <p><code>Gasto Mensal x 12 (meses) x 25 = Seu Número FIRE</code></p>
+        
+        <p>Se você precisa de menos dinheiro para viver bem, precisará acumular menos patrimônio. Se você tem gostos caros, precisará investir por muito mais tempo. Veja abaixo alguns exemplos de quanto você precisaria acumular de acordo com diferentes padrões de vida no Brasil:</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Gasto Mensal</th>
+              <th>Gasto Anual (x12)</th>
+              <th>Número FIRE (x25)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>R$ 3.000,00</td>
+              <td>R$ 36.000,00</td>
+              <td><strong>R$ 900.000,00</strong></td>
+            </tr>
+            <tr>
+              <td>R$ 5.000,00</td>
+              <td>R$ 60.000,00</td>
+              <td><strong>R$ 1.500.000,00</strong></td>
+            </tr>
+            <tr>
+              <td>R$ 8.000,00</td>
+              <td>R$ 96.000,00</td>
+              <td><strong>R$ 2.400.000,00</strong></td>
+            </tr>
+            <tr>
+              <td>R$ 12.000,00</td>
+              <td>R$ 144.000,00</td>
+              <td><strong>R$ 3.600.000,00</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Lembre-se: o seu custo de vida não precisa incluir gastos que você deixaria de ter na aposentadoria (como transporte diário para o trabalho), mas deve prever custos que tendem a aumentar, como plano de saúde.</p>
+
+        <h2>A Regra dos 4% (A Taxa de Retirada Segura)</h2>
+        <p>A regra dos 25x existe porque ela é a inversa da <strong>Regra dos 4%</strong> (100 dividido por 4 é 25). Essa regra surgiu de um estudo famoso chamado <em>Trinity Study</em>, feito em 1998 por professores da Universidade de Trinity (Texas). Eles analisaram décadas do mercado financeiro americano e concluíram que, se um investidor retirar 4% do seu patrimônio total no primeiro ano da aposentadoria, e ajustar esse valor pela inflação nos anos seguintes, o dinheiro tem uma probabilidade altíssima de não acabar por pelo menos 30 anos.</p>
+        
+        <p>Por exemplo: se você acumulou R$ 1.500.000,00, você pode retirar 4% no primeiro ano (R$ 60.000,00, ou seja, R$ 5.000 por mês). No segundo ano, se a inflação foi de 5%, você retira R$ 63.000,00, e assim por diante. Seus investimentos, diversificados em renda fixa e variável, continuariam a render acima da inflação para repor o que você sacou.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>⚠️ ATENÇÃO: A REALIDADE BRASILEIRA</strong>
+          <p>A regra dos 4% foi pensada para o mercado dos EUA e para aposentadorias tradicionais de 30 anos. Se você pretende se aposentar aos 40, o dinheiro precisará durar 40 ou 50 anos. Muitos especialistas no Brasil sugerem uma taxa de retirada mais conservadora, entre <strong>3% e 3,5%</strong>, o que aumenta o seu "Número FIRE" (multiplicando seu gasto anual por 30 ou 33 em vez de 25).</p>
+        </div>
+
+        <h2>O FIRE no Brasil: Vantagens e Desafios</h2>
+        <p>Aplicar os conceitos americanos do FIRE no Brasil exige algumas adaptações. Nossa economia é muito peculiar e traz vantagens e desvantagens únicas para quem busca viver de renda.</p>
+
+        <h3>A grande vantagem: Juros Altos</h3>
+        <p>O Brasil é, historicamente, o país da renda fixa. A nossa taxa básica de juros (Selic) costuma ser muito mais alta do que nos países desenvolvidos. Isso significa que é possível conseguir retornos reais (acima da inflação) excelentes com um risco baixíssimo.</p>
+        <p>Títulos como o <strong>Tesouro IPCA+</strong> são o Santo Graal do FIRE brasileiro. Eles garantem a reposição da inflação (IPCA) e pagam mais uma taxa de juros fixa (frequentemente acima de 5% ou 6% ao ano). Para quem quer proteger o patrimônio a longo prazo e garantir uma rentabilidade real que pague a conta dos "4%", o Tesouro IPCA+ e títulos de renda fixa privada (CDBs, LCIs) são armas poderosas que os americanos, com seus juros muitas vezes próximos a zero, não possuem com facilidade.</p>
+
+        <h3>O grande desafio: Inflação, Impostos e Volatilidade</h3>
+        <p>Se, por um lado, os juros são altos, a <strong>inflação brasileira</strong> é nossa eterna vilã. O IPCA pode saltar rapidamente de 4% para 10% ao ano. Quem não protege o patrimônio contra a inflação vai ver o poder de compra derreter. Aposentar-se com R$ 1 milhão na poupança (que muitas vezes perde para a inflação) é uma receita para o desastre.</p>
+        <p>Além disso, diferente dos EUA que têm contas de investimento com grandes benefícios fiscais (como o 401k e o Roth IRA), no Brasil pagamos imposto sobre quase tudo. O <strong>Imposto de Renda</strong> sobre renda fixa chega a 15% após 2 anos. Até nos Fundos Imobiliários e dividendos, o fantasma da tributação sempre ronda. Portanto, a sua rentabilidade <em>líquida</em> precisa ser a base do seu cálculo, não a rentabilidade bruta.</p>
+
+        <h2>Os Sabores do FIRE: Qual é a sua tribo?</h2>
+        <p>O movimento FIRE se dividiu em algumas vertentes para se adaptar aos diferentes estilos de vida. Afinal, a liberdade financeira não é uma receita de bolo única.</p>
+
+        <ul>
+          <li><strong>Lean FIRE (FIRE Enxuto):</strong> Foco no minimalismo. A meta é acumular menos dinheiro, pois o estilo de vida projetado é muito barato. A pessoa aceita viver com o mínimo essencial (ex: viver no interior com R$ 2.500 a R$ 3.000 por mês) para alcançar a liberdade mais rápido.</li>
+          <li><strong>Fat FIRE (FIRE Gordo):</strong> Para quem não quer abrir mão de nada. O objetivo é viver com fartura, viagens caras e sem se preocupar com preços no supermercado. Exige rendas passivas altíssimas (ex: R$ 20.000 a R$ 30.000 por mês), o que significa que será necessário acumular muitos milhões ou focar agressivamente no aumento da renda ativa (empreender).</li>
+          <li><strong>Barista FIRE:</strong> O meio-termo. A pessoa acumula um patrimônio legal, mas que ainda não cobre 100% das contas, e complementa a renda com um trabalho de meio-período muito leve, sem estresse (a analogia americana é fazer café como barista no Starbucks só para ganhar um extra e ter plano de saúde).</li>
+          <li><strong>Coast FIRE:</strong> A pessoa economiza agressivamente nos primeiros anos (por exemplo, dos 20 aos 30 anos) e, graças aos juros compostos, já acumulou um valor que chegará ao Número FIRE lá na velhice sem precisar de novos aportes. Então ela para de poupar e passa a trabalhar só para pagar os custos de vida do presente.</li>
+        </ul>
+
+        <h2>Passos concretos para começar hoje</h2>
+        <p>Se você se animou com a ideia de recuperar décadas da sua vida, veja por onde começar a sua jornada. A fórmula do FIRE é simples (embora não seja fácil): <strong>Ganhar mais, gastar menos, investir a diferença</strong>.</p>
+
+        <ol>
+          <li><strong>Calcule o seu custo de vida real:</strong> Você não tem como calcular a meta se não souber o seu consumo. Anote tudo e corte os gastos invisíveis. Se você conseguir reduzir seu custo de vida em R$ 500, seu Número FIRE despenca em R$ 150.000 (R$ 500 x 12 x 25).</li>
+          <li><strong>Ataque as dívidas:</strong> Nenhum investimento rende mais do que os juros do rotativo do cartão de crédito brasileiro. Se você tem dívidas, seu foco zero é quitá-las.</li>
+          <li><strong>Foque em aumentar a sua taxa de poupança (Savings Rate):</strong> Poupar 10% é o básico para se aposentar aos 65. Para se aposentar aos 40, você precisará poupar muito mais (frequentemente 30% a 50% da sua renda). Como há um limite para o quanto você pode cortar no cafezinho, foque em aumentar seu salário, fazer renda extra e investir esse dinheiro adicional sem aumentar seu padrão de vida.</li>
+          <li><strong>Invista todos os meses:</strong> Aprenda a diversificar. Tesouro IPCA+, Fundos Imobiliários (ótimos para gerar renda mensal isenta), ações boas pagadoras de dividendos, e ETFs globais para se proteger do risco-Brasil. A constância é o que faz os juros compostos trabalharem.</li>
+        </ol>
+
+        <div class="article-callout article-callout--green">
+          <strong>🌿 A MÁGICA DOS JUROS COMPOSTOS (LINHA DO TEMPO)</strong>
+          <p>Imagine a Ana, que tem 25 anos. Ela ganha R$ 7.000 líquidos e gasta R$ 4.000 por mês, investindo <strong>R$ 3.000 mensais</strong> (cerca de 42% da renda). Com uma rentabilidade real conservadora de 5% ao ano (acima da inflação):</p>
+          <ul style="margin-top:10px; font-size:0.9rem;">
+            <li>Aos <strong>30 anos</strong>: ~R$ 205.000 acumulados.</li>
+            <li>Aos <strong>35 anos</strong>: ~R$ 466.000 acumulados.</li>
+            <li>Aos <strong>42 anos</strong> (17 anos no total): Ana atinge os <strong>R$ 960.000</strong> necessários (R$ 4.000 x 12 x 20). Ela é financeiramente independente. A partir daí, trabalhar vira opção!</li>
+          </ul>
+        </div>
+
+        <h2>Conclusão: O dinheiro compra tempo</h2>
+        <p>O movimento FIRE não é para todo mundo. Exige disciplina, capacidade de evitar o canto da sereia do consumismo de curto prazo, e organização financeira constante. No entanto, o conceito central é libertador: o seu dinheiro é a ferramenta que você usa para comprar de volta o seu tempo.</p>
+        <p>Mesmo que o FIRE total não seja o seu objetivo imediato, aplicar os princípios de controle financeiro, alta taxa de poupança e investimentos regulares vai te trazer uma paz de espírito incalculável. Você estará preparado para demissões, crises e oportunidades, e estará cada vez mais no controle da sua própria vida.</p>
+        <p>Comece a fazer as contas hoje, entenda os seus gastos, comece a aportar no Tesouro Direto ou em boas ações, e assista aos juros compostos mudarem o seu destino.</p>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 24px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <span class="section-tag" style="display:inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #f59e0b; margin-bottom: 8px;">Continue lendo</span>
+        <h2 class="section-title" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 800; color: #0f172a;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="renda-passiva.html" style="text-decoration: none; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="padding: 24px;">
+            <span style="display:inline-block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #f0fdf4; color: #10b981; margin-bottom: 12px;">Estratégia</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; line-height: 1.3;">O guia prático para criar fontes de Renda Passiva</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0;">Como fazer o dinheiro trabalhar para você enquanto dorme...</p>
+          </div>
+        </a>
+        <a href="juros-compostos.html" style="text-decoration: none; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="padding: 24px;">
+            <span style="display:inline-block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #fffbeb; color: #f59e0b; margin-bottom: 12px;">Fundamentos</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; line-height: 1.3;">Juros Compostos: A oitava maravilha do mundo financeiro</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0;">Entenda a matemática que acelera sua independência...</p>
+          </div>
+        </a>
+        <a href="investimentos.html" style="text-decoration: none; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="padding: 24px;">
+            <span style="display:inline-block; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; background: #eff6ff; color: #2563eb; margin-bottom: 12px;">Guia Básico</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; line-height: 1.3;">Os melhores investimentos para iniciar a jornada FIRE</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0;">Onde colocar seu dinheiro do Tesouro aos FIIs...</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 60px 24px 24px; border-top: 1px solid #e2e8f0;">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none; margin-bottom: 16px;">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text" style="font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.4rem; color: #0f172a;">Dinheiro<span class="logo-accent" style="color: #f59e0b;">Nu</span></span>
+          </a>
+          <p class="footer-tagline" style="color: #64748b; font-size: 0.95rem;">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Artigos</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="poupanca.html" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Investimentos básicos</a></li>
+            <li><a href="dividas.html" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Sair das dívidas</a></li>
+            <li><a href="tesouro.html" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Tesouro Direto</a></li>
+            <li><a href="orcamento.html" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Ferramentas</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="../index.html#ferramentas" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Blog</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="../index.html" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Início</a></li>
+            <li><a href="../index.html#sobre" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Sobre</a></li>
+            <li><a href="../index.html#newsletter" style="color: #64748b; text-decoration: none; font-size: 0.9rem;">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 24px; color: #94a3b8; font-size: 0.85rem;">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position: fixed; bottom: 24px; right: 24px; width: 40px; height: 40px; background: #0f172a; color: #fff; border: none; border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s; z-index: 100;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+    
+    // Scroll to top button visibility
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 300) {
+        btn.style.opacity = '1';
+      } else {
+        btn.style.opacity = '0';
+      }
+    });
+  </script>
+</body>
+</html>

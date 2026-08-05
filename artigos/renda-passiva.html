@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra o que é renda passiva, como construir uma carteira de dividendos e fundos imobiliários, e quanto investir para ganhar R$ 1.000 mensais sem trabalhar."/>
+  <title>Renda passiva: o que é e como começar com pouco dinheiro | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (same as index) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--green">Investimentos</span>
+      <h1 class="article-title">Renda passiva: o que é e como começar com pouco dinheiro</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 18 Jun 2026</span>
+        <span>⏱️ 8 min de leitura</span>
+      </div>
+      <p class="article-summary">Entenda o verdadeiro conceito de renda passiva e descubra as melhores estratégias para colocar o seu dinheiro para trabalhar por você. De dividendos e FIIs até juros de renda fixa, aprenda o passo a passo para construir a sua máquina de gerar dinheiro, mesmo começando com pouco.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/investimentos.jpg" alt="Ilustração sobre investimentos e renda passiva" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <h2>O Que Realmente é Renda Passiva?</h2>
+        <p>Imagine estar dormindo, curtindo um dia de praia com a família ou assistindo à sua série favorita e, de repente, o seu celular vibra com uma notificação do banco. Alguém acabou de depositar dinheiro na sua conta. E o melhor: você não precisou trocar suas preciosas horas do dia para que isso acontecesse. Bem-vindo ao maravilhoso mundo da <strong>renda passiva</strong>.</p>
+        <p>A definição real de renda passiva é simples: trata-se de um fluxo de dinheiro gerado por ativos que não dependem do seu esforço contínuo de trabalho. Ao contrário da <em>renda ativa</em> — o seu salário, o dinheiro do seu negócio em que você trabalha diariamente, ou as horas extras —, a renda passiva funciona no piloto automático (ou quase isso).</p>
+        <p>Porém, é fundamental desmistificar uma ilusão que muita gente vende por aí: <strong>não existe dinheiro fácil ou mágico</strong>. Para gerar renda passiva, você precisa, invariavelmente, de uma destas duas coisas: ou você aplica <strong>tempo e energia</strong> para criar um sistema ou um produto (como escrever um livro ou criar um curso), ou você investe <strong>dinheiro</strong> para comprar ativos financeiros (ações, fundos imobiliários, renda fixa).</p>
+        
+        <div class="article-callout article-callout--gold">
+          <strong>A Regra de Ouro</strong>
+          <p>O objetivo principal de buscar a renda passiva é alcançar a liberdade financeira. Não significa parar de trabalhar para sempre, mas sim ter a <em>opção</em> de trabalhar apenas no que você ama, sem depender do próximo salário para pagar os boletos.</p>
+        </div>
+
+        <h2>Os Caminhos para a Renda Passiva no Brasil</h2>
+        <p>O Brasil é um país com juros historicamente altos e um mercado financeiro amadurecendo rapidamente. Isso cria oportunidades incríveis para quem quer colocar o dinheiro para trabalhar. A seguir, detalhamos os principais ativos e estratégias para você iniciar sua jornada rumo a uma renda extra mensal ou semestral sem suar a camisa.</p>
+
+        <h3>1. Dividendos de Ações: Sendo Sócio de Grandes Empresas</h3>
+        <p>Quando você compra uma ação na bolsa de valores (a B3), você se torna acionista — ou seja, dono de uma pequena fatia de uma empresa. Muitas empresas maduras e com lucros consistentes distribuem parte desse lucro aos seus acionistas. Essa distribuição é chamada de <strong>dividendo</strong>.</p>
+        <p>No Brasil, investir focado em dividendos é uma estratégia clássica. Por que comprar ações de empresas que não dão lucro quando você pode ser parceiro de negócios que já são gigantes no mercado? Dois exemplos populares entre os investidores (lembre-se, não é recomendação de compra, mas exemplos educacionais) são:</p>
+        <ul>
+            <li><strong>ITSA4 (Itaúsa):</strong> Uma holding que tem participações relevantes em empresas como o Itaú Unibanco, Alpargatas (dona da Havaianas), CCR e outras. É conhecida por ser uma boa pagadora de dividendos históricos a um preço acessível (muitas vezes custando na casa dos R$ 10 a R$ 12 a cota).</li>
+            <li><strong>BBAS3 (Banco do Brasil):</strong> Sendo um dos maiores bancos do país, ele costuma lucrar bilhões todos os trimestres. O Banco do Brasil costuma distribuir proventos generosos (dividendos e JCP - Juros sobre Capital Próprio) com frequência ao longo do ano.</li>
+        </ul>
+        <p>O segredo das ações de dividendos é pegar os proventos recebidos e <strong>reinvestir</strong> comprando mais ações. É o famoso "efeito bola de neve" que acelera seu enriquecimento e o poder dos juros compostos agindo em seu favor.</p>
+
+        <h3>2. FIIs (Fundos de Investimento Imobiliário): Viver de Aluguel sem Ter Imóvel</h3>
+        <p>A cultura brasileira sempre valorizou a compra de imóveis para "viver de renda". O problema é que comprar um apartamento de R$ 500 mil para alugar por R$ 2.500 mensais exige... bem, R$ 500 mil. Sem falar nos custos com escritura, vacância (quando o inquilino sai), reformas e impostos.</p>
+        <p>É aqui que entram os <strong>Fundos Imobiliários (FIIs)</strong>. Com os FIIs, milhares de investidores juntam seu dinheiro num grande "condomínio" gerido por profissionais. Esse gestor pega o montante e compra grandes imóveis: galpões logísticos alugados para o Mercado Livre, shoppings centers de alto padrão, torres comerciais luxuosas na Avenida Faria Lima, ou até mesmo papéis de dívida do setor imobiliário (os FIIs de "papel").</p>
+        
+        <div class="article-callout article-callout--green">
+          <strong>A Vantagem dos FIIs</strong>
+          <p>Com cerca de R$ 10 ou R$ 100, você pode comprar uma cota de um Fundo Imobiliário e já começar a receber o seu "aluguel" proporcional no mês seguinte. E a melhor parte: para pessoas físicas, os rendimentos mensais distribuídos pela maioria dos FIIs na B3 são totalmente <strong>isentos de Imposto de Renda</strong>.</p>
+        </div>
+
+        <h3>3. Juros de Renda Fixa: A Seguradora da Renda</h3>
+        <p>Nem só da bolsa de valores se constrói uma renda passiva sólida. A renda fixa no Brasil oferece algumas das melhores taxas reais do mundo, graças à nossa taxa Selic.</p>
+        <p>Ao investir em renda fixa, você está basicamente emprestando seu dinheiro em troca de juros. E há títulos excelentes para renda passiva:</p>
+        <ul>
+            <li><strong>Tesouro Direto IPCA+ com Juros Semestrais:</strong> Você empresta dinheiro ao governo federal. Este título em específico paga a variação da inflação (IPCA) mais uma taxa fixa e ainda distribui juros pingando na sua conta a cada 6 meses (os famosos "cupons semestrais"). É excelente para proteger o poder de compra.</li>
+            <li><strong>CDBs, LCIs e LCAs:</strong> Títulos emitidos por bancos que podem render muito bem. LCIs e LCAs são particularmente atrativas porque, assim como os FIIs, são isentas de Imposto de Renda para a pessoa física. Você investe hoje para sacar no vencimento com um lucro gordo.</li>
+        </ul>
+
+        <h3>4. Renda de Conteúdo Digital e Direitos Autorais</h3>
+        <p>Fugindo um pouco do mercado financeiro tradicional, existe o formato de renda passiva através do esforço criativo. A internet facilitou muito isso. Se você entende muito de culinária, programação, violão ou Excel, você pode:</p>
+        <ul>
+            <li>Escrever e publicar um e-book na Amazon.</li>
+            <li>Criar um curso em vídeo e vender em plataformas como Hotmart, Kiwify ou Udemy.</li>
+            <li>Criar um canal no YouTube ou um blog que gere receita constante de anúncios ao longo dos anos, com vídeos ou textos que são sempre pesquisados ("evergreen").</li>
+        </ul>
+        <p>O esforço inicial é gigantesco: você pode passar meses trabalhando de graça para estruturar o produto. Mas, uma vez publicado, você pode vendê-lo 1 ou 1.000 vezes, sem custo adicional, gerando uma renda completamente passiva baseada em escala digital.</p>
+
+        <h2>Quanto Precisa Investir Para Ter R$ 1.000/Mês de Renda Passiva?</h2>
+        <p>Esta é a pergunta de um milhão de reais (ou melhor, de mil reais). Para saber quanto dinheiro você precisa ter acumulado para receber mil reais todos os meses sem encostar um dedo no trabalho, tudo depende da <strong>taxa de rentabilidade (yield)</strong> mensal que a sua carteira de investimentos gera.</p>
+        <p>Veja a tabela abaixo para ter uma noção da matemática. Lembrando que buscar uma rentabilidade muito alta geralmente significa assumir mais riscos.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Rendimento Mensal Médio (Yield)</th>
+              <th>Patrimônio Investido Necessário</th>
+              <th>Perfil de Risco / Ativos Comuns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0,5% ao mês</td>
+              <td>R$ 200.000,00</td>
+              <td>Conservador (Tesouro Direto, CDBs de bancões)</td>
+            </tr>
+            <tr>
+              <td>0,8% ao mês</td>
+              <td>R$ 125.000,00</td>
+              <td>Moderado (FIIs de Tijolo, Carteira diversificada de Ações)</td>
+            </tr>
+            <tr>
+              <td>1,0% ao mês</td>
+              <td>R$ 100.000,00</td>
+              <td>Arrojado (FIIs de Papel, Ações com alto Dividend Yield (DY))</td>
+            </tr>
+            <tr>
+              <td>1,2% ao mês</td>
+              <td>R$ 83.333,33</td>
+              <td>Agressivo / Alto Risco (Muitos FIIs High Yield, oscilação severa)</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p><em>*Nota: É fundamental considerar a inflação ao planejar o longo prazo. Se você gasta tudo o que a carteira rende e não reinveste uma parte, seu dinheiro perderá valor de compra ao longo dos anos.</em></p>
+        
+        <div class="article-callout article-callout--red">
+          <strong>Cuidado com as Armadilhas</strong>
+          <p>Se alguém na internet te prometer rendimentos garantidos de 2% ou 5% ao mês, corra! São fortes indícios de esquemas de pirâmide ou golpes financeiros. A renda passiva sólida se constrói aos poucos, com taxas realistas do mercado de 0,5% a 1,2% a.m., baseada em empresas e imóveis reais.</p>
+        </div>
+
+        <h2>Como Começar com Pouco Dinheiro?</h2>
+        <p>A maior barreira para a renda passiva é a procrastinação sob a desculpa de "não tenho dinheiro suficiente". Mas, graças à tecnologia e às corretoras de valores (a maioria hoje taxa zero para ações e FIIs), o jogo mudou.</p>
+        <p>Você não precisa de R$ 100 mil para começar. O importante é dar o primeiro passo, mesmo que o retorno pareça irrisório no início. Vamos imaginar um plano de ação prático:</p>
+        <ol>
+            <li><strong>Abra conta em uma corretora:</strong> Nubank, Inter, Rico, XP, BTG Pactual, Clear. Existem inúmeras opções gratuitas. É por meio delas que você acessará o mercado.</li>
+            <li><strong>Crie sua reserva de emergência antes:</strong> Antes de mirar na renda variável (ações e FIIs), garanta que você tem de 3 a 6 meses do seu custo de vida guardados num investimento seguro com liquidez diária (como Tesouro Selic ou CDB de 100% do CDI).</li>
+            <li><strong>O poder dos 10 Reais:</strong> Existem diversos fundos imobiliários chamados de "Base 10" (que custam perto de R$ 10 a cota). Por exemplo, com menos de R$ 50,00 você já consegue comprar 4 ou 5 cotas de FIIs e ver na sua conta, no mês seguinte, os centavos caindo. Aqueles R$ 0,50 podem parecer pouco, mas eles são o primeiro dinheiro que você não precisou suar fisicamente para ganhar!</li>
+            <li><strong>Invista mensalmente:</strong> A consistência bate a genialidade no mundo das finanças. Torne um hábito separar de 10% a 20% do seu salário assim que ele cai na conta para investir. "Pague a si mesmo primeiro".</li>
+        </ol>
+
+        <h2>A Mágica da Bola de Neve</h2>
+        <p>O que acontece quando você é persistente? Mês após mês, você investe uma parte do seu salário. Seu patrimônio cresce e os dividendos/rendimentos aumentam. Depois de algum tempo, acontece um fenômeno glorioso chamado "bola de neve" ou <em>efeito dos juros compostos</em>: os rendimentos da sua carteira se tornam tão altos que eles mesmos, sozinhos, compram novas cotas de fundos e ações.</p>
+        <p>Isso acelera violentamente o seu caminho até os primeiros R$ 1.000 mensais de renda passiva. E de R$ 1.000 para R$ 2.000, o tempo é mais curto do que foi de zero a mil, pois o próprio dinheiro ganha vida e trabalha a seu favor 24 horas por dia, 7 dias por semana, sem folga, sem pedir aumento, sem tirar férias.</p>
+        <p>Comece hoje. Seu "eu" do futuro certamente agradecerá de frente para a praia, enquanto a notificação da corretora avisa que os dividendos do mês acabaram de cair na conta. Boas escolhas e rumo à liberdade financeira!</p>
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-tag" style="display: block; font-size: 0.85rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Continue lendo</span>
+        <h2 class="section-title" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 20px;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <!-- Card 1 -->
+        <a href="investimentos.html" style="display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,.05); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,.05)';">
+          <div style="height: 180px; background: #1e293b; display: flex; align-items: center; justify-content: center;">
+             <span style="font-size: 3rem;">📈</span>
+          </div>
+          <div style="padding: 24px;">
+            <span style="font-size: 0.7rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.1em;">Investimentos</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 10px 0;">Os Melhores Investimentos para Iniciantes</h3>
+            <p style="font-size: 0.9rem; color: #475569; line-height: 1.6; margin: 0;">Descubra por onde começar no mundo dos investimentos com segurança e clareza.</p>
+          </div>
+        </a>
+        
+        <!-- Card 2 -->
+        <a href="fundos.html" style="display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,.05); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,.05)';">
+          <div style="height: 180px; background: #0f172a; display: flex; align-items: center; justify-content: center;">
+             <span style="font-size: 3rem;">🏢</span>
+          </div>
+          <div style="padding: 24px;">
+            <span style="font-size: 0.7rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.1em;">Fundos</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 10px 0;">Tudo sobre Fundos de Investimentos</h3>
+            <p style="font-size: 0.9rem; color: #475569; line-height: 1.6; margin: 0;">Como escolher um bom fundo e deixar a gestão do seu dinheiro nas mãos de profissionais.</p>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="juros-compostos.html" style="display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,.05); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,.05)';">
+          <div style="height: 180px; background: #334155; display: flex; align-items: center; justify-content: center;">
+             <span style="font-size: 3rem;">❄️</span>
+          </div>
+          <div style="padding: 24px;">
+            <span style="font-size: 0.7rem; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.1em;">Educação Financeira</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 10px 0;">O Poder dos Juros Compostos</h3>
+            <p style="font-size: 0.9rem; color: #475569; line-height: 1.6; margin: 0;">A oitava maravilha do mundo e como ela pode multiplicar o seu dinheiro ao longo do tempo.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="footer">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 24px;">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 16px;">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text" style="font-size: 1.4rem; font-weight: 800; color: #0f172a; font-family: 'Playfair Display', serif;">Dinheiro<span class="logo-accent" style="color: #f59e0b;">Nu</span></span>
+          </a>
+          <p class="footer-tagline" style="color: #475569; font-size: 0.95rem;">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-size: 1rem; color: #0f172a; margin-bottom: 16px;">Artigos</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+            <li><a href="poupanca.html" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Investimentos básicos</a></li>
+            <li><a href="dividas.html" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Sair das dívidas</a></li>
+            <li><a href="tesouro.html" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Tesouro Direto</a></li>
+            <li><a href="orcamento.html" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-size: 1rem; color: #0f172a; margin-bottom: 16px;">Ferramentas</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+            <li><a href="../index.html#ferramentas" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-size: 1rem; color: #0f172a; margin-bottom: 16px;">Blog</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+            <li><a href="../index.html" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Início</a></li>
+            <li><a href="../index.html#sobre" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Sobre</a></li>
+            <li><a href="../index.html#newsletter" style="color: #475569; text-decoration: none; font-size: 0.9rem;">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <p style="color: #64748b; font-size: 0.85rem; margin: 0;">© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer" style="color: #94a3b8; font-size: 0.75rem; margin: 0;">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position: fixed; bottom: 30px; right: 30px; background: #0f172a; color: #fff; width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,.15); opacity: 0.8; transition: opacity 0.2s;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+    
+    // Simple scroll to top button visibility toggle
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      if(window.scrollY > 300) {
+        btn.style.opacity = '1';
+      } else {
+        btn.style.opacity = '0';
+      }
+    });
+  </script>
+</body>
+</html>

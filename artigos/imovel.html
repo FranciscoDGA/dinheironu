@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="A velha máxima 'quem compra terra não erra' ainda faz sentido? Comparamos o retorno real de um imóvel físico com a renda fixa e os FIIs. Confira os números."/>
+  <title>Imóvel ou renda fixa? A comparação que ninguém faz | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--blue">Investimentos</span>
+      <h1 class="article-title">Imóvel ou renda fixa? A comparação que ninguém faz</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 25 Jul 2026</span>
+        <span>⏱️ 11 min de leitura</span>
+      </div>
+      <p class="article-summary">A velha máxima "quem compra terra não erra" ainda faz sentido? Colocamos os números na ponta do lápis para comparar o retorno real de um imóvel físico com a renda fixa e os fundos imobiliários. Prepare-se para se surpreender.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/imovel.jpg" alt="Casas e prédios com gráficos de investimentos ao fundo" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Desde que você era criança, provavelmente ouviu dos seus pais ou avós: <strong>"A melhor coisa do mundo é ter o próprio teto"</strong> ou <strong>"Quem compra terra não erra"</strong>. No Brasil, o sonho da casa própria não é apenas um desejo; é praticamente uma religião. Culturalmente, associamos tijolos à segurança e aluguel à "jogar dinheiro fora".</p>
+        
+        <p>Mas será que essa máxima ainda se sustenta no cenário econômico atual? Com taxas de juros frequentemente nas alturas (a velha conhecida Selic) e a facilidade de acesso a investimentos de renda fixa e Fundos Imobiliários (FIIs), a matemática por trás da compra de um imóvel mudou drasticamente.</p>
+        
+        <p>Hoje, não vamos usar emoção. Vamos usar a calculadora. Vamos destrinchar os números reais, os custos ocultos e mostrar o que rende mais: comprar um imóvel, deixar o dinheiro na renda fixa ou investir em FIIs.</p>
+
+        <h2>O mito de "aluguel é jogar dinheiro fora"</h2>
+        
+        <p>A frase mais comum quando se discute o assunto é: "Se eu pago aluguel, estou pagando o imóvel dos outros. Se eu pago um financiamento, o imóvel será meu". Parece muito lógico, certo? Errado.</p>
+
+        <p>Quando você financia um imóvel no Brasil por 30 anos (360 meses) com as taxas de juros atuais (em torno de 9% a 11% ao ano + TR), você acaba pagando o valor de dois ou até três imóveis no final das contas. O dinheiro que você "joga fora" no aluguel, você "joga fora" pagando <strong>juros para o banco</strong> no financiamento.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>A Ilusão do Financiamento</strong>
+          <p>Imagine que você vai financiar R$ 500.000,00 em 30 anos a uma taxa de 10% a.a. usando a tabela SAC. A sua primeira parcela será em torno de R$ 5.500. Deste valor, cerca de R$ 4.100 são APENAS JUROS e taxas. Você só está abatendo cerca de R$ 1.400 da sua dívida real. Aluguel é pagar pelo uso do imóvel de terceiros; juros do financiamento é pagar pelo uso do dinheiro do banco.</p>
+        </div>
+
+        <p>A diferença crucial é que o aluguel no Brasil historicamente representa cerca de 0,3% a 0,5% do valor do imóvel ao mês. Se um apartamento custa R$ 500.000, o aluguel costuma girar entre R$ 1.500 e R$ 2.500. Percebe a diferença brutal para a parcela do financiamento?</p>
+
+        <h2>Os verdadeiros custos de um imóvel (O que ninguém te conta)</h2>
+
+        <p>Quem tem dinheiro à vista costuma dizer: "Vou comprar à vista, me livrar do aluguel e ter paz". Ter a casa própria quitada traz, inegavelmente, uma enorme paz de espírito. Mas um imóvel não é um ativo que se sustenta sozinho; ele consome dinheiro.</p>
+
+        <p>Vamos listar os "custos ocultos" que os entusiastas dos tijolos costumam esquecer na hora de calcular a rentabilidade:</p>
+
+        <ul>
+          <li><strong>Documentação na compra:</strong> ITBI (Imposto de Transmissão de Bens Imóveis) e custos de cartório giram em torno de 4% a 5% do valor do imóvel. Comprando um apê de R$ 500.000, você já deixa R$ 25.000 na mesa só para passar para o seu nome.</li>
+          <li><strong>Manutenção:</strong> Imóvel envelhece. A regra de ouro do mercado imobiliário diz que você gastará, em média, 1% do valor do imóvel por ano em manutenções preventivas e corretivas (pintura, encanamento, elétrica, infiltrações).</li>
+          <li><strong>Condomínio e IPTU:</strong> Mesmo se você não estiver morando ou se o imóvel estiver vazio tentando ser alugado, essas contas não param de chegar.</li>
+          <li><strong>Corretagem e vacância:</strong> Se for imóvel para investimento, saiba que ele não ficará alugado 100% do tempo (vacância). E quando alugar ou vender, a imobiliária cobra seu pedágio (geralmente o 1º aluguel inteiro e 6% na venda).</li>
+          <li><strong>Falta de liquidez:</strong> Vender um imóvel pode levar meses ou anos. Se você precisar do dinheiro com urgência amanhã para uma emergência médica, não consegue vender "só a sala" do apartamento. Você vende tudo ou não vende nada.</li>
+        </ul>
+
+        <h2>Renda Fixa: O poder do Tesouro IPCA+</h2>
+
+        <p>No Brasil, o paraíso dos juros altos, a renda fixa costuma ser um competidor desleal. O referencial para investimentos de longo prazo, como seria a compra de um imóvel, é o Tesouro IPCA+ (que paga a inflação + uma taxa fixa).</p>
+
+        <p>Historicamente, o Tesouro IPCA+ costuma pagar a inflação mais um juro real de 5% a 6% ao ano, muitas vezes sem risco de vacância, sem IPTU, sem inquilino ligando domingo de manhã porque o cano estourou.</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>O Conceito de "Juro Real"</strong>
+          <p>O imóvel, em tese, se valoriza com o tempo, pelo menos acompanhando a inflação. O Tesouro IPCA+ também te protege da inflação, e te entrega os "juros reais" por cima disso. Portanto, para o imóvel bater o Tesouro, a valorização dele + o dinheiro do aluguel líquido (livre de imposto de renda e manutenções) precisa ser maior do que esses 5% a 6% reais ao ano.</p>
+        </div>
+
+        <h2>Fundos Imobiliários (FIIs): O melhor dos dois mundos?</h2>
+
+        <p>Se você ama a ideia de investir em imóveis, existe uma alternativa moderna: os Fundos de Investimento Imobiliário. Com R$ 10 ou R$ 100, você compra uma "cota" (um pedacinho) de shoppings centers, galpões logísticos ou lajes corporativas (prédios comerciais de alto padrão).</p>
+
+        <p><strong>As vantagens dos FIIs contra o imóvel físico:</strong></p>
+        <ul>
+          <li><strong>Isenção de Imposto de Renda:</strong> Os alugueis (dividendos) caem na sua conta todos os meses isentos de IR. No imóvel físico, o aluguel pode ser tributado em até 27,5% no carnê-leão.</li>
+          <li><strong>Liquidez imediata:</strong> Quer vender suas cotas? Bastam alguns cliques no app da corretora, e em dois dias úteis o dinheiro está na conta.</li>
+          <li><strong>Diversificação:</strong> Com R$ 5.000, você pode ser dono de um pedacinho de 10 fundos diferentes, que juntos possuem 100 imóveis pelo Brasil, diluindo completamente o seu risco.</li>
+          <li><strong>Zero dor de cabeça:</strong> Um time profissional cuida de cobrar aluguel, fazer reformas, negociar com inquilinos e pagar impostos. Você só abre o app e vê o dinheiro caindo.</li>
+        </ul>
+
+        <h2>Tabela de Comparação Definitiva</h2>
+
+        <p>Vamos colocar os três cenários lado a lado, assumindo um capital de R$ 500.000 (valores e retornos aproximados com base em médias históricas no Brasil).</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Imóvel Físico (Aluguel)</th>
+              <th>Renda Fixa (Tesouro IPCA+)</th>
+              <th>Fundos Imobiliários (FIIs)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Retorno médio mensal (líquido)</strong></td>
+              <td>0,3% a 0,4% (já descontando IR e vacância)</td>
+              <td>Inflação + ~0,5% ao mês</td>
+              <td>0,7% a 0,9% ao mês (isentos de IR)</td>
+            </tr>
+            <tr>
+              <td><strong>Valorização do Patrimônio</strong></td>
+              <td>Costuma acompanhar a inflação + 1% ou 2% a.a.</td>
+              <td>O valor principal é corrigido pelo IPCA</td>
+              <td>Cotas oscilam, mas tendem a corrigir pela inflação no longo prazo</td>
+            </tr>
+            <tr>
+              <td><strong>Liquidez (facilidade de sacar)</strong></td>
+              <td>Baixíssima (meses ou anos)</td>
+              <td>Alta (Liquidez diária, sujeito à marcação a mercado)</td>
+              <td>Altíssima (2 dias úteis na bolsa)</td>
+            </tr>
+            <tr>
+              <td><strong>Trabalho / Dor de cabeça</strong></td>
+              <td>Alto (Inquilinos, manutenções, IPTU, vistorias)</td>
+              <td>Zero (Sentar e esperar)</td>
+              <td>Muito baixo (Apenas escolher e acompanhar os relatórios)</td>
+            </tr>
+            <tr>
+              <td><strong>Custos Iniciais / Finais</strong></td>
+              <td>Altos (~5% compra e ~6% venda)</td>
+              <td>Baixos (B3 cobra 0,20% a.a., IR regressivo no saque)</td>
+              <td>Zero ou Baixos (Corretagem zero na maioria, 20% de IR sobre o *lucro* da venda)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>O Estudo de Caso: Financiamento x Aluguel + Investimento</h2>
+
+        <p>Vamos à prova de fogo. João e Maria têm R$ 100.000 guardados e querem morar em um apartamento de R$ 500.000. Eles têm duas opções:</p>
+
+        <p><strong>Opção A (A escolha do João - Financiamento):</strong><br>
+        João dá os R$ 100.000 de entrada e financia os R$ 400.000 restantes em 30 anos. A parcela inicial dele será de <strong>R$ 4.500</strong>. Ele pagará o condomínio, IPTU e manutenções do próprio bolso pelos próximos 30 anos.</p>
+
+        <p><strong>Opção B (A escolha da Maria - Aluguel + Renda Fixa):</strong><br>
+        Maria pega os R$ 100.000 e investe (rendendo 10% a.a. líquidos). Ela aluga um apartamento idêntico ao de João por <strong>R$ 2.000</strong> por mês. Como João gasta R$ 4.500 na parcela e ela só R$ 2.000 de aluguel, Maria tem uma <strong>sobra mensal de R$ 2.500</strong>, que ela investe religiosamente todo mês, acompanhando seus R$ 100.000 iniciais.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>O Resultado Mágico dos Juros Compostos</strong>
+          <p>Após 15 anos (metade do tempo do financiamento), João ainda está pagando o banco, já sentindo as parcelas pesarem menos, mas ainda sem liquidez. Maria, com seus R$ 100.000 iniciais somados aos R$ 2.500 investidos por mês a 10% a.a., terá acumulado cerca de <strong>R$ 1.400.000</strong>. Neste ponto, se quiser, ela compra o apartamento à vista, paga as taxas e ainda sobram centenas de milhares de reais.</p>
+        </div>
+
+        <p>O segredo da matemática de não comprar é a <strong>disciplina</strong>. O financiamento funciona porque ele te "obriga" a pagar o boleto do banco sob pena de perder a casa. O modelo do aluguel só funciona se você tiver disciplina férrea para pegar a diferença e investir todos os meses, sem exceção, como se fosse um boleto sagrado.</p>
+
+        <h2>Conclusão: Quando comprar um imóvel faz sentido?</h2>
+
+        <p>Com toda essa matemática, parece que comprar imóvel é uma burrice astronômica. Mas não é bem assim. Dinheiro não é só planilha do Excel; finanças são <em>pessoais</em>.</p>
+
+        <p>Comprar a casa própria faz muito sentido se:</p>
+        <ol>
+          <li>Você quer customizar a casa do seu jeito, quebrar paredes, plantar árvores e ter estabilidade geográfica de longo prazo para criar filhos sem o dono pedir o imóvel de volta.</li>
+          <li>Você não tem disciplina para investir a diferença mensal. (Se for para alugar e gastar a sobra em ifood e blusinhas, o financiamento é melhor, pois atua como uma poupança forçada).</li>
+          <li>Você encontrou uma oportunidade única, muito abaixo do valor de mercado (um leilão, ou alguém vendendo com pressa).</li>
+        </ol>
+
+        <p>Porém, como <strong>investimento para obter renda mensal passiva</strong>, comprar um imóvel físico para alugar nos dias de hoje, no Brasil, perde feio para uma carteira diversificada de Tesouro Direto e Fundos Imobiliários em praticamente todos os cenários, considerando rentabilidade, liquidez, impostos e dor de cabeça.</p>
+        
+        <p>A terra não erra, mas quem ignora o poder dos juros compostos da renda fixa no Brasil, com certeza, deixa muito dinheiro na mesa.</p>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 24px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+        <span class="section-tag" style="color: #2563eb; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem;">Continue lendo</span>
+        <h2 class="section-title" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #0f172a; margin-top: 8px;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        
+        <!-- Card 1 -->
+        <a href="investimentos.html" style="text-decoration: none; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,.08); transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="padding: 24px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 999px;">Guia</span>
+            <h3 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; color: #0f172a; margin: 12px 0 8px;">Os 5 Melhores Investimentos para Iniciantes</h3>
+            <p style="font-size: 0.95rem; color: #64748b; line-height: 1.5; margin: 0;">Como dar o primeiro passo no mundo dos investimentos com pouco dinheiro e baixo risco.</p>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="tesouro.html" style="text-decoration: none; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,.08); transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="padding: 24px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #10b981; background: #ecfdf5; padding: 4px 10px; border-radius: 999px;">Renda Fixa</span>
+            <h3 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; color: #0f172a; margin: 12px 0 8px;">Tesouro Direto Descomplicado</h3>
+            <p style="font-size: 0.95rem; color: #64748b; line-height: 1.5; margin: 0;">Entenda de uma vez por todas as diferenças entre Selic, IPCA e Prefixado.</p>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="fundos.html" style="text-decoration: none; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,.08); transition: transform 0.2s, box-shadow 0.2s;">
+          <div style="padding: 24px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #f59e0b; background: #fffbeb; padding: 4px 10px; border-radius: 999px;">Avançado</span>
+            <h3 style="font-size: 1.25rem; font-family: 'Playfair Display', serif; color: #0f172a; margin: 12px 0 8px;">Tudo sobre Fundos de Investimento</h3>
+            <p style="font-size: 0.95rem; color: #64748b; line-height: 1.5; margin: 0;">Aprenda a escolher bons fundos imobiliários e fundos de ações para diversificar.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 60px 24px 24px;">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none; margin-bottom: 16px;">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text" style="font-size: 1.25rem; font-weight: 800; color: #0f172a;">Dinheiro<span class="logo-accent" style="color: #f59e0b;">Nu</span></span>
+          </a>
+          <p class="footer-tagline" style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-family: 'Playfair Display', serif; color: #0f172a; margin-bottom: 20px;">Artigos</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
+            <li><a href="poupanca.html" style="color: #64748b; text-decoration: none;">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html" style="color: #64748b; text-decoration: none;">Investimentos básicos</a></li>
+            <li><a href="dividas.html" style="color: #64748b; text-decoration: none;">Sair das dívidas</a></li>
+            <li><a href="tesouro.html" style="color: #64748b; text-decoration: none;">Tesouro Direto</a></li>
+            <li><a href="orcamento.html" style="color: #64748b; text-decoration: none;">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-family: 'Playfair Display', serif; color: #0f172a; margin-bottom: 20px;">Ferramentas</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
+            <li><a href="../index.html#ferramentas" style="color: #64748b; text-decoration: none;">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas" style="color: #64748b; text-decoration: none;">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas" style="color: #64748b; text-decoration: none;">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="font-family: 'Playfair Display', serif; color: #0f172a; margin-bottom: 20px;">Blog</h4>
+          <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
+            <li><a href="../index.html" style="color: #64748b; text-decoration: none;">Início</a></li>
+            <li><a href="../index.html#sobre" style="color: #64748b; text-decoration: none;">Sobre</a></li>
+            <li><a href="../index.html#newsletter" style="color: #64748b; text-decoration: none;">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="margin-top: 60px; padding-top: 24px; border-top: 1px solid rgba(15,23,42,.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; color: #94a3b8; font-size: 0.85rem;">
+        <p style="margin: 0;">© 2026 <strong style="color: #64748b;">Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer" style="margin: 0;">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position: fixed; bottom: 24px; right: 24px; background: #0f172a; color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,.15);">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+    
+    // Simple scroll to top logic
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 300) {
+        btn.style.display = 'flex';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

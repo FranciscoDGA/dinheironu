@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra como montar a sua reserva de emergência do jeito certo, onde guardar o dinheiro e qual o valor ideal para o seu perfil. O guia definitivo do Dinheiro Nu."/>
+  <title>A reserva de emergência que ninguém te ensinou a montar | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--gold">Reserva</span>
+      <h1 class="article-title">A reserva de emergência que ninguém te ensinou a montar</h1>
+      <div class="article-meta">
+        <span>✍️ Equipe Dinheiro Nu</span>
+        <span>📅 03 Jul 2026</span>
+        <span>⏱️ 5 min de leitura</span>
+      </div>
+      <p class="article-summary">O guia definitivo para você parar de depender do cartão de crédito nas horas de aperto. Descubra quanto guardar, onde colocar o dinheiro e como construir sua blindagem financeira, mesmo começando do zero.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/reserva.jpg" alt="A reserva de emergência que ninguém te ensinou a montar" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Você já passou pela situação de ter que consertar o carro, pagar um exame médico inesperado ou trocar a geladeira que pifou do nada, e a única saída foi parcelar em 12 vezes no cartão de crédito? Se a resposta for sim, seja bem-vindo ao clube da esmagadora maioria dos brasileiros. Mas é hora de sair dele.</p>
+        
+        <p>A <strong>reserva de emergência</strong> é, de longe, o pilar mais importante de qualquer vida financeira saudável. Antes de pensar em comprar ações, investir em fundos imobiliários, ou sonhar com a independência financeira, você precisa desse colchão de proteção. Sem ele, qualquer ventinho mais forte te derruba.</p>
+
+        <p>O problema é que muita gente acha que montar uma reserva é impossível, ou pior: guarda o dinheiro no lugar errado. Neste guia sem enrolação, o Dinheiro Nu vai te ensinar tudo o que você precisa saber para criar sua blindagem financeira definitiva.</p>
+
+        <h2>1. Reserva não é investimento. É seguro.</h2>
+        <p>Vamos deixar uma coisa bem clara logo de cara: <strong>reserva de emergência não serve para te deixar rico</strong>. A função dela não é render horrores ou multiplicar seu capital. A função dela é <em>salvar a sua pele</em> quando tudo der errado.</p>
+        
+        <p>Muitas pessoas cometem o erro clássico de pegar o dinheiro da reserva e colocar em investimentos que variam muito, como ações ou fundos arriscados, só porque querem ver o dinheiro render mais. Imagina só: você perde o emprego justo no mês em que a Bolsa caiu 20%. Você vai ter que resgatar seu dinheiro no prejuízo. Isso é um pesadelo financeiro.</p>
+        
+        <div class="article-callout article-callout--red">
+          <strong>O Maior Erro</strong>
+          <p>Tratar a reserva como investimento de longo prazo. O foco da reserva é <strong>Liquidez</strong> (poder sacar a qualquer momento) e <strong>Segurança</strong> (não perder valor). Rentabilidade é o de menos.</p>
+        </div>
+
+        <h2>2. Por que 3, 6 ou 12 meses de gastos?</h2>
+        <p>Você já deve ter ouvido a regra de ouro: sua reserva deve cobrir de 3 a 12 meses do seu <em>custo de vida mensal</em>. Mas por que essa variação toda? Como saber o que é o ideal para você?</p>
+
+        <p>A resposta depende totalmente da sua estabilidade profissional e do seu contexto familiar. Se você tem um emprego público super seguro, seu risco de perder a renda de um dia para o outro é muito baixo. Agora, se você é um profissional autônomo, fotógrafo, uber, ou dono do próprio negócio, sua renda flutua, e os riscos são maiores.</p>
+
+        <ul>
+          <li><strong>3 a 4 meses:</strong> Ideal para funcionários públicos com alta estabilidade, jovens solteiros sem dependentes que moram com os pais.</li>
+          <li><strong>6 meses:</strong> A regra geral para trabalhadores com carteira assinada (CLT) em setores razoavelmente estáveis.</li>
+          <li><strong>12 meses (ou mais):</strong> Autônomos, empresários, freelancers e profissionais liberais, ou quem é a única fonte de renda de uma família grande.</li>
+        </ul>
+
+        <h3>Atenção: É custo de vida, não salário!</h3>
+        <p>Se você ganha R$ 5.000 por mês, mas seus gastos essenciais (aluguel, comida, luz, internet, transporte, escola dos filhos) somam R$ 3.500, a base do seu cálculo será os R$ 3.500. Não conte o dinheiro do restaurante de luxo e das roupas novas na hora de calcular o básico da sobrevivência.</p>
+
+        <h2>3. Como calcular o valor certo para seu perfil</h2>
+        <p>Vamos usar exemplos práticos para deixar isso bem claro. Abaixo, montamos uma tabela com três perfis diferentes, estimando os gastos essenciais e o tamanho ideal da reserva para cada um deles.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Perfil</th>
+              <th>Situação / Emprego</th>
+              <th>Gasto Mensal Essencial</th>
+              <th>Multiplicador</th>
+              <th>Tamanho Ideal da Reserva</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Jovem Solteiro</strong></td>
+              <td>CLT, mora de aluguel sozinho</td>
+              <td>R$ 2.500</td>
+              <td>6 meses</td>
+              <td><strong>R$ 15.000</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Casal sem filhos</strong></td>
+              <td>Servidores Públicos Estaduais</td>
+              <td>R$ 6.000</td>
+              <td>3 meses</td>
+              <td><strong>R$ 18.000</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Família (2 filhos)</strong></td>
+              <td>Ele é Autônomo, ela é PJ</td>
+              <td>R$ 8.500</td>
+              <td>12 meses</td>
+              <td><strong>R$ 102.000</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Olhando para a tabela, o valor de R$ 102.000 assusta, né? E os R$ 15.000 do jovem solteiro também parecem impossíveis de juntar da noite para o dia. E adivinha? Não é da noite para o dia mesmo.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>Dica Prática</strong>
+          <p>Você não precisa ter a reserva inteira para começar a investir. Construa os primeiros 2 meses de gastos. Depois disso, você pode começar a dividir suas economias: 70% continua indo para terminar a reserva e 30% já vai para os seus investimentos de longo prazo. Aos poucos, você chega lá!</p>
+        </div>
+
+        <h2>4. Onde guardar a Reserva de Emergência?</h2>
+        <p>Aqui não tem espaço para invenção de moda. Dinheiro de emergência tem que estar em um lugar onde você pode pegar <strong>hoje ou no máximo no próximo dia útil</strong> (liquidez diária), e que não sofra com as variações malucas do mercado.</p>
+        
+        <p>No Brasil, temos duas excelentes opções principais que rendem quase 100% da taxa Selic/CDI, e são super seguras:</p>
+
+        <h3>1. Tesouro Selic</h3>
+        <p>O Tesouro Selic é o título público do governo brasileiro atrelado à taxa básica de juros. Na prática, é o investimento mais seguro do país. Se o governo quebrar, acredite, os bancos já quebraram bem antes. Ele tem liquidez diária (se você pedir o resgate em dia útil até as 13h, o dinheiro cai no mesmo dia) e é ótimo para fugir da tentação, já que não fica ali na cara da sua conta corrente.</p>
+        
+        <h3>2. CDB de Liquidez Diária rendendo 100% do CDI (ou mais)</h3>
+        <p>Os CDBs são títulos emitidos pelos bancos. Quando você investe num CDB, você está emprestando dinheiro para o banco, e ele te devolve com juros. Para a reserva, <strong>tem que ser de liquidez diária</strong>. Quase todos os grandes bancos e corretoras, além de Nubank, Inter e Itaú, oferecem essa opção. Importante: eles têm a proteção do FGC (Fundo Garantidor de Créditos) para valores até R$ 250 mil por CPF e instituição. Então, se o banco falir, você recebe seu dinheiro de volta.</p>
+
+        <h3>E a Poupança? E a caixinha do Nubank?</h3>
+        <p>A poupança é segura e tem liquidez, mas a rentabilidade dela é péssima, perdendo quase sempre para a inflação no longo prazo. Já a Caixinha do Nubank (na opção de RDB 100% do CDI) e outras contas remuneradas (como Mercado Pago e PicPay) servem muito bem para a reserva de emergência, desde que você ative as opções corretas que tenham proteção e não apenas o dinheiro parado na conta.</p>
+
+        <h2>5. Como construir a reserva aos poucos (sem sofrer)</h2>
+        <p>O maior erro de quem tenta montar a reserva de emergência é querer guardar o que "sobra" no fim do mês. A realidade é dura: <strong>nunca sobra</strong>.</p>
+        
+        <p>O segredo é você se pagar primeiro. Assim que seu salário cair na conta, antes de pagar o boleto da Netflix, antes do iFood de sexta-feira, você pega o valor que determinou (pode ser 10%, 15% ou 20% da sua renda) e transfere imediatamente para onde a reserva vai ficar. Esqueça esse dinheiro.</p>
+
+        <ol>
+          <li><strong>Defina o alvo:</strong> Calcule seus gastos essenciais e multiplique pelos meses necessários (ex: 6 meses x R$ 3.000 = R$ 18.000).</li>
+          <li><strong>Estabeleça metas menores:</strong> O objetivo final de R$ 18.000 é muito grande. Sua primeira meta é R$ 1.000. Comemore! Depois, R$ 3.000 (1 mês de segurança). A psicologia agradece as pequenas vitórias.</li>
+          <li><strong>Automatize se possível:</strong> Alguns bancos e corretoras permitem aplicações automáticas mensais. Isso tira de você o peso da decisão.</li>
+          <li><strong>Cuidado com o estilo de vida:</strong> Se você tiver um aumento no trabalho, não suba seus gastos imediatamente. Use a grana extra para acelerar a construção da reserva!</li>
+        </ol>
+
+        <div class="article-callout article-callout--green">
+          <strong>Atenção ao imposto</strong>
+          <p>Tanto o Tesouro Selic quanto os CDBs têm cobrança de Imposto de Renda e IOF sobre os rendimentos. Mas não se preocupe: a cobrança é automática, já é retida na fonte, e mesmo com os impostos, esses investimentos rendem MUITO mais do que a velha e combalida poupança.</p>
+        </div>
+
+        <h2>6. Erros mais comuns (Fuja deles!)</h2>
+        <p>Para fechar com chave de ouro, listamos as piores ideias que o brasileiro tem quando o assunto é reserva de emergência. Leia com atenção e não caia nessas armadilhas:</p>
+
+        <ul>
+          <li><strong>Deixar a reserva na conta corrente:</strong> O dinheiro fica fácil de ser gasto em qualquer promoção relâmpago. Afaste a tentação.</li>
+          <li><strong>Colocar na Bolsa de Valores:</strong> "Ah, mas a ação da Petrobras tá barata". Reserva de emergência não se arrisca em bolsa. Nunca.</li>
+          <li><strong>Achar que limite de cartão ou cheque especial é reserva:</strong> Cartão de crédito é dívida com juros estratosféricos. Cheque especial é o abismo financeiro. Eles não são seus amigos na hora do aperto.</li>
+          <li><strong>Usar a reserva para emergências "falsas":</strong> A promoção daquela TV OLED na Black Friday ou a viagem pro Nordeste de última hora NÃO são emergências. Emergência é desemprego, doença, batida de carro, vazamento na casa.</li>
+        </ul>
+
+        <p>Ter uma reserva de emergência pronta não vai te deixar rico financeiramente, mas vai te deixar rico em <strong>paz de espírito</strong>. É a diferença entre dormir tranquilo ou passar noites em claro porque o pneu do carro furou e você não tem limite no cartão. Comece pequeno, comece hoje, mas não deixe de começar.</p>
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Continue lendo</span>
+        <h2 class="section-title">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="poupanca.html" class="article-card" style="text-decoration:none; color:inherit; display:block; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.05); padding:20px;">
+          <h3 style="font-size:1.1rem; margin-bottom:10px;">Como guardar R$ 5.000</h3>
+          <p style="font-size:0.9rem; color:#64748b;">Um passo a passo simples para você finalmente juntar seu primeiro montante de dinheiro.</p>
+        </a>
+        <a href="investimentos.html" class="article-card" style="text-decoration:none; color:inherit; display:block; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.05); padding:20px;">
+          <h3 style="font-size:1.1rem; margin-bottom:10px;">Melhores investimentos</h3>
+          <p style="font-size:0.9rem; color:#64748b;">Descubra as opções mais rentáveis e seguras para quem está começando a investir hoje.</p>
+        </a>
+        <a href="orcamento.html" class="article-card" style="text-decoration:none; color:inherit; display:block; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.05); padding:20px;">
+          <h3 style="font-size:1.1rem; margin-bottom:10px;">5 passos para montar orçamento</h3>
+          <p style="font-size:0.9rem; color:#64748b;">Assuma o controle do seu dinheiro organizando seus gastos mensais de forma prática e fácil.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>
