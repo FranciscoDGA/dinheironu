@@ -446,10 +446,7 @@ input { font-family: inherit; }
   gap: 24px;
 }
 
-/* Featured-main: imagem um pouco maior para destacar */
-.featured-main .card-img-wrap { height: 240px; }
-.featured-main .card-title    { font-size: 1.15rem; font-weight: 800; }
-.featured-main .card-excerpt  { display: block; -webkit-line-clamp: 3; }
+
 
 /* Recent Grid */
 .recent-grid {
@@ -596,6 +593,9 @@ input { font-family: inherit; }
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(15,23,42,.06);
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .tool-card:hover {
   transform: translateY(-4px);
@@ -642,7 +642,7 @@ input { font-family: inherit; }
 }
 
 /* Tool form */
-.tool-form { display: flex; flex-direction: column; gap: 14px; }
+.tool-form { display: flex; flex-direction: column; gap: 14px; margin-top: auto; }
 .tool-input-group {
   display: flex;
   flex-direction: column;
