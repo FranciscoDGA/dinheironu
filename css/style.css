@@ -134,6 +134,7 @@ input { font-family: inherit; }
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 4px;
   flex: 1;
 }
@@ -1038,10 +1039,15 @@ input { font-family: inherit; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 2fr 1fr;
   gap: 48px;
   padding-bottom: 56px;
   border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 .footer-brand .nav-logo { margin-bottom: 16px; }
 .footer-brand .logo-text { color: var(--white); }
