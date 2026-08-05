@@ -582,7 +582,7 @@ input { font-family: inherit; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  align-items: stretch; /* cards sempre mesma altura */
+  align-items: start; /* Fixes siblings expanding when result shows */
 }
 
 .tool-card {
