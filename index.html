@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dinheiro Nu — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira." />
+  <meta name="keywords" content="finanças pessoais, investimentos, controle de gastos, educação financeira, dinheiro, blog financeiro" />
+  <meta property="og:title" content="Dinheiro Nu | Finanças Sem Enrolação" />
+  <meta property="og:description" content="Educação financeira direta ao ponto. Sem jargão, sem segredo." />
+  <meta property="og:type" content="website" />
+  <title>Dinheiro Nu | Finanças Sem Enrolação</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/>
+            <path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="12" cy="16" r="0.8" fill="#f59e0b"/>
+          </svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+
+      <a href="#newsletter" class="nav-cta" id="nav-newsletter-btn">Newsletter</a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="images/hero.jpg" alt="Background financeiro" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Novo artigo toda semana
+      </div>
+      <h1 class="hero-title">
+        Dinheiro sem mistério,<br />
+        <span class="hero-accent">liberdade sem limites</span>
+      </h1>
+      <p class="hero-subtitle">
+        Educação financeira direta ao ponto. Sem jargão, sem segredo, sem enrolação.<br />
+        Só o que você precisa para transformar sua vida financeira — de uma vez por todas.
+      </p>
+      <div class="hero-buttons">
+        <a href="#artigos" class="btn btn-primary" id="hero-cta-artigos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          Começar a Ler
+        </a>
+        <a href="#ferramentas" class="btn btn-outline" id="hero-cta-ferramentas">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Ver Ferramentas
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">50<span class="stat-plus">+</span></span>
+          <span class="stat-label">Artigos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Ferramentas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">100<span class="stat-plus">%</span></span>
+          <span class="stat-label">Gratuito</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ARTIGOS EM DESTAQUE ═══════════════════════ -->
+  <section class="section artigos-destaque" id="artigos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Em Alta</span>
+        <h2 class="section-title">Artigos em Destaque</h2>
+        <p class="section-subtitle">Os conteúdos mais acessados e comentados da semana</p>
+      </div>
+
+      <div class="articles-grid featured-grid">
+
+        <!-- Card 1 -->
+        <article class="article-card featured-main" id="article-poupanca">
+          <div class="card-img-wrap">
+            <img src="images/poupanca.jpg" alt="Como guardar R$ 5.000" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--gold">Poupança</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-author">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg>
+                Equipe DN
+              </span>
+              <span class="card-date">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg>
+                28 Jul 2026
+              </span>
+              <span class="card-read">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                8 min
+              </span>
+            </div>
+            <h3 class="card-title"><a href="#" id="article-link-poupanca">Como guardar R$ 5.000 em 12 meses — mesmo com salário baixo</a></h3>
+            <p class="card-excerpt">Parece impossível? A gente prova que não é. Com método e consistência, qualquer pessoa consegue guardar mais do que imagina. Veja o passo a passo.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="article-card" id="article-investimentos">
+          <div class="card-img-wrap">
+            <img src="images/investimentos.jpg" alt="Melhores investimentos" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--green">Investimentos</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Equipe DN</span>
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 21 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 6 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="article-link-invest">Os melhores investimentos para iniciantes em 2026</a></h3>
+            <p class="card-excerpt">Não precisa ser expert para começar. Descubra as opções mais seguras e rentáveis para quem está dando os primeiros passos no mundo dos investimentos.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="article-card" id="article-cartao">
+          <div class="card-img-wrap">
+            <img src="images/cartao.jpg" alt="Cartão de crédito" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--red">Dívidas</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Equipe DN</span>
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 14 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 5 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="article-link-cartao">Cartão de crédito: vilão ou aliado? A verdade nua e crua</a></h3>
+            <p class="card-excerpt">Ele pode te levar à ruína ou ser uma ferramenta poderosa. Tudo depende de como você usa. Entenda de uma vez por todas como funciona e pare de ter medo.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="article-card" id="article-tesouro">
+          <div class="card-img-wrap">
+            <img src="images/tesouro.jpg" alt="Tesouro Direto" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--blue">Renda Fixa</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Equipe DN</span>
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 07 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 7 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="article-link-tesouro">Tesouro Direto para quem tem medo de investir</a></h3>
+            <p class="card-excerpt">O investimento mais seguro do Brasil explicado do zero. Descubra como funciona, quanto rende e por onde começar sem precisar entender nada de economia.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta-wrap">
+        <a href="#" class="btn btn-outline-dark" id="ver-todos-artigos">Ver Todos os Artigos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FERRAMENTAS ═══════════════════════ -->
+  <section class="section ferramentas" id="ferramentas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag section-tag--dark">Grátis</span>
+        <h2 class="section-title">Ferramentas Financeiras</h2>
+        <p class="section-subtitle">Calcule, planeje e tome decisões melhores com nossos simuladores</p>
+      </div>
+
+      <div class="tools-grid">
+
+        <!-- Tool 1 -->
+        <div class="tool-card" id="tool-juros">
+          <div class="tool-icon-wrap tool-icon--gold">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-4H9l3-3 3 3h-2v4zm0-8h-2V7h2v2z" fill="currentColor"/></svg>
+          </div>
+          <div class="tool-badge">GRÁTIS</div>
+          <h3 class="tool-title">Calculadora de Juros Compostos</h3>
+          <p class="tool-desc">Descubra quanto seu dinheiro vai render ao longo do tempo com o poder dos juros compostos.</p>
+
+          <div class="tool-form" id="form-juros">
+            <div class="tool-input-group">
+              <label for="juros-capital">Capital Inicial (R$)</label>
+              <input type="number" id="juros-capital" placeholder="1.000,00" min="0" />
+            </div>
+            <div class="tool-input-row">
+              <div class="tool-input-group">
+                <label for="juros-taxa">Taxa mensal (%)</label>
+                <input type="number" id="juros-taxa" placeholder="1,0" step="0.1" min="0" />
+              </div>
+              <div class="tool-input-group">
+                <label for="juros-meses">Período (meses)</label>
+                <input type="number" id="juros-meses" placeholder="24" min="1" />
+              </div>
+            </div>
+            <div class="tool-input-group">
+              <label for="juros-aporte">Aporte mensal (R$)</label>
+              <input type="number" id="juros-aporte" placeholder="200,00" min="0" />
+            </div>
+            <button class="tool-btn" id="btn-calcular-juros" onclick="calcularJuros()">Calcular →</button>
+            <div class="tool-result" id="result-juros" style="display:none;">
+              <div class="result-row">
+                <span>Total Investido:</span>
+                <strong id="res-investido">—</strong>
+              </div>
+              <div class="result-row">
+                <span>Rendimento:</span>
+                <strong id="res-rendimento" class="result-green">—</strong>
+              </div>
+              <div class="result-row result-row--total">
+                <span>Montante Final:</span>
+                <strong id="res-montante">—</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 2 -->
+        <div class="tool-card" id="tool-gastos">
+          <div class="tool-icon-wrap tool-icon--blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="tool-badge tool-badge--blue">GRÁTIS</div>
+          <h3 class="tool-title">Controle de Gastos Mensais</h3>
+          <p class="tool-desc">Informe sua renda e distribua nos pilares essenciais com a regra 50-30-20 automática.</p>
+
+          <div class="tool-form" id="form-gastos">
+            <div class="tool-input-group">
+              <label for="gastos-renda">Renda Líquida Mensal (R$)</label>
+              <input type="number" id="gastos-renda" placeholder="3.000,00" min="0" />
+            </div>
+            <button class="tool-btn tool-btn--blue" id="btn-calcular-gastos" onclick="calcularGastos()">Calcular →</button>
+            <div class="tool-result" id="result-gastos" style="display:none;">
+              <div class="result-row"><span>🏠 Necessidades (50%):</span><strong id="res-necessidades">—</strong></div>
+              <div class="result-row"><span>🎉 Lazer (30%):</span><strong id="res-lazer">—</strong></div>
+              <div class="result-row result-row--total"><span>💰 Poupança (20%):</span><strong id="res-poupanca" class="result-green">—</strong></div>
+            </div>
+          </div>
+
+          <div class="tool-footer">
+            <div class="tool-progress-bar">
+              <div class="tool-progress-segment tool-progress--red" style="width:50%" title="50% - Necessidades"></div>
+              <div class="tool-progress-segment tool-progress--yellow" style="width:30%" title="30% - Lazer"></div>
+              <div class="tool-progress-segment tool-progress--green" style="width:20%" title="20% - Poupança"></div>
+            </div>
+            <div class="tool-progress-legend">
+              <span><i class="leg-dot leg-dot--red"></i>Necessidades 50%</span>
+              <span><i class="leg-dot leg-dot--yellow"></i>Lazer 30%</span>
+              <span><i class="leg-dot leg-dot--green"></i>Poupança 20%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="tool-card" id="tool-financiamento">
+          <div class="tool-icon-wrap tool-icon--green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"/><polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <div class="tool-badge tool-badge--green">GRÁTIS</div>
+          <h3 class="tool-title">Calculadora de Financiamento</h3>
+          <p class="tool-desc">Simule parcelas de financiamento imobiliário ou de veículo e saiba o custo real antes de assinar.</p>
+
+          <div class="tool-form" id="form-financiamento">
+            <div class="tool-input-group">
+              <label for="fin-valor">Valor do bem (R$)</label>
+              <input type="number" id="fin-valor" placeholder="300.000,00" min="0" />
+            </div>
+            <div class="tool-input-row">
+              <div class="tool-input-group">
+                <label for="fin-entrada">Entrada (R$)</label>
+                <input type="number" id="fin-entrada" placeholder="60.000,00" min="0" />
+              </div>
+              <div class="tool-input-group">
+                <label for="fin-taxa">Taxa mensal (%)</label>
+                <input type="number" id="fin-taxa" placeholder="0,79" step="0.01" min="0" />
+              </div>
+            </div>
+            <div class="tool-input-group">
+              <label for="fin-meses">Prazo (meses)</label>
+              <input type="number" id="fin-meses" placeholder="360" min="1" />
+            </div>
+            <button class="tool-btn tool-btn--green" id="btn-calcular-fin" onclick="calcularFinanciamento()">Calcular →</button>
+            <div class="tool-result" id="result-financiamento" style="display:none;">
+              <div class="result-row"><span>Parcela mensal:</span><strong id="res-parcela">—</strong></div>
+              <div class="result-row"><span>Total a pagar:</span><strong id="res-total-fin">—</strong></div>
+              <div class="result-row result-row--total"><span>Juros totais:</span><strong id="res-juros-fin" class="result-red">—</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ARTIGOS RECENTES ═══════════════════════ -->
+  <section class="section artigos-recentes" id="recentes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag section-tag--outline">Blog</span>
+        <h2 class="section-title">Artigos Mais Recentes</h2>
+        <p class="section-subtitle">Fique por dentro das últimas publicações do Dinheiro Nu</p>
+      </div>
+
+      <div class="articles-grid recent-grid">
+
+        <!-- Recent 1 -->
+        <article class="article-card article-card--sm" id="recent-dividas">
+          <div class="card-img-wrap">
+            <img src="images/dividas.jpg" alt="Sair das dívidas" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--red">Dívidas</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 01 Ago 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 9 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="recent-link-dividas">Como sair das dívidas em 12 meses — o método que funciona</a></h3>
+            <p class="card-excerpt">Bola de neve ou avalanche? Conheça as duas estratégias e descubra qual é a certa para o seu perfil.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Recent 2 -->
+        <article class="article-card article-card--sm" id="recent-imovel">
+          <div class="card-img-wrap">
+            <img src="images/imovel.jpg" alt="Imóvel ou renda fixa" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--blue">Investimentos</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 25 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 11 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="recent-link-imovel">Imóvel ou renda fixa? A comparação que ninguém faz</a></h3>
+            <p class="card-excerpt">Comprar um imóvel sempre foi visto como o maior investimento da vida. Mas será que os números confirmam isso?</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Recent 3 -->
+        <article class="article-card article-card--sm" id="recent-orcamento">
+          <div class="card-img-wrap">
+            <img src="images/orcamento.jpg" alt="Controle de orçamento" class="card-img" loading="lazy" />
+            <span class="card-tag card-tag--gold">Orçamento</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 18 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 6 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="recent-link-orcamento">5 passos para montar um orçamento que você vai seguir</a></h3>
+            <p class="card-excerpt">A maioria abandona o orçamento em 2 semanas. Aprenda como criar um método realista e sustentável para a sua vida.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Recent 4 - sem imagem, usa CSS gradient -->
+        <article class="article-card article-card--sm" id="recent-fgts">
+          <div class="card-img-wrap card-img-wrap--gradient card-img-wrap--teal">
+            <div class="card-img-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/></svg>
+            </div>
+            <span class="card-tag card-tag--blue">FGTS</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 10 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 7 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="recent-link-fgts">FGTS: como usar o seu dinheiro esquecido a seu favor</a></h3>
+            <p class="card-excerpt">Você sabia que pode usar seu FGTS para investir? Veja todas as modalidades de saque e como tirar o máximo proveito.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Recent 5 -->
+        <article class="article-card article-card--sm" id="recent-reserva">
+          <div class="card-img-wrap card-img-wrap--gradient card-img-wrap--purple">
+            <div class="card-img-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/></svg>
+            </div>
+            <span class="card-tag card-tag--gold">Reserva</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 03 Jul 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 5 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="recent-link-reserva">A reserva de emergência que ninguém te ensinou a montar</a></h3>
+            <p class="card-excerpt">Quanto guardar, onde guardar e como calcular o valor certo para o seu estilo de vida. Sem fórmula mágica, só realidade.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Recent 6 -->
+        <article class="article-card article-card--sm" id="recent-habitos">
+          <div class="card-img-wrap card-img-wrap--gradient card-img-wrap--orange">
+            <div class="card-img-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 0 1.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 0 0 1.946.806 3.42 3.42 0 0 1 3.138 3.138 3.42 3.42 0 0 0 .806 1.946 3.42 3.42 0 0 1 0 4.438 3.42 3.42 0 0 0-.806 1.946 3.42 3.42 0 0 1-3.138 3.138 3.42 3.42 0 0 0-1.946.806 3.42 3.42 0 0 1-4.438 0 3.42 3.42 0 0 0-1.946-.806 3.42 3.42 0 0 1-3.138-3.138 3.42 3.42 0 0 0-.806-1.946 3.42 3.42 0 0 1 0-4.438 3.42 3.42 0 0 0 .806-1.946 3.42 3.42 0 0 1 3.138-3.138z" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/></svg>
+            </div>
+            <span class="card-tag card-tag--green">Hábitos</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 25 Jun 2026</span>
+              <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 4 min</span>
+            </div>
+            <h3 class="card-title"><a href="#" id="recent-link-habitos">5 hábitos de quem nunca fica no vermelho — e como copiar</a></h3>
+            <p class="card-excerpt">Não é sorte, não é salário alto. É disciplina e método. Conheça os hábitos que separam quem prospera de quem apenas sobrevive.</p>
+            <a href="#" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta-wrap">
+        <a href="#" class="btn btn-outline-dark" id="ver-mais-artigos">Ver Mais Artigos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ NEWSLETTER ═══════════════════════ -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter-bg"></div>
+    <div class="container">
+      <div class="newsletter-content">
+        <div class="newsletter-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#f59e0b" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#f59e0b" stroke-width="2"/></svg>
+        </div>
+        <h2 class="newsletter-title">Receba Dicas Financeiras <span class="newsletter-accent">Semanais</span></h2>
+        <p class="newsletter-subtitle">Toda semana uma dica prática direto no seu e-mail. Sem spam, sem enrolação. Pode cancelar quando quiser.</p>
+
+        <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+          <div class="newsletter-input-wrap">
+            <svg class="newsletter-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+            <input type="email" id="newsletter-email" placeholder="seu@email.com.br" required />
+          </div>
+          <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">
+            <span id="newsletter-btn-text">Quero Receber!</span>
+            <svg id="newsletter-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </button>
+        </form>
+
+        <div class="newsletter-success" id="newsletterSuccess" style="display:none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span>Perfeito! Você está na lista. Primeira dica chega em breve 🎉</span>
+        </div>
+
+        <p class="newsletter-guarantee">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/></svg>
+          Nós odiamos spam. Pode cancelar quando quiser.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SOBRE ═══════════════════════ -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-content">
+        <div class="sobre-text">
+          <span class="section-tag">Quem somos</span>
+          <h2 class="section-title">Sobre o Dinheiro Nu</h2>
+          <p>O <strong>Dinheiro Nu</strong> nasceu da frustração com conteúdos financeiros cheios de termos técnicos, planilhas complicadas e conselhos que só funcionam para quem já tem dinheiro.</p>
+          <p>Aqui falamos de finanças do jeito que deveria ser: <strong>direto, honesto e sem enrolação</strong>. Sem produtos pra vender, sem cursos caros para empurrar. Só conteúdo de qualidade para ajudar você a tomar decisões financeiras melhores.</p>
+          <p>Porque dinheiro não precisa ser mistério.</p>
+          <div class="sobre-values">
+            <div class="value-item">
+              <span class="value-icon">🔍</span>
+              <div>
+                <strong>Transparência</strong>
+                <span>Falamos a verdade, mesmo que doa</span>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🎯</span>
+              <div>
+                <strong>Praticidade</strong>
+                <span>Só o que você pode aplicar hoje</span>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">💙</span>
+              <div>
+                <strong>Gratuidade</strong>
+                <span>100% grátis, sempre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-visual">
+          <div class="sobre-card">
+            <div class="sobre-stat-grid">
+              <div class="sobre-stat">
+                <span class="sobre-stat-num">50+</span>
+                <span class="sobre-stat-label">Artigos publicados</span>
+              </div>
+              <div class="sobre-stat">
+                <span class="sobre-stat-num">3</span>
+                <span class="sobre-stat-label">Ferramentas gratuitas</span>
+              </div>
+              <div class="sobre-stat">
+                <span class="sobre-stat-num">100%</span>
+                <span class="sobre-stat-label">Conteúdo gratuito</span>
+              </div>
+              <div class="sobre-stat">
+                <span class="sobre-stat-num">0</span>
+                <span class="sobre-stat-label">Produtos pra vender</span>
+              </div>
+            </div>
+            <div class="sobre-mission">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f59e0b"/></svg>
+              <em>"Dinheiro não precisa ser mistério."</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo" id="footer-logo-link">
+            <div class="logo-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+            </div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.<br />Do jeito que sempre deveria ter sido.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-youtube" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <ul class="footer-links">
+            <li><a href="#sobre" id="footer-link-sobre">Quem Somos</a></li>
+            <li><a href="#" id="footer-link-missao">Nossa Missão</a></li>
+            <li><a href="#newsletter" id="footer-link-newsletter">Newsletter</a></li>
+            <li><a href="#" id="footer-link-contato">Contato</a></li>
+            <li><a href="#" id="footer-link-privacidade">Privacidade</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Links Úteis</h4>
+          <ul class="footer-links">
+            <li><a href="#artigos" id="footer-link-destaque">Artigos em Destaque</a></li>
+            <li><a href="#ferramentas" id="footer-link-ferramentas">Ferramentas</a></li>
+            <li><a href="#recentes" id="footer-link-recentes">Mais Recentes</a></li>
+            <li><a href="#" id="footer-link-glossario">Glossário Financeiro</a></li>
+            <li><a href="#" id="footer-link-guia">Guia do Iniciante</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos Principais</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-link-guardar">Como Guardar R$ 5.000</a></li>
+            <li><a href="#" id="footer-link-investir">Investimentos Básicos</a></li>
+            <li><a href="#" id="footer-link-dividas">Sair das Dívidas</a></li>
+            <li><a href="#" id="footer-link-tesouro">Tesouro Direto</a></li>
+            <li><a href="#" id="footer-link-orcamento">Montar Orçamento</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Feito com ☕ e muita planilha. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constituí assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
