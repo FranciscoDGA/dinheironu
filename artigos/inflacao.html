@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="A inflação está corroendo o seu poder de compra? Descubra 7 estratégias essenciais para proteger seu dinheiro da alta dos preços em 2026."/>
+  <title>Inflação em alta: 7 estratégias para proteger seu dinheiro em 2026 | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .article-card {
+      background: #fff; border-radius: 12px; padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.05); text-decoration: none;
+      transition: transform 0.2s; display: block;
+    }
+    .article-card:hover { transform: translateY(-4px); }
+    .article-card-title {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
+      color: #0f172a; margin: 12px 0 8px; line-height: 1.3;
+    }
+    .article-card-desc { font-size: 0.9rem; color: #64748b; margin: 0; line-height: 1.5; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Blog</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="#footer" class="nav-link">Contato</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--blue">Economia</span>
+      <h1 class="article-title">Inflação em alta: 7 estratégias para proteger seu dinheiro em 2026</h1>
+      <div class="article-meta">
+        <span>✍️ Francisco Gomes</span>
+        <span>📅 05 Ago 2026</span>
+        <span>⏱️ 8 min de leitura</span>
+      </div>
+      <p class="article-summary">Sentindo que as compras do mês estão ficando cada vez mais caras? Aprenda passos práticos e investimentos inteligentes para blindar seu orçamento e fazer seu dinheiro render acima da inflação.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/inflacao.jpg" alt="Pessoa analisando gastos em frente a um carrinho de supermercado com gráficos de alta" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Você vai ao supermercado comprar os mesmos produtos que costuma comprar toda semana. Ao passar no caixa, percebe que a conta final está muito mais cara do que há alguns meses. Você não comprou nada a mais, mas o seu dinheiro parece valer muito menos. Se essa cena lhe soa familiar, você está vivenciando na pele o que os economistas chamam de <strong>inflação</strong>, um dos fenômenos mais desafiadores para o orçamento doméstico de qualquer família brasileira.</p>
+        
+        <p>A inflação é, de forma simples e direta, o aumento generalizado e contínuo dos preços de bens e serviços. No Brasil, o índice oficial que mede essa variação é o IPCA (Índice Nacional de Preços ao Consumidor Amplo), calculado pelo IBGE. Em 2026, com o cenário econômico global apresentando novos e complexos desafios – como a transição energética global, pressões cambiais, flutuações no preço dos combustíveis e mudanças nas cadeias produtivas globais –, a inflação voltou a ser um dos principais vilões do bolso dos brasileiros, exigindo cuidado redobrado na gestão das finanças pessoais.</p>
+        
+        <div class="article-callout article-callout--red">
+          <strong>O Inimigo Invisível do seu Patrimônio</strong>
+          <p>A inflação age como um "imposto invisível" que corrói o seu poder de compra dia após dia, muitas vezes sem que você perceba. Se a inflação no ano for de 6%, significa que aqueles R$ 1.000,00 guardados no colchão, num cofre ou simplesmente parados na sua conta corrente perderam 6% do seu valor real. Ou seja, no ano seguinte, para continuar comprando exatamente as mesmas coisas que comprava antes, você precisaria de R$ 1.060,00. É o seu dinheiro evaporando sem que você tenha gastado um único centavo!</p>
+        </div>
+
+        <p>A grande questão que assombra muitas famílias é: o que você pode fazer para se defender desse aumento de preços crônico? Ficar paralisado não é uma opção, pois o seu dinheiro continuará derretendo e o seu padrão de vida será inevitavelmente reduzido. Pensando nisso, reuni neste guia completo 7 estratégias práticas e testadas — que vão desde mudanças de hábitos de consumo cotidiano até investimentos sofisticados de renda fixa — para ajudar você a blindar o seu patrimônio da alta da inflação em 2026 e garantir a segurança financeira da sua família.</p>
+
+        <h2>1. Reveja, Analise e Otimize o seu Orçamento Mensal</h2>
+        <p>O primeiro e mais fundamental passo para enfrentar o aumento do custo de vida é ter clareza total, absoluta e inquestionável sobre para onde o seu dinheiro está indo. Sem um orçamento bem estruturado e acompanhado de perto, você fica completamente cego para pequenos gastos que, quando somados no fim do mês, fazem um estrago na sua conta bancária.</p>
+        
+        <p>Comece anotando todas as suas despesas, até mesmo o cafezinho da padaria. Você pode fazer isso em um caderno, numa planilha do Excel ou usar os diversos aplicativos de controle financeiro disponíveis gratuitamente. Categorize essas despesas em <strong>essenciais</strong> (como moradia, alimentação, saúde, educação e transporte) e <strong>não essenciais</strong> (como lazer, idas a restaurantes, compras por impulso, serviços e assinaturas). Muitas vezes, ao revisar as despesas não essenciais, descobrimos "vazamentos" de dinheiro absurdos, como assinaturas de canais de streaming que não assistimos há meses, planos de celular com mais internet do que consumimos ou anuidades de cartões de crédito que poderiam ser isentas.</p>
+        
+        <p>Use a famosa regra do 50-30-20 como seu principal guia de alocação de recursos: destine no máximo 50% da sua renda líquida para os gastos essenciais e básicos da sua vida, 30% para desejos pessoais, qualidade de vida e lazer, e, o mais importante, destine rigorosamente os 20% restantes para poupar e investir visando o seu futuro. Se os seus gastos essenciais estão engolindo 70% ou 80% do seu orçamento por causa da inflação, é um sinal de alerta vermelho: é hora de agir imediatamente cortando excessos ou buscando urgentemente formas de aumentar a sua renda.</p>
+
+        <h2>2. Modifique Radicalmente seus Hábitos no Supermercado</h2>
+        <p>A alimentação, tanto em casa quanto fora dela, é historicamente um dos setores onde a inflação bate mais forte e com mais rapidez. Produtos da cesta básica, como carne, arroz, feijão, laticínios e hortifrúti costumam apresentar variações bruscas dependendo do clima, safra e dólar. Para proteger o seu suado dinheiro nesse quesito, você precisa ser muito mais estratégico, agindo como um verdadeiro "gestor" das compras da casa.</p>
+        
+        <ul>
+          <li><strong>Vá às compras sempre com uma lista detalhada:</strong> Nunca, sob nenhuma hipótese, vá ao supermercado sem saber exatamente o que precisa comprar e, principalmente, nunca vá com fome! Estudos mostram que ir ao supermercado com fome aumenta as compras por impulso de itens supérfluos (como doces e salgadinhos) em até 30%. A lista foca a sua atenção e evita desvios perigosos.</li>
+          <li><strong>Aproveite as marcas próprias dos supermercados:</strong> Muitas das grandes redes de supermercados possuem marcas próprias (aquelas que levam o nome do mercado). O que muitos não sabem é que elas são fabricadas pelas mesmíssimas grandes indústrias das marcas famosas, mas são vendidas a um preço bem inferior, pois não têm o custo embutido de campanhas milionárias de marketing na TV.</li>
+          <li><strong>Compre em "atacarejos" para volume:</strong> Para itens de limpeza pesada, higiene pessoal e produtos não perecíveis (como arroz, feijão e macarrão), os supermercados de formato "atacarejo" (atacado + varejo) oferecem descontos significativos para compras em maior volume. Faça as contas e veja se comprar a embalagem familiar não sai mais barato por quilo ou litro.</li>
+          <li><strong>Troque produtos na alta:</strong> Se a carne bovina disparou nas prateleiras, não force o seu orçamento. Invista em proteínas alternativas como frango, cortes suínos, peixes da estação ou ovos. Adapte inteligentemente o cardápio da semana de acordo com as promoções e com o que está mais barato, não de acordo com a sua vontade do momento.</li>
+        </ul>
+
+        <h2>3. Construa (ou Mantenha) sua Reserva de Emergência Intacta</h2>
+        <p>Em períodos de forte instabilidade econômica, alta de preços generalizada e juros altos, o risco de imprevistos aumenta. Seja uma manutenção cara e inesperada no seu carro, um problema de saúde na família, um conserto urgente na casa ou, no pior dos cenários, a perda do seu emprego. Esses imprevistos tornam-se eventos catastróficos se você não tiver como se bancar nos meses seguintes.</p>
+        
+        <div class="article-callout article-callout--gold">
+          <strong>A Regra de Ouro da Sobrevivência</strong>
+          <p>A sua reserva de emergência deve ser capaz de cobrir, no mínimo, de 3 a 6 meses do seu custo de vida mensal (atenção: não do seu salário, mas do quanto você gasta para viver). Esse montante deve ficar exclusivamente em aplicações de <strong>liquidez diária</strong> (aquelas que você pode resgatar no mesmo dia) e de risco zero, como o Tesouro Selic, um CDB de liquidez diária que pague no mínimo 100% do CDI, ou Fundos DI com taxa zero de administração.</p>
+        </div>
+
+        <p>Um erro gravíssimo que muitos cometem tentando fugir da inflação é comprometer a sua reserva de emergência, alocando-a em investimentos de alto risco (como ações ou criptomoedas) ou em investimentos sem liquidez (que prendem o dinheiro por 2 ou 3 anos) apenas porque prometem render mais. A reserva de emergência não serve para deixar você rico, ela serve única e exclusivamente para dar paz de espírito e não deixar você ficar pobre e endividado de uma hora para a outra.</p>
+
+        <h2>4. Invista seu Capital de Longo Prazo no Tesouro IPCA+</h2>
+        <p>Se você tem um dinheiro separado que não fará falta nos próximos anos e que não faz parte da reserva de emergência, entra em cena a principal ferramenta do mundo dos investimentos contra a inflação no Brasil. O Governo Federal, através do programa Tesouro Direto, oferece um título público maravilhoso chamado <strong>Tesouro IPCA+</strong> (antigamente conhecido como NTN-B). Esse título foi desenvolvido especificamente com o propósito de proteger o poder de compra do investidor, não importando o que aconteça na economia.</p>
+        
+        <p>A genialidade desse título reside na sua rentabilidade, que é composta por duas partes distintas e complementares:</p>
+        <ol>
+          <li>A variação exata do <strong>IPCA</strong> (a inflação oficial do período).</li>
+          <li>Mais uma <strong>taxa prefixada</strong> de juros (por exemplo, + 6% ao ano, ou + 5,5% ao ano).</li>
+        </ol>
+        
+        <p>Isso matematicamente garante um <strong>ganho real</strong>. Ou seja, se o país passar por uma crise e a inflação for de apenas 3%, o seu título vai render 3% + 6% = 9%. Se o país entrar em hiperinflação e a inflação disparar para estratosféricos 20%, o seu título vai render 20% + 6% = 26%. Independentemente do cenário, o seu dinheiro sempre crescerá acima do aumento dos preços da economia brasileira.</p>
+        
+        <p>No entanto, preste muita atenção a um detalhe crucial: o Tesouro IPCA+ sofre com um mecanismo chamado <em>marcação a mercado</em>. Isso significa que, se você precisar tirar o dinheiro <strong>antes da data de vencimento</strong> combinada, o valor do seu título será recalculado pelo mercado no dia e você poderá até mesmo perder dinheiro, dependendo se os juros da economia subiram ou caíram. Portanto, invista no Tesouro IPCA+ única e exclusivamente aquele dinheiro que você tem absoluta certeza que poderá deixar aplicado quietinho até o vencimento do título (seja em 2029, 2035 ou 2045).</p>
+
+        <h2>5. Explore CDBs, LCIs e LCAs Atrelados ao IPCA</h2>
+        <p>Assim como o Governo Federal emite o Tesouro IPCA+ para se financiar, os grandes e médios bancos brasileiros também emitem títulos de renda fixa que pagam "IPCA + uma taxa fixa". Estamos falando dos Certificados de Depósito Bancário (CDBs) e das cobiçadas Letras de Crédito (LCIs, do setor imobiliário, e LCAs, do agronegócio).</p>
+        
+        <p>A grande e formidável vantagem das LCIs e LCAs frente aos CDBs e ao próprio Tesouro Direto é que elas são <strong>totalmente isentas de Imposto de Renda</strong> para pessoas físicas. Então, encontrar no seu banco ou corretora uma LCI que pague, por exemplo, IPCA + 5% ao ano, pode ser um negócio espetacularmente lucrativo, já que todo esse lucro vai cair limpinho, direto no seu bolso, sem ter que dividir uma fatia com a Receita Federal.</p>
+        
+        <p>A regra de ouro aqui é lembrar-se de sempre conferir a solidez e o rating (nota de risco) da instituição financeira antes de investir o seu dinheiro. Embora investimentos como CDB, LCI e LCA contem com a brilhante proteção do FGC (Fundo Garantidor de Créditos) — que devolve o seu dinheiro caso o banco quebre, para valores de até R$ 250 mil por CPF e por instituição —, é muito melhor evitar a dor de cabeça, a burocracia e a ansiedade escolhendo investir através de bancos sólidos e altamente confiáveis. E, novamente, não custa reforçar: fique de olho no prazo de vencimento e carência desses papéis!</p>
+
+        <h2>6. Fuja das Dívidas Caras e Renegocie as Antigas Urgemente</h2>
+        <p>Sabe o que acontece quando a inflação sobe sem controle? O Banco Central do Brasil entra em ação e geralmente aumenta a taxa Selic (os juros básicos da economia) numa tentativa de encarecer o crédito, diminuir o consumo e, assim, tentar controlar os preços. E o que isso significa para você, na prática? Significa que pegar dinheiro emprestado ou rolar dívidas fica astronomicamente mais caro.</p>
+        
+        <p>Se você tem dívidas ativas penduradas no cheque especial, usando o limite da sua conta, no famoso rotativo do cartão de crédito ou em empréstimos pessoais sem garantia com juros flagrantemente abusivos, a sua prioridade financeira número um, dois e três deve ser eliminá-las imediatamente. Não faça novos investimentos antes disso. A rentabilidade de qualquer investimento jamais, em tempo algum, vai superar os juros cobrados pelos bancos nessas modalidades (que chegam a passar absurdamente dos 300% ou até 400% ao ano).</p>
+        
+        <div class="article-callout article-callout--green">
+          <strong>A Grande Sacada da Renegociação</strong>
+          <p>Tente primeiro renegociar a sua dívida diretamente com o banco ou gerente, pedindo um parcelamento a juros menores. Se o banco for intransigente, busque um empréstimo mais barato e com garantia — como o crédito consignado (que desconta direto na sua folha de pagamento), empréstimo com garantia de veículo ou imóvel, ou a antecipação do FGTS — para quitar de uma vez a dívida mais cara. A estratégia brilhante aqui é "trocar uma dívida muito cara e tóxica por uma dívida muito mais barata e controlável".</p>
+        </div>
+
+        <h2>7. Invista em Você (Qualificação Profissional e Aumento de Renda)</h2>
+        <p>Essa última estratégia muitas vezes é deixada de lado, pois não envolve planilhas no Excel, juros compostos ou telas de corretoras, mas é, de longe, o investimento com a maior taxa de retorno no longo prazo: a sua própria capacidade de gerar renda ativa.</p>
+        
+        <p>A inflação tira o seu poder de compra gradativamente, e uma das melhores e mais efetivas formas de recuperar esse poder é aumentando ativamente o seu salário ou gerando novas e criativas fontes de renda paralela (as chamadas rendas extras). Invista tempo e dinheiro em você mesmo: compre bons livros sobre a sua área, assine cursos online, faça uma pós-graduação ou certificação profissionalizante, aprenda um novo idioma ou, mais importante, domine uma nova habilidade técnica (como análise de dados, programação básica, vendas ou inteligência artificial) que seja extremamente requisitada pelo mercado de trabalho agora em 2026.</p>
+        
+        <p>A matemática é simples: profissionais altamente qualificados e que resolvem problemas complexos para as empresas têm muito mais facilidade para negociar aumentos salariais ou migrar para empresas e concorrentes que pagam melhor. Isso garante que os seus rendimentos mensais cresçam em um ritmo que esmaga o nível da inflação do país.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Estratégia Anti-Inflação</th>
+              <th>Por que funciona perfeitamente?</th>
+              <th>Para quem é ideal?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Otimização Fria do Orçamento</strong></td>
+              <td>Identifica gastos invisíveis, corta supérfluos e libera recursos para poupar e investir todo mês.</td>
+              <td>Para todas as pessoas, especialmente aquelas que chegam ao fim do mês e não sabem para onde o dinheiro foi.</td>
+            </tr>
+            <tr>
+              <td><strong>Compras Supermercadistas Inteligentes</strong></td>
+              <td>Evita repassar toda a alta dos preços da cadeia produtiva para o seu bolso, otimizando o gasto com alimentação.</td>
+              <td>Para qualquer pessoa que seja responsável ou ajude nas compras da casa.</td>
+            </tr>
+            <tr>
+              <td><strong>Aportes no Tesouro IPCA+</strong></td>
+              <td>Garante por contrato um ganho real (acima da inflação) e é 100% protegido pelo Governo Federal.</td>
+              <td>Ideal para dinheiro com foco no longo prazo (como aposentadoria, faculdade dos filhos ou compra de um imóvel).</td>
+            </tr>
+            <tr>
+              <td><strong>CDB / LCI / LCA Atrelados ao IPCA</strong></td>
+              <td>Possuem o mesmo benefício de proteção do Tesouro, muitas vezes com a gigantesca vantagem da isenção de IR (no caso de LCI/LCA).</td>
+              <td>Fundamental para a diversificação de carteira de médio e longo prazo buscando aumento real de capital.</td>
+            </tr>
+            <tr>
+              <td><strong>Qualificação Contínua</strong></td>
+              <td>Aumenta exponencialmente a sua capacidade de gerar renda ativa por meio do seu trabalho e especialização.</td>
+              <td>Para todo e qualquer trabalhador, autônomo ou empreendedor que deseja se proteger a longo prazo.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Considerações Finais: O Seu Próximo Passo</h2>
+        <p>A inflação não é o fim do mundo nem motivo para pânico desmedido, mas ela certamente exige que você acorde e deixe a passividade financeira completamente de lado. Deixar o dinheiro "parado" na sua conta corrente ou investido na caderneta de poupança esperando um milagre é um erro financeiro gigantesco que custa muito caro ao longo dos anos. Com as 7 estratégias detalhadas e práticas que você acabou de ler, você não apenas protege o seu duro poder de compra, como coloca todo o engenhoso sistema financeiro para trabalhar agressivamente a seu favor, garantindo que o seu patrimônio continue crescendo de verdade, independentemente das crises que o Brasil ou o mundo venham a enfrentar no futuro.</p>
+        
+        <p>Dê o seu primeiro passo agora, ainda hoje. Abra o aplicativo do seu banco, analise friamente a sua última fatura do cartão de crédito, comece a escrever a sua próxima lista de supermercado levando em conta as substituições sugeridas e, se tiver aquele dinheirinho poupado no colchão da poupança, considere seriamente abrir conta numa corretora e migrar uma boa parte dele para o <strong>Tesouro IPCA+</strong>. O seu "eu" do futuro certamente agradecerá com muita alegria por essas sábias e importantes decisões financeiras que você está tomando agora, em 2026!</p>
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header" style="max-width:800px; margin:0 auto;">
+        <span class="section-tag" style="display:block; text-transform:uppercase; font-size:0.75rem; font-weight:700; color:#2563eb; letter-spacing:0.1em; margin-bottom:8px;">Continue lendo</span>
+        <h2 class="section-title" style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:#0f172a; margin:0;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid" style="max-width:800px; margin:40px auto 0;">
+        <a href="tesouro.html" class="article-card">
+          <span class="article-category article-cat--blue">Renda Fixa</span>
+          <h3 class="article-card-title">O que é e como investir no Tesouro Direto</h3>
+          <p class="article-card-desc">Tudo o que você precisa saber para emprestar dinheiro ao governo e ser pago por isso.</p>
+        </a>
+        <a href="investimentos.html" class="article-card">
+          <span class="article-category article-cat--green">Investimentos</span>
+          <h3 class="article-card-title">Os melhores investimentos para iniciantes</h3>
+          <p class="article-card-desc">Aprenda a sair da poupança e encontre o investimento ideal com segurança.</p>
+        </a>
+        <a href="reserva.html" class="article-card">
+          <span class="article-category article-cat--gold">Segurança</span>
+          <h3 class="article-card-title">Como montar a sua Reserva de Emergência</h3>
+          <p class="article-card-desc">Proteja-se contra imprevistos com o passo a passo completo para a sua reserva financeira.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

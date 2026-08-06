@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="O sonho da independência financeira é possível através da renda fixa. Entenda como calcular o valor necessário para viver de juros e conquistar a sua liberdade."/>
+  <title>Viver de renda fixa: Quanto você precisa investir para não precisar trabalhar? | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .article-card {
+      background: #fff; border-radius: 12px; padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.05); text-decoration: none;
+      transition: transform 0.2s; display: block;
+    }
+    .article-card:hover { transform: translateY(-4px); }
+    .article-card-title {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
+      color: #0f172a; margin: 12px 0 8px; line-height: 1.3;
+    }
+    .article-card-desc { font-size: 0.9rem; color: #64748b; margin: 0; line-height: 1.5; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--green">Investimentos</span>
+      <h1 class="article-title">Viver de renda fixa: Quanto você precisa investir para não precisar trabalhar?</h1>
+      <div class="article-meta">
+        <span>✍️ Francisco Gomes</span>
+        <span>📅 05 Ago 2026</span>
+        <span>⏱️ 10 min de leitura</span>
+      </div>
+      <p class="article-summary">O sonho da independência financeira é totalmente possível através de títulos seguros e previsíveis. Aprenda a calcular a rentabilidade real, entenda o impacto da inflação no longo prazo e descubra exatamente quanto você precisa acumular para viver dos juros.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/viver-de-renda.jpg" alt="Pessoa relaxando em uma rede na praia lendo um livro" class="article-featured-img" onerror="this.src='../images/investimentos.jpg'" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Imagine acordar numa terça-feira chuvosa, olhar para a janela e decidir que não vai trabalhar hoje. Não porque está doente ou porque está de férias, mas simplesmente porque as suas contas já estão sendo pagas automaticamente pelo seu patrimônio. Essa é a essência da verdadeira <strong>independência financeira</strong> (também conhecida pelo movimento FIRE - Financial Independence, Retire Early).</p>
+        
+        <p>No Brasil, muitas pessoas acreditam que esse é um privilégio exclusivo de herdeiros ou ganhadores da loteria. Ou ainda pior: acham que precisam correr riscos absurdos na Bolsa de Valores ou apostar em criptomoedas para multiplicar o dinheiro rápido e se aposentar.</p>
+        
+        <p>A realidade é bem diferente e muito mais promissora. Graças ao histórico de juros elevados do nosso país, é totalmente possível alcançar a independência financeira utilizando apenas a <strong>Renda Fixa</strong>. Isso mesmo: os investimentos mais seguros do mercado, onde você não perde o sono acompanhando gráficos, podem sustentar o seu padrão de vida pelo resto dos seus dias.</p>
+        
+        <p>Mas, afinal, quanto dinheiro você precisa juntar? Qual é a matemática por trás da vida de rentista? É exatamente isso que vamos destrinchar, passo a passo, sem usar "economês" complicado. Prepare-se, porque o seu plano de fuga para a liberdade financeira começa agora.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>A Ilusão Nominal e a Verdade Real</strong>
+          <p>O maior erro do investidor iniciante é olhar para a rentabilidade de um investimento e esquecer da inflação. Se um investimento rende 10% ao ano, mas a inflação do período foi de 6%, o seu poder de compra aumentou apenas 4%. É sobre esse "aumento real" que devemos focar para não sermos devorados pelo custo de vida no futuro.</p>
+        </div>
+
+        <h2>Rentabilidade Real: O Segredo de Sobrevivência do Rentista</h2>
+        
+        <p>Para viver de renda no longo prazo (estamos falando de décadas), você não pode simplesmente sacar todos os juros que o seu investimento rende todos os meses. Se fizer isso, a inflação fará com que os seus rendimentos comprem cada vez menos coisas com o passar dos anos.</p>
+        
+        <p>Vamos usar um exemplo extremo para entender: imagine que você precise de R$ 5.000 por mês para viver hoje. Se a inflação no Brasil for de cerca de 5% ao ano (um número realista a longo prazo), daqui a 15 anos você não precisará de R$ 5.000 para manter o mesmo padrão de vida, mas sim de quase R$ 10.400. Se o seu investimento continuar te pagando fixos R$ 5.000, você vai acabar quebrado.</p>
+        
+        <p>Por isso, o cálculo da independência financeira baseia-se na <strong>Rentabilidade Real</strong> (também conhecida como juros reais). A rentabilidade real é aquilo que o seu dinheiro rende <em>acima</em> da inflação. É esse "excedente" que você pode sacar todos os meses e gastar sem peso na consciência, deixando a outra parte do rendimento lá dentro para corrigir o bolo principal pela inflação e manter o seu poder de compra.</p>
+        
+        <h3>Mas qual é a taxa de juros reais no Brasil?</h3>
+        
+        <p>Historicamente, o Brasil é um dos países que mais paga juros reais no mundo. Quando olhamos para títulos públicos de longo prazo, como o Tesouro IPCA+ (que rende a inflação mais uma taxa fixa), é comum encontrarmos taxas variando entre 4% a até 6% ao ano acima da inflação.</p>
+        <p>Para sermos conservadores e garantir que o seu dinheiro nunca vai acabar, vamos adotar uma taxa de juros reais realista e segura para os nossos cálculos: <strong>4% ao ano (ou cerca de 0,33% ao mês) livres de imposto e acima da inflação.</strong> Esse é o nosso número de ouro.</p>
+        
+        <h2>A Matemática da Independência: Como calcular o "Seu Número"</h2>
+        
+        <p>Existe uma regra famosa nos Estados Unidos chamada de "Regra dos 4%" (The 4% Rule). Ela afirma que, se você sacar 4% do seu patrimônio total no primeiro ano da aposentadoria e continuar sacando esse valor corrigido pela inflação nos anos seguintes, o seu dinheiro vai durar pelo menos 30 anos (e na maioria das vezes, para sempre). Por coincidência, essa regra encaixa-se perfeitamente na taxa de juros reais da Renda Fixa brasileira.</p>
+        
+        <p>Calcular o patrimônio exato que você precisa para chegar lá é muito simples. A fórmula básica é:</p>
+        
+        <div class="article-callout article-callout--green">
+          <strong>A Fórmula da Liberdade</strong>
+          <p style="font-size: 1.1rem; text-align: center; margin: 10px 0; font-family: 'Playfair Display', serif;"><strong>Patrimônio Necessário = (Custo de Vida Mensal x 12) ÷ Taxa Real Anual</strong></p>
+          <p>Onde a Taxa Real Anual que utilizaremos é de 0,04 (ou seja, 4%). O resultado será o valor total que deve estar aplicado e rendendo para você não precisar mais bater ponto.</p>
+        </div>
+
+        <p>Vamos passar pelas etapas de cálculo e olhar alguns exemplos práticos com a nossa moeda.</p>
+        
+        <h3>Passo 1: Descubra o seu custo de vida</h3>
+        <p>O primeiro passo é entender quanto você gasta por mês. Mas cuidado! Se o objetivo é parar de trabalhar, o seu custo de vida futuro pode ser diferente do atual. Sem o trabalho, você talvez gaste menos com transporte, alimentação fora de casa, roupas sociais. Por outro lado, com mais tempo livre, você pode acabar gastando mais com hobbies, viagens e lazer. Some tudo e encontre um número confortável. Vamos chamar este número de <strong>Custo de Vida Alvo</strong>.</p>
+        
+        <h3>Passo 2: Entenda a relação do Imposto de Renda</h3>
+        <p>Ao realizar saques dos seus investimentos de Renda Fixa (CDBs, Tesouro Direto), na maioria das vezes haverá cobrança de Imposto de Renda (IR). A tabela regressiva de IR estabiliza em 15% sobre o lucro para aplicações acima de 720 dias. Nos nossos cálculos de juros reais de 4%, já estamos assumindo esse valor de forma líquida, para simplificar. Caso invista em produtos isentos de IR (como LCI, LCA ou debêntures incentivadas), você poderá até ganhar uma "gordurinha" a mais.</p>
+        
+        <h2>Exemplos Reais: Quanto eu preciso juntar?</h2>
+        
+        <p>Abaixo estão algumas simulações utilizando a taxa segura de 4% de rentabilidade real líquida ao ano.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Custo de Vida Mensal</th>
+              <th>Custo Anual (Mensal x 12)</th>
+              <th>Patrimônio Alvo (Cálculo a 4%)</th>
+              <th>O que isso significa na prática?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>R$ 3.000</strong></td>
+              <td>R$ 36.000</td>
+              <td><strong>R$ 900.000</strong></td>
+              <td>Com 900 mil aplicados, você tira 3 mil todo mês e o bolo continua corrigido pela inflação.</td>
+            </tr>
+            <tr>
+              <td><strong>R$ 5.000</strong></td>
+              <td>R$ 60.000</td>
+              <td><strong>R$ 1.500.000</strong></td>
+              <td>Com 1,5 milhão você atinge o padrão de vida de uma boa parte da classe média, sem precisar trabalhar.</td>
+            </tr>
+            <tr>
+              <td><strong>R$ 10.000</strong></td>
+              <td>R$ 120.000</td>
+              <td><strong>R$ 3.000.000</strong></td>
+              <td>O equivalente a uma vida confortável para uma família, bancada integralmente pelos juros compostos.</td>
+            </tr>
+            <tr>
+              <td><strong>R$ 20.000</strong></td>
+              <td>R$ 240.000</td>
+              <td><strong>R$ 6.000.000</strong></td>
+              <td>Padrão de vida de luxo, suportado por rendimentos sólidos do patrimônio investido.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>Sabe o que é mais interessante ao olhar a tabela acima? Muita gente se espanta ao ver o número <strong>R$ 1.500.000</strong> para render <strong>R$ 5.000</strong>, pensando: <em>"Nossa, na poupança de 0,5% daria pra tirar 7.500!"</em>.</p>
+        
+        <p>Sim, você poderia sacar R$ 7.500 hoje. Porém, no ano seguinte os seus gastos sobem devido à inflação, o seu principal se desvaloriza com o tempo e em poucos anos o seu dinheiro acabaria. A matemática dos 4% (ou o fator 300 - onde você multiplica o seu gasto mensal por 300) protege o seu poder de compra <strong>pelo resto da sua vida e das próximas gerações</strong>. O segredo da verdadeira renda passiva não é o máximo de saque, mas a perpetuidade.</p>
+        
+        <h2>Os Melhores Investimentos de Renda Fixa para Viver de Renda</h2>
+        
+        <p>Não basta juntar o patrimônio e colocá-lo na Poupança ou no Tesouro Selic e viver feliz para sempre. Apesar do Tesouro Selic ser ótimo para a <a href="reserva.html">reserva de emergência</a>, a rentabilidade dele oscila junto com a taxa Selic. Se o Banco Central cortar a taxa básica para 2% ao ano (como aconteceu em 2020), a sua "renda" vai despencar de uma hora para a outra.</p>
+        
+        <p>Para garantir a perpetuidade do seu padrão de vida e travar ganhos altos acima da inflação, a estratégia envolve montar uma carteira focada em juros reais. Aqui estão os três pilares que você deve focar quando o objetivo é renda permanente e passiva:</p>
+        
+        <h3>1. Tesouro IPCA+ com Juros Semestrais</h3>
+        <p>Esta é, possivelmente, a melhor ferramenta que o Governo Federal disponibiliza para quem quer viver de juros sem dor de cabeça. Ao comprar esse título, você garante a proteção da inflação do período (IPCA) e mais uma taxa fixa (ex: + 5,5% ao ano).</p>
+        <p>A vantagem mágica deste título é o termo "Juros Semestrais". A cada seis meses, o Tesouro Nacional deposita os juros reais diretamente na sua conta da corretora, já descontados o Imposto de Renda. O seu dinheiro principal continua investido. Dessa forma, você recebe um "salário" gordo duas vezes ao ano e pode se organizar para viver com ele ao longo dos meses. Não há surpresas com a inflação, já que o título corrige automaticamente a sua grana.</p>
+
+        <h3>2. Tesouro RendA+</h3>
+        <p>Lançado mais recentemente, o <strong>Tesouro RendA+</strong> foi criado especificamente para a aposentadoria. Ele tem duas fases: a fase de acumulação e a fase de fruição (recebimento). Durante anos, você vai comprando os títulos e acumulando patrimônio. Quando chega a data alvo escolhida por você (por exemplo, 2045), o governo passa a depositar um valor mensal corrigido pela inflação diretamente na sua conta por 20 anos.</p>
+        <p>Embora não seja um título "eterno" como a nossa regra de viver de renda (já que ele esgota o principal em 20 anos), é um investimento formidável e uma excelente base de Renda Fixa para garantir pelo menos um piso de sobrevivência na terceira idade, substituindo de forma muito mais eficiente o INSS.</p>
+        
+        <h3>3. Títulos Privados Isentos e Atrelados à Inflação (LCI/LCA e Debêntures)</h3>
+        <p>Com um patrimônio substancial, faz sentido diversificar além do Tesouro Direto para tentar obter taxas de juros reais ainda maiores. Os bancos e as grandes empresas emitem papéis que rendem, por exemplo, IPCA + 6%, IPCA + 7%. No caso das <strong>LCI, LCA e Debêntures Incentivadas</strong>, o ganho de causa é brutal porque elas são <strong>isentas de Imposto de Renda</strong>.</p>
+        <p>Lembre-se apenas que a Renda Fixa privada carrega o risco da empresa emissora. Por isso, a diversificação e a escolha de boas instituições são primordiais. Enquanto o Governo nunca vai dar calote em Reais (ele pode simplesmente imprimir dinheiro), um banco privado ou empresa pode falir.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>O Grande Perigo: A Fase de Acumulação</strong>
+          <p>Durante a fase em que você está juntando patrimônio (Acumulação), você não deve focar em investimentos que pagam rendimentos periódicos (juros semestrais ou dividendos mensais na conta), porque isso vai forçar você a pagar imposto de renda antecipadamente, perdendo a força dos juros compostos. Juros na conta só são bons na fase de viver de renda (Fruição)!</p>
+        </div>
+
+        <h2>O Plano de Ação: Como chegar lá partindo do zero?</h2>
+        
+        <p>Ok, você já entendeu que se quiser uma renda mensal permanente de R$ 5.000, o seu alvo é R$ 1,5 milhão investidos em ativos de renda fixa que rendam IPCA+ 4%. O número parece assustador e impossível para quem está ganhando um salário comercial. Mas é aí que a magia dos <a href="../index.html#ferramentas">juros compostos</a> entra em ação.</p>
+        
+        <p>A rota para a independência não é um prêmio de loteria, é uma bola de neve. Siga estas etapas fundamentais:</p>
+        
+        <ol>
+          <li><strong>Viva um degrau abaixo:</strong> Organize o seu orçamento. Você só consegue investir se houver sobra no final do mês. Adeque o seu estilo de vida atual para gastar menos do que você ganha.</li>
+          <li><strong>Ataque as dívidas:</strong> Nenhum investimento supera os juros de uma dívida de cartão de crédito ou cheque especial. Mate isso primeiro.</li>
+          <li><strong>Construa a Reserva:</strong> Comece pelo Tesouro Selic ou um CDB 100% CDI de Liquidez Diária, acumulando algo entre 3 e 6 meses dos seus custos mensais vitais.</li>
+          <li><strong>Crie o hábito:</strong> Automatize as suas finanças. Todo dia 5, quando o salário cai, transfira um valor fixo (10%, 15%, 20% do salário) imediatamente para a corretora e invista. Não deixe para investir "o que sobrar no fim do mês", porque não vai sobrar. Pague-se primeiro!</li>
+          <li><strong>Aumente os seus aportes:</strong> O tempo e a rentabilidade são essenciais, mas o que mais acelera a caminhada nos primeiros 10 anos é o volume do <strong>aporte</strong>. Invista em você mesmo, estude, busque promoções e rendas extras. Quando o salário aumentar, não aumente o padrão de vida de imediato, invista a diferença.</li>
+        </ol>
+
+        <p>A jornada para viver de renda é uma maratona de longo prazo. No começo, vai parecer que os R$ 100 investidos todo mês não estão mudando a sua vida. O dinheiro crescerá como o capim: no dia a dia você não vê o crescimento, mas daqui a 5 ou 10 anos, quando olhar para trás, vai se surpreender com o montante. Com o tempo e a magia dos juros sobre juros agindo a seu favor, chegará o dia em que o rendimento mensal da sua carteira de investimentos pagará uma conta de luz, depois o supermercado, depois o aluguel... E quando você menos esperar, será a vez do salário ser superado pela renda do seu patrimônio.</p>
+        
+        <p>A liberdade financeira não é sobre ser milionário ou viver em iates luxuosos. É sobre <strong>comprar o seu próprio tempo</strong> de volta. O tempo que você tem para a sua família, para os seus hobbies e para a sua própria vida. E na Renda Fixa brasileira, as regras do jogo já estão escritas e favoráveis. Basta começar a jogar.</p>
+        
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header" style="max-width:800px; margin:0 auto;">
+        <span class="section-tag" style="display:block; text-transform:uppercase; font-size:0.75rem; font-weight:700; color:#2563eb; letter-spacing:0.1em; margin-bottom:8px;">Continue lendo</span>
+        <h2 class="section-title" style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:#0f172a; margin:0;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid" style="max-width:800px; margin:40px auto 0;">
+        <a href="investimentos.html" class="article-card">
+          <span class="article-category article-cat--green">Investimentos</span>
+          <h3 class="article-card-title">Os melhores investimentos para iniciantes</h3>
+          <p class="article-card-desc">Descubra quais são as opções mais seguras e rentáveis para dar seus primeiros passos.</p>
+        </a>
+        <a href="tesouro.html" class="article-card">
+          <span class="article-category article-cat--blue">Renda Fixa</span>
+          <h3 class="article-card-title">Como investir no Tesouro Direto</h3>
+          <p class="article-card-desc">Tudo o que você precisa saber para emprestar dinheiro ao governo com segurança total.</p>
+        </a>
+        <a href="poupanca.html" class="article-card">
+          <span class="article-category article-cat--gold">Metas</span>
+          <h3 class="article-card-title">Como guardar seus primeiros R$ 5.000</h3>
+          <p class="article-card-desc">O passo a passo para construir a sua primeira meta financeira rumo à liberdade.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

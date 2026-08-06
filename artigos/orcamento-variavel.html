@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aprenda o passo a passo para criar um orçamento seguro e evitar o sufoco financeiro quando você tem renda variável, sendo freelancer ou comissionado."/>
+  <title>Como montar um orçamento com salário variável (freelancers, comissionados) | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .article-card {
+      background: #fff; border-radius: 12px; padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.05); text-decoration: none;
+      transition: transform 0.2s; display: block;
+    }
+    .article-card:hover { transform: translateY(-4px); }
+    .article-card-title {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
+      color: #0f172a; margin: 12px 0 8px; line-height: 1.3;
+    }
+    .article-card-desc { font-size: 0.9rem; color: #64748b; margin: 0; line-height: 1.5; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Blog</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="#footer" class="nav-link">Contato</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--gold">Orçamento</span>
+      <h1 class="article-title">Como montar um orçamento com salário variável (freelancers, comissionados)</h1>
+      <div class="article-meta">
+        <span>✍️ Francisco Gomes</span>
+        <span>📅 05 Ago 2026</span>
+        <span>⏱️ 8 min de leitura</span>
+      </div>
+      <p class="article-summary">Quem trabalha como freelancer, autônomo, motorista de aplicativo ou vendedor comissionado sabe a dor de cabeça que é planejar as contas do mês quando a renda oscila. Aprenda o passo a passo para criar um orçamento seguro e evitar o sufoco financeiro de vez.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/orcamento-variavel.jpg" alt="Pessoa anotando gastos em um caderno com uma calculadora ao lado" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>A vida de quem não tem um contracheque fixo todo mês caindo religiosamente no quinto dia útil é desafiadora. Se você é freelancer, autônomo, empresário, motorista de aplicativo, corretor de imóveis ou qualquer profissional que ganha por comissão ou projeto, você conhece bem a ansiedade que bate na última semana do mês.</p>
+        
+        <p>"Será que o dinheiro deste mês vai dar para pagar todas as contas?" Essa pergunta assombra milhões de brasileiros que convivem com o <strong>fluxo de caixa irregular</strong>. Em um mês você pode faturar R$ 8.000 e sentir que está rico, no mês seguinte chove menos, o cliente atrasa, as vendas caem, e você fecha o mês com R$ 2.500 suados.</p>
+
+        <p>A maioria das dicas clássicas de finanças pessoais pressupõe que você sabe exatamente quanto vai ganhar. "Guarde 20% do seu salário!" - mas que salário? Se você tentar aplicar as regras tradicionais ao seu cenário variável, a frustração é garantida. É por isso que você precisa de um <strong>sistema financeiro próprio</strong>, adaptado à realidade de altos e baixos.</p>
+        
+        <p>A boa notícia é que, com algumas mudanças de mentalidade e uma organização estratégica, você pode viver de forma mais previsível e tranquila do que muita gente que tem carteira assinada. Vamos destrinchar o passo a passo para criar o seu orçamento à prova de meses ruins.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>O Maior Erro do Profissional Autônomo</strong>
+          <p>Elevar o seu padrão de vida com base no seu <em>melhor mês</em>. Se você ganhou R$ 10.000 em dezembro e assumiu prestações de carro, apartamento e viagens contando que todo mês seria igual, você plantou uma bomba-relógio nas suas finanças. O tombo nos meses fracos será devastador.</p>
+        </div>
+
+        <h2>Passo 1: Descubra o seu "Custo de Sobrevivência"</h2>
+        <p>Quando a sua receita não é fixa, a sua base de planejamento não deve ser o quanto você <em>ganha</em>, mas sim o quanto você <strong>gasta</strong>. Antes de qualquer coisa, você precisa saber de forma milimétrica quanto custa a sua vida.</p>
+        
+        <p>O primeiro conceito fundamental é o <strong>Custo de Sobrevivência</strong> (ou Custo Fixo Básico). Ele representa o valor mínimo que você precisa para manter a máquina rodando e não passar necessidades. O que entra nesta conta?</p>
+        <ul>
+          <li>Moradia (aluguel, condomínio, IPTU)</li>
+          <li>Contas essenciais (água, luz, internet, celular, gás)</li>
+          <li>Alimentação básica (supermercado)</li>
+          <li>Saúde (plano de saúde, medicamentos de uso contínuo)</li>
+          <li>Transporte para o trabalho (gasolina, passagens)</li>
+          <li>Dívidas assumidas que não podem ser atrasadas (parcela do carro, renegociações bancárias)</li>
+        </ul>
+        
+        <p>O Custo de Sobrevivência <strong>não inclui</strong> idas ao restaurante, compras no shopping, assinaturas de streaming, lazer ou gastos supérfluos. A ideia aqui é responder à seguinte pergunta: <em>"Se o meu mês for um desastre, quanto dinheiro eu preciso, no mínimo, para pagar as contas básicas e colocar comida na mesa sem entrar no cheque especial?"</em></p>
+        <p>Para o nosso exemplo prático, vamos supor que o seu Custo de Sobrevivência calculado seja de <strong>R$ 3.500,00</strong>.</p>
+
+        <h2>Passo 2: Defina uma "Renda Base Segura"</h2>
+        <p>Agora que você sabe quanto precisa para sobreviver, precisamos estimar a sua renda. Mas como fazer isso se ela varia? A técnica correta é calcular a sua <strong>Renda Base Segura</strong>, muitas vezes chamada de renda média pessimista.</p>
+        
+        <p>Levante o seu faturamento dos últimos 6 a 12 meses. Identifique o mês em que você ganhou <em>mais</em> e o mês em que ganhou <em>menos</em>. Muitas pessoas pegam a média simples, mas para termos segurança de verdade, a recomendação é ser conservador.</p>
+        
+        <p>Se em um ano ruim o seu faturamento oscilou entre R$ 3.000 e R$ 9.000, e a média foi de R$ 5.500, a sua Renda Base Segura para fins de planejamento deveria ser um pouco abaixo da média. Por exemplo, <strong>R$ 4.500,00</strong>.</p>
+        
+        <p>Por que fazer isso? Ao planejar a sua vida baseada em um cenário pessimista, todo o dinheiro que entrar <em>a mais</em> será lucro e servirá para construir patrimônio ou realizar sonhos, não para apagar incêndios. Se a sua Renda Base Segura (R$ 4.500) cobre o seu Custo de Sobrevivência (R$ 3.500), você já tem um respiro financeiro mensal de R$ 1.000,00.</p>
+
+        <div class="article-callout article-callout--green">
+          <strong>Dica de Ouro: Separe as Contas!</strong>
+          <p>Se você é freelancer ou PJ, nunca misture o dinheiro do seu negócio com o seu dinheiro pessoal. Tenha uma conta bancária (pode ser digital, sem taxas) só para receber dos clientes, e outra conta para as despesas da sua casa. Misturar tudo é o atalho mais rápido para a falência.</p>
+        </div>
+
+        <h2>Passo 3: A Estratégia das "Reservas Duplas"</h2>
+        <p>Todo educador financeiro fala sobre a Reserva de Emergência. Para um trabalhador CLT (carteira assinada), ela serve para cobrir o desemprego inesperado, um problema médico grave ou o conserto do carro. É recomendável que ele tenha de 3 a 6 meses do seu custo de vida guardados.</p>
+        
+        <p>Porém, para quem tem renda variável, a Reserva de Emergência tradicional não é suficiente. Você precisa de um sistema de <strong>Reservas Duplas</strong>:</p>
+        
+        <h3>1. A Reserva de Oscilação (O "Vale dos Meses Ruins")</h3>
+        <p>Esta é uma reserva pequena e de acesso imediato, criada especificamente para complementar a sua renda nos meses fracos. Ela não é para emergências graves; é parte do seu fluxo de caixa normal. Seu objetivo é garantir que você consiga tirar o seu pró-labore todos os meses.</p>
+        <p>O ideal é ter de <strong>1 a 2 meses</strong> do seu Custo de Sobrevivência guardados aqui (no nosso exemplo, entre R$ 3.500 e R$ 7.000). Esse dinheiro deve ficar em um investimento de liquidez imediata, como a poupança (neste caso específico, pela agilidade) ou um CDB de liquidez diária do seu banco do dia a dia.</p>
+        
+        <h3>2. A Reserva de Emergência Real</h3>
+        <p>Esta reserva é para a "fase preta": uma pandemia que zera a sua renda, um acidente que impede você de trabalhar por meses, ou a quebra do seu principal equipamento de trabalho (como o computador do designer ou o carro do motorista).</p>
+        <p>Para profissionais autônomos, a recomendação é de <strong>6 a 12 meses</strong> do Custo de Sobrevivência. No nosso exemplo, seria entre R$ 21.000 e R$ 42.000. Este dinheiro deve estar rendendo no Tesouro Selic ou em um fundo DI seguro e sem taxas abusivas.</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Tipo de Reserva</th>
+              <th>Finalidade</th>
+              <th>Tamanho Recomendado</th>
+              <th>Onde Investir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Reserva de Oscilação</strong></td>
+              <td>Completar a renda em meses fracos ("Vales")</td>
+              <td>1 a 2 meses do custo fixo básico</td>
+              <td>Conta corrente remunerada ou CDB de liquidez diária do próprio banco</td>
+            </tr>
+            <tr>
+              <td><strong>Reserva de Emergência</strong></td>
+              <td>Catástrofes financeiras, invalidez temporária, perda total de renda</td>
+              <td>6 a 12 meses do custo fixo básico</td>
+              <td>Tesouro Selic, CDB 100% CDI de banco sólido, LCI de liquidez (após carência)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Passo 4: Pague um "Salário Fixo" a Si Mesmo</h2>
+        <p>Aqui está o segredo dos autônomos bem-sucedidos: <strong>eles agem como se fossem funcionários da própria empresa.</strong></p>
+        
+        <p>Em vez de gastar todo o dinheiro que entra na conta de trabalho no mês, você fará uma transferência agendada para a sua conta pessoal. Este será o seu salário fixo, ou "pró-labore".</p>
+        
+        <p>Lembra daquela conta que fizemos no Passo 2? A sua Renda Base Segura foi estimada em R$ 4.500, e o seu Custo de Sobrevivência em R$ 3.500. Você pode definir que o seu salário fixo mensal será de R$ 4.500. Todo dia 05, você transfere R$ 4.500 da conta PJ para a conta PF (Pessoa Física). Com esse dinheiro, você paga as contas básicas (R$ 3.500) e sobra R$ 1.000 para lazer, lanches e investimentos pessoais.</p>
+        
+        <p>O que acontece se, em um determinado mês, a sua empresa faturar <strong>R$ 8.000</strong>?</p>
+        <p>Você continua transferindo apenas os <strong>R$ 4.500</strong> de salário. Os R$ 3.500 excedentes ficam na conta PJ e servem para construir a sua <strong>Reserva de Oscilação</strong> ou para reinvestir no negócio (comprar um equipamento melhor, investir em anúncios).</p>
+        
+        <p>E o que acontece se, no mês seguinte, as vendas despencarem e a empresa faturar apenas <strong>R$ 2.000</strong>?</p>
+        <p>É aqui que a mágica acontece! Como você teve a disciplina de guardar os lucros do mês excelente, a conta PJ terá saldo suficiente (aqueles R$ 3.500 excedentes do mês anterior). Você acessa a Reserva de Oscilação, completa os R$ 2.500 faltantes e continua transferindo os seus <strong>R$ 4.500</strong> de salário para a conta PF. A sua vida pessoal continua intacta. Sem estresse, sem juros no cheque especial, sem ansiedade na mesa de jantar.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>A Regra dos Meses Excelentes</strong>
+          <p>Quando a sua renda "explodir" em um mês excepcional, segure a emoção. Antes de trocar de carro ou fazer uma viagem internacional, use 70% desse excedente para "engordar" as suas reservas duplas e abater dívidas caras. Use os outros 30% para se recompensar pelo trabalho duro. O equilíbrio é o segredo para a paz mental de longo prazo.</p>
+        </div>
+
+        <h2>Passo 5: Planejando os Gastos Variáveis e Anuais</h2>
+        <p>Com as contas fixas e as reservas esquematizadas, o último desafio é lidar com as despesas esporádicas. Gastos anuais como IPTU, IPVA, seguro do carro e matrícula escolar costumam derrubar o orçamento de quem não se planeja.</p>
+        
+        <p>A técnica para isso é a "Mensalização" de despesas anuais. Se você sabe que em janeiro de 2027 terá que pagar R$ 1.200 de IPVA, não espere chegar em janeiro para sofrer. Divida o valor por 12 meses: R$ 100,00 por mês. Inclua esses R$ 100,00 como parte do seu Custo de Sobrevivência e separe esse valor mensalmente.</p>
+        
+        <p>Para os gastos de lazer, crie envelopes virtuais (ou caixinhas de bancos digitais). Se no seu salário de R$ 4.500 sobraram R$ 1.000 após pagar o custo básico, defina limites: "Este mês tenho R$ 400 para saídas e restaurantes, R$ 200 para roupas, R$ 400 para investir." Se o limite da caixinha de saídas acabar no dia 20, paciência. Vai ter que comer pão com ovo em casa ou assistir Netflix até a virada do mês.</p>
+
+        <h2>Conclusão: Consistência Gera Liberdade</h2>
+        <p>Viver com renda variável pode ser libertador, pois o teto de ganhos depende muito do seu próprio esforço e criatividade, diferente do salário engessado da CLT. Porém, sem organização, essa liberdade rapidamente se transforma em escravidão financeira, onde você passa os dias trabalhando apenas para pagar boletos atrasados e rolar dívidas do cartão.</p>
+        
+        <p>Resumindo os passos para vencer este jogo:</p>
+        <ol>
+          <li>Saiba exatamente qual é o seu Custo Mínimo de Sobrevivência.</li>
+          <li>Calcule uma Renda Base pessimista baseada no seu histórico.</li>
+          <li>Separe contas bancárias (Negócio x Vida Pessoal).</li>
+          <li>Pague-se um salário fixo (pró-labore), sem gastar todo o lucro nos meses bons.</li>
+          <li>Monte a sua Reserva de Oscilação primeiro, e a sua Reserva de Emergência em seguida.</li>
+        </ol>
+        
+        <p>A transição para este sistema leva tempo. Pode ser que você passe os primeiros meses se apertando para conseguir formar a Reserva de Oscilação. É normal e faz parte do processo de amadurecimento financeiro. Mantenha a disciplina, evite compras impulsivas em meses fartos e construa o seu alicerce com paciência.</p>
+        <p>A paz de deitar a cabeça no travesseiro sabendo que, independente de quantos clientes fecharem no próximo mês, as contas da sua casa estão garantidas, não tem preço. Comece o seu planejamento hoje e retome o controle da sua vida financeira!</p>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header" style="max-width:800px; margin:0 auto;">
+        <span class="section-tag" style="display:block; text-transform:uppercase; font-size:0.75rem; font-weight:700; color:#2563eb; letter-spacing:0.1em; margin-bottom:8px;">Continue lendo</span>
+        <h2 class="section-title" style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:#0f172a; margin:0;">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid" style="max-width:800px; margin:40px auto 0;">
+        <a href="reserva.html" class="article-card">
+          <span class="article-category article-cat--green">Segurança</span>
+          <h3 class="article-card-title">Como montar a sua Reserva de Emergência</h3>
+          <p class="article-card-desc">Proteja-se contra imprevistos com o passo a passo completo para a sua reserva financeira.</p>
+        </a>
+        <a href="dividas.html" class="article-card">
+          <span class="article-category article-cat--red">Dívidas</span>
+          <h3 class="article-card-title">Como sair das dívidas com o Método Bola de Neve</h3>
+          <p class="article-card-desc">Uma estratégia psicológica e prática para quitar seus débitos e limpar o seu nome.</p>
+        </a>
+        <a href="poupanca.html" class="article-card">
+          <span class="article-category article-cat--gold">Metas</span>
+          <h3 class="article-card-title">Como guardar seus primeiros R$ 5.000</h3>
+          <p class="article-card-desc">Um guia prático para organizar suas finanças e atingir sua primeira grande meta financeira.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Descubra como identificar cobranças indevidas no banco, os passos exatos para exigir o estorno e como reclamar no Banco Central e Procon."/>
+  <title>Cobranças indevidas no banco? Saiba como reclamar e recuperar seu dinheiro | Dinheiro Nu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    }
+    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .article-category {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
+    }
+    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
+    .article-cat--green  { background: #10b981; color: #fff; }
+    .article-cat--blue   { background: #2563eb; color: #fff; }
+    .article-cat--red    { background: #ef4444; color: #fff; }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .article-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-summary {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.7; border-left: 3px solid #f59e0b;
+      padding-left: 20px; margin-top: 24px;
+    }
+    .article-featured-img {
+      width: 100%; max-width: 800px; margin: 0 auto;
+      display: block; border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      transform: translateY(40px);
+    }
+    .article-body-wrap {
+      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
+    }
+    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 800;
+      color: #0f172a; margin: 48px 0 18px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .article-content h3 {
+      font-size: 1.15rem; font-weight: 700;
+      color: #0f172a; margin: 32px 0 12px;
+    }
+    .article-content p { margin-bottom: 20px; }
+    .article-content strong { color: #0f172a; font-weight: 700; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article-content li { line-height: 1.7; }
+    .article-callout {
+      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
+      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-callout--gold {
+      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
+    }
+    .article-callout--green {
+      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
+    }
+    .article-callout--red {
+      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
+    }
+    .article-callout p { margin: 0; font-size: 0.95rem; }
+    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .article-table th {
+      background: #0f172a; color: #fff; padding: 12px 16px;
+      text-align: left; font-weight: 600; font-size: 0.82rem;
+    }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+    .article-table tr:nth-child(even) td { background: #f8faff; }
+    .article-share {
+      margin: 60px 0 0; padding: 32px; background: #f8faff;
+      border-radius: 16px; text-align: center;
+      border: 1px solid rgba(15,23,42,.06);
+    }
+    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
+    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.2s;
+    }
+    .share-btn--whatsapp { background: #25d366; color: #fff; }
+    .share-btn--whatsapp:hover { background: #128C7E; }
+    .share-btn--copy { background: #0f172a; color: #fff; }
+    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
+    .related-section { padding: 80px 0; background: #f8faff; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
+        </div>
+        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="../index.html#artigos" class="nav-link">Artigos</a></li>
+        <li><a href="../index.html#ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="../index.html#recentes" class="nav-link">Recentes</a></li>
+        <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+      <a href="../index.html#newsletter" class="nav-cta">Newsletter</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <span class="article-category article-cat--blue">Direitos</span>
+      <h1 class="article-title">Cobranças indevidas no banco? Saiba como reclamar e recuperar seu dinheiro</h1>
+      <div class="article-meta">
+        <span>✍️ Francisco Gomes</span>
+        <span>📅 5 de Agosto de 2026</span>
+        <span>⏱️ 10 min de leitura</span>
+      </div>
+      <p class="article-summary">Descubra como identificar cobranças indevidas no cartão de crédito ou na conta corrente, entenda seus direitos no Código de Defesa do Consumidor e veja os passos práticos para exigir o estorno (e até receber em dobro!).</p>
+    </div>
+  </section>
+
+  <!-- IMAGE -->
+  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+    <div style="max-width:800px;margin:0 auto;padding:0 24px;">
+      <img src="../images/cobranca-indevida.jpg" alt="Pessoa analisando a fatura do cartão com dúvidas sobre tarifas e cobranças indevidas" class="article-featured-img" />
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main style="padding-top: 20px;">
+    <div class="article-body-wrap">
+      <article class="article-content">
+        <p>Imagine a cena: você está conferindo o extrato do seu banco pelo aplicativo ou lendo a fatura do cartão de crédito quando, do nada, se depara com um lançamento que não faz a menor ideia do que seja. "Tarifa de avaliação emergencial de crédito"? "Seguro prestamista"? Uma compra na madrugada em uma loja online estrangeira? Se essa situação lhe parece familiar, você não está sozinho.</p>
+        
+        <p>A <strong>cobrança indevida</strong> é um dos maiores pesadelos financeiros dos brasileiros e também uma das principais queixas registradas nos órgãos de defesa do consumidor, como o Procon e o Banco Central. Muitos bancos e instituições financeiras se aproveitam da desatenção dos clientes para embutir pequenas taxas, seguros não solicitados ou, pior, falham em fornecer segurança básica, permitindo que fraudes ocorram em nossos cartões de crédito.</p>
+        
+        <p>No entanto, você não precisa — e nem deve — engolir esse sapo e pagar por algo que não contratou ou consumiu. Neste guia completo, o <em>Dinheiro Nu</em> vai te mostrar como agir rápido, conhecer as leis que estão do seu lado (incluindo o famoso direito à devolução em dobro) e como pressionar o banco para que o seu suado dinheiro seja devolvido à sua conta o mais rápido possível.</p>
+
+        <h2>O que caracteriza uma cobrança indevida no banco?</h2>
+        
+        <p>Antes de partirmos para a ação, é essencial entendermos os tipos mais comuns de cobranças indevidas. Elas geralmente caem em três grandes categorias:</p>
+
+        <h3>1. Tarifas bancárias não autorizadas e pacotes de serviços</h3>
+        <p>A clássica cobrança de "Cesta de Serviços" ou "Pacote de Tarifas" na sua conta corrente, geralmente na faixa de R$ 20,00 a R$ 80,00 por mês. De acordo com as normas do Banco Central (Resolução CMN nº 3.919), todo cidadão brasileiro tem o direito de ter uma conta com <strong>Serviços Essenciais gratuitos</strong>. Isso inclui cartão de débito, quatro saques no mês, dois extratos e transferências via Pix (que já são gratuitas por natureza). Se o banco empurrou um pacote pago sem a sua autorização expressa, isso é cobrança indevida.</p>
+
+        <h3>2. Seguros e Títulos de Capitalização não solicitados (Venda Casada)</h3>
+        <p>Outro golpe muito comum. Você faz um empréstimo, contrata um financiamento ou até mesmo abre uma conta, e, de repente, descobre que está pagando um "Seguro de Vida", "Seguro Prestamista" ou um título de capitalização. Essa prática, conhecida como <em>venda casada</em>, é expressamente proibida pelo Código de Defesa do Consumidor (CDC). Você só deve pagar por seguros que ativamente escolheu contratar.</p>
+
+        <h3>3. Fraudes e clonagem no cartão de crédito</h3>
+        <p>Você verifica sua fatura do Nubank, Itaú, Santander (ou qualquer outro) e vê compras de milhares de reais em lugares que você nunca pisou, ou em sites que nunca visitou. Aqui, não foi o banco que tentou lhe vender algo, mas houve uma falha de segurança que permitiu que fraudadores usassem seus dados. De quem é a culpa? O Superior Tribunal de Justiça (STJ) entende que a responsabilidade por fraudes praticadas por terceiros é da instituição financeira. Eles não podem jogar o prejuízo nas suas costas.</p>
+
+        <div class="article-callout article-callout--red">
+          <strong>Atenção ao Prazo</strong>
+          <p>Se você identificar uma fraude no cartão de crédito, o primeiro passo absoluto deve ser o bloqueio imediato do cartão no aplicativo. Em seguida, avise a instituição. Não espere a fatura fechar!</p>
+        </div>
+
+        <h2>O Código de Defesa do Consumidor: A Regra do Pagamento em Dobro</h2>
+
+        <p>O Brasil tem uma das leis de defesa do consumidor mais fortes do mundo. O artigo 42, parágrafo único, do Código de Defesa do Consumidor (CDC) traz um dos seus maiores trunfos no momento de combater abusos bancários. Ele diz exatamente o seguinte:</p>
+
+        <blockquote>
+          "O consumidor cobrado em quantia indevida tem direito à repetição do indébito, <strong>por valor igual ao dobro do que pagou em excesso</strong>, acrescido de correção monetária e juros legais, salvo hipótese de engano justificável."
+        </blockquote>
+
+        <p>O que isso significa na prática? Se o banco te cobrou R$ 50,00 de tarifa de seguro sem a sua autorização durante 6 meses, totalizando R$ 300,00, e você já pagou essas faturas, <strong>o banco é obrigado a te devolver R$ 600,00</strong>. Isso mesmo, o dobro do valor, devidamente corrigido.</p>
+        
+        <p>A única exceção é o "engano justificável" (um erro de sistema pontual e logo corrigido), mas os tribunais brasileiros já pacificaram o entendimento de que tarifas cobradas sem contratação ou fraudes de terceiros não configuram "engano justificável". Elas configuram, na verdade, um defeito na prestação do serviço ou má-fé do banco.</p>
+
+        <p>É importante ressaltar: o direito à devolução em dobro ocorre quando você <strong>já pagou</strong> o valor indevido. Se a fatura ainda não venceu ou a cobrança foi feita mas não paga (porque você contestou antes de pagar), você tem direito ao estorno simples daquele valor (o banco apenas retira a cobrança da fatura).</p>
+
+        <h2>Passo a Passo Prático para Resolver Cobranças Indevidas</h2>
+
+        <p>Saber os seus direitos é só metade da batalha. A outra metade é agir estrategicamente. Aqui está a rota exata que você deve seguir para garantir que o estorno aconteça com o mínimo de dor de cabeça.</p>
+
+        <h3>Passo 1: Reúna as provas e o histórico</h3>
+        <p>Antes de pegar o telefone ou abrir o app, prepare o seu arsenal de provas. Tire prints da tela do aplicativo, guarde as faturas em formato PDF, imprima extratos, destaque os valores contestados e anote a data em que ocorreu. Quanto mais detalhado for o seu registro, mais fácil será argumentar a favor do estorno.</p>
+
+        <h3>Passo 2: Contate o SAC (Serviço de Atendimento ao Consumidor)</h3>
+        <p>Esse é sempre o canal oficial de entrada para problemas. Ligue para o SAC do seu banco (o número sempre fica no verso do cartão), acesse o chat do aplicativo e relate o problema de maneira objetiva. Use frases claras, como: "Não reconheço a compra X" ou "Eu não contratei esse seguro e exijo o cancelamento e estorno imediato".</p>
+        
+        <p><strong>Dica de Ouro:</strong> SEMPRE anote o número do protocolo, a data, a hora e o nome do atendente. O protocolo é a sua "arma" para provar que tentou resolver amigavelmente. Sem protocolo, para o banco e para os órgãos reguladores, é como se a ligação nunca tivesse existido.</p>
+
+        <div class="article-callout article-callout--gold">
+          <strong>Prazos do SAC</strong>
+          <p>O SAC do banco tem, por lei, o prazo máximo de <strong>5 dias úteis</strong> para resolver a sua demanda. Se eles não resolverem dentro desse período, você pode escalar o problema para os próximos passos.</p>
+        </div>
+
+        <h3>Passo 3: Ouvidoria do Banco e Consumidor.gov.br</h3>
+        <p>Se o SAC te ignorou, enrolou, ou deu uma resposta insatisfatória (como "a compra foi feita com senha, então não podemos cancelar"), é hora de escalar.</p>
+        
+        <ul>
+          <li><strong>Ouvidoria:</strong> Entre em contato com a Ouvidoria do seu banco informando o número do protocolo do SAC que não foi resolvido. A Ouvidoria costuma ter profissionais com mais poder de resolução. O prazo de resposta é de até 10 dias úteis.</li>
+          <li><strong>Consumidor.gov.br:</strong> Em paralelo, abra uma reclamação oficial no portal <a href="https://consumidor.gov.br" target="_blank" rel="noopener">Consumidor.gov.br</a>. Quase todos os grandes bancos e fintechs estão lá e morrem de medo de perder nota na plataforma, pois isso atrai multas e fiscalização. É muito comum bancos devolverem o dinheiro rapidamente após uma reclamação bem fundamentada ali.</li>
+        </ul>
+
+        <h3>Passo 4: A "Bomba Atômica": Reclamação no Banco Central (Bacen)</h3>
+        <p>O Banco Central (BC) é quem manda nos bancos. Se as etapas anteriores falharem, registrar uma queixa no BC é uma medida extremamente eficaz. Os bancos são obrigados a responder às notificações do Banco Central, e muitas queixas geram punições institucionais severas para eles.</p>
+        
+        <p>Para reclamar no Bacen, basta acessar o site do Banco Central ou o sistema Registrato (você pode logar com a sua conta Gov.br), procurar pela seção de atendimento ao cidadão e preencher os dados informando os protocolos das tentativas frustradas de resolver no SAC e na Ouvidoria.</p>
+
+        <h3>Passo 5: Justiça (Juizado Especial Cível)</h3>
+        <p>Se, mesmo após envolver Procon e Banco Central, o banco continuar se recusando a estornar (muito comum em fraudes de alto valor, como o "golpe do motoboy" ou invasões de conta via celular roubado), a via judicial será o caminho final. Como os valores costumam ser inferiores a 40 salários mínimos, você pode entrar no <strong>Juizado Especial Cível (JEC)</strong>, popularmente conhecido como "Pequenas Causas".</p>
+        
+        <p>Para ações de até 20 salários mínimos, você sequer precisa de advogado. Basta comparecer ao JEC da sua cidade com os extratos, boletim de ocorrência (obrigatório no caso de fraude) e os protocolos de atendimento. O juiz não apenas poderá obrigar o banco a devolver o valor (frequentemente em dobro), como também poderá condenar o banco a pagar uma indenização por <strong>danos morais</strong> devido ao tempo perdido e estresse (o chamado "desvio produtivo do consumidor").</p>
+
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Canal de Atendimento</th>
+              <th>Quando Usar</th>
+              <th>Prazo Médio de Resposta</th>
+              <th>Precisa de Protocolo Anterior?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SAC do Banco / App</td>
+              <td>Para o primeiro contato e aviso imediato.</td>
+              <td>Até 5 dias úteis</td>
+              <td>Não (é a primeira etapa).</td>
+            </tr>
+            <tr>
+              <td>Ouvidoria do Banco</td>
+              <td>Se o SAC não resolver.</td>
+              <td>Até 10 dias úteis</td>
+              <td>Sim, o protocolo do SAC.</td>
+            </tr>
+            <tr>
+              <td>Consumidor.gov.br / Procon</td>
+              <td>Para pressionar o banco externamente.</td>
+              <td>Até 10 dias (média)</td>
+              <td>Recomendado.</td>
+            </tr>
+            <tr>
+              <td>Banco Central (Bacen)</td>
+              <td>Para denúncias graves e inércia da Ouvidoria.</td>
+              <td>Até 10 dias úteis</td>
+              <td>Sim.</td>
+            </tr>
+            <tr>
+              <td>Juizado Especial Cível (JEC)</td>
+              <td>Último recurso, ou quando há dano moral envolvido.</td>
+              <td>Meses (depende da comarca)</td>
+              <td>Sim, para provar a resistência do banco.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Modelos de Reclamação Prontos para Copiar e Colar</h2>
+
+        <p>Muitas vezes, a resposta fria e burocrática dos atendentes pode nos deixar sem palavras. Para facilitar, elaboramos dois modelos que você pode usar para comunicar o banco por escrito (via e-mail, chat do app ou formulário do Procon/Consumidor.gov).</p>
+
+        <h3>Modelo 1: Para o SAC do Banco (Tarifas Indevidas)</h3>
+        <p><em>"Olá. Meu nome é [Seu Nome], titular do CPF [Seu CPF] e da conta [Agência/Conta]. Ao analisar meu extrato deste mês, identifiquei a cobrança sob a rubrica [nome que aparece no extrato, ex: 'Tarifa Cesta Plus'] no valor de R$ [Valor], na data de [Data]. Eu jamais contratei esse serviço ou pacote. Solicito o cancelamento imediato deste pacote não autorizado, com a manutenção da minha conta nos Serviços Essenciais Gratuitos (Resolução CMN nº 3.919), e a restituição em dobro do valor descontado indevidamente da minha conta, conforme art. 42 do Código de Defesa do Consumidor, num prazo de até 5 dias úteis. Aguardo retorno com o comprovante de estorno e número de protocolo deste atendimento."</em></p>
+
+        <h3>Modelo 2: Para Ouvidoria ou Banco Central (Fraude no Cartão)</h3>
+        <p><em>"Prezados, sou titular do cartão final [4 últimos dígitos], CPF [Seu CPF]. No dia [Data], foram efetuadas diversas transações que NÃO reconheço e NÃO realizei, no valor total de R$ [Valor total], nos estabelecimentos [Nomes das lojas/maquininhas]. Imediatamente bloqueei o cartão e abri o protocolo [Número do protocolo do SAC], porém fui informado que o estorno foi negado sob a justificativa de uso de senha. Trata-se de uma fraude evidente que fere meu padrão de consumo, indicando falha na segurança do sistema da instituição financeira. Como prevê a Súmula 479 do STJ, a responsabilidade civil pelo risco da atividade é do banco. Exijo a imediata suspensão dessas cobranças da minha fatura, sob pena de acionar o Juizado Especial Cível com pedido de indenização por danos materiais e morais, e registro no Banco Central do Brasil."</em></p>
+
+        <div class="article-callout article-callout--green">
+          <strong>Dicas de Ouro para Nunca Mais Cair em Ciladas</strong>
+          <p>A melhor forma de evitar dor de cabeça com cobranças indevidas é a prevenção contínua:</p>
+          <ul>
+            <li><strong>Ative notificações no celular:</strong> Configure seu app do banco para enviar um SMS, push notification ou e-mail a cada compra feita com o cartão ou débito em conta. Assim, você reage em segundos se houver fraude.</li>
+            <li><strong>Use Cartão Virtual para compras online:</strong> Quase todo banco oferece a função de "cartão virtual temporário". Crie um apenas para a compra na internet e apague-o na sequência. Se o site vazar dados, aquele cartão será inútil.</li>
+            <li><strong>Revise seu extrato quinzenalmente:</strong> Muitas cobranças indevidas (como pequenos seguros de R$ 9,90) passam despercebidas por meses porque as pessoas têm "preguiça" de ler o extrato. Transforme a leitura da fatura no seu ritual de controle financeiro.</li>
+          </ul>
+        </div>
+
+        <h2>Conclusão: Você no Controle do Seu Dinheiro</h2>
+
+        <p>Os bancos faturam bilhões todos os anos apenas com as pequenas "taxas" que milhões de brasileiros pagam sem perceber ou sem reclamar por acharem que "dá muito trabalho". Não seja mais uma estatística para inflar o balanço de lucros exorbitantes dessas instituições.</p>
+        
+        <p>Se a cobrança é indevida, a lei está do seu lado. Utilize os canais oficiais de denúncia, exija os protocolos e, caso sinta que está sendo desrespeitado, não hesite em acionar o Procon, o Banco Central ou a Justiça. Afinal, um real que não deveria ter saído do seu bolso é um real que você deixou de economizar, investir ou usar no seu próprio bem-estar.</p>
+
+        <p>O seu dinheiro exige respeito, e só você pode impor esse limite. Mãos à obra e boa sorte com os estornos!</p>
+
+      </article>
+
+      <!-- SHARE -->
+      <div class="article-share">
+        <h3>Gostou? Compartilhe com quem precisa!</h3>
+        <div class="share-btns">
+          <button class="share-btn share-btn--whatsapp" onclick="shareWhatsApp()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Compartilhar no WhatsApp
+          </button>
+          <button class="share-btn share-btn--copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Copiar Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Continue lendo</span>
+        <h2 class="section-title">Artigos Relacionados</h2>
+      </div>
+      <div class="related-grid">
+        <a href="poupanca.html" class="article-card">
+          <div class="card-img-wrap">
+            <div class="card-category article-cat--gold">Finanças Pessoais</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Como guardar seus primeiros R$ 5.000</h3>
+            <p class="card-excerpt">O passo a passo para começar a poupar mesmo ganhando pouco e construir sua primeira reserva de emergência.</p>
+          </div>
+        </a>
+        <a href="dividas.html" class="article-card">
+          <div class="card-img-wrap">
+            <div class="card-category article-cat--red">Dívidas</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Saindo do buraco: Como renegociar dívidas atrasadas</h3>
+            <p class="card-excerpt">Estratégias práticas para limpar o seu nome no Serasa e fechar acordos com até 90% de desconto nos juros.</p>
+          </div>
+        </a>
+        <a href="tesouro.html" class="article-card">
+          <div class="card-img-wrap">
+            <div class="card-category article-cat--green">Investimentos</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Tesouro Direto para Iniciantes: Guia Definitivo</h3>
+            <p class="card-excerpt">Descubra como emprestar dinheiro para o governo e receber juros de forma segura, com apenas R$ 30,00.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo footer-logo">
+            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
+            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+          </a>
+          <p class="footer-tagline">Finanças sem enrolação.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Artigos</h4>
+          <ul class="footer-links">
+            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
+            <li><a href="investimentos.html">Investimentos básicos</a></li>
+            <li><a href="dividas.html">Sair das dívidas</a></li>
+            <li><a href="tesouro.html">Tesouro Direto</a></li>
+            <li><a href="orcamento.html">Montar orçamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Ferramentas</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ferramentas">Juros Compostos</a></li>
+            <li><a href="../index.html#ferramentas">Controle de Gastos</a></li>
+            <li><a href="../index.html#ferramentas">Financiamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Blog</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
+        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function shareWhatsApp() {
+      window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+</body>
+</html>

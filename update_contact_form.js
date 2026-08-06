@@ -1,50 +1,232 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dinheiro Nu — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira." />
-  <meta name="keywords" content="finanças pessoais, investimentos, controle de gastos, educação financeira, dinheiro, blog financeiro" />
-  <meta property="og:title" content="Dinheiro Nu | Finanças Sem Enrolação" />
-  <meta property="og:description" content="Educação financeira direta ao ponto. Sem jargão, sem segredo." />
-  <meta property="og:type" content="website" />
-  <title>Contato | Dinheiro Nu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+﻿const fs = require('fs');
 
-  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo" id="nav-logo-link">
-        <div class="logo-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/>
-            <path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
-            <circle cx="12" cy="16" r="0.8" fill="#f59e0b"/>
-          </svg>
-        </div>
-        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
-      </a>
+const css = `
+/* ══════════════════════════════════════════════════════
+   CONTATO PAGE - GRID LAYOUT
+══════════════════════════════════════════════════════ */
+.contact-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.contact-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-        <li><a href="index.html#recentes" class="nav-link">Blog</a></li>
-        <li><a href="index.html#ferramentas" class="nav-link">Ferramentas</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+@media (min-width: 992px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+  }
+}
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-<main style="padding-top: 120px; padding-bottom: 80px;">
+.contact-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15,23,42,.06);
+}
 
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(15,23,42,.06);
+}
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.info-icon {
+  width: 48px; height: 48px;
+  background: rgba(37,99,235,0.08);
+  color: var(--primary);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.info-icon.gold {
+  background: rgba(245,158,11,0.1);
+  color: var(--gold);
+}
+.info-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.info-content p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.info-content a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+}
+.policy-list li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+.policy-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(15,23,42,.15);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+  background: var(--white);
+}
+textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+}
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.checkbox-group input {
+  margin-top: 4px;
+}
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 8px;
+}
+.btn-submit:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+.form-footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* FAQ Box */
+.faq-box, .hours-box {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15,23,42,.06);
+  margin-bottom: 32px;
+}
+.faq-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  text-align: center;
+}
+.faq-item {
+  margin-bottom: 24px;
+}
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+.faq-item h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.faq-item p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.hours-content {
+  text-align: center;
+}
+.hours-content p {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+`;
+
+fs.appendFileSync('css/style.css', '\n' + css);
+
+let html = fs.readFileSync('contato.html', 'utf8');
+const mainRegex = /(<main[^>]*>)([\s\S]*?)(<\/main>)/i;
+
+const mainContent = `
   <section class="section">
     <div class="container" style="max-width: 1100px;">
       
@@ -202,78 +384,8 @@
 
     </div>
   </section>
+`;
 
-</main>
-
-  
-  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-          <a href="#" class="nav-logo footer-logo" id="footer-logo-link">
-            <div class="logo-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
-            </div>
-            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
-          </a>
-          <p class="footer-tagline">Dinheiro Nu é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
-          <div class="footer-social">
-            <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </a>
-            <a href="#" class="social-btn" id="social-youtube" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter/X">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Links Úteis</h4>
-          <div class="footer-links-grid">
-            <ul class="footer-links">
-              <li><a href="index.html" id="footer-link-inicio">Início</a></li>
-              <li><a href="index.html#ferramentas" id="footer-link-ferramentas">Ferramentas</a></li>
-              <li><a href="contato.html">Contato</a></li>
-              <li><a href="sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
-            </ul>
-            <ul class="footer-links">
-              <li><a href="privacidade.html" id="footer-link-privacidade">Política de Privacidade</a></li>
-              <li><a href="termos.html" id="footer-link-termos">Termos de Uso</a></li>
-              <li><a href="glossario.html" id="footer-link-glossario">Glossário Financeiro</a></li>
-              <li><a href="guia.html" id="footer-link-guia">Guia do Iniciante</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Artigos Principais</h4>
-          <ul class="footer-links">
-            <li><a href="artigos/orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
-            <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos Básicos</a></li>
-            <li><a href="artigos/dividas.html" id="footer-link-dividas">Sair das Dívidas</a></li>
-            <li><a href="artigos/tesouro.html" id="footer-link-tesouro">Tesouro Direto</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
-        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll to top button -->
-  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-  </button>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+let newHtml = html.replace(mainRegex, `$1\n${mainContent}\n$3`);
+fs.writeFileSync('contato.html', newHtml);
+console.log("contato.html updated successfully with complex form layout.");
