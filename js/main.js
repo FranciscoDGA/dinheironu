@@ -241,3 +241,30 @@ lazyImages.forEach(img => imageObserver.observe(img));
 
 console.log('%c💰 Dinheiro Nu', 'font-size:24px;font-weight:800;color:#f59e0b;');
 console.log('%cFinanças sem enrolação.', 'font-size:14px;color:#64748b;');
+
+
+// Cookie Consent Banner (LGPD)
+document.addEventListener('DOMContentLoaded', () => {
+  if (!localStorage.getItem('dinheironu_cookie_consent')) {
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    // Find absolute path to privacidade.html based on current location
+    const inArtigos = window.location.pathname.includes('/artigos/');
+    const privLink = inArtigos ? '../privacidade.html' : 'privacidade.html';
+    
+    banner.innerHTML = `
+      <p>Este site usa cookies de análise para garantir que você obtenha a melhor experiência. Ao continuar navegando, você concorda com a nossa <a href="${privLink}">Política de Privacidade</a>.</p>
+      <button class="cookie-btn" id="accept-cookies">Concordar e Fechar</button>
+    `;
+    document.body.appendChild(banner);
+    
+    // trigger animation
+    setTimeout(() => banner.classList.add('show'), 500);
+    
+    document.getElementById('accept-cookies').addEventListener('click', () => {
+      localStorage.setItem('dinheironu_cookie_consent', 'true');
+      banner.classList.remove('show');
+      setTimeout(() => banner.remove(), 400);
+    });
+  }
+});
