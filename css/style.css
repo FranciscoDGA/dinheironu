@@ -93,11 +93,68 @@ input { font-family: inherit; }
 }
 
 /* ══════════════════════════════════════════════════════
+   TICKER DE ATIVOS
+══════════════════════════════════════════════════════ */
+.ticker-bar {
+  background: linear-gradient(90deg, #0f172a 0%, #1e3a5f 100%);
+  border-bottom: 1px solid rgba(245,158,11,.2);
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 500;
+}
+.ticker-container {
+  display: flex;
+  gap: 32px;
+  padding: 0 24px;
+  animation: scroll-left 30s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,.85);
+  flex-shrink: 0;
+}
+.ticker-label {
+  font-weight: 600;
+  color: var(--gold);
+  min-width: 60px;
+}
+.ticker-value {
+  color: #ffffff;
+  font-weight: 700;
+  min-width: 70px;
+}
+.ticker-change {
+  font-weight: 600;
+  min-width: 55px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.ticker-change.positive {
+  background: rgba(16,185,129,.15);
+  color: #d1fae5;
+}
+.ticker-change.negative {
+  background: rgba(239,68,68,.15);
+  color: #fee2e2;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════════════════
    NAVBAR
 ══════════════════════════════════════════════════════ */
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 40px; left: 0; right: 0;
   z-index: 1000;
   padding: 0;
   background: rgba(255,255,255,0.85);
@@ -213,6 +270,7 @@ input { font-family: inherit; }
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-top: 68px;
 }
 .hero-bg {
   position: absolute;
