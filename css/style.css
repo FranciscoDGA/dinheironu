@@ -460,6 +460,9 @@ input { font-family: inherit; }
 ══════════════════════════════════════════════════════ */
 .section {
   padding: 96px 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .section-header {
   text-align: center;
@@ -1238,7 +1241,7 @@ input { font-family: inherit; }
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 68px; left: 0; right: 0;
+    top: 108px; left: 0; right: 0;
     background: var(--white);
     border-bottom: 1px solid rgba(15,23,42,.06);
     padding: 20px 24px;
@@ -1254,7 +1257,7 @@ input { font-family: inherit; }
   .mobile-menu-btn { display: flex; }
 
   .section { padding: 48px 0; }
-  .container { padding: 0 16px; }
+  .container { padding: 0 16px; width: 100%; max-width: 100%; }
 
   .featured-grid { grid-template-columns: 1fr; }
   .recent-grid   { grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -1322,10 +1325,11 @@ input { font-family: inherit; }
   }
 
   .tools-filter-wrapper {
-    width: calc(100% - 24px);
+    width: 100%;
     padding: 12px;
-    margin: 0 auto 24px;
+    margin: 0 0 24px 0;
     border-radius: 12px;
+    max-width: 100%;
   }
 
   .search-input {
@@ -1703,7 +1707,7 @@ textarea.form-control {
 
 /* Filters & Search */
 .tools-filter-wrapper {
-  width: calc(100% - 48px);
+  width: 100%;
   max-width: 900px;
   margin: 0 auto 48px;
   background: var(--white);
@@ -1711,7 +1715,7 @@ textarea.form-control {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   position: relative;
-  z-index: 10;
+  z-index: 1;
   box-sizing: border-box;
 }
 .search-input {
