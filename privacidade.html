@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dinheiro Nu — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira." />
+  <meta name="description" content="Fazendo Dinheiro — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira." />
   <meta name="keywords" content="finanças pessoais, investimentos, controle de gastos, educação financeira, dinheiro, blog financeiro" />
-  <meta property="og:title" content="Dinheiro Nu | Finanças Sem Enrolação" />
+  <meta property="og:title" content="Fazendo Dinheiro | Finanças Sem Enrolação" />
   <meta property="og:description" content="Educação financeira direta ao ponto. Sem jargão, sem segredo." />
   <meta property="og:type" content="website" />
-  <title>Política de Privacidade e LGPD | Dinheiro Nu</title>
+  <title>Política de Privacidade e LGPD | Fazendo Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
+  <link rel="manifest" href="../manifest.json" />
 </head>
 <body>
+<div id="market-ticker"></div>
+
 
   <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
   <nav class="navbar" id="navbar">
@@ -28,17 +32,21 @@
   <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
         </div>
-        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+        <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-        <li><a href="index.html#recentes" class="nav-link">Blog</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
 
+      <form action="busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
+        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
+        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      </form>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -46,103 +54,89 @@
   </nav>
 
 <main style="padding-top: 120px; padding-bottom: 80px;">
-
   <section class="section">
     <div class="container" style="max-width: 900px; margin: 0 auto; background: var(--white); padding: 56px; border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); border: 1px solid rgba(15,23,42,.06);">
       
 <h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">Política de Privacidade e Proteção de Dados (LGPD)</h1>
-<p style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">A sua privacidade é uma prioridade para o <strong>Dinheiro Nu</strong>. Temos o compromisso de proteger os seus dados pessoais e de ser transparentes sobre como os utilizamos. Esta Política de Privacidade foi elaborada em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
+<p style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">A sua privacidade é uma prioridade inegociável para o <strong>Fazendo Dinheiro</strong>. Temos o compromisso de proteger os seus dados pessoais, respeitar a sua intimidade e ser 100% transparentes sobre como a nossa infraestrutura tecnológica funciona. Esta Política de Privacidade foi elaborada em estrita conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD) e com os mais altos padrões de segurança internacional.</p>
 
-<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">1. Quais dados coletamos?</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O Dinheiro Nu foi criado para ser o mais anônimo e seguro possível. Nós coletamos apenas as informações estritamente necessárias para fornecer a você o melhor conteúdo financeiro:</p>
+<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">1. Processamento Local (Calculadoras e Ferramentas)</h3>
+<div style="background-color: rgba(16, 185, 129, 0.1); border-left: 4px solid var(--green); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px;">
+  <p style="margin: 0; color: #047857; font-weight: 500; line-height: 1.5;"><strong>Atenção: Nós NÃO coletamos os seus dados financeiros.</strong> Todas as calculadoras, simuladores (Desenrola, Rotativo, etc.) e ferramentas interativas disponíveis no Fazendo Dinheiro operam exclusivamente via processamento local no seu navegador (Client-Side Javascript).<br><br>Qualquer valor monetário, salário ou dívida que você digitar <strong>não é enviado para os nossos servidores, não é armazenado em nenhum banco de dados e não é compartilhado com terceiros</strong>. Tudo fica restrito à memória temporária do seu próprio dispositivo e é deletado assim que você fecha a página.</p>
+</div>
+
+<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">2. Quais dados efetivamente coletamos?</h3>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O Fazendo Dinheiro foi projetado com a premissa de minimização de dados. Nós coletamos apenas:</p>
 <ul style="margin-bottom: 24px; padding-left: 24px; color: var(--text-muted); line-height: 1.6;">
-  <li style="margin-bottom: 8px;"><strong>Dados de Contato:</strong> Coletamos o seu endereço de e-mail exclusivamente quando você opta voluntariamente por assinar a nossa newsletter.</li>
-  <li style="margin-bottom: 8px;"><strong>Dados de Navegação (Cookies Anônimos):</strong> Coletamos dados estatísticos não identificáveis (como páginas visitadas, tempo gasto no site e tipo de dispositivo) através do Google Analytics, com o único objetivo de melhorar a usabilidade do site. Não rastreamos a sua identidade.</li>
-  <li style="margin-bottom: 8px;"><strong>O que NÃO coletamos:</strong> O Dinheiro Nu nunca solicitará o seu CPF, RG, dados bancários, número de cartão de crédito, endereço físico ou senhas. Se você receber um e-mail em nosso nome pedindo essas informações, denuncie imediatamente.</li>
+  <li style="margin-bottom: 8px;"><strong>Dados de Contato:</strong> Coletamos o seu endereço de e-mail exclusivamente quando você opta por preencher o nosso formulário de contato ou assinar a newsletter.</li>
+  <li style="margin-bottom: 8px;"><strong>Dados de Navegação (Cookies Anônimos):</strong> Através de ferramentas de Analytics padrão de mercado, processamos métricas não identificáveis (como páginas visitadas, cliques, tipo de navegador) com a finalidade estrita de análise de tráfego, melhoria de infraestrutura e otimização de conteúdo. Não rastreamos a sua identidade.</li>
+  <li style="margin-bottom: 8px;"><strong>O que NUNCA coletaremos:</strong> CPF, RG, dados bancários, números de cartão, endereço residencial ou senhas. Jamais entraremos em contato via WhatsApp ou SMS pedindo depósitos.</li>
 </ul>
 
-<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">2. Como utilizamos os seus dados?</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O seu e-mail será utilizado exclusivamente para enviar a você o nosso boletim informativo semanal contendo dicas de educação financeira, novos artigos publicados no blog e comunicados importantes sobre as ferramentas do site. Nós temos tolerância zero com spam e não vendemos, alugamos ou repassamos sua lista de contatos para corretores, bancos, ou quaisquer empresas terceiras.</p>
+<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">3. Base Legal e Compartilhamento</h3>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O tratamento do seu e-mail baseia-se no seu consentimento expresso (Art. 7º, I da LGPD). Nós mantemos seus dados estritamente em nossos servidores criptografados e <strong>em nenhuma hipótese vendemos, comercializamos, permutamos ou repassamos sua base de dados para corretores, bancos, fintechs ou agências de publicidade</strong>.</p>
 
-<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">3. Seus Direitos sob a LGPD</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Como titular dos dados, você tem o direito garantido pela lei brasileira de exercer controle sobre as suas informações. A qualquer momento, você pode:</p>
-<ul style="margin-bottom: 24px; padding-left: 24px; color: var(--text-muted); line-height: 1.6;">
-  <li style="margin-bottom: 8px;"><strong>Solicitar acesso:</strong> Você pode pedir para saber quais dados temos vinculados ao seu e-mail.</li>
-  <li style="margin-bottom: 8px;"><strong>Revogar consentimento:</strong> Você pode clicar no link "Cancelar Inscrição" (Unsubscribe) presente no rodapé de qualquer e-mail enviado por nós. Isso removerá instantaneamente seu e-mail do nosso sistema de envios.</li>
-  <li style="margin-bottom: 8px;"><strong>Solicitar exclusão definitiva:</strong> Você pode nos contatar para exigir a exclusão imediata e permanente de qualquer registro do seu e-mail em nossos servidores.</li>
-</ul>
+<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">4. Seus Direitos sob a LGPD</h3>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Como titular dos dados, você tem o direito garantido por lei de exercer controle total. A qualquer momento, você pode solicitar a exibição, retificação, bloqueio ou exclusão total dos seus dados de contato dos nossos sistemas. Basta nos enviar um e-mail com a solicitação "Exclusão de Dados".</p>
 
-<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">4. Segurança das Informações</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Implementamos medidas rigorosas de segurança técnica e organizacional para proteger os seus dados contra acessos não autorizados, perdas, destruição ou alteração. Todos os dados são processados por sistemas providos de criptografia (HTTPS/TLS) e servidores de alta segurança.</p>
-
-<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">5. Contato do Encarregado de Dados (DPO)</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Caso tenha qualquer dúvida, preocupação ou solicitação referente ao tratamento dos seus dados pessoais, por favor, entre em contato através do e-mail: <strong>privacidade@dinheironu.com.br</strong>.</p>
-<p style="margin-top: 40px; font-size: 0.9rem; color: var(--text-muted);"><em>Última atualização: 05 de Agosto de 2026.</em></p>
+<h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">5. Contato Institucional</h3>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Caso tenha qualquer dúvida, requisição ou sugestão sobre nossas práticas de privacidade, contate nosso Encarregado pelo Tratamento de Dados Pessoais (DPO) pelo canal oficial: <strong>privacidade@fazendodinheiro.com.br</strong>.</p>
+<p style="margin-top: 40px; font-size: 0.9rem; color: var(--text-muted);"><em>Última atualização e revisão: Agosto de 2026. Documento válido e em vigência.</em></p>
 
     </div>
   </section>
-
 </main>
 
+  
+  
+  
+  
+  
+  
+  
+  
   <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-grid">
 
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo footer-logo" id="footer-logo-link">
-            <div class="logo-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
-            </div>
-            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
-          </a>
-          <p class="footer-tagline">Dinheiro Nu é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
-          <div class="footer-social">
-            <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </a>
-            <a href="#" class="social-btn" id="social-youtube" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter/X">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-            </a>
-          </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Sobre o Site</h4>
+          <p class="footer-tagline" style="margin-top: 16px;">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Links Úteis</h4>
-          <div class="footer-links-grid">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Links Úteis</h4>
+          <div class="footer-links-grid" style="margin-top: 16px;">
             <ul class="footer-links">
               <li><a href="index.html" id="footer-link-inicio">Início</a></li>
               <li><a href="ferramentas.html" id="footer-link-ferramentas">Ferramentas</a></li>
-              <li><a href="contato.html">Contato</a></li>
-              <li><a href="sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
+              <li><a href="contato.html" id="footer-link-contato">Contato</a></li>
             </ul>
             <ul class="footer-links">
+              <li><a href="sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
               <li><a href="privacidade.html" id="footer-link-privacidade">Política de Privacidade</a></li>
               <li><a href="termos.html" id="footer-link-termos">Termos de Uso</a></li>
-              <li><a href="glossario.html" id="footer-link-glossario">Glossário Financeiro</a></li>
-              <li><a href="guia.html" id="footer-link-guia">Guia do Iniciante</a></li>
+              <li><a href="cookies.html" id="footer-link-cookies">Política de Cookies</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Artigos Principais</h4>
-          <ul class="footer-links">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Artigos Principais</h4>
+          <ul class="footer-links" style="margin-top: 16px;">
             <li><a href="artigos/orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
-            <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos Básicos</a></li>
-            <li><a href="artigos/dividas.html" id="footer-link-dividas">Sair das Dívidas</a></li>
-            <li><a href="artigos/tesouro.html" id="footer-link-tesouro">Tesouro Direto</a></li>
+            <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos</a></li>
+            <li><a href="artigos/dividas.html" id="footer-link-dividas">Impostos</a></li>
+            <li><a href="artigos/tesouro.html" id="footer-link-tesouro">Crédito</a></li>
           </ul>
         </div>
 
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
-        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
+        <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
@@ -153,5 +147,14 @@
   </button>
 
   <script src="js/main.js"></script>
+
+  <script src="../js/ticker.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js');
+      });
+    }
+  </script>
 </body>
 </html>

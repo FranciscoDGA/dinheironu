@@ -12,8 +12,8 @@ const sobreHtml = `
       <div class="sobre-content">
         <div class="sobre-text">
           <span class="section-tag">Quem somos</span>
-          <h2 class="section-title">Sobre o Dinheiro Nu</h2>
-          <p>O <strong>Dinheiro Nu</strong> nasceu da frustração com conteúdos financeiros cheios de termos técnicos, planilhas complicadas e conselhos que só funcionam para quem já tem dinheiro.</p>
+          <h2 class="section-title">Sobre o Fazendo Dinheiro</h2>
+          <p>O <strong>Fazendo Dinheiro</strong> nasceu da frustração com conteúdos financeiros cheios de termos técnicos, planilhas complicadas e conselhos que só funcionam para quem já tem dinheiro.</p>
           <p>Aqui falamos de finanças do jeito que deveria ser: <strong>direto, honesto e sem enrolação</strong>. Sem produtos pra vender, sem cursos caros para empurrar. Só conteúdo de qualidade para ajudar você a tomar decisões financeiras melhores.</p>
           <p>Porque dinheiro não precisa ser mistério.</p>
           <div class="sobre-values">

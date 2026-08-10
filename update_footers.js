@@ -13,7 +13,7 @@ const newFooterRoot = `
             <div class="logo-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
             </div>
-            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+            <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
           </a>
           <p class="footer-tagline">Finanças sem enrolação.<br />Do jeito que sempre deveria ter sido.</p>
           <div class="footer-social">
@@ -66,7 +66,7 @@ const newFooterRoot = `
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 <strong>Dinheiro Nu</strong>. Feito com ☕ e muita planilha. Todos os direitos reservados.</p>
+        <p>© 2026 <strong>Fazendo Dinheiro</strong>. Feito com ☕ e muita planilha. Todos os direitos reservados.</p>
         <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
       </div>
     </div>

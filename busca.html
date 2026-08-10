@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resultados da busca no Fazendo Dinheiro." />
+  <title>Resultados da Busca | Fazendo Dinheiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
+  <link rel="manifest" href="../manifest.json" />
+</head>
+<body>
+<div id="market-ticker"></div>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <form action="busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
+        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
+        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      </form>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+<main style="padding-top: 120px; padding-bottom: 80px; min-height: 70vh;">
+  <section class="section">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <h1 style="margin-bottom: 24px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800;">Resultados da Busca</h1>
+      <p id="search-query-display" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px;">Buscando por: <strong>...</strong></p>
+
+      <div id="search-results" class="grid-2">
+        <!-- Resultados serão injetados aqui -->
+      </div>
+    </div>
+  </section>
+</main>
+
+  <script>
+    // Simple frontend search script
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      const display = document.getElementById('search-query-display');
+      const resultsContainer = document.getElementById('search-results');
+
+      if (!query) {
+        display.innerHTML = "Nenhum termo de busca fornecido.";
+        return;
+      }
+
+      display.innerHTML = 'Resultados para: <strong>' + query.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</strong>';
+
+      // Simulando busca chamando um json que a gente vai gerar ou mockando
+      fetch('search_index.json')
+        .then(res => res.json())
+        .then(data => {
+          const lowerQuery = query.toLowerCase();
+          const results = data.filter(item => 
+            item.title.toLowerCase().includes(lowerQuery) || 
+            item.content.toLowerCase().includes(lowerQuery)
+          );
+
+          if (results.length === 0) {
+            resultsContainer.innerHTML = '<p>Nenhum artigo encontrado para esta busca.</p>';
+            return;
+          }
+
+          results.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'blog-card';
+            card.innerHTML = \`
+              <div class="blog-card-content" style="padding:24px; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); margin-bottom:16px;">
+                <h3 style="margin-bottom:8px;"><a href="\${item.url}" style="color:var(--text-dark); text-decoration:none;">\${item.title}</a></h3>
+                <p style="color:var(--text-muted); font-size:0.95rem;">\${item.content.substring(0, 120)}...</p>
+              </div>
+            \`;
+            resultsContainer.appendChild(card);
+          });
+        })
+        .catch(err => {
+          console.error(err);
+          resultsContainer.innerHTML = '<p>Não foi possível realizar a busca no momento.</p>';
+        });
+    });
+  </script>
+
+  
+  
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Sobre o Site</h4>
+          <p class="footer-tagline" style="margin-top: 16px;">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Links Úteis</h4>
+          <div class="footer-links-grid" style="margin-top: 16px;">
+            <ul class="footer-links">
+              <li><a href="index.html" id="footer-link-inicio">Início</a></li>
+              <li><a href="ferramentas.html" id="footer-link-ferramentas">Ferramentas</a></li>
+              <li><a href="contato.html" id="footer-link-contato">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
+              <li><a href="privacidade.html" id="footer-link-privacidade">Política de Privacidade</a></li>
+              <li><a href="termos.html" id="footer-link-termos">Termos de Uso</a></li>
+              <li><a href="cookies.html" id="footer-link-cookies">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Artigos Principais</h4>
+          <ul class="footer-links" style="margin-top: 16px;">
+            <li><a href="artigos/orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
+            <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos</a></li>
+            <li><a href="artigos/dividas.html" id="footer-link-dividas">Impostos</a></li>
+            <li><a href="artigos/tesouro.html" id="footer-link-tesouro">Crédito</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
+        <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script src="../js/ticker.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js');
+      });
+    }
+  </script>
+</body>
+</html>

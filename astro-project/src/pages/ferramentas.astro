@@ -1,0 +1,376 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Ferramentas Financeiras | Fazendo Dinheiro" description="Ferramentas Financeiras Gratuitas do Fazendo Dinheiro - Calculadoras e Simuladores." type="WebSite">
+
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-premium">
+      <div class="container">
+        <h1>Calculadoras e Simuladores</h1>
+        <p>Acesse ferramentas financeiras gratuitas e inteligentes para sair das dívidas, organizar seu orçamento e multiplicar seus investimentos. Sem burocracia, sem cadastro.</p>
+        <div class="stats-premium">
+          <div class="stat-p"><h3>9</h3><span>Ferramentas</span></div>
+          <div class="stat-p"><h3>3</h3><span>Categorias</span></div>
+          <div class="stat-p"><h3>100%</h3><span>Gratuito</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-box">
+          <span style="font-size:1.2rem;">🔍</span>
+          <input type="text" id="searchInput" placeholder="Buscar ferramenta..." onkeyup="filterTools()">
+        </div>
+        <div class="chips-group" id="filterChips">
+          <button class="chip-btn active" onclick="setFilter('all')">Todas</button>
+          <button class="chip-btn" onclick="setFilter('investimentos')">Investimentos</button>
+          <button class="chip-btn" onclick="setFilter('dividas')">Dívidas</button>
+          <button class="chip-btn" onclick="setFilter('orcamento')">Orçamento</button>
+        </div>
+      </div>
+
+      <!-- TOOLS GRID -->
+      <div class="tool-grid" id="toolsGrid">
+        
+        <a href="ferramentas/desenrola.html" class="tool-card" data-cat="dividas" style="border-top: 4px solid var(--gold);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Simulador Desenrola</h3>
+            <span style="background: rgba(245,158,11,0.1); color: var(--gold); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Dívidas</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Descubra quanto você pode economizar na renegociação (Lei 14.836) com até 90% de desconto.</p>
+        </a>
+
+        <a href="ferramentas/rotativo.html" class="tool-card" data-cat="dividas" style="border-top: 4px solid var(--red);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Teto do Rotativo</h3>
+            <span style="background: rgba(239,68,68,0.1); color: var(--red); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Dívidas</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Veja a diferença da sua dívida antes e depois da nova lei limitadora de juros de 100%.</p>
+        </a>
+
+        <a href="ferramentas/troca-divida.html" class="tool-card" data-cat="dividas" style="border-top: 4px solid var(--primary);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Troca de Dívida</h3>
+            <span style="background: rgba(37,99,235,0.1); color: var(--primary); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Dívidas</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Compare se vale a pena pegar um empréstimo mais barato para quitar seu cartão ou cheque especial.</p>
+        </a>
+
+        <a href="ferramentas/financiamento.html" class="tool-card" data-cat="dividas" style="border-top: 4px solid var(--red);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Simulador Financiamento</h3>
+            <span style="background: rgba(239,68,68,0.1); color: var(--red); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Dívidas</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Vai comprar casa ou carro? Calcule o valor real das parcelas com a tabela Price e juros totais.</p>
+        </a>
+
+        <a href="ferramentas/juros-compostos.html" class="tool-card" data-cat="investimentos" style="border-top: 4px solid var(--green);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Juros Compostos</h3>
+            <span style="background: rgba(16,185,129,0.1); color: var(--green); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Investimentos</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Descubra o poder da bola de neve a seu favor. Simule quanto seu dinheiro vai render no futuro.</p>
+        </a>
+
+        <a href="ferramentas/renda-passiva.html" class="tool-card" data-cat="investimentos" style="border-top: 4px solid var(--primary);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Simulador FIRE</h3>
+            <span style="background: rgba(37,99,235,0.1); color: var(--primary); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Investimentos</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Quanto você precisa ter investido para viver de renda? Calcule seu número de independência financeira.</p>
+        </a>
+
+        <a href="ferramentas/esg.html" class="tool-card" data-cat="investimentos" style="border-top: 4px solid var(--gold);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Termômetro ESG</h3>
+            <span style="background: rgba(245,158,11,0.1); color: var(--gold); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Investimentos</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Vai investir em uma empresa? Responda 3 perguntas para medir a nota ESG e sustentabilidade dela.</p>
+        </a>
+
+        <a href="ferramentas/salario-variavel.html" class="tool-card" data-cat="orcamento" style="border-top: 4px solid var(--green);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Orçamento Autônomo</h3>
+            <span style="background: rgba(16,185,129,0.1); color: var(--green); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Orçamento</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">Para autônomos e freelancers: descubra seu "Padrão de Vida Seguro" baseado na média de ganhos.</p>
+        </a>
+
+        <a href="ferramentas/controle-50-30-20.html" class="tool-card" data-cat="orcamento" style="border-top: 4px solid var(--gold);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+            <h3 style="margin:0; font-size:1.2rem;">Controle 50-30-20</h3>
+            <span style="background: rgba(245,158,11,0.1); color: var(--gold); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">Orçamento</span>
+          </div>
+          <p style="color:var(--text-muted); line-height:1.5;">A regra de ouro. Descubra o limite exato que você deve gastar em Necessidades, Desejos e Investimentos.</p>
+        </a>
+      </div>
+      
+      <!-- BENEFITS -->
+      <div style="background: #f8fafc; border-radius: 24px; padding: 64px 40px; margin-bottom: 80px; text-align: center;">
+        <h2 style="font-size:2rem; font-weight:800; margin-bottom: 40px; color: #0f172a;">Por que usar nossas ferramentas?</h2>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px;">
+          <div style="background: white; padding: 32px; border-radius: 16px; border: 1px solid #e2e8f0;">
+            <div style="font-size: 2.5rem; margin-bottom: 16px;">🎯</div>
+            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">Precisão Real</h4>
+            <p style="color: #64748b; font-size: 0.95rem;">Nossos simuladores usam as mesmas tabelas (Price/SAC) e leis (14.836) aplicadas pelos grandes bancos do Brasil.</p>
+          </div>
+          <div style="background: white; padding: 32px; border-radius: 16px; border: 1px solid #e2e8f0;">
+            <div style="font-size: 2.5rem; margin-bottom: 16px;">🔒</div>
+            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">100% Anônimo</h4>
+            <p style="color: #64748b; font-size: 0.95rem;">Tudo roda na memória do seu celular/PC. Nenhum valor de dívida ou salário é salvo em nossos servidores.</p>
+          </div>
+          <div style="background: white; padding: 32px; border-radius: 16px; border: 1px solid #e2e8f0;">
+            <div style="font-size: 2.5rem; margin-bottom: 16px;">⚡</div>
+            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;">Direto ao Ponto</h4>
+            <p style="color: #64748b; font-size: 0.95rem;">Sem cadastros chatos, sem pedágio de e-mail. É só clicar, colocar os números e ver o resultado instantâneo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="max-width: 800px; margin: 0 auto 100px;">
+        <h2 style="font-size:2rem; font-weight:800; margin-bottom: 40px; color: #0f172a; text-align: center;">Perguntas Frequentes</h2>
+        
+        <div class="faq-item">
+          <h4 class="faq-q" onclick="toggleFaq(this)">As calculadoras são gratuitas mesmo? <span>+</span></h4>
+          <p class="faq-a">Sim! O objetivo do Fazendo Dinheiro é democratizar a educação financeira. Todas as nossas 9 ferramentas sempre serão 100% gratuitas e sem limite de uso.</p>
+        </div>
+        <div class="faq-item">
+          <h4 class="faq-q" onclick="toggleFaq(this)">Os resultados das simulações de dívida têm validade legal? <span>+</span></h4>
+          <p class="faq-a">Não. Os resultados são estimativas muito precisas baseadas na matemática financeira, mas não substituem o contrato final gerado pela instituição bancária, pois cada banco pode adicionar pequenas taxas de administração (TAC) e IOF variáveis.</p>
+        </div>
+        <div class="faq-item">
+          <h4 class="faq-q" onclick="toggleFaq(this)">Vocês guardam os dados que eu digito nas calculadoras? <span>+</span></h4>
+          <p class="faq-a">De forma alguma. Nossa arquitetura foi montada para processar a matemática diretamente no navegador do seu dispositivo (Client-Side). Fechou a aba, os dados somem para sempre.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script is:inline>
+    let currentCategory = 'all';
+    
+    function setFilter(cat) {
+      currentCategory = cat;
+      const buttons = document.querySelectorAll('.chip-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      filterTools();
+    }
+    
+    function filterTools() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.tool-card');
+      
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        const cat = card.getAttribute('data-cat');
+        
+        const matchesSearch = text.includes(search);
+        const matchesCat = currentCategory === 'all' || cat === currentCategory;
+        
+        if (matchesSearch && matchesCat) {
+          card.style.display = 'block';
+          setTimeout(() => card.style.opacity = '1', 50);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => card.style.display = 'none', 300);
+        }
+      });
+    }
+
+    function toggleFaq(el) {
+      const parent = el.parentElement;
+      parent.classList.toggle('active');
+      const span = el.querySelector('span');
+      if (parent.classList.contains('active')) {
+        span.textContent = '-';
+      } else {
+        span.textContent = '+';
+      }
+    }
+  </script>
+
+  <style>
+    /* HERO PREMIUM */
+    .hero-premium {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 140px 20px 80px;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-premium::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-premium h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .hero-premium p {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    
+    .stats-premium {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .stat-p {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 16px 32px;
+      border-radius: 16px;
+      text-align: center;
+    }
+    .stat-p h3 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin: 0 0 8px 0;
+    }
+    .stat-p span {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #cbd5e1;
+    }
+
+    /* FILTER BAR */
+    .filter-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      margin: -32px auto 48px;
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+    }
+    .search-box {
+      width: 100%;
+      background: white;
+      padding: 8px 24px;
+      border-radius: 100px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .search-box:focus-within {
+      border-color: var(--gold);
+      box-shadow: 0 10px 40px rgba(212,175,55,0.2);
+    }
+    .search-box input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+    
+    .chips-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .chip-btn {
+      background: #f1f5f9;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-weight: 600;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .chip-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    .chip-btn.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+    }
+
+    /* TOOL GRID */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 80px;
+    }
+    .tool-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 10px 15px rgba(0,0,0,0.04);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: block;
+      position: relative;
+    }
+    .tool-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 24px 0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-a {
+      max-height: 200px;
+      margin-top: 16px;
+    }
+  </style>
+
+</Layout>

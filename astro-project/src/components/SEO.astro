@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  type?: 'WebSite' | 'Article' | 'FAQPage';
+  url: string;
+}
+
+const { title, description, type = 'WebSite', url } = Astro.props;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": type,
+  "name": title,
+  "description": description,
+  "url": url,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fazendo Dinheiro",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dinheironu.vercel.app/images/favicon.svg"
+    }
+  }
+};
+---
+<!-- JSON-LD Schema Markup -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)}></script>

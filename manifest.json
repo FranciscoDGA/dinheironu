@@ -1,0 +1,16 @@
+{
+  "name": "Fazendo Dinheiro",
+  "short_name": "Fazendo Dinheiro",
+  "description": "Educação financeira direta ao ponto. Aprenda a investir e sair das dívidas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

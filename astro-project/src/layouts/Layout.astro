@@ -1,0 +1,128 @@
+---
+import SEO from '../components/SEO.astro';
+
+export interface Props {
+	title: string;
+	description?: string;
+    type?: 'WebSite' | 'Article' | 'FAQPage';
+}
+
+const { title, description = "Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo.", type = 'WebSite' } = Astro.props;
+
+// Determine current URL for canonical
+const canonicalURL = new URL(Astro.url.pathname, 'https://dinheironu.vercel.app').href;
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  
+  <SEO title={title} description={description} type={type} url={canonicalURL} />
+  
+  <link rel="canonical" href={canonicalURL} />
+  
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  
+  <title>{title}</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  
+  <!-- Estilos globais originais (devem ser movidos para astro-project/public/css) -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+</head>
+<body>
+<div id="market-ticker"></div>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/sobre" class="nav-link">Sobre</a></li>
+        <li><a href="/blog" class="nav-link">Blog</a></li>
+        <li><a href="/ferramentas" class="nav-link">Ferramentas</a></li>
+        <li><a href="/contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <form action="/busca" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
+        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
+        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      </form>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <slot />
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Sobre o Site</h4>
+          <p class="footer-tagline" style="margin-top: 16px;">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Links Úteis</h4>
+          <div class="footer-links-grid" style="margin-top: 16px;">
+            <ul class="footer-links">
+              <li><a href="/" id="footer-link-inicio">Início</a></li>
+              <li><a href="/ferramentas" id="footer-link-ferramentas">Ferramentas</a></li>
+              <li><a href="/contato" id="footer-link-contato">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="/sobre" id="footer-link-sobre">Sobre Nós</a></li>
+              <li><a href="/privacidade" id="footer-link-privacidade">Política de Privacidade</a></li>
+              <li><a href="/termos" id="footer-link-termos">Termos de Uso</a></li>
+              <li><a href="/cookies" id="footer-link-cookies">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Artigos Principais</h4>
+          <ul class="footer-links" style="margin-top: 16px;">
+            <li><a href="/artigos/orcamento" id="footer-link-orcamento">Orçamento Pessoal</a></li>
+            <li><a href="/artigos/investimentos" id="footer-link-investir">Investimentos</a></li>
+            <li><a href="/artigos/dividas" id="footer-link-dividas">Impostos</a></li>
+            <li><a href="/artigos/tesouro" id="footer-link-tesouro">Crédito</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
+        <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script is:inline src="/js/main.js"></script>
+  <script is:inline src="/js/ticker.js"></script>
+</body>
+</html>

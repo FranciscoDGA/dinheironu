@@ -14,7 +14,7 @@ let contatoContent = `
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 7l8 5.333L20 7M4 17h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2H4C2.9 2 2 2.9 2 4v10c0 1.1.9 2 2 2z" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div style="text-align: left;">
           <span style="display: block; font-size: 0.875rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Nosso E-mail Oficial</span>
-          <a href="mailto:contato@dinheironu.com.br" style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark);">contato@dinheironu.com.br</a>
+          <a href="mailto:contato@fazendodinheiro.com.br" style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark);">contato@fazendodinheiro.com.br</a>
         </div>
       </div>
       
@@ -23,7 +23,7 @@ let contatoContent = `
   </section>
 `;
 let newHtml = base.replace(mainRegex, `$1\n${contatoContent}\n$3`);
-newHtml = newHtml.replace(/<title>.*?<\/title>/, '<title>Contato | Dinheiro Nu</title>');
+newHtml = newHtml.replace(/<title>.*?<\/title>/, '<title>Contato | Fazendo Dinheiro</title>');
 fs.writeFileSync('contato.html', newHtml);
 console.log("contato.html created");
 
@@ -96,7 +96,7 @@ let jsContent = fs.readFileSync('js/main.js', 'utf8');
 const cookieJs = `
 // Cookie Consent Banner (LGPD)
 document.addEventListener('DOMContentLoaded', () => {
-  if (!localStorage.getItem('dinheironu_cookie_consent')) {
+  if (!localStorage.getItem('fazendodinheiro_cookie_consent')) {
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     // Find absolute path to privacidade.html based on current location
@@ -113,14 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => banner.classList.add('show'), 500);
     
     document.getElementById('accept-cookies').addEventListener('click', () => {
-      localStorage.setItem('dinheironu_cookie_consent', 'true');
+      localStorage.setItem('fazendodinheiro_cookie_consent', 'true');
       banner.classList.remove('show');
       setTimeout(() => banner.remove(), 400);
     });
   }
 });
 `;
-if (!jsContent.includes('dinheironu_cookie_consent')) {
+if (!jsContent.includes('fazendodinheiro_cookie_consent')) {
   fs.writeFileSync('js/main.js', jsContent + '\n' + cookieJs);
 }
 

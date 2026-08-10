@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dinheiro Nu — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira." />
+  <meta name="description" content="Fazendo Dinheiro — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira." />
   <meta name="keywords" content="finanças pessoais, investimentos, controle de gastos, educação financeira, dinheiro, blog financeiro" />
-  <meta property="og:title" content="Dinheiro Nu | Finanças Sem Enrolação" />
+  <meta property="og:title" content="Fazendo Dinheiro | Finanças Sem Enrolação" />
   <meta property="og:description" content="Educação financeira direta ao ponto. Sem jargão, sem segredo." />
   <meta property="og:type" content="website" />
-  <title>Dinheiro Nu | Finanças Sem Enrolação</title>
+  <title>Fazendo Dinheiro | Finanças Sem Enrolação</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
+  <link rel="manifest" href="../manifest.json" />
 </head>
 <body>
+<div id="market-ticker"></div>
+
 
   <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
   <nav class="navbar" id="navbar">
@@ -28,17 +32,21 @@
   <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
         </div>
-        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+        <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-        <li><a href="index.html#recentes" class="nav-link">Blog</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
 
+      <form action="busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
+        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
+        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      </form>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -81,7 +89,7 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-number">3</span>
+          <span class="stat-number">9</span>
           <span class="stat-label">Ferramentas</span>
         </div>
         <div class="stat-divider"></div>
@@ -188,7 +196,7 @@
       </div>
 
       <div class="section-cta-wrap">
-        <a href="#recentes" class="btn btn-outline-dark" id="ver-todos-artigos">Ver Todos os Artigos</a>
+        <a href="blog.html" class="btn btn-outline-dark" id="ver-todos-artigos">Ver Todos os Artigos</a>
       </div>
     </div>
   </section>
@@ -333,7 +341,7 @@
       <div class="section-header">
         <span class="section-tag section-tag--outline">Blog</span>
         <h2 class="section-title">Artigos Mais Recentes</h2>
-        <p class="section-subtitle">Fique por dentro das últimas publicações do Dinheiro Nu</p>
+        <p class="section-subtitle">Fique por dentro das últimas publicações do Fazendo Dinheiro</p>
       </div>
 
       <div class="articles-grid recent-grid">
@@ -443,7 +451,7 @@
       </div>
 
       <div class="section-cta-wrap">
-        <a href="#recentes" class="btn btn-outline-dark" id="ver-mais-artigos">Ver Mais Artigos</a>
+        <a href="blog.html" class="btn btn-outline-dark" id="ver-mais-artigos">Ver Mais Artigos</a>
       </div>
     </div>
   </section>
@@ -485,65 +493,57 @@
 
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-grid">
 
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo footer-logo" id="footer-logo-link">
-            <div class="logo-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg>
-            </div>
-            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
-          </a>
-          <p class="footer-tagline">Dinheiro Nu é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
-          <div class="footer-social">
-            <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </a>
-            <a href="#" class="social-btn" id="social-youtube" aria-label="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter/X">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-            </a>
-          </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Sobre o Site</h4>
+          <p class="footer-tagline" style="margin-top: 16px;">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Links Úteis</h4>
-          <div class="footer-links-grid">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Links Úteis</h4>
+          <div class="footer-links-grid" style="margin-top: 16px;">
             <ul class="footer-links">
               <li><a href="index.html" id="footer-link-inicio">Início</a></li>
               <li><a href="ferramentas.html" id="footer-link-ferramentas">Ferramentas</a></li>
-              <li><a href="contato.html">Contato</a></li>
-              <li><a href="sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
+              <li><a href="contato.html" id="footer-link-contato">Contato</a></li>
             </ul>
             <ul class="footer-links">
+              <li><a href="sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
               <li><a href="privacidade.html" id="footer-link-privacidade">Política de Privacidade</a></li>
               <li><a href="termos.html" id="footer-link-termos">Termos de Uso</a></li>
-              <li><a href="glossario.html" id="footer-link-glossario">Glossário Financeiro</a></li>
-              <li><a href="guia.html" id="footer-link-guia">Guia do Iniciante</a></li>
+              <li><a href="cookies.html" id="footer-link-cookies">Política de Cookies</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Artigos Principais</h4>
-          <ul class="footer-links">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Artigos Principais</h4>
+          <ul class="footer-links" style="margin-top: 16px;">
             <li><a href="artigos/orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
-            <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos Básicos</a></li>
-            <li><a href="artigos/dividas.html" id="footer-link-dividas">Sair das Dívidas</a></li>
-            <li><a href="artigos/tesouro.html" id="footer-link-tesouro">Tesouro Direto</a></li>
+            <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos</a></li>
+            <li><a href="artigos/dividas.html" id="footer-link-dividas">Impostos</a></li>
+            <li><a href="artigos/tesouro.html" id="footer-link-tesouro">Crédito</a></li>
           </ul>
         </div>
 
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
-        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
+        <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
@@ -554,5 +554,14 @@
   </button>
 
   <script src="js/main.js"></script>
+
+  <script src="../js/ticker.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js');
+      });
+    }
+  </script>
 </body>
 </html>

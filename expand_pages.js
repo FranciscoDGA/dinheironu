@@ -20,14 +20,14 @@ function updatePage(filename, title, content) {
 // 1. Privacidade / LGPD
 updatePage('privacidade.html', 'Política de Privacidade e LGPD', `
 <h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">Política de Privacidade e Proteção de Dados (LGPD)</h1>
-<p style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">A sua privacidade é uma prioridade para o <strong>Dinheiro Nu</strong>. Temos o compromisso de proteger os seus dados pessoais e de ser transparentes sobre como os utilizamos. Esta Política de Privacidade foi elaborada em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
+<p style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">A sua privacidade é uma prioridade para o <strong>Fazendo Dinheiro</strong>. Temos o compromisso de proteger os seus dados pessoais e de ser transparentes sobre como os utilizamos. Esta Política de Privacidade foi elaborada em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
 
 <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">1. Quais dados coletamos?</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O Dinheiro Nu foi criado para ser o mais anônimo e seguro possível. Nós coletamos apenas as informações estritamente necessárias para fornecer a você o melhor conteúdo financeiro:</p>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O Fazendo Dinheiro foi criado para ser o mais anônimo e seguro possível. Nós coletamos apenas as informações estritamente necessárias para fornecer a você o melhor conteúdo financeiro:</p>
 <ul style="margin-bottom: 24px; padding-left: 24px; color: var(--text-muted); line-height: 1.6;">
   <li style="margin-bottom: 8px;"><strong>Dados de Contato:</strong> Coletamos o seu endereço de e-mail exclusivamente quando você opta voluntariamente por assinar a nossa newsletter.</li>
   <li style="margin-bottom: 8px;"><strong>Dados de Navegação (Cookies Anônimos):</strong> Coletamos dados estatísticos não identificáveis (como páginas visitadas, tempo gasto no site e tipo de dispositivo) através do Google Analytics, com o único objetivo de melhorar a usabilidade do site. Não rastreamos a sua identidade.</li>
-  <li style="margin-bottom: 8px;"><strong>O que NÃO coletamos:</strong> O Dinheiro Nu nunca solicitará o seu CPF, RG, dados bancários, número de cartão de crédito, endereço físico ou senhas. Se você receber um e-mail em nosso nome pedindo essas informações, denuncie imediatamente.</li>
+  <li style="margin-bottom: 8px;"><strong>O que NÃO coletamos:</strong> O Fazendo Dinheiro nunca solicitará o seu CPF, RG, dados bancários, número de cartão de crédito, endereço físico ou senhas. Se você receber um e-mail em nosso nome pedindo essas informações, denuncie imediatamente.</li>
 </ul>
 
 <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">2. Como utilizamos os seus dados?</h3>
@@ -45,17 +45,17 @@ updatePage('privacidade.html', 'Política de Privacidade e LGPD', `
 <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Implementamos medidas rigorosas de segurança técnica e organizacional para proteger os seus dados contra acessos não autorizados, perdas, destruição ou alteração. Todos os dados são processados por sistemas providos de criptografia (HTTPS/TLS) e servidores de alta segurança.</p>
 
 <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">5. Contato do Encarregado de Dados (DPO)</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Caso tenha qualquer dúvida, preocupação ou solicitação referente ao tratamento dos seus dados pessoais, por favor, entre em contato através do e-mail: <strong>privacidade@dinheironu.com.br</strong>.</p>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Caso tenha qualquer dúvida, preocupação ou solicitação referente ao tratamento dos seus dados pessoais, por favor, entre em contato através do e-mail: <strong>privacidade@fazendodinheiro.com.br</strong>.</p>
 <p style="margin-top: 40px; font-size: 0.9rem; color: var(--text-muted);"><em>Última atualização: 05 de Agosto de 2026.</em></p>
 `);
 
 // 2. Termos e Cookies
 updatePage('termos.html', 'Termos de Uso e Cookies', `
 <h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">Termos de Uso e Política de Cookies</h1>
-<p style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">Bem-vindo ao <strong>Dinheiro Nu</strong>. Ao acessar e utilizar o nosso site, você concorda expressamente com os Termos e Condições de Uso descritos abaixo. Leia com atenção, pois estes termos protegem tanto os seus direitos quanto os nossos.</p>
+<p style="margin-bottom: 24px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">Bem-vindo ao <strong>Fazendo Dinheiro</strong>. Ao acessar e utilizar o nosso site, você concorda expressamente com os Termos e Condições de Uso descritos abaixo. Leia com atenção, pois estes termos protegem tanto os seus direitos quanto os nossos.</p>
 
 <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">1. Natureza do Conteúdo (Aviso Legal Importante)</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O Dinheiro Nu é um portal dedicado exclusivamente à <strong>educação financeira e democratização da informação</strong>. Todo o conteúdo, incluindo artigos, textos, tabelas, calculadoras e simuladores, possui caráter estritamente educativo e informativo.</p>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">O Fazendo Dinheiro é um portal dedicado exclusivamente à <strong>educação financeira e democratização da informação</strong>. Todo o conteúdo, incluindo artigos, textos, tabelas, calculadoras e simuladores, possui caráter estritamente educativo e informativo.</p>
 <div style="background-color: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--gold); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px;">
   <p style="margin: 0; color: #925f05; font-weight: 500; line-height: 1.5;"><strong>Atenção:</strong> Nenhuma informação fornecida neste site deve ser interpretada como assessoria financeira profissional, recomendação de compra ou venda de ativos, consultoria de investimentos ou indicação de corretoras. As simulações feitas em nossas ferramentas não configuram promessa de rentabilidade futura. Todo investimento envolve riscos, e você é inteiramente responsável por suas decisões financeiras.</p>
 </div>
@@ -70,19 +70,19 @@ updatePage('termos.html', 'Termos de Uso e Cookies', `
 <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Você pode desativar o uso de cookies a qualquer momento nas configurações do seu próprio navegador. O site continuará funcionando perfeitamente, embora o preenchimento automático das calculadoras possa ser afetado.</p>
 
 <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">3. Propriedade Intelectual e Direitos Autorais</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Todo o material presente no Dinheiro Nu (artigos, textos estruturados, design visual, identidade gráfica, logotipos, imagens geradas e lógica das calculadoras) é propriedade exclusiva do site e está protegido pela Lei de Direitos Autorais (Lei nº 9.610/1998).</p>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Todo o material presente no Fazendo Dinheiro (artigos, textos estruturados, design visual, identidade gráfica, logotipos, imagens geradas e lógica das calculadoras) é propriedade exclusiva do site e está protegido pela Lei de Direitos Autorais (Lei nº 9.610/1998).</p>
 <p style="margin-bottom: 24px; color: var(--text-muted); line-height: 1.6;"><strong>O que é permitido:</strong> Compartilhar nossos links nas redes sociais, enviar artigos para amigos via WhatsApp, citar trechos curtos em trabalhos acadêmicos ou em outros blogs, <em>desde que acompanhados obrigatoriamente de um link direto e claro para a página original</em>.</p>
-<p style="margin-bottom: 24px; color: var(--text-muted); line-height: 1.6;"><strong>O que é proibido:</strong> Copiar textos integrais, clonar as calculadoras ou usar a marca Dinheiro Nu para obter vantagens comerciais sem a nossa autorização expressa por escrito.</p>
+<p style="margin-bottom: 24px; color: var(--text-muted); line-height: 1.6;"><strong>O que é proibido:</strong> Copiar textos integrais, clonar as calculadoras ou usar a marca Fazendo Dinheiro para obter vantagens comerciais sem a nossa autorização expressa por escrito.</p>
 
 <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.5rem; color: var(--text-dark); font-weight: 700;">4. Isenção de Garantias</h3>
-<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Esforçamo-nos para manter todo o conteúdo rigorosamente atualizado, especialmente no tocante às taxas de juros (Selic, CDI) e regras fiscais. No entanto, a economia é dinâmica e as informações podem mudar. O Dinheiro Nu não garante a precisão absoluta e em tempo real dos dados, e não se responsabiliza por eventuais perdas financeiras decorrentes do uso das informações aqui contidas.</p>
+<p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.6;">Esforçamo-nos para manter todo o conteúdo rigorosamente atualizado, especialmente no tocante às taxas de juros (Selic, CDI) e regras fiscais. No entanto, a economia é dinâmica e as informações podem mudar. O Fazendo Dinheiro não garante a precisão absoluta e em tempo real dos dados, e não se responsabiliza por eventuais perdas financeiras decorrentes do uso das informações aqui contidas.</p>
 
 <p style="margin-top: 40px; font-size: 0.9rem; color: var(--text-muted);"><em>Última atualização: 05 de Agosto de 2026.</em></p>
 `);
 
 // 3. Glossário
 updatePage('glossario.html', 'Glossário Financeiro', `
-<h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">O Glossário Dinheiro Nu</h1>
+<h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">O Glossário Fazendo Dinheiro</h1>
 <p style="margin-bottom: 40px; font-size: 1.15rem; color: var(--text-muted); line-height: 1.7;">No mercado financeiro, as instituições adoram criar siglas difíceis para fazer você achar que investir é algo complicado e que você precisa da ajuda deles. Nossa missão aqui é quebrar esse muro. Abaixo, traduzimos o "economês" para o português claro, honesto e sem enrolação. Consulte sempre que encontrar um termo estranho por aí.</p>
 
 <div style="display: grid; gap: 32px; padding-bottom: 40px;">
@@ -133,7 +133,7 @@ updatePage('glossario.html', 'Glossário Financeiro', `
 // 4. Guia do Iniciante
 updatePage('guia.html', 'Guia do Iniciante', `
 <h1 style="margin-bottom: 24px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">O Grande Guia do Iniciante</h1>
-<p style="margin-bottom: 12px; font-size: 1.2rem; color: var(--text-muted); line-height: 1.7;">Se você acabou de descobrir o Dinheiro Nu e está confuso sobre por onde começar, este guia foi desenhado exatamente para você.</p>
+<p style="margin-bottom: 12px; font-size: 1.2rem; color: var(--text-muted); line-height: 1.7;">Se você acabou de descobrir o Fazendo Dinheiro e está confuso sobre por onde começar, este guia foi desenhado exatamente para você.</p>
 <p style="margin-bottom: 48px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">A organização financeira não tem segredo, mas ela exige uma <strong>ordem cronológica</strong>. Não adianta querer começar a investir na bolsa se você não tem o controle do que gasta hoje. Siga rigorosamente este mapa do tesouro abaixo. Leia um passo de cada vez, arrume a casa e então avance para o próximo nível.</p>
 
 <div style="display: flex; flex-direction: column; gap: 40px; position: relative; padding-left: 32px; border-left: 3px solid rgba(37,99,235,0.2);">

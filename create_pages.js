@@ -9,7 +9,7 @@ const footer = base.match(footerRegex)[1];
 
 function createPage(filename, title, content) {
   // modify title
-  let localHead = headNav.replace(/<title>.*?<\/title>/, `<title>${title} | Dinheiro Nu</title>`);
+  let localHead = headNav.replace(/<title>.*?<\/title>/, `<title>${title} | Fazendo Dinheiro</title>`);
   
   let mainContent = `
 <main style="padding-top: 120px; padding-bottom: 80px;">
@@ -27,7 +27,7 @@ function createPage(filename, title, content) {
 // 1. Privacidade / LGPD
 createPage('privacidade.html', 'Política de Privacidade e LGPD', `
 <h1 style="margin-bottom: 24px; font-size: 2rem; color: var(--text-dark);">Política de Privacidade e LGPD</h1>
-<p style="margin-bottom: 16px;">No <strong>Dinheiro Nu</strong>, levamos a sua privacidade a sério. Esta política explica como coletamos, usamos e protegemos seus dados.</p>
+<p style="margin-bottom: 16px;">No <strong>Fazendo Dinheiro</strong>, levamos a sua privacidade a sério. Esta política explica como coletamos, usamos e protegemos seus dados.</p>
 <h3 style="margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">1. Coleta de Dados</h3>
 <p style="margin-bottom: 16px;">Coletamos apenas as informações necessárias para o funcionamento do site e envio de nossa newsletter (seu endereço de e-mail). Não coletamos dados sensíveis como CPF, contas bancárias ou telefones.</p>
 <h3 style="margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">2. Uso das Informações</h3>
@@ -41,13 +41,13 @@ createPage('privacidade.html', 'Política de Privacidade e LGPD', `
 // 2. Termos e Cookies
 createPage('termos.html', 'Termos de Uso e Cookies', `
 <h1 style="margin-bottom: 24px; font-size: 2rem; color: var(--text-dark);">Termos de Uso e Política de Cookies</h1>
-<p style="margin-bottom: 16px;">Ao acessar o <strong>Dinheiro Nu</strong>, você concorda com nossos termos de uso.</p>
+<p style="margin-bottom: 16px;">Ao acessar o <strong>Fazendo Dinheiro</strong>, você concorda com nossos termos de uso.</p>
 <h3 style="margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">1. Conteúdo Informativo</h3>
 <p style="margin-bottom: 16px;">Todo o conteúdo e as calculadoras disponibilizadas neste site possuem caráter estritamente educativo e informativo. Nenhuma informação fornecida deve ser interpretada como assessoria de investimentos ou recomendação oficial.</p>
 <h3 style="margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">2. Uso de Cookies</h3>
 <p style="margin-bottom: 16px;">Utilizamos cookies apenas para garantir o funcionamento básico do site e obter métricas anônimas de tráfego (como o Google Analytics), a fim de entender quais artigos são mais lidos. Não usamos cookies invasivos ou de rastreamento cruzado para venda de anúncios diretos.</p>
 <h3 style="margin-top: 24px; margin-bottom: 12px; font-size: 1.25rem;">3. Propriedade Intelectual</h3>
-<p style="margin-bottom: 16px;">Os textos, ilustrações e ferramentas do site são de propriedade do Dinheiro Nu. A reprodução parcial ou total do conteúdo sem citação e link para a fonte original é proibida.</p>
+<p style="margin-bottom: 16px;">Os textos, ilustrações e ferramentas do site são de propriedade do Fazendo Dinheiro. A reprodução parcial ou total do conteúdo sem citação e link para a fonte original é proibida.</p>
 `);
 
 // 3. Glossário

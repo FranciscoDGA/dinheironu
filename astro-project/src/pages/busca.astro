@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Resultados da Busca | Fazendo Dinheiro" description="Resultados da busca no Fazendo Dinheiro." type="WebSite">
+
+
+<main style="padding-top: 120px; padding-bottom: 80px; min-height: 70vh;">
+  <section class="section">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <h1 style="margin-bottom: 24px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800;">Resultados da Busca</h1>
+      <p id="search-query-display" style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 40px;">Buscando por: <strong>...</strong></p>
+
+      <div id="search-results" class="grid-2">
+        <!-- Resultados serão injetados aqui -->
+      </div>
+    </div>
+  </section>
+</main>
+
+  <script is:inline>
+    // Simple frontend search script
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      const display = document.getElementById('search-query-display');
+      const resultsContainer = document.getElementById('search-results');
+
+      if (!query) {
+        display.innerHTML = "Nenhum termo de busca fornecido.";
+        return;
+      }
+
+      display.innerHTML = 'Resultados para: <strong>' + query.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</strong>';
+
+      // Simulando busca chamando um json que a gente vai gerar ou mockando
+      fetch('search_index.json')
+        .then(res => res.json())
+        .then(data => {
+          const lowerQuery = query.toLowerCase();
+          const results = data.filter(item => 
+            item.title.toLowerCase().includes(lowerQuery) || 
+            item.content.toLowerCase().includes(lowerQuery)
+          );
+
+          if (results.length === 0) {
+            resultsContainer.innerHTML = '<p>Nenhum artigo encontrado para esta busca.</p>';
+            return;
+          }
+
+          results.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'blog-card';
+            card.innerHTML = `
+              <div class="blog-card-content" style="padding:24px; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); margin-bottom:16px;">
+                <h3 style="margin-bottom:8px;"><a href="${item.url}" style="color:var(--text-dark); text-decoration:none;">${item.title}</a></h3>
+                <p style="color:var(--text-muted); font-size:0.95rem;">${item.content.substring(0, 120)}...</p>
+              </div>
+            `;
+            resultsContainer.appendChild(card);
+          });
+        })
+        .catch(err => {
+          console.error(err);
+          resultsContainer.innerHTML = '<p>Não foi possível realizar a busca no momento.</p>';
+        });
+    });
+  </script>
+
+  
+  
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  
+</Layout>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Descubra 5 ferramentas gratuitas de inteligência artificial e automação que vão gerenciar o seu dinheiro quase sozinhas."/>
-  <title>IA para suas finanças: 5 ferramentas gratuitas que gerenciam seu dinheiro sozinhas | Dinheiro Nu</title>
+  <title>IA para suas finanças: 5 ferramentas gratuitas que gerenciam seu dinheiro sozinhas | Fazendo Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"/>
@@ -123,8 +123,12 @@
   </style>
 
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+  <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
+  <link rel="manifest" href="../manifest.json" />
 </head>
 <body>
+<div id="market-ticker"></div>
+
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -135,15 +139,20 @@
   <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
         </div>
-        <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
+        <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
-        <li><a href="../index.html#recentes" class="nav-link">Blog</a></li>
+        <li><a href="../blog.html" class="nav-link">Blog</a></li>
         <li><a href="../ferramentas.html" class="nav-link">Ferramentas</a></li>
         <li><a href="#footer" class="nav-link">Contato</a></li>
       </ul>
+
+      <form action="../busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
+        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
+        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      </form>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -158,19 +167,28 @@
         <ol style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: rgba(255,255,255,0.6);">
           <li><a href="../index.html" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Início</a></li>
           <li><span style="opacity: 0.4;">/</span></li>
-          <li><a href="../index.html#recentes" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Artigos</a></li>
+          <li><a href="../blog.html" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Artigos</a></li>
           <li><span style="opacity: 0.4;">/</span></li>
           <li aria-current="page" style="color: #fff; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 250px;" title="IA para suas finanças: 5 ferramentas gratuitas que gerenciam seu dinheiro sozinhas">IA para suas finanças: 5 ferramentas gratuitas que gerenciam seu dinheiro sozinhas</li>
         </ol>
       </nav>
       <span class="article-category article-cat--blue">Ferramentas</span>
       <h1 class="article-title">IA para suas finanças: 5 ferramentas gratuitas que gerenciam seu dinheiro sozinhas</h1>
-      <div class="article-meta">
-        <span>✍️ Francisco Gomes</span>
-        <span>📅 05 Ago 2026</span>
-        <span>⏱️ 7 min de leitura</span>
+      
+      <div class="author-block" style="margin-top: 0; padding-bottom: 0; border-bottom: none; margin-bottom: 24px;">
+        <img src="../images/francisco.jpg" alt="Equipe Fazendo Dinheiro" class="author-avatar" style="border: 2px solid rgba(255,255,255,0.2);">
+        <div class="author-info">
+          <span class="author-name" style="color: white;">Equipe Fazendo Dinheiro</span>
+          <span class="author-desc" style="color: rgba(255,255,255,0.7);">Especialistas em Educação Financeira</span>
+          <span class="author-meta" style="color: rgba(255,255,255,0.5);">05 Ago 2026 &bull; 7 min de leitura</span>
+        </div>
       </div>
+
       <p class="article-summary">Cansado de planilhas complexas e de esquecer de anotar seus gastos? Conheça 5 ferramentas e aplicativos gratuitos baseados em inteligência artificial e automação que fazem o trabalho pesado do controle financeiro por você.</p>
+<div style="background-color: var(--bg-light); border-left: 4px solid var(--primary); padding: 16px; margin: 32px 0; border-radius: 4px;">
+  <strong>Leia também:</strong> <a href="investimentos.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Descubra mais sobre INVESTIMENTOS clicando aqui</a>
+</div>
+
     </div>
   </section>
 
@@ -182,9 +200,11 @@
   </div>
 
   <!-- ARTICLE BODY -->
-  <main style="padding-top: 20px;">
+  <main style="padding-top: 100px; padding-bottom: 60px; background: #f1f5f9;">
+  <div class="container article-layout">
+    <div class="article-main">
     <div class="article-body-wrap">
-      <article class="article-content">
+      <article class="article-box">
         <p>Se você já tentou organizar a sua vida financeira, provavelmente já passou pela fase da "planilha milagrosa". Você passa horas configurando abas, cores e fórmulas, promete a si mesmo que vai anotar até o cafezinho de R$ 5,00 da esquina, e na primeira semana tudo corre perfeitamente bem. Mas aí vem a correria da vida real: o trabalho aperta, você esquece de anotar um lanche rápido na padaria, deixa passar uma corrida de aplicativo e, no fim do mês, a planilha teimosamente não bate com o saldo do banco. É uma situação frustrante que faz com que milhares de brasileiros desistam do controle financeiro todos os anos.</p>
         
         <p>A boa notícia é que estamos em 2026, e a tecnologia avançou de forma absurda. Hoje, você absolutamente não precisa mais ser um escravo das planilhas manuais e da digitação interminável. A <strong>Inteligência Artificial (IA)</strong> e as robustas tecnologias de automação financeira (como o Open Finance) chegaram para democratizar e facilitar radicalmente o controle do nosso dinheiro. Os aplicativos mais modernos são capazes de ler suas notificações, conectar-se diretamente com o seu banco com total segurança, categorizar seus gastos quase com perfeição e, em alguns casos, até te dar "broncas" ou sugestões amigáveis quando você está gastando dinheiro demais no iFood ou em compras por impulso.</p>
@@ -313,6 +333,35 @@
         <p>Agora a escolha e o poder estão nas suas mãos. Escolha apenas uma dessas excelentes ferramentas tecnológicas hoje mesmo, dedique irrisórios 10 minutos de foco logo após terminar a leitura desse texto para fazer o download, baixar o app que mais combinou com o seu perfil, conectá-lo ao seu banco principal através do Open Finance, ou extrair o seu primeiríssimo relatório detalhado através de um bom prompt no ChatGPT. Veja a fascinante e reconfortante mágica da Inteligência Artificial em plena ação diante dos seus olhos na telinha do celular. Lembre-se, o passo número um e essencial para se atingir a tão sonhada liberdade financeira e dormir tranquilo à noite com a cabeça no travesseiro é possuir a luz e a clareza total, absoluta e inquestionável sobre o presente. Use as máquinas a seu favor e que o seu dinheiro prospere.</p>
 
       </article>
+    </div> <!-- close article-main -->
+
+      <aside class="article-sidebar">
+        <!-- Related Articles -->
+        <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Artigos Relacionados</h3>
+            
+            <a href="../acoes-dividendos.html" class="related-article-link">5 estratégias para investir em ações e receber dividendos hoje</a>
+            <p class="related-article-desc">Descubra as táticas infalíveis para montar uma carteira focada em dividendos e viver de renda passiva.</p>
+            
+            <a href="../psicologia-dinheiro.html" class="related-article-link">Por que gastamos por impulso? A psicologia do dinheiro</a>
+            <p class="related-article-desc">Entenda o comportamento oculto que faz seu saldo zerar e aprenda a controlar suas emoções e suas finanças.</p>
+            
+            <a href="../imovel.html" class="related-article-link">Comprar casa ou morar de aluguel? O cálculo definitivo</a>
+            <p class="related-article-desc">Fizemos as contas para provar de uma vez por todas o que é mais vantajoso no Brasil hoje.</p>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="sidebar-widget" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: #bbf7d0;">
+            <h3 class="sidebar-widget-title">Receba Dicas de Ouro</h3>
+            <p style="font-size: 0.85rem; color: #166534; margin-bottom: 16px;">Junte-se a milhares de pessoas e receba nossos guias práticos sobre finanças pessoais semanalmente.</p>
+            <form onsubmit="event.preventDefault(); alert('Inscrito com sucesso!');">
+                <input type="email" placeholder="Seu melhor e-mail" class="newsletter-input" required>
+                <button type="submit" class="newsletter-btn" style="background: #16a34a;">Inscrever-se Grátis</button>
+            </form>
+        </div>
+      </aside>
+
+  </div> <!-- close article-layout -->
 
       <!-- SHARE -->
       <div class="article-share">
@@ -330,6 +379,49 @@
       </div>
     </div>
   </main>
+
+  <section class="recommended-tools">
+    <div class="container">
+      <div style="text-align: center;">
+        <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 10px;">Ferramentas Recomendadas</h2>
+        <p style="color: #64748b; font-size: 1.1rem;">As calculadoras mais utilizadas pelos nossos leitores para organizar a vida financeira.</p>
+      </div>
+      
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-card-header">
+            <h3 class="tool-card-title">Calculadora de Juros Compostos</h3>
+            <span class="tool-badge" style="background: var(--blue);">Popular</span>
+          </div>
+          <p class="tool-card-desc">Simule a mágica dos juros compostos ao longo dos anos. Descubra quanto dinheiro você terá investindo um valor mensalmente.</p>
+          <a href="../ferramentas/juros-compostos.html" class="tool-card-btn">Acessar Ferramenta &rarr;</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-header">
+            <h3 class="tool-card-title">Simulador de Financiamento</h3>
+            <span class="tool-badge" style="background: #eab308;">Essencial</span>
+          </div>
+          <p class="tool-card-desc">Vai comprar casa ou carro? Simule as parcelas SAC ou Price e veja quanto pagará de juros ao banco antes de assinar.</p>
+          <a href="../ferramentas/financiamento.html" class="tool-card-btn">Acessar Ferramenta &rarr;</a>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-card-header">
+            <h3 class="tool-card-title">Regra 50-30-20 (Orçamento)</h3>
+            <span class="tool-badge" style="background: #16a34a;">Novo</span>
+          </div>
+          <p class="tool-card-desc">Descubra exatamente quanto você deve destinar para gastos fixos, lazer e investimentos baseado no seu salário limpo.</p>
+          <a href="../ferramentas/regra-50-30-20.html" class="tool-card-btn">Acessar Ferramenta &rarr;</a>
+        </article>
+      </div>
+      
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="../ferramentas.html" class="btn btn-secondary" style="background: #1e293b; color: white;">Ver Todas as Ferramentas</a>
+      </div>
+    </div>
+  </section>
+
 
   <!-- RELATED ARTICLES -->
   <section class="related-section">
@@ -359,46 +451,54 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  
+  
+  
+  
+  
+  
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="nav-logo footer-logo">
-            <div class="logo-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#f59e0b" stroke-width="2"/><path d="M12 6v1m0 10v1M9 9.5C9 8.12 10.34 7 12 7s3 1.12 3 2.5c0 1.74-2 2.5-3 3.5" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="0.8" fill="#f59e0b"/></svg></div>
-            <span class="logo-text">Dinheiro<span class="logo-accent">Nu</span></span>
-          </a>
-          <p class="footer-tagline">Finanças sem enrolação.</p>
-        </div>
+
         <div class="footer-col">
-          <h4 class="footer-col-title">Artigos</h4>
-          <ul class="footer-links">
-            <li><a href="poupanca.html">Como guardar R$ 5.000</a></li>
-            <li><a href="investimentos.html">Investimentos básicos</a></li>
-            <li><a href="dividas.html">Sair das dívidas</a></li>
-            <li><a href="tesouro.html">Tesouro Direto</a></li>
-            <li><a href="orcamento.html">Montar orçamento</a></li>
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Sobre o Site</h4>
+          <p class="footer-tagline" style="margin-top: 16px;">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo gratuito e de qualidade sobre economia pessoal, investimentos e finanças.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Links Úteis</h4>
+          <div class="footer-links-grid" style="margin-top: 16px;">
+            <ul class="footer-links">
+              <li><a href="../index.html" id="footer-link-inicio">Início</a></li>
+              <li><a href="../ferramentas.html" id="footer-link-ferramentas">Ferramentas</a></li>
+              <li><a href="../contato.html" id="footer-link-contato">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="../sobre.html" id="footer-link-sobre">Sobre Nós</a></li>
+              <li><a href="../privacidade.html" id="footer-link-privacidade">Política de Privacidade</a></li>
+              <li><a href="../termos.html" id="footer-link-termos">Termos de Uso</a></li>
+              <li><a href="../cookies.html" id="footer-link-cookies">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Artigos Principais</h4>
+          <ul class="footer-links" style="margin-top: 16px;">
+            <li><a href="orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
+            <li><a href="investimentos.html" id="footer-link-investir">Investimentos</a></li>
+            <li><a href="dividas.html" id="footer-link-dividas">Impostos</a></li>
+            <li><a href="tesouro.html" id="footer-link-tesouro">Crédito</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Ferramentas</h4>
-          <ul class="footer-links">
-            <li><a href="../ferramentas.html">Juros Compostos</a></li>
-            <li><a href="../ferramentas.html">Controle de Gastos</a></li>
-            <li><a href="../ferramentas.html">Financiamento</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Blog</h4>
-          <ul class="footer-links">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../index.html#sobre">Sobre</a></li>
-            <li><a href="../index.html#newsletter">Newsletter</a></li>
-          </ul>
-        </div>
+
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 <strong>Dinheiro Nu</strong>. Todos os direitos reservados.</p>
-        <p class="footer-disclaimer">Conteúdo informativo. Não constitui assessoria de investimentos.</p>
+
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
+        <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
@@ -414,6 +514,15 @@
     }
     function copyLink() {
       navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+    }
+  </script>
+
+  <script src="../js/ticker.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js');
+      });
     }
   </script>
 </body>

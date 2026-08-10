@@ -94,7 +94,7 @@ const ferramentasHTML = `
 const sobreHTML = `
   <div class="page-hero" style="background: var(--bg-light); color: var(--text-dark);">
     <div class="container">
-      <h1 style="color: var(--text-dark);">Sobre o Dinheiro Nu</h1>
+      <h1 style="color: var(--text-dark);">Sobre o Fazendo Dinheiro</h1>
       <p style="color: var(--text-muted);">Educação financeira transparente, sem jargões e feita para o brasileiro.</p>
     </div>
   </div>
@@ -106,7 +106,7 @@ const sobreHTML = `
       <div class="feature-card">
         <div class="feature-card-content">
           <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 16px; color: var(--text-dark);">Nossa Missão</h2>
-          <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">O Dinheiro Nu nasceu com uma missão clara: democratizar a educação financeira no Brasil, quebrando o mito de que investir ou organizar dinheiro é para poucos, ricos ou matemáticos.</p>
+          <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">O Fazendo Dinheiro nasceu com uma missão clara: democratizar a educação financeira no Brasil, quebrando o mito de que investir ou organizar dinheiro é para poucos, ricos ou matemáticos.</p>
           <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">Acreditamos que todo mundo merece entender como o próprio dinheiro funciona, ter acesso a ferramentas práticas e não depender de gerentes de banco querendo bater meta.</p>
         </div>
         <div class="feature-card-icon">
@@ -179,7 +179,7 @@ const sobreHTML = `
 `;
 
 function generate(filename, title, content) {
-  let head = headerPart.replace(/<title>.*?<\/title>/, `<title>${title} | Dinheiro Nu</title>`);
+  let head = headerPart.replace(/<title>.*?<\/title>/, `<title>${title} | Fazendo Dinheiro</title>`);
   fs.writeFileSync(filename, head + '\n<main>\n' + content + '\n</main>\n' + footerPart);
 }
 

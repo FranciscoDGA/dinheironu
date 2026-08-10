@@ -249,7 +249,7 @@ const mainContent = `
               </div>
               <div class="info-content">
                 <h4>E-mail</h4>
-                <a href="mailto:contato@dinheironu.com.br">contato@dinheironu.com.br</a>
+                <a href="mailto:contato@fazendodinheiro.com.br">contato@fazendodinheiro.com.br</a>
                 <p>Resposta em até 24 horas</p>
               </div>
             </div>
@@ -260,7 +260,7 @@ const mainContent = `
               </div>
               <div class="info-content">
                 <h4>Suporte Técnico</h4>
-                <a href="mailto:suporte@dinheironu.com.br">suporte@dinheironu.com.br</a>
+                <a href="mailto:suporte@fazendodinheiro.com.br">suporte@fazendodinheiro.com.br</a>
                 <p>Para problemas com calculadoras</p>
               </div>
             </div>
@@ -271,7 +271,7 @@ const mainContent = `
               </div>
               <div class="info-content">
                 <h4>Parcerias</h4>
-                <a href="mailto:parcerias@dinheironu.com.br">parcerias@dinheironu.com.br</a>
+                <a href="mailto:parcerias@fazendodinheiro.com.br">parcerias@fazendodinheiro.com.br</a>
                 <p>Para colaborações e negócios</p>
               </div>
             </div>
@@ -282,7 +282,7 @@ const mainContent = `
               </div>
               <div class="info-content">
                 <h4>Privacidade</h4>
-                <a href="mailto:privacidade@dinheironu.com.br">privacidade@dinheironu.com.br</a>
+                <a href="mailto:privacidade@fazendodinheiro.com.br">privacidade@fazendodinheiro.com.br</a>
                 <p>Dúvidas sobre LGPD e dados</p>
               </div>
             </div>
@@ -354,7 +354,7 @@ const mainContent = `
         
         <div class="faq-item">
           <h5>Como posso sugerir um novo artigo?</h5>
-          <p>Use o formulário acima selecionando "Sugestão de Melhoria" ou envie um e-mail para <a href="mailto:contato@dinheironu.com.br" style="color: var(--primary);">contato@dinheironu.com.br</a> com sua ideia. Adoramos receber pautas dos nossos leitores!</p>
+          <p>Use o formulário acima selecionando "Sugestão de Melhoria" ou envie um e-mail para <a href="mailto:contato@fazendodinheiro.com.br" style="color: var(--primary);">contato@fazendodinheiro.com.br</a> com sua ideia. Adoramos receber pautas dos nossos leitores!</p>
         </div>
         
         <div class="faq-item">
