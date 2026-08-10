@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debug Overflow</title>
+  <style>
+    * { outline: 1px solid red !important; }
+  </style>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', () => {
+      const elements = document.querySelectorAll('*');
+      const overflowing = [];
+      
+      elements.forEach(el => {
+        if (el.scrollWidth > window.innerWidth) {
+          overflowing.push({
+            element: el.tagName + '.' + (el.className || 'no-class'),
+            scrollWidth: el.scrollWidth,
+            clientWidth: el.clientWidth,
+            windowWidth: window.innerWidth,
+            difference: el.scrollWidth - window.innerWidth
+          });
+        }
+      });
+      
+      console.log('ELEMENTOS COM OVERFLOW:');
+      overflowing.sort((a, b) => b.difference - a.difference);
+      overflowing.slice(0, 20).forEach(item => {
+        console.log(`${item.element}: scrollWidth=${item.scrollWidth} (${item.difference}px maior que viewport)`);
+      });
+      
+      // Log no corpo também
+      document.body.innerHTML = '<pre>' + JSON.stringify(overflowing.slice(0, 20), null, 2) + '</pre>';
+    });
+  </script>
+</body>
+</html>

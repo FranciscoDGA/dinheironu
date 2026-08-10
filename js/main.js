@@ -268,3 +268,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ═══════════════════════════════════════════════════════
+   OVERFLOW PROTECTION
+═══════════════════════════════════════════════════════ */
+// Prevent horizontal scroll on mobile
+function preventOverflow() {
+  const htmlEl = document.documentElement;
+  const bodyEl = document.body;
+  
+  // Set strict overflow on html and body
+  htmlEl.style.overflow = 'hidden';
+  bodyEl.style.overflow = 'hidden';
+  
+  // Check for overflowing elements and fix them
+  const allElements = document.querySelectorAll('*');
+  allElements.forEach(el => {
+    if (el.scrollWidth > window.innerWidth) {
+      el.style.overflow = 'hidden';
+      el.style.maxWidth = '100vw';
+      el.style.width = '100%';
+    }
+  });
+  
+  // Re-enable scroll on body but keep vertical only
+  bodyEl.style.overflow = 'auto';
+  htmlEl.style.overflow = 'auto';
+}
+
+// Run on load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', preventOverflow);
+} else {
+  preventOverflow();
+}
+
+// Also check after a short delay
+setTimeout(preventOverflow, 1000);
+
+// Disable horizontal scroll
+document.addEventListener('touchmove', (e) => {
+  if (window.innerWidth < 1024) {
+    // Allow vertical scroll but not horizontal
+    const touch = e.touches[0];
+    if (Math.abs(touch.clientX - touch.clientY) > 20) {
+      // This is likely horizontal movement, allow it for intentional horizontal scroll in elements
+      // but prevent it on body
+      if (e.target === document.body || e.target === document.documentElement) {
+        e.preventDefault();
+      }
+    }
+  }
+}, { passive: false });
