@@ -3,6 +3,36 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Ferramentas Financeiras | Fazendo Dinheiro" description="Ferramentas Financeiras Gratuitas do Fazendo Dinheiro - Calculadoras e Simuladores." type="WebSite">
+  <Fragment slot="head">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "As calculadoras são gratuitas mesmo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! O objetivo do Fazendo Dinheiro é democratizar a educação financeira. Todas as nossas 9 ferramentas sempre serão 100% gratuitas e sem limite de uso."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Os resultados das simulações de dívida têm validade legal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Os resultados são estimativas muito precisas baseadas na matemática financeira, mas não substituem o contrato final gerado pela instituição bancária, pois cada banco pode adicionar pequenas taxas de administração (TAC) e IOF variáveis."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Vocês guardam os dados que eu digito nas calculadoras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De forma alguma. Nossa arquitetura foi montada para processar a matemática diretamente no navegador do seu dispositivo (Client-Side). Fechou a aba, os dados somem para sempre."
+        }
+      }]
+    }
+    </script>
+  </Fragment>
 
 
   <main>
@@ -201,7 +231,7 @@ import Layout from '../layouts/Layout.astro';
     /* HERO PREMIUM */
     .hero-premium {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      padding: 140px 20px 80px;
+      padding: 240px 20px 80px;
       color: white;
       text-align: center;
       position: relative;

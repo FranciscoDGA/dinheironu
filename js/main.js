@@ -297,3 +297,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+/* ── Newsletter Sidebar Handler ── */
+function handleSidebarNewsletter(form) {
+  const emailInput = form.querySelector('input[type="email"]');
+  if (!emailInput) return;
+  
+  const email = emailInput.value.trim();
+  if (!email || !email.includes('@')) {
+    emailInput.style.borderColor = '#ef4444';
+    emailInput.focus();
+    return;
+  }
+
+  // Store in localStorage
+  const subscribers = JSON.parse(localStorage.getItem('fd_subscribers') || '[]');
+  if (!subscribers.includes(email)) {
+    subscribers.push(email);
+    localStorage.setItem('fd_subscribers', JSON.stringify(subscribers));
+  }
+
+  // Show success message
+  const widget = form.closest('.sidebar-widget');
+  if (widget) {
+    widget.innerHTML = '<div style="text-align:center; padding:24px 16px;"><div style="font-size:2rem; margin-bottom:8px;">✅</div><h3 style="font-size:1rem; font-weight:700; color:#166534; margin-bottom:8px;">Inscrito com sucesso!</h3><p style="font-size:0.85rem; color:#166534;">Você receberá nossas dicas no email.</p></div>';
+  }
+}
+

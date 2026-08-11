@@ -13,7 +13,7 @@ html_content = """<!DOCTYPE html>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <style>
-    .hero-premium { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; text-align: center; padding: 160px 20px 80px; position: relative; overflow: hidden; }
+    .hero-premium { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; text-align: center; padding: 240px 20px 80px; position: relative; overflow: hidden; }
     .hero-premium::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 60%); pointer-events: none; }
     .hero-premium h1 { font-size: 3rem; font-weight: 800; margin-bottom: 24px; line-height: 1.2; }
     .hero-premium p { font-size: 1.25rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 40px; line-height: 1.6; }
@@ -43,6 +43,34 @@ html_content = """<!DOCTYPE html>
     .faq-q { font-weight: 700; font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: #0f172a; margin:0; }
     .faq-a { margin-top: 16px; color: #475569; line-height: 1.6; display: none; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "As calculadoras são gratuitas mesmo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim! O objetivo do Dinheiro Nu é democratizar a educação financeira. Todas as nossas 9 ferramentas sempre serão 100% gratuitas e sem limite de uso."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Os resultados das simulações de dívida têm validade legal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Os resultados são estimativas muito precisas baseadas na matemática financeira, mas não substituem o contrato final gerado pela instituição bancária, pois cada banco pode adicionar pequenas taxas de administração (TAC) e IOF variáveis."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Vocês guardam os dados que eu digito nas calculadoras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De forma alguma. Nossa arquitetura foi montada para processar a matemática diretamente no navegador do seu dispositivo (Client-Side). Fechou a aba, os dados somem para sempre."
+      }
+    }]
+  }
+  </script>
 </head>
 <body>
 
