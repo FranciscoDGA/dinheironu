@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /js/
+Disallow: /css/
 
 Sitemap: https://dinheironu.vercel.app/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

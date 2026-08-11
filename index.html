@@ -33,17 +33,27 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Fazendo Dinheiro | Finanças Sem Enrolação",
-    "description": "Fazendo Dinheiro — Educação financeira direta ao ponto. Sem jargão, sem enrolação, sem segredo. Aprenda a investir, sair das dívidas e conquistar liberdade financeira.",
-    "url": "https://dinheironu.vercel.app/",
+    "@type": "WebSite",
+    "name": "Fazendo Dinheiro",
+    "url": "https://dinheironu.vercel.app",
+    "description": "Educação financeira direta ao ponto. Aprenda a investir, sair das dívidas e conquistar liberdade financeira.",
     "publisher": {
       "@type": "Organization",
       "name": "Fazendo Dinheiro",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://dinheironu.vercel.app/images/favicon.svg"
-      }
+      "logo": "https://dinheironu.vercel.app/images/favicon.svg",
+      "url": "https://dinheironu.vercel.app",
+      "sameAs": [
+        "https://www.instagram.com/fazendodinheiro",
+        "https://www.youtube.com/@fazendodinheiro"
+      ]
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://dinheironu.vercel.app/busca.html?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
     }
   }
   </script>
