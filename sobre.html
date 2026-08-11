@@ -34,12 +34,16 @@
     .sobre-section--gray{background:#f8fafc}
     .sobre-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;text-align:center;margin-bottom:48px;color:#0f172a}
     .sobre-subtitle{text-align:center;color:#64748b;margin-top:-32px;margin-bottom:48px;font-size:1.05rem;max-width:600px;margin-left:auto;margin-right:auto}
-    .sobre-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center;transition:transform .2s,box-shadow .2s}
-    .sobre-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+    .sobre-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .sobre-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1);border-color:#cbd5e1}
     .sobre-card-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 20px}
     .sobre-card-title{font-size:1.1rem;font-weight:700;margin-bottom:12px;color:#0f172a}
     .sobre-card-text{font-size:.95rem;color:#64748b;line-height:1.6}
     .sobre-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .sobre-grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .sobre-grid-team{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    @media(max-width:900px){.sobre-grid-team{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:500px){.sobre-grid-4,.sobre-grid-team{grid-template-columns:1fr}}
     .sobre-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
     .sobre-mission-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:40px}
     .sobre-mission-card h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:20px;color:#0f172a}
@@ -47,7 +51,8 @@
     .sobre-history-card{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:16px;padding:40px}
     .sobre-history-card h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:20px;color:#0f172a}
     .sobre-history-card p{color:#475569;line-height:1.7;margin-bottom:16px}
-    .sobre-team-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center}
+    .sobre-team-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .sobre-team-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1);border-color:#cbd5e1}
     .sobre-team-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#1e40af);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.8rem;margin:0 auto 16px}
     .sobre-team-role{color:#2563eb;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
     .sobre-quality-item{display:flex;gap:16px;margin-bottom:24px}
@@ -60,6 +65,8 @@
     .sobre-transparency-item{display:flex;gap:12px;align-items:flex-start}
     .sobre-transparency-item svg{flex-shrink:0;margin-top:2px}
     @media(max-width:768px){.sobre-grid-2,.sobre-transparency-grid{grid-template-columns:1fr}}
+    @media(max-width:1000px){.sobre-grid-4[style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(3,1fr) !important}}
+    @media(max-width:600px){.sobre-grid-4[style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr) !important}}
   </style>
 </head>
 <body>
@@ -118,7 +125,7 @@
   <section class="sobre-section sobre-section--gray">
     <div class="container">
       <h2 class="sobre-title">Nossos Valores</h2>
-      <div class="sobre-grid">
+      <div class="sobre-grid-4">
         <div class="sobre-card">
           <div class="sobre-card-icon" style="background:rgba(16,185,129,.1);color:#10b981;">&#128176;</div>
           <h3 class="sobre-card-title">Gratuidade</h3>
@@ -146,7 +153,7 @@
   <section class="sobre-section">
     <div class="container">
       <h2 class="sobre-title">O Que Oferecemos</h2>
-      <div class="sobre-grid">
+      <div class="sobre-grid-4">
         <div class="sobre-card">
           <div class="sobre-card-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">&#128214;</div>
           <h3 class="sobre-card-title">Artigos Educativos</h3>
@@ -175,25 +182,25 @@
     <div class="container">
       <h2 class="sobre-title">Nossa Equipe</h2>
       <p class="sobre-subtitle">Somos uma equipe multifacetica apaixonada por educacao financeira e tecnologia.</p>
-      <div class="sobre-grid">
+      <div class="sobre-grid-team">
         <div class="sobre-team-card">
           <div class="sobre-team-avatar">FD</div>
-          <div class="sobre-team-role">Especialistas em Financas</h3>
+          <div class="sobre-team-role">Especialistas em Financas</div>
           <p class="sobre-card-text">Profissionais com formacao em economia, administracao e certificacoes de mercado financeiro.</p>
         </div>
         <div class="sobre-team-card">
           <div class="sobre-team-avatar" style="background:linear-gradient(135deg,#10b981,#059669);">DEV</div>
-          <div class="sobre-team-role">Desenvolvedores</h3>
+          <div class="sobre-team-role">Desenvolvedores</div>
           <p class="sobre-card-text">Equipe tecnica especializada em criar ferramentas uteis e funcionais para auxiliar suas decisoes financeiras.</p>
         </div>
         <div class="sobre-team-card">
           <div class="sobre-team-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">DES</div>
-          <div class="sobre-team-role">Designers</h3>
+          <div class="sobre-team-role">Designers</div>
           <p class="sobre-card-text">Profissionais que tornam nossa plataforma visualmente atraente e facil de usar em qualquer dispositivo.</p>
         </div>
         <div class="sobre-team-card">
           <div class="sobre-team-avatar" style="background:linear-gradient(135deg,#ef4444,#dc2626);">EDU</div>
-          <div class="sobre-team-role">Educadores</h3>
+          <div class="sobre-team-role">Educadores</div>
           <p class="sobre-card-text">Especialistas em didatica que transformam conceitos complexos em explicacoes simples e compreensiveis.</p>
         </div>
       </div>
@@ -269,26 +276,26 @@
     <div class="container">
       <h2 class="sobre-title">Nossa Visao de Futuro</h2>
       <p class="sobre-subtitle">Queremos ser a principal referencia em educacao financeira gratuita no Brasil, ajudando milhoes de brasileiros a:</p>
-      <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:40px;">
-        <div style="text-align:center;max-width:140px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 12px;">&#127919;</div>
-          <p style="font-size:.9rem;color:#475569;font-weight:600;">Alcançar independencia financeira</p>
+      <div class="sobre-grid-4" style="grid-template-columns:repeat(5,1fr);max-width:900px;margin:40px auto 0;">
+        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#127919;</div>
+          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Alcançar independencia financeira</p>
         </div>
-        <div style="text-align:center;max-width:140px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(16,185,129,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 12px;">&#127968;</div>
-          <p style="font-size:.9rem;color:#475569;font-weight:600;">Realizar o sonho da casa propria</p>
+        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(16,185,129,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#127968;</div>
+          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Realizar o sonho da casa propria</p>
         </div>
-        <div style="text-align:center;max-width:140px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(245,158,11,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 12px;">&#128176;</div>
-          <p style="font-size:.9rem;color:#475569;font-weight:600;">Investir com seguranca e confianca</p>
+        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(245,158,11,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#128176;</div>
+          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Investir com seguranca e confianca</p>
         </div>
-        <div style="text-align:center;max-width:140px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(239,68,68,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 12px;">&#128737;</div>
-          <p style="font-size:.9rem;color:#475569;font-weight:600;">Proteger suas financas contra imprevistos</p>
+        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(239,68,68,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#128737;</div>
+          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Proteger suas financas contra imprevistos</p>
         </div>
-        <div style="text-align:center;max-width:140px;">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(139,92,246,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 12px;">&#127891;</div>
-          <p style="font-size:.9rem;color:#475569;font-weight:600;">Educar a proxima geracao sobre dinheiro</p>
+        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(139,92,246,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#127891;</div>
+          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Educar a proxima geracao sobre dinheiro</p>
         </div>
       </div>
     </div>
