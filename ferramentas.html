@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ferramentas Financeiras Gratuitas do Fazendo Dinheiro - Calculadoras e Simuladores para investimentos, dividas, orcamento e mais." />
-  <title>Ferramentas Financeiras Gratuitas - Calculadoras e Simuladores | Fazendo Dinheiro</title>
+  <meta name="description" content="Ferramentas financeiras gratuitas - calculadoras e simuladores para investimentos, dividas e orcamento." />
+  <title>Ferramentas | Fazendo Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="canonical" href="https://dinheironu.vercel.app/ferramentas.html" />
-  <meta property="og:title" content="Ferramentas Financeiras Gratuitas | Fazendo Dinheiro" />
-  <meta property="og:description" content="Calculadoras e simuladores gratuitos para investimentos, dividas, orcamento e mais." />
+  <meta property="og:title" content="Ferramentas | Fazendo Dinheiro" />
+  <meta property="og:description" content="Calculadoras e simuladores gratuitos para investimentos, dividas e orcamento." />
   <meta property="og:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
   <meta property="og:url" content="https://dinheironu.vercel.app/ferramentas.html" />
   <meta property="og:type" content="website" />
@@ -21,8 +21,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Ferramentas Financeiras Gratuitas | Fazendo Dinheiro",
-    "description": "Calculadoras e simuladores gratuitos para investimentos, dividas, orcamento e mais.",
+    "name": "Ferramentas | Fazendo Dinheiro",
+    "description": "Calculadoras e simuladores gratuitos para investimentos, dividas e orcamento.",
     "url": "https://dinheironu.vercel.app/ferramentas.html"
   }
   </script>
@@ -32,122 +32,77 @@
     "@type": "FAQPage",
     "mainEntity": [{
       "@type": "Question",
-      "name": "As calculadoras sao realmente gratuitas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim! Todas as nossas ferramentas sao 100% gratuitas e sem limite de uso. O objetivo do Fazendo Dinheiro e democratizar a educacao financeira."
-      }
+      "name": "As ferramentas sao gratuitas?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Sim. Todas as ferramentas sao 100% gratuitas e sem limite de uso."}
     }, {
       "@type": "Question",
-      "name": "Os resultados das simulacoes tem validade legal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nao. Os resultados sao estimativas precisas baseadas na matematica financeira, mas nao substituem o contrato final gerado pela instituicao bancaria."
-      }
+      "name": "Preciso criar conta?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nao. Funciona sem cadastro, sem login e sem pedagio."}
     }, {
       "@type": "Question",
-      "name": "Voces guardam os dados que eu digito nas calculadoras?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "De forma alguma. Nossa arquitetura processa a matematica diretamente no navegador do seu dispositivo (Client-Side). Fechou a aba, os dados somem para sempre."
-      }
+      "name": "Os dados sao salvos?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Nao. Os calculos rodam no navegador. Fechou a aba, os dados somem."}
     }, {
       "@type": "Question",
-      "name": "Preciso criar conta para usar as ferramentas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nao! Todas as ferramentas funcionam sem cadastro, sem login e sem pedagio. E so acessar e comecar a usar."
-      }
-    }, {
-      "@type": "Question",
-      "name": "As ferramentas funcionam no celular?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim! Todas sao responsivas e funcionam perfeitamente em smartphones, tablets e computadores."
-      }
-    }, {
-      "@type": "Question",
-      "name": "Posso sugerir novas ferramentas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Claro! Envie suas sugestoes pelo formulario de contato. Estamos sempre abertos a ideias que ajudem nossos usuarios."
-      }
+      "name": "Funciona no celular?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Sim. Todas sao responsivas e funcionam em qualquer dispositivo."}
     }]
   }
   </script>
   <style>
-    .f-hero{padding:140px 0 80px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%);text-align:center;color:#fff;position:relative;overflow:hidden}
-    .f-hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(245,158,11,.06) 0%,transparent 60%);pointer-events:none}
-    .f-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:16px;line-height:1.2}
-    .f-hero p{font-size:1.15rem;color:#94a3b8;max-width:650px;margin:0 auto 40px;line-height:1.6}
-    .f-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
-    .f-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:20px 32px;border-radius:16px;backdrop-filter:blur(10px);min-width:140px}
-    .f-stat h3{font-size:2.2rem;font-weight:800;color:#f59e0b;margin:0 0 4px}
-    .f-stat span{font-size:.8rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+    .f-hero{padding:160px 0 80px;text-align:center}
+    .f-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:600;color:#0f172a;letter-spacing:-.03em;margin-bottom:20px;line-height:1.15}
+    .f-hero p{font-size:1.1rem;color:#64748b;max-width:520px;margin:0 auto;line-height:1.7}
+    .f-stats{display:flex;justify-content:center;gap:48px;margin-top:40px}
+    .f-stat{text-align:center}
+    .f-stat strong{display:block;font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:#0f172a;letter-spacing:-.03em}
+    .f-stat span{font-size:.7rem;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;font-weight:500}
 
-    .f-filter-bar{background:#fff;padding:16px 24px;border-radius:100px;box-shadow:0 10px 30px rgba(0,0,0,.06);display:flex;align-items:center;max-width:900px;margin:-40px auto 0;position:relative;z-index:10;border:1px solid #e2e8f0}
-    .f-search{display:flex;align-items:center;background:#f1f5f9;border-radius:50px;padding:12px 20px;flex:1;margin-right:16px}
-    .f-search input{border:none;background:transparent;outline:none;width:100%;font-size:.95rem;margin-left:10px}
-    .f-chips{display:flex;gap:8px;flex-wrap:wrap}
-    .f-chip{background:transparent;border:1px solid #cbd5e1;color:#475569;padding:8px 16px;border-radius:50px;cursor:pointer;font-weight:600;font-size:.85rem;transition:.2s;white-space:nowrap}
-    .f-chip:hover{border-color:#3b82f6;color:#3b82f6}
-    .f-chip.active{background:#3b82f6;color:#fff;border-color:#3b82f6}
+    .f-sect{padding:80px 0}
+    .f-sect--muted{background:#fafbfc}
+    .f-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-bottom:20px;display:block}
+    .f-heading{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:600;color:#0f172a;letter-spacing:-.02em;line-height:1.2}
 
-    .f-section{padding:80px 0}
-    .f-section--gray{background:#f8fafc}
-    .f-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;text-align:center;margin-bottom:48px;color:#0f172a}
+    .f-filter{max-width:600px;margin:48px auto 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+    .f-chip{padding:8px 18px;border:1px solid #e2e8f0;background:#fff;font-size:.82rem;font-weight:500;color:#64748b;border-radius:2px;cursor:pointer;transition:all .2s}
+    .f-chip:hover,.f-chip.active{background:#0f172a;color:#fff;border-color:#0f172a}
 
-    .f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    @media(max-width:1000px){.f-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:700px){.f-grid{grid-template-columns:1fr}.f-filter-bar{flex-direction:column;border-radius:24px;gap:16px;padding:20px}.f-search{margin-right:0;width:100%}.f-chips{justify-content:center}}
+    .f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;margin-top:48px}
+    .f-card{background:#fff;padding:36px 28px;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:background .2s}
+    .f-card:hover{background:#fafbfc}
+    .f-card-tag{font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:16px;display:inline-block}
+    .f-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:#0f172a;margin-bottom:10px;line-height:1.3}
+    .f-card p{font-size:.85rem;color:#64748b;line-height:1.6;flex:1}
+    .f-card-link{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:#0f172a;margin-top:20px;opacity:.6;transition:opacity .2s}
+    .f-card:hover .f-card-link{opacity:1}
+    .f-card-link svg{width:14px;height:14px}
 
-    .f-card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 2px 8px rgba(0,0,0,.03);border:1px solid #f1f5f9;transition:.3s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
-    .f-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:#e2e8f0}
-    .f-card-badge{display:inline-block;padding:4px 10px;border-radius:6px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:14px;width:fit-content}
-    .f-card h3{font-size:1.15rem;font-weight:700;margin:0 0 10px;color:#0f172a}
-    .f-card p{color:#64748b;font-size:.92rem;line-height:1.55;margin:0 0 16px;flex:1}
-    .f-card-link{color:#2563eb;font-weight:600;font-size:.9rem;display:flex;align-items:center;gap:6px}
-    .f-card-link svg{width:16px;height:16px}
+    .f-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;margin-top:48px}
+    .f-ben{background:#fff;padding:36px 24px;text-align:center}
+    .f-ben h4{font-size:.85rem;font-weight:600;color:#0f172a;margin-bottom:6px}
+    .f-ben p{font-size:.8rem;color:#94a3b8;line-height:1.5}
 
-    .f-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    @media(max-width:900px){.f-benefits{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:500px){.f-benefits{grid-template-columns:1fr}}
-    .f-benefit{background:#fff;padding:32px;border-radius:16px;border:1px solid #e2e8f0;text-align:center}
-    .f-benefit-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px}
-    .f-benefit h4{font-size:1.05rem;font-weight:700;margin:0 0 8px;color:#0f172a}
-    .f-benefit p{color:#64748b;font-size:.9rem;line-height:1.55;margin:0}
-
-    .f-cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    @media(max-width:800px){.f-cat-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:500px){.f-cat-grid{grid-template-columns:1fr}}
-    .f-cat-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px;display:flex;gap:16px;align-items:flex-start;transition:.2s}
-    .f-cat-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06)}
-    .f-cat-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-    .f-cat-card h4{font-size:1rem;font-weight:700;margin:0 0 6px;color:#0f172a}
-    .f-cat-card p{color:#64748b;font-size:.85rem;line-height:1.5;margin:0}
-
-    .f-steps{max-width:700px;margin:0 auto}
+    .f-how{max-width:560px;margin:48px auto 0}
     .f-step{display:flex;gap:20px;margin-bottom:28px;align-items:flex-start}
-    .f-step-num{width:40px;height:40px;border-radius:50%;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;flex-shrink:0}
-    .f-step h4{font-size:1rem;font-weight:700;margin:0 0 4px;color:#0f172a}
-    .f-step p{color:#64748b;font-size:.92rem;line-height:1.5;margin:0}
+    .f-step:last-child{margin-bottom:0}
+    .f-step-n{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:#0f172a;min-width:28px;flex-shrink:0;padding-top:2px}
+    .f-step h4{font-size:.9rem;font-weight:600;color:#0f172a;margin-bottom:4px}
+    .f-step p{font-size:.85rem;color:#94a3b8;line-height:1.55}
 
-    .f-tips{max-width:700px;margin:0 auto}
-    .f-tip{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
-    .f-tip svg{flex-shrink:0;margin-top:2px}
-    .f-tip p{color:#475569;font-size:.95rem;line-height:1.6;margin:0}
-
-    .f-faq{max-width:800px;margin:0 auto}
+    .f-faq{max-width:640px;margin:0 auto}
     .f-faq-item{border-bottom:1px solid #e2e8f0;padding:20px 0}
-    .f-faq-q{font-weight:700;font-size:1.05rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#0f172a;margin:0;background:none;border:none;width:100%;text-align:left;font-family:inherit;padding:0}
-    .f-faq-a{margin-top:14px;color:#475569;line-height:1.6;display:none;font-size:.95rem}
+    .f-faq-q{font-weight:600;font-size:.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#0f172a;background:none;border:none;width:100%;text-align:left;font-family:inherit;padding:0}
+    .f-faq-q svg{width:16px;height:16px;flex-shrink:0;transition:transform .2s;color:#94a3b8}
+    .f-faq-a{margin-top:12px;color:#64748b;line-height:1.6;font-size:.9rem;display:none}
 
-    .f-recommended{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    @media(max-width:800px){.f-recommended{grid-template-columns:1fr}}
+    .f-cta{background:#0f172a;padding:64px 48px;text-align:center}
+    .f-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:600;color:#fff;margin-bottom:12px;letter-spacing:-.02em}
+    .f-cta p{color:#64748b;margin-bottom:28px;font-size:.95rem}
+    .f-cta .btn{font-size:.85rem;padding:12px 28px;border-radius:2px;font-weight:600;background:#fff;color:#0f172a;transition:all .2s;display:inline-block;text-decoration:none}
+    .f-cta .btn:hover{background:#f1f5f9}
 
-    .f-cta{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);border-radius:16px;padding:48px;text-align:center;color:#fff;margin-top:60px}
-    .f-cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:12px}
-    .f-cta p{color:#94a3b8;margin-bottom:28px}
+    @media(max-width:1024px){.f-grid{grid-template-columns:repeat(2,1fr)}.f-benefits{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.f-grid,.f-benefits{grid-template-columns:1fr}.f-stats{gap:32px}}
   </style>
 </head>
 <body>
@@ -178,313 +133,129 @@
 
   <section class="f-hero">
     <div class="container">
-      <h1>Ferramentas Financeiras Gratuitas - Calculadoras e Simuladores</h1>
-      <p>Acesse nossa colecao completa de ferramentas financeiras gratuitas. Calculadoras de investimentos, simuladores de financiamentos, controle de gastos e muito mais. Tudo desenvolvido para ajudar voce a tomar decisoes financeiras inteligentes.</p>
+      <h1>Ferramentas gratuitas<br />para decisoes inteligentes.</h1>
+      <p>Calculadoras e simuladores precisos para voce planejar investimentos, quitar dividas e organizar seu orcamento.</p>
       <div class="f-stats">
-        <div class="f-stat"><h3>9</h3><span>Ferramentas</span></div>
-        <div class="f-stat"><h3>4</h3><span>Categorias</span></div>
-        <div class="f-stat"><h3>100%</h3><span>Gratuito</span></div>
+        <div class="f-stat"><strong>9</strong><span>Ferramentas</span></div>
+        <div class="f-stat"><strong>4</strong><span>Categorias</span></div>
+        <div class="f-stat"><strong>100%</strong><span>Gratuito</span></div>
       </div>
     </div>
   </section>
 
-  <div class="container">
-    <div class="f-filter-bar">
-      <div class="f-search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="text" id="searchInput" placeholder="Buscar ferramentas..." onkeyup="filterTools()">
-      </div>
-      <div class="f-chips" id="filterChips">
-        <button class="f-chip active" onclick="setFilter('all',this)">Todas (9)</button>
-        <button class="f-chip" onclick="setFilter('dividas',this)">Dividas (4)</button>
-        <button class="f-chip" onclick="setFilter('investimentos',this)">Investimentos (3)</button>
-        <button class="f-chip" onclick="setFilter('orcamento',this)">Orcamento (2)</button>
-      </div>
-    </div>
-  </div>
-
-  <section class="f-section">
+  <section class="f-sect">
     <div class="container">
-      <h2 class="f-title" style="margin-top:40px;">Ferramentas Disponiveis</h2>
-      <p style="text-align:center;color:#64748b;margin-top:-36px;margin-bottom:40px;">Modificada 9 de 9 ferramentas</p>
+      <div class="f-filter">
+        <button class="f-chip active" onclick="setFilter('all',this)">Todas</button>
+        <button class="f-chip" onclick="setFilter('dividas',this)">Dividas</button>
+        <button class="f-chip" onclick="setFilter('investimentos',this)">Investimentos</button>
+        <button class="f-chip" onclick="setFilter('orcamento',this)">Orcamento</button>
+      </div>
 
       <div class="f-grid" id="toolsGrid">
-
         <a href="ferramentas/desenrola.html" class="f-card" data-cat="dividas">
-          <span class="f-card-badge" style="background:rgba(16,185,129,.1);color:#10b981;">RECOMENDADA</span>
+          <span class="f-card-tag">Dividas</span>
           <h3>Simulador Desenrola</h3>
-          <p>Descubra quanto voce pode economizar na renegociacao de dividas com a Lei 14.836, com potencial de ate 90% de desconto.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Descubra quanto voce pode economizar na renegociacao com a Lei 14.836, com potencial de ate 90% de desconto.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/rotativo.html" class="f-card" data-cat="dividas">
-          <span class="f-card-badge" style="background:rgba(239,68,68,.1);color:#ef4444;">DIVIDA CARTAO</span>
+          <span class="f-card-tag">Dividas</span>
           <h3>Teto do Rotativo</h3>
-          <p>Veja a diferenca da sua divida antes e depois da nova lei limitadora de juros do cartao de credito em 100% ao ano.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Veja a diferenca da sua divida antes e depois da nova lei limitadora de juros do cartao em 100% ao ano.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/troca-divida.html" class="f-card" data-cat="dividas">
-          <span class="f-card-badge" style="background:rgba(37,99,235,.1);color:#2563eb;">EMPRESTIMOS</span>
+          <span class="f-card-tag">Dividas</span>
           <h3>Troca de Divida</h3>
-          <p>Compare se vale a pena pegar um emprestimo mais barato para quitar seu cartao de credito ou cheque especial.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Compare se vale a pena pegar um emprestimo mais barato para quitar cartao ou cheque especial.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/financiamento.html" class="f-card" data-cat="dividas">
-          <span class="f-card-badge" style="background:rgba(245,158,11,.1);color:#f59e0b;">FINANCIAMENTOS</span>
+          <span class="f-card-tag">Financiamentos</span>
           <h3>Simulador Financiamento</h3>
-          <p>Simule financiamentos para compra de imoveis ou veiculos. Calcule parcelas com tabela Price e compare custos totais.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Simule financiamentos para imoveis ou veiculos com tabela Price e compare custos totais.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/juros-compostos.html" class="f-card" data-cat="investimentos">
-          <span class="f-card-badge" style="background:rgba(16,185,129,.1);color:#10b981;">RECOMENDADA</span>
-          <h3>Calculadora de Juros Compostos</h3>
-          <p>Descubra o poder da bola de neve financeira. Simule quanto seu dinheiro vai render com juros compostos ao longo do tempo.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <span class="f-card-tag">Investimentos</span>
+          <h3>Juros Compostos</h3>
+          <p>Simule o crescimento do seu dinheiro ao longo do tempo com o poder dos juros compostos.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/renda-passiva.html" class="f-card" data-cat="investimentos">
-          <span class="f-card-badge" style="background:rgba(139,92,246,.1);color:#8b5cf6;">INVESTIMENTOS</span>
+          <span class="f-card-tag">Investimentos</span>
           <h3>Simulador FIRE</h3>
-          <p>Quanto voce precisa ter investido para viver de renda? Calcule seu numero de independencia financeira.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Calcule quanto voce precisa ter investido para viver de renda e alcancar liberdade financeira.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/esg.html" class="f-card" data-cat="investimentos">
-          <span class="f-card-badge" style="background:rgba(16,185,129,.1);color:#10b981;">SUSTENTAVEL</span>
+          <span class="f-card-tag">Sustentabilidade</span>
           <h3>Termometro ESG</h3>
-          <p>Vai investir em uma empresa? Responda 3 perguntas para medir a nota ESG e nivel de sustentabilidade dela.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Responda 3 perguntas para medir a nota de sustentabilidade e ESG de uma empresa antes de investir.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/salario-variavel.html" class="f-card" data-cat="orcamento">
-          <span class="f-card-badge" style="background:rgba(37,99,235,.1);color:#2563eb;">AUTONOMOS</span>
+          <span class="f-card-tag">Orcamento</span>
           <h3>Orcamento Autonomo</h3>
-          <p>Para autonomos e freelancers: descubra seu Padrao de Vida Seguro baseado na media de ganhos mensais.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Para autonomos e freelancers: descubra seu Padrao de Vida Seguro baseado na media de ganhos.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
         <a href="ferramentas/controle-50-30-20.html" class="f-card" data-cat="orcamento">
-          <span class="f-card-badge" style="background:rgba(245,158,11,.1);color:#f59e0b;">REGRA 50/30/20</span>
+          <span class="f-card-tag">Orcamento</span>
           <h3>Controle 50-30-20</h3>
-          <p>A regra de ouro do orcamento. Descubra o limite exato que voce deve gastar em Necessidades, Desejos e Investimentos.</p>
-          <span class="f-card-link">Clique para acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <p>Aplique a regra de ouro para dividir sua renda entre necessidades, desejos e investimentos.</p>
+          <span class="f-card-link">Acessar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </a>
-
       </div>
     </div>
   </section>
 
-  <section class="f-section f-section--gray">
+  <section class="f-sect f-sect--muted">
     <div class="container">
-      <h2 class="f-title">Por que Usar Nossas Ferramentas Financeiras?</h2>
-      <p style="text-align:center;color:#64748b;margin-top:-36px;margin-bottom:48px;max-width:600px;margin-left:auto;margin-right:auto;">Nossas ferramentas financeiras sao desenvolvidas pensando na <strong>facilidade</strong> e na <strong>praticidade dos usuarios</strong>. Todas sao gratuitas e nao requerem cadastro.</p>
+      <span class="f-label" style="text-align:center;display:block">Por que usar</span>
+      <h2 class="f-heading" style="text-align:center">Feitas para funcionar.</h2>
       <div class="f-benefits">
-        <div class="f-benefit">
-          <div class="f-benefit-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">&#127919;</div>
-          <h4>Precisao</h4>
-          <p>Todas as formulas sao baseadas em matematica financeira comprovada e testada rigorosamente.</p>
-        </div>
-        <div class="f-benefit">
-          <div class="f-benefit-icon" style="background:rgba(16,185,129,.1);color:#10b981;">&#128073;</div>
-          <h4>Facilidade</h4>
-          <p>Interface simples e intuitiva. Qualquer pessoa pode usar, independentemente do nivel de conhecimento.</p>
-        </div>
-        <div class="f-benefit">
-          <div class="f-benefit-icon" style="background:rgba(245,158,11,.1);color:#f59e0b;">&#128176;</div>
-          <h4>Gratuito</h4>
-          <p>Acesso completo a todas as ferramentas sem nenhum tipo de cobranca ou limitacao de uso.</p>
-        </div>
-        <div class="f-benefit">
-          <div class="f-benefit-icon" style="background:rgba(139,92,246,.1);color:#8b5cf6;">&#128241;</div>
-          <h4>Responsivo</h4>
-          <p>Funciona perfeitamente em qualquer dispositivo: computador, tablet ou smartphone.</p>
-        </div>
+        <div class="f-ben"><h4>Precisao</h4><p>Formulas baseadas em matematica financeira comprovada e testadas.</p></div>
+        <div class="f-ben"><h4>Simplicidade</h4><p>Interface limpa. Qualquer pessoa pode usar, sem conhecimento tecnico.</p></div>
+        <div class="f-ben"><h4>Gratuito</h4><p>Acesso completo sem cadastro, sem limite e sem cobranca.</p></div>
+        <div class="f-ben"><h4>Responsivo</h4><p>Funciona em qualquer dispositivo, do smartphone ao desktop.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="f-section">
+  <section class="f-sect">
     <div class="container">
-      <h2 class="f-title">Categorias de Ferramentas</h2>
-      <div class="f-cat-grid">
-        <div class="f-cat-card">
-          <div class="f-cat-icon" style="background:rgba(16,185,129,.1);color:#10b981;">&#128176;</div>
-          <div>
-            <h4>Investimentos</h4>
-            <p>Calcule juros compostos, rendimentos, simule FIRE e avalie sustentabilidade de empresas.</p>
-          </div>
-        </div>
-        <div class="f-cat-card">
-          <div class="f-cat-icon" style="background:rgba(239,68,68,.1);color:#ef4444;">&#128179;</div>
-          <div>
-            <h4>Dividas e Credito</h4>
-            <p>Simule renegociacao, rotativo, troca de divida e financiamentos com precisao bancaria.</p>
-          </div>
-        </div>
-        <div class="f-cat-card">
-          <div class="f-cat-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">&#128202;</div>
-          <div>
-            <h4>Orcamento</h4>
-            <p>Organize suas financas com a regra 50/30/20 e descubra seu padrao de vida seguro.</p>
-          </div>
-        </div>
+      <span class="f-label" style="text-align:center;display:block">Como usar</span>
+      <h2 class="f-heading" style="text-align:center">Quatro passos simples.</h2>
+      <div class="f-how">
+        <div class="f-step"><span class="f-step-n">1</span><div><h4>Escolha a ferramenta</h4><p>Navegue pelas categorias ou use os filtros acima.</p></div></div>
+        <div class="f-step"><span class="f-step-n">2</span><div><h4>Preencha os dados</h4><p>Insira as informacoes solicitadas nos campos.</p></div></div>
+        <div class="f-step"><span class="f-step-n">3</span><div><h4>Veja o resultado</h4><p>A calculadora processa tudo instantaneamente no navegador.</p></div></div>
+        <div class="f-step"><span class="f-step-n">4</span><div><h4>Tome a decisao</h4><p>Use os dados para agir com seguranca e confianca.</p></div></div>
       </div>
     </div>
   </section>
 
-  <section class="f-section f-section--gray">
+  <section class="f-sect f-sect--muted">
     <div class="container">
-      <h2 class="f-title">Como Usar as Ferramentas</h2>
-      <div class="f-steps">
-        <div class="f-step">
-          <div class="f-step-num">1</div>
-          <div><h4>Escolha a ferramenta</h4><p>Navegue pelas categorias ou use a barra de busca para encontrar a calculadora ideal.</p></div>
-        </div>
-        <div class="f-step">
-          <div class="f-step-num">2</div>
-          <div><h4>Preencha os dados</h4><p>Insira as informacoes solicitadas nos campos. Quanto mais preciso, melhor o resultado.</p></div>
-        </div>
-        <div class="f-step">
-          <div class="f-step-num">3</div>
-          <div><h4>Clique em Calcular</h4><p>Nosso sistema processa tudo instantaneamente no navegador do seu dispositivo.</p></div>
-        </div>
-        <div class="f-step">
-          <div class="f-step-num">4</div>
-          <div><h4>Analise os resultados</h4><p>Visualize graficos, tabelas e analises detalhadas para tomar decisoes informadas.</p></div>
-        </div>
-        <div class="f-step">
-          <div class="f-step-num">5</div>
-          <div><h4>Salve ou compartilhe</h4><p>Exporte os resultados ou compartilhe com quem precisa tomar a mesma decisao.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="f-section">
-    <div class="container">
-      <h2 class="f-title">Dicas para Melhor Uso</h2>
-      <div class="f-tips">
-        <div class="f-tip">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <p><strong>Use dados reais:</strong> Quanto mais precisos os dados de entrada, mais confiavel sera o resultado.</p>
-        </div>
-        <div class="f-tip">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <p><strong>Compare cenarios:</strong> Faca varias simulacoes com diferentes valores para encontrar a melhor estrategia.</p>
-        </div>
-        <div class="f-tip">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <p><strong>Salve seus resultados:</strong> Anote ou tire print dos resultados para comparar ao longo do tempo.</p>
-        </div>
-        <div class="f-tip">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <p><strong>Consulte um especialista:</strong> Use as ferramentas como apoio para decisoes financeiras, nao como substituto.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="f-section f-section--gray">
-    <div class="container">
-      <h2 class="f-title">Atualizacoes e Novidades</h2>
-      <p style="text-align:center;color:#64748b;max-width:600px;margin:-36px auto 0;">Estamos sempre atualizando nossas ferramentas com novas funcionalidades, melhorias na interface e correcoes para garantir a maxima precisao.</p>
-    </div>
-  </section>
-
-  <section class="f-section">
-    <div class="container">
-      <h2 class="f-title">Artigos Relacionados</h2>
-      <div class="f-grid" style="margin-bottom:0;">
-        <a href="artigos/orcamento-pessoal.html" class="f-card" style="border-left:4px solid #2563eb;">
-          <h3 style="font-size:1rem;">Orcamento Pessoal Guia Completo</h3>
-          <p style="font-size:.85rem;">Aprenda a organizar suas financas com o metodo 50/30/20 e outras estrategias comprovadas.</p>
-          <span class="f-card-link" style="font-size:.85rem;">Leia o artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="artigos/renda-passiva.html" class="f-card" style="border-left:4px solid #10b981;">
-          <h3 style="font-size:1rem;">Renda Passiva: Como Criar</h3>
-          <p style="font-size:.85rem;">Descubra as melhores estrategias para construir fontes de renda passiva e alcançar liberdade financeira.</p>
-          <span class="f-card-link" style="font-size:.85rem;">Leia o artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="artigos/dividas.html" class="f-card" style="border-left:4px solid #ef4444;">
-          <h3 style="font-size:1rem;">Sair das Dividas: Passo a Passo</h3>
-          <p style="font-size:.85rem;">Estrategias comprovadas para quitar dividas e recuperar o controle das suas financas.</p>
-          <span class="f-card-link" style="font-size:.85rem;">Leia o artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="f-section f-section--gray">
-    <div class="container">
-      <h2 class="f-title">Perguntas Frequentes sobre as Ferramentas</h2>
+      <span class="f-label" style="text-align:center;display:block">Duvidas</span>
+      <h2 class="f-heading" style="text-align:center;margin-bottom:36px">Perguntas frequentes.</h2>
       <div class="f-faq">
-
-        <div class="f-faq-item">
-          <button class="f-faq-q" onclick="toggleFaq(this)">As ferramentas sao realmente gratuitas? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="f-faq-a"><p>Sim, 100% gratuitas! Todas as ferramentas podem ser usadas sem custos, sem cadastro obrigatorios e sem limitacoes de uso. Nosso objetivo e democratizar a educacao financeira.</p></div>
-        </div>
-
-        <div class="f-faq-item">
-          <button class="f-faq-q" onclick="toggleFaq(this)">Preciso instalar algum programa? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="f-faq-a"><p>Nao! Todas as ferramentas funcionam diretamente no navegador. Basta acessar a pagina da ferramenta desejada e comecar a usar imediatamente.</p></div>
-        </div>
-
-        <div class="f-faq-item">
-          <button class="f-faq-q" onclick="toggleFaq(this)">Os calculos sao precisos? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="f-faq-a"><p>Absolutamente! Todas as formulas sao baseadas em matematica financeira comprovada e rigorosamente testadas. As ferramentas utilizam as mesmas formulas usadas por bancos e instituicoes financeiras.</p></div>
-        </div>
-
-        <div class="f-faq-item">
-          <button class="f-faq-q" onclick="toggleFaq(this)">Posso usar as ferramentas no celular? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="f-faq-a"><p>Sim! Todas sao responsivas e funcionam perfeitamente em smartphones, tablets e computadores. A interface se adapta automaticamente ao tamanho da tela do seu dispositivo.</p></div>
-        </div>
-
-        <div class="f-faq-item">
-          <button class="f-faq-q" onclick="toggleFaq(this)">Voces guardam meus dados? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="f-faq-a"><p>De forma alguma! Nossas ferramentas processam todos os calculos localmente no navegador. Os dados nao sao enviados para nenhum servidor. Sua privacidade e garantida.</p></div>
-        </div>
-
-        <div class="f-faq-item">
-          <button class="f-faq-q" onclick="toggleFaq(this)">Posso sugerir novas ferramentas? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
-          <div class="f-faq-a"><p>Claro! Adoramos receber sugestoes. Use nosso formulario de contato para enviar suas ideias. Avaliamos todas as sugestoes e priorizamos as mais solicitadas.</p></div>
-        </div>
-
+        <div class="f-faq-item"><button class="f-faq-q" onclick="toggleFaq(this)">As ferramentas sao gratuitas? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="f-faq-a"><p>Sim. Todas sao 100% gratuitas e sem limite de uso.</p></div></div>
+        <div class="f-faq-item"><button class="f-faq-q" onclick="toggleFaq(this)">Preciso criar conta? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="f-faq-a"><p>Nao. Funciona sem cadastro e sem login.</p></div></div>
+        <div class="f-faq-item"><button class="f-faq-q" onclick="toggleFaq(this)">Meus dados sao salvos? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="f-faq-a"><p>Nao. Os calculos rodam no navegador. Fechou a aba, os dados somem.</p></div></div>
+        <div class="f-faq-item"><button class="f-faq-q" onclick="toggleFaq(this)">Funciona no celular? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button><div class="f-faq-a"><p>Sim. Todas sao responsivas e funcionam em qualquer dispositivo.</p></div></div>
       </div>
     </div>
   </section>
 
-  <section class="f-section">
+  <section class="f-sect" style="padding:0">
     <div class="container">
-      <h2 class="f-title">Ferramentas Recomendadas</h2>
-      <p style="text-align:center;color:#64748b;margin-top:-36px;margin-bottom:40px;">As ferramentas mais utilizadas pelos nossos usuarios.</p>
-      <div class="f-recommended">
-        <a href="ferramentas/juros-compostos.html" class="f-card">
-          <span class="f-card-badge" style="background:rgba(16,185,129,.1);color:#10b981;">POPULAR</span>
-          <h3>Calculadora de Juros Compostos</h3>
-          <p>Simule o crescimento do seu dinheiro ao longo do tempo com juros compostos.</p>
-          <span class="f-card-link">Ver ferramenta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="ferramentas/controle-50-30-20.html" class="f-card">
-          <span class="f-card-badge" style="background:rgba(245,158,11,.1);color:#f59e0b;">ESSENCIAL</span>
-          <h3>Controle 50-30-20</h3>
-          <p>Aplique a regra de ouro para organizar seu orcamento mensal de forma inteligente.</p>
-          <span class="f-card-link">Ver ferramenta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="ferramentas/desenrola.html" class="f-card">
-          <span class="f-card-badge" style="background:rgba(37,99,235,.1);color:#2563eb;">NOVO</span>
-          <h3>Simulador Desenrola</h3>
-          <p>Descubra quanto pode economizar na renegociacao com a Lei 14.836.</p>
-          <span class="f-card-link">Ver ferramenta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-      </div>
-
       <div class="f-cta">
-        <h2>Encontre a Ferramenta Ideal para Voce</h2>
-        <p>Navegue por todas as nossas ferramentas e comece a tomar decisoes financeiras mais inteligentes hoje mesmo.</p>
-        <a href="#toolsGrid" class="btn btn-primary" style="background:#f59e0b;color:#0f172a;font-weight:700;">Ver Todas as Ferramentas</a>
+        <h2>Comece a usar agora.</h2>
+        <p>Encontre a ferramenta ideal para a sua situacao financeira.</p>
+        <a href="#toolsGrid" class="btn">Ver Ferramentas</a>
       </div>
     </div>
   </section>
@@ -495,12 +266,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Sobre o Site</h4>
-          <p class="footer-tagline" style="margin-top:16px;">Fazendo Dinheiro e um portal dedicado a educacao financeira para brasileiros, oferecendo conteudo gratuito e de qualidade sobre economia pessoal, investimentos e financas.</p>
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <p class="footer-tagline">Fazendo Dinheiro e um portal dedicado a educacao financeira para brasileiros, oferecendo conteudo gratuito e de qualidade sobre economia pessoal, investimentos e financas.</p>
         </div>
         <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Links Uteis</h4>
-          <div class="footer-links-grid" style="margin-top:16px;">
+          <h4 class="footer-col-title">Links Uteis</h4>
+          <div class="footer-links-grid">
             <ul class="footer-links">
               <li><a href="index.html">Inicio</a></li>
               <li><a href="ferramentas.html">Ferramentas</a></li>
@@ -508,44 +279,24 @@
             </ul>
             <ul class="footer-links">
               <li><a href="sobre.html">Sobre Nos</a></li>
-              <li><a href="privacidade.html">Politica de Privacidade</a></li>
-              <li><a href="termos.html">Termos de Uso</a></li>
+              <li><a href="privacidade.html">Privacidade</a></li>
+              <li><a href="termos.html">Termos</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Artigos Principais</h4>
-          <ul class="footer-links" style="margin-top:16px;">
-            <li><a href="artigos/orcamento.html">Orcamento Pessoal</a></li>
-            <li><a href="artigos/investimentos.html">Investimentos</a></li>
-            <li><a href="artigos/imposto-renda.html">Imposto de Renda</a></li>
-            <li><a href="artigos/cartao.html">Cartao de Credito</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Categorias</h4>
-          <ul class="footer-links" style="margin-top:16px;">
+          <h4 class="footer-col-title">Categorias</h4>
+          <ul class="footer-links">
             <li><a href="investimentos.html">Investimentos</a></li>
-            <li><a href="dividas.html">Dividas e Credito</a></li>
+            <li><a href="dividas.html">Dividas</a></li>
             <li><a href="orcamento.html">Orcamento</a></li>
             <li><a href="economia.html">Economia</a></li>
           </ul>
         </div>
       </div>
-      <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:16px;">
-        <a href="https://www.instagram.com/fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:rgba(255,255,255,.6);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:rgba(255,255,255,.6);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="color:rgba(255,255,255,.6);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-      </div>
-      <div class="footer-bottom" style="flex-direction:column;text-align:center;justify-content:center;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;">
-        <p class="footer-disclaimer" style="margin-bottom:8px;">Este site tem carater informativo e educativo. Nao constitui recomendacao ou aconselhamento financeiro profissional.</p>
-        <p>&copy; 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      <div class="footer-bottom">
+        <p>Fazendo Dinheiro &copy; 2026. Todos os direitos reservados.</p>
+        <p>Educacao financeira de verdade.</p>
       </div>
     </div>
   </footer>
@@ -558,33 +309,25 @@
   <script src="js/ticker.js"></script>
   <script>
     let currentCategory = 'all';
-
     function setFilter(cat, btn) {
       currentCategory = cat;
       document.querySelectorAll('.f-chip').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       filterTools();
     }
-
     function filterTools() {
-      const search = document.getElementById('searchInput').value.toLowerCase();
       const cards = document.querySelectorAll('.f-card[data-cat]');
       cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
         const cat = card.getAttribute('data-cat');
-        const matchesSearch = text.includes(search);
-        const matchesCat = currentCategory === 'all' || cat === currentCategory;
-        card.style.display = (matchesSearch && matchesCat) ? 'flex' : 'none';
+        card.style.display = (currentCategory === 'all' || cat === currentCategory) ? 'flex' : 'none';
       });
     }
-
     function toggleFaq(el) {
       const answer = el.nextElementSibling;
       const icon = el.querySelector('svg');
       const isOpen = answer.style.display === 'block';
       answer.style.display = isOpen ? 'none' : 'block';
       icon.style.transform = isOpen ? '' : 'rotate(45deg)';
-      icon.style.transition = 'transform .2s';
     }
   </script>
 </body>

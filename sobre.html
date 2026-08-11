@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Conheca o Fazendo Dinheiro - nossa missao, valores, historia e equipe. Educacao financeira transparente e gratuita para todos os brasileiros." />
-  <title>Sobre Nós | Fazendo Dinheiro</title>
+  <meta name="description" content="Conheca o Fazendo Dinheiro - educacao financeira transparente e gratuita para todos os brasileiros." />
+  <title>Sobre | Fazendo Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="canonical" href="https://dinheironu.vercel.app/sobre.html" />
-  <meta property="og:title" content="Sobre Nos | Fazendo Dinheiro" />
-  <meta property="og:description" content="Conheca o Fazendo Dinheiro - nossa missao, valores, historia e equipe." />
+  <meta property="og:title" content="Sobre | Fazendo Dinheiro" />
+  <meta property="og:description" content="Educacao financeira transparente e gratuita para todos os brasileiros." />
   <meta property="og:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
   <meta property="og:url" content="https://dinheironu.vercel.app/sobre.html" />
   <meta property="og:type" content="website" />
@@ -21,52 +21,76 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Sobre Nos | Fazendo Dinheiro",
-    "description": "Conheca o Fazendo Dinheiro - nossa missao, valores, historia e equipe.",
+    "name": "Sobre | Fazendo Dinheiro",
+    "description": "Educacao financeira transparente e gratuita para todos os brasileiros.",
     "url": "https://dinheironu.vercel.app/sobre.html"
   }
   </script>
   <style>
-    .sobre-hero{padding:120px 0 60px;background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);text-align:center}
-    .sobre-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);color:#fff;margin-bottom:16px}
-    .sobre-hero p{font-size:1.15rem;color:#94a3b8;max-width:600px;margin:0 auto}
-    .sobre-section{padding:80px 0}
-    .sobre-section--gray{background:#f8fafc}
-    .sobre-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;text-align:center;margin-bottom:48px;color:#0f172a}
-    .sobre-subtitle{text-align:center;color:#64748b;margin-top:-32px;margin-bottom:48px;font-size:1.05rem;max-width:600px;margin-left:auto;margin-right:auto}
-    .sobre-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
-    .sobre-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1);border-color:#cbd5e1}
-    .sobre-card-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 20px}
-    .sobre-card-title{font-size:1.1rem;font-weight:700;margin-bottom:12px;color:#0f172a}
-    .sobre-card-text{font-size:.95rem;color:#64748b;line-height:1.6}
-    .sobre-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-    .sobre-grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-    .sobre-grid-team{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    @media(max-width:900px){.sobre-grid-team{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:500px){.sobre-grid-4,.sobre-grid-team{grid-template-columns:1fr}}
-    .sobre-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-    .sobre-mission-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:40px}
-    .sobre-mission-card h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:20px;color:#0f172a}
-    .sobre-mission-card p{color:#475569;line-height:1.7;margin-bottom:16px}
-    .sobre-history-card{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:16px;padding:40px}
-    .sobre-history-card h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:20px;color:#0f172a}
-    .sobre-history-card p{color:#475569;line-height:1.7;margin-bottom:16px}
-    .sobre-team-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
-    .sobre-team-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1);border-color:#cbd5e1}
-    .sobre-team-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#1e40af);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.8rem;margin:0 auto 16px}
-    .sobre-team-role{color:#2563eb;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
-    .sobre-quality-item{display:flex;gap:16px;margin-bottom:24px}
-    .sobre-quality-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-    .sobre-cta{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);border-radius:16px;padding:48px;text-align:center;color:#fff}
-    .sobre-cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:16px}
-    .sobre-cta p{color:#94a3b8;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
-    .sobre-cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .sobre-transparency-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .sobre-transparency-item{display:flex;gap:12px;align-items:flex-start}
-    .sobre-transparency-item svg{flex-shrink:0;margin-top:2px}
-    @media(max-width:768px){.sobre-grid-2,.sobre-transparency-grid{grid-template-columns:1fr}}
-    @media(max-width:1000px){.sobre-grid-4[style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(3,1fr) !important}}
-    @media(max-width:600px){.sobre-grid-4[style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr) !important}}
+    .s-about{padding:160px 0 100px;text-align:center}
+    .s-about h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:600;color:#0f172a;letter-spacing:-.03em;margin-bottom:20px;line-height:1.15}
+    .s-about p{font-size:1.1rem;color:#64748b;max-width:520px;margin:0 auto;line-height:1.7}
+
+    .s-sect{padding:100px 0}
+    .s-sect--muted{background:#fafbfc}
+    .s-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-bottom:20px;display:block}
+    .s-heading{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:600;color:#0f172a;letter-spacing:-.02em;line-height:1.2;margin-bottom:20px}
+    .s-desc{font-size:1rem;color:#64748b;line-height:1.75;max-width:560px}
+    .s-desc--center{margin:0 auto}
+
+    .s-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .s-split-text .s-label{text-align:left}
+    .s-split-text .s-heading{text-align:left}
+    .s-split-text .s-desc{text-align:left}
+    .s-split-body{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+    .s-split-body p{font-size:.95rem;color:#475569;line-height:1.75}
+
+    .s-values{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;margin-top:48px}
+    .s-val{background:#fff;padding:40px 28px;text-align:center}
+    .s-val-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:600;color:#0f172a;margin-bottom:12px}
+    .s-val h3{font-size:.85rem;font-weight:600;color:#0f172a;margin-bottom:8px;letter-spacing:.01em}
+    .s-val p{font-size:.82rem;color:#94a3b8;line-height:1.55}
+
+    .s-offer{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;margin-top:48px}
+    .s-off-item{background:#fff;padding:40px 28px;text-align:center}
+    .s-off-icon{font-size:1.5rem;margin-bottom:16px;opacity:.7}
+    .s-off-item h3{font-size:.85rem;font-weight:600;color:#0f172a;margin-bottom:8px}
+    .s-off-item p{font-size:.82rem;color:#94a3b8;line-height:1.55}
+
+    .s-team{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;margin-top:48px}
+    .s-member{background:#fff;padding:40px 28px;text-align:center}
+    .s-member-initials{width:56px;height:56px;border-radius:50%;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600;letter-spacing:.05em;margin:0 auto 20px}
+    .s-member h3{font-size:.85rem;font-weight:600;color:#0f172a;margin-bottom:4px}
+    .s-member span{font-size:.75rem;color:#94a3b8;letter-spacing:.03em;text-transform:uppercase}
+    .s-member p{font-size:.82rem;color:#64748b;line-height:1.55;margin-top:12px}
+
+    .s-quality{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+    .s-q-list{display:flex;flex-direction:column;gap:24px}
+    .s-q-item{display:flex;gap:16px;align-items:flex-start}
+    .s-q-icon{width:36px;height:36px;border-radius:8px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
+    .s-q-item h4{font-size:.9rem;font-weight:600;color:#0f172a;margin-bottom:4px}
+    .s-q-item p{font-size:.82rem;color:#94a3b8;line-height:1.55}
+
+    .s-vision{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;margin-top:48px}
+    .s-vis{background:#fff;padding:36px 20px;text-align:center}
+    .s-vis-icon{font-size:1.3rem;margin-bottom:14px;opacity:.6}
+    .s-vis p{font-size:.82rem;color:#475569;line-height:1.5;font-weight:500}
+
+    .s-cta{background:#0f172a;border-radius:2px;padding:80px 48px;text-align:center}
+    .s-cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:600;color:#fff;margin-bottom:16px;letter-spacing:-.02em}
+    .s-cta p{color:#64748b;margin-bottom:36px;font-size:1rem}
+    .s-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .s-cta .btn{font-size:.85rem;padding:12px 28px;border-radius:2px;font-weight:600;transition:all .2s}
+    .s-cta .btn-primary{background:#fff;color:#0f172a}
+    .s-cta .btn-primary:hover{background:#f1f5f9}
+    .s-cta .btn-ghost{border:1px solid rgba(255,255,255,.2);color:#fff;background:transparent}
+    .s-cta .btn-ghost:hover{border-color:rgba(255,255,255,.5)}
+
+    .s-final{text-align:center;padding:40px 0;border-top:1px solid #e2e8f0;margin-top:48px}
+    .s-final p{font-size:.82rem;color:#94a3b8}
+
+    @media(max-width:1024px){.s-split,.s-quality{grid-template-columns:1fr;gap:48px}.s-values,.s-offer,.s-team{grid-template-columns:repeat(2,1fr)}.s-vision{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:600px){.s-values,.s-offer,.s-team{grid-template-columns:1fr}.s-vision{grid-template-columns:repeat(2,1fr)}}
   </style>
 </head>
 <body>
@@ -82,7 +106,7 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+        <li><a href="sobre.html" class="nav-link active">Sobre</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
         <li><a href="contato.html">Contato</a></li>
@@ -95,175 +119,179 @@
 
 <main>
 
-  <section class="sobre-hero">
+  <section class="s-about">
     <div class="container">
-      <h1>Sobre o Fazendo Dinheiro</h1>
-      <p>Educacao financeira acessivel e gratuita para todos os brasileiros</p>
+      <span class="s-label">Quem somos</span>
+      <h1>Educacao financeira<br />sem complicacao.</h1>
+      <p>Acreditamos que entender dinheiro nao deveria ser privilegio de poucos. Por isso, criamos uma plataforma gratuita, direta e sem enrolacao.</p>
     </div>
   </section>
 
-  <section class="sobre-section">
+  <section class="s-sect s-sect--muted">
     <div class="container">
-      <div class="sobre-grid-2">
-        <div class="sobre-mission-card">
-          <div style="font-size:2.5rem;margin-bottom:16px;">&#127919;</div>
-          <h2>Nossa Missao</h2>
-          <p>O Fazendo Dinheiro nasceu com uma missao clara: democratizar a educacao financeira no Brasil. Acreditamos que entender sobre financas pessoais nao deve ser um privilegio de poucos, mas um direito de todos.</p>
-          <p style="margin-bottom:0;">Nossos objetivos transformar a complexidade financeira em simplificidade, oferecendo ferramentas praticas, artigos educativos e guias que realmente fazem a diferenca na vida das pessoas.</p>
+      <div class="s-split">
+        <div class="s-split-text">
+          <span class="s-label">Missao</span>
+          <h2 class="s-heading">Democratizar a<br />educacao financeira.</h2>
+          <p class="s-desc">O Fazendo Dinheiro nasceu com um proposito simples: fazer com que qualquer pessoa, independente da situacao, tenha acesso a informacoes financeiras claras e uteis.</p>
         </div>
-        <div class="sobre-history-card">
-          <div style="font-size:2.5rem;margin-bottom:16px;">&#128200;</div>
-          <h2>Nossa Historia</h2>
-          <p>O Fazendo Dinheiro foi fundado em 2024 por uma equipe apaixonada por educacao financeira que identificou uma lacuna significativa no mercado brasileiro: a falta de acesso a educacao financeira de qualidade e gratuita.</p>
-          <p>Conhecemos como um pequeno blog com algumas calculadoras financeiras basicas. Hoje, somos uma plataforma completa com dezenas de artigos, guias praticos e ferramentas avancadas que ajudam milhares de brasileiros todos os dias.</p>
-          <p style="margin-bottom:0;">Nossa trajetoria e marcada pelo compromisso constante com a qualidade e pela busca incansavel por formas de tornar a educacao financeira mais acessivel e compreensivel.</p>
+        <div class="s-split-text">
+          <span class="s-label">Historia</span>
+          <h2 class="s-heading">De um blog pessoal<br />a um portal completo.</h2>
+          <div class="s-split-body">
+            <p>Comecou como um projeto para responder duvidas de amigos e familiares sobre investimentos e orcamento. A vontade de traduzir o complexo virou algo maior.</p>
+            <p>Hoje somos um ecossistema com artigos aprofundados e calculadoras que ajudam milhares de brasileiros a tomar decisoes mais inteligentes sobre seu dinheiro.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sobre-section sobre-section--gray">
+  <section class="s-sect">
     <div class="container">
-      <h2 class="sobre-title">Nossos Valores</h2>
-      <div class="sobre-grid-4">
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(16,185,129,.1);color:#10b981;">&#128176;</div>
-          <h3 class="sobre-card-title">Gratuidade</h3>
-          <p class="sobre-card-text">Acreditamos que a educacao financeira deve ser acessivel a todos, independentemente da situacao financeira.</p>
+      <span class="s-label" style="text-align:center;display:block">Valores</span>
+      <h2 class="s-heading" style="text-align:center">O que nos guia.</h2>
+      <div class="s-values">
+        <div class="s-val">
+          <div class="s-val-num">01</div>
+          <h3>Simplicidade</h3>
+          <p>Traduzimos o economês para a linguagem do dia a dia. Sem jargao, sem enrolacao.</p>
         </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">&#128218;</div>
-          <h3 class="sobre-card-title">Educacao</h3>
-          <p class="sobre-card-text">Nosso foco esta em ensinar, nao vender. Queremos que voce aprenda a tomar decisoes financeiras inteligentes.</p>
+        <div class="s-val">
+          <div class="s-val-num">02</div>
+          <h3>Isencao</h3>
+          <p>Analises transparentes. Nao somos patrocinados por bancos ou corretoras.</p>
         </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(245,158,11,.1);color:#f59e0b;">&#128269;</div>
-          <h3 class="sobre-card-title">Transparencia</h3>
-          <p class="sobre-card-text">Somos transparentes em tudo o que fazemos, desde nossos parceiros ate a origem de nossos modelos.</p>
+        <div class="s-val">
+          <div class="s-val-num">03</div>
+          <h3>Praticidade</h3>
+          <p>Conteudo focado na acao. Ensinamos a percar e damos a vara com nossas ferramentas.</p>
         </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(239,68,68,.1);color:#ef4444;">&#127463;&#127479;</div>
-          <h3 class="sobre-card-title">Foco no Brasil</h3>
-          <p class="sobre-card-text">Nosso conteudo e feito para brasileiros, considerando a realidade economica do pais.</p>
+        <div class="s-val">
+          <div class="s-val-num">04</div>
+          <h3>Foco Brasil</h3>
+          <p>Dicas que funcionam na realidade da nossa inflacao, juros altos e economia.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sobre-section">
+  <section class="s-sect s-sect--muted">
     <div class="container">
-      <h2 class="sobre-title">O Que Oferecemos</h2>
-      <div class="sobre-grid-4">
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">&#128214;</div>
-          <h3 class="sobre-card-title">Artigos Educativos</h3>
-          <p class="sobre-card-text">Conteudo escrito por especialistas sobre temas como investimentos, orcamento, impostos, credito e muito mais.</p>
+      <span class="s-label" style="text-align:center;display:block">Ofertas</span>
+      <h2 class="s-heading" style="text-align:center">O que voce encontra aqui.</h2>
+      <div class="s-offer">
+        <div class="s-off-item">
+          <div class="s-off-icon">&#9998;</div>
+          <h3>Artigos</h3>
+          <p>Mais de 50 guias aprofundados sobre renda fixa, orcamento e dividas.</p>
         </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(16,185,129,.1);color:#10b981;">&#129518;</div>
-          <h3 class="sobre-card-title">Ferramentas Financeiras</h3>
-          <p class="sobre-card-text">Calculadoras e simuladores gratuitos para voce planejar suas financas e tomar decisoes informadas.</p>
+        <div class="s-off-item">
+          <div class="s-off-icon">&#8801;</div>
+          <h3>Ferramentas</h3>
+          <p>Calculadoras precisas para voce simular cenarios reais antes de decidir.</p>
         </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(245,158,11,.1);color:#f59e0b;">&#128231;</div>
-          <h3 class="sobre-card-title">Newsletter Semanal</h3>
-          <p class="sobre-card-text">Dicas praticas e atualizacoes sobre novos artigos e ferramentas, diretamente no seu e-mail.</p>
+        <div class="s-off-item">
+          <div class="s-off-icon">&#9993;</div>
+          <h3>Newsletter</h3>
+          <p>Dicas praticas toda semana direto no seu e-mail. Sem spam.</p>
         </div>
-        <div class="sobre-card">
-          <div class="sobre-card-icon" style="background:rgba(239,68,68,.1);color:#ef4444;">&#128218;</div>
-          <h3 class="sobre-card-title">Guias Praticos</h3>
-          <p class="sobre-card-text">Passo a passo para resolver problemas financeiros e alcancar suas metas financeiras.</p>
+        <div class="s-off-item">
+          <div class="s-off-icon">&#9878;</div>
+          <h3>Guias</h3>
+          <p>Passo a passo para resolver problemas financeiros reais.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sobre-section sobre-section--gray">
+  <section class="s-sect">
     <div class="container">
-      <h2 class="sobre-title">Nossa Equipe</h2>
-      <p class="sobre-subtitle">Somos uma equipe multifacetica apaixonada por educacao financeira e tecnologia.</p>
-      <div class="sobre-grid-team">
-        <div class="sobre-team-card">
-          <div class="sobre-team-avatar">FD</div>
-          <div class="sobre-team-role">Especialistas em Financas</div>
-          <p class="sobre-card-text">Profissionais com formacao em economia, administracao e certificacoes de mercado financeiro.</p>
+      <span class="s-label" style="text-align:center;display:block">Equipe</span>
+      <h2 class="s-heading" style="text-align:center">Quem faz acontecer.</h2>
+      <p class="s-desc s-desc--center" style="margin-bottom:0">Um grupo de redatores, analistas e desenvolvedores unidos pelo mesmo proposito.</p>
+      <div class="s-team">
+        <div class="s-member">
+          <div class="s-member-initials">FD</div>
+          <span>Educacao</span>
+          <h3>Especialistas em Financas</h3>
+          <p>Traduzem conceitos complexos do mercado financeiro para linguagem simples e aplicavel.</p>
         </div>
-        <div class="sobre-team-card">
-          <div class="sobre-team-avatar" style="background:linear-gradient(135deg,#10b981,#059669);">DEV</div>
-          <div class="sobre-team-role">Desenvolvedores</div>
-          <p class="sobre-card-text">Equipe tecnica especializada em criar ferramentas uteis e funcionais para auxiliar suas decisoes financeiras.</p>
+        <div class="s-member">
+          <div class="s-member-initials" style="background:#1e293b">DEV</div>
+          <span>Tecnologia</span>
+          <h3>Desenvolvedores</h3>
+          <p>Criam as calculadoras e ferramentas que tornam a matematica financeira automatica.</p>
         </div>
-        <div class="sobre-team-card">
-          <div class="sobre-team-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706);">DES</div>
-          <div class="sobre-team-role">Designers</div>
-          <p class="sobre-card-text">Profissionais que tornam nossa plataforma visualmente atraente e facil de usar em qualquer dispositivo.</p>
+        <div class="s-member">
+          <div class="s-member-initials" style="background:#334155">DES</div>
+          <span>Design</span>
+          <h3>Designers</h3>
+          <p>Constroem interfaces limpas e funcionais que facilitam a experiencia do usuario.</p>
         </div>
-        <div class="sobre-team-card">
-          <div class="sobre-team-avatar" style="background:linear-gradient(135deg,#ef4444,#dc2626);">EDU</div>
-          <div class="sobre-team-role">Educadores</div>
-          <p class="sobre-card-text">Especialistas em didatica que transformam conceitos complexos em explicacoes simples e compreensiveis.</p>
+        <div class="s-member">
+          <div class="s-member-initials" style="background:#475569">EDU</div>
+          <span>Didatica</span>
+          <h3>Educadores</h3>
+          <p>Garantem que todo conteudo seja compreensivel por qualquer pessoa, sem excecao.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sobre-section">
+  <section class="s-sect s-sect--muted">
     <div class="container">
-      <h2 class="sobre-title">Compromisso com a Qualidade</h2>
-      <div class="sobre-grid-2">
+      <div class="s-quality">
         <div>
-          <div class="sobre-quality-item">
-            <div class="sobre-quality-icon" style="background:rgba(16,185,129,.1);color:#10b981;">&#9989;</div>
-            <div>
-              <h4 style="font-size:1.05rem;margin-bottom:6px;">Conteudo Verificado</h4>
-              <p style="color:#64748b;line-height:1.6;font-size:.95rem;">Todos os nossos artigos passam por revisao rigorosa de especialistas antes de serem publicados.</p>
+          <span class="s-label">Qualidade</span>
+          <h2 class="s-heading">Compromisso com<br />excelencia.</h2>
+          <div class="s-q-list">
+            <div class="s-q-item">
+              <div class="s-q-icon">&#10003;</div>
+              <div>
+                <h4>Conteudo Verificado</h4>
+                <p>Todo artigo passa por revisao de especialistas antes de ser publicado.</p>
+              </div>
             </div>
-          </div>
-          <div class="sobre-quality-item">
-            <div class="sobre-quality-icon" style="background:rgba(37,99,235,.1);color:#2563eb;">&#128260;</div>
-            <div>
-              <h4 style="font-size:1.05rem;margin-bottom:6px;">Atualizacao Constante</h4>
-              <p style="color:#64748b;line-height:1.6;font-size:.95rem;">Nossos artigos e ferramentas sempre atualizados com as ultimas mudancas na legislacao e no mercado financeiro.</p>
+            <div class="s-q-item">
+              <div class="s-q-icon">&#8634;</div>
+              <div>
+                <h4>Atualizacao Constante</h4>
+                <p>Regras de impostos e juros mudam. Nossos simuladores operam sempre com as leis vigentes.</p>
+              </div>
             </div>
-          </div>
-          <div class="sobre-quality-item">
-            <div class="sobre-quality-icon" style="background:rgba(245,158,11,.1);color:#f59e0b;">&#128202;</div>
-            <div>
-              <h4 style="font-size:1.05rem;margin-bottom:6px;">Dados Confiaveis</h4>
-              <p style="color:#64748b;line-height:1.6;font-size:.95rem;">Utilizamos fontes confiaveis e dados verificados para garantir a precisao de nossas informacoes.</p>
+            <div class="s-q-item">
+              <div class="s-q-icon">&#9670;</div>
+              <div>
+                <h4>Dados Confiaveis</h4>
+                <p>Fontes verificadas e matematica rigorosa para garantir precisao.</p>
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:24px;">Transparencia e Responsabilidade</h3>
-          <p style="color:#475569;line-height:1.7;margin-bottom:24px;">No Fazendo Dinheiro, acreditamos que a transparencia e fundamental para construir confianca. Por isso:</p>
-          <div class="sobre-transparency-grid">
-            <div class="sobre-transparency-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="s-label">Transparencia</span>
+          <h2 class="s-heading">Confianca acima<br />de tudo.</h2>
+          <div class="s-q-list">
+            <div class="s-q-item">
+              <div class="s-q-icon">&#9670;</div>
               <div>
-                <h5 style="font-size:.95rem;margin-bottom:4px;">Politicas Claras</h5>
-                <p style="color:#64748b;font-size:.85rem;line-height:1.5;">Nossas politicas de privacidade e termos de uso sao escritos em linguagem clara e acessivel.</p>
+                <h4>Politicas Claras</h4>
+                <p>Privacidade e termos de uso escritos em linguagem acessivel.</p>
               </div>
             </div>
-            <div class="sobre-transparency-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="s-q-item">
+              <div class="s-q-icon">&#9670;</div>
               <div>
-                <h5 style="font-size:.95rem;margin-bottom:4px;">Receitas Transparentes</h5>
-                <p style="color:#64748b;font-size:.85rem;line-height:1.5;">Mantemos o site gratuito atraves de publicidade responsavel e parcerias transparentes.</p>
+                <h4>Receitas Transparentes</h4>
+                <p>Site gratuito via publicidade responsavel e parcerias claras.</p>
               </div>
             </div>
-            <div class="sobre-transparency-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="s-q-item">
+              <div class="s-q-icon">&#9670;</div>
               <div>
-                <h5 style="font-size:.95rem;margin-bottom:4px;">Contato Direto</h5>
-                <p style="color:#64748b;font-size:.85rem;line-height:1.5;">Estamos sempre disponiveis para responder suas duvidas e receber feedback.</p>
-              </div>
-            </div>
-            <div class="sobre-transparency-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <h5 style="font-size:.95rem;margin-bottom:4px;">Auditoria Independente</h5>
-                <p style="color:#64748b;font-size:.85rem;line-height:1.5;">Nossas calculadoras sao regularmente auditadas para garantir precisao e confiabilidade.</p>
+                <h4>Contato Direto</h4>
+                <p>Estamos disponiveis para duvidas e feedback sempre.</p>
               </div>
             </div>
           </div>
@@ -272,49 +300,47 @@
     </div>
   </section>
 
-  <section class="sobre-section sobre-section--gray">
+  <section class="s-sect">
     <div class="container">
-      <h2 class="sobre-title">Nossa Visao de Futuro</h2>
-      <p class="sobre-subtitle">Queremos ser a principal referencia em educacao financeira gratuita no Brasil, ajudando milhoes de brasileiros a:</p>
-      <div class="sobre-grid-4" style="grid-template-columns:repeat(5,1fr);max-width:900px;margin:40px auto 0;">
-        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#127919;</div>
-          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Alcançar independencia financeira</p>
+      <span class="s-label" style="text-align:center;display:block">Visao</span>
+      <h2 class="s-heading" style="text-align:center">Onde queremos chegar.</h2>
+      <div class="s-vision">
+        <div class="s-vis">
+          <div class="s-vis-icon">&#9733;</div>
+          <p>Independencia financeira para quem nunca pensou que era possivel.</p>
         </div>
-        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(16,185,129,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#127968;</div>
-          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Realizar o sonho da casa propria</p>
+        <div class="s-vis">
+          <div class="s-vis-icon">&#9733;</div>
+          <p>Casa propria com planejamento, nao com desespero.</p>
         </div>
-        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(245,158,11,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#128176;</div>
-          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Investir com seguranca e confianca</p>
+        <div class="s-vis">
+          <div class="s-vis-icon">&#9733;</div>
+          <p>Investimentos acessiveis para qualquer nivel de renda.</p>
         </div>
-        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(239,68,68,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#128737;</div>
-          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Proteger suas financas contra imprevistos</p>
+        <div class="s-vis">
+          <div class="s-vis-icon">&#9733;</div>
+          <p>Protecao financeira contra imprevistos da vida.</p>
         </div>
-        <div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 16px;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(139,92,246,.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;">&#127891;</div>
-          <p style="font-size:.88rem;color:#475569;font-weight:600;line-height:1.4;margin:0;">Educar a proxima geracao sobre dinheiro</p>
+        <div class="s-vis">
+          <div class="s-vis-icon">&#9733;</div>
+          <p>Uma geracao que entende e ensina sobre dinheiro.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sobre-section">
+  <section class="s-sect s-sect--muted">
     <div class="container">
-      <div class="sobre-cta">
-        <h2>Faca Parte da Nossa Jornada</h2>
-        <p>Junte-se a milhares de brasileiros que ja transformaram sua vida financeira com o Fazendo Dinheiro.</p>
-        <div class="sobre-cta-btns">
-          <a href="blog.html" class="btn btn-primary" style="background:#2563eb;">Explorar Conteudo</a>
-          <a href="ferramentas.html" class="btn btn-outline" style="border-color:#fff;color:#fff;">Usar Ferramentas</a>
-          <a href="contato.html" class="btn btn-outline" style="border-color:#fff;color:#fff;">Entrar em Contato</a>
+      <div class="s-cta">
+        <h2>Faca parte desta jornada.</h2>
+        <p>Junte-se a milhares de leitores que ja transformaram sua relacao com o dinheiro.</p>
+        <div class="s-cta-btns">
+          <a href="blog.html" class="btn btn-primary">Ler Artigos</a>
+          <a href="ferramentas.html" class="btn btn-ghost">Ver Ferramentas</a>
         </div>
       </div>
-      <div style="text-align:center;margin-top:32px;padding:24px;background:#f0fdf4;border-radius:12px;border:1px solid #bbf7d0;">
-        <p style="font-weight:700;color:#166534;margin-bottom:4px;">Fazendo Dinheiro</p>
-        <p style="color:#166534;font-size:.9rem;">Transformando vidas atraves da educacao financeira.<br>Desde 2024, ajudando brasileiros a conquistar sua liberdade financeira.</p>
+      <div class="s-final">
+        <p>Fazendo Dinheiro &mdash; Educacao financeira desde 2024.</p>
       </div>
     </div>
   </section>
@@ -325,12 +351,12 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Sobre o Site</h4>
-          <p class="footer-tagline" style="margin-top:16px;">Fazendo Dinheiro e um portal dedicado a educacao financeira para brasileiros, oferecendo conteudo gratuito e de qualidade sobre economia pessoal, investimentos e financas.</p>
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <p class="footer-tagline">Fazendo Dinheiro e um portal dedicado a educacao financeira para brasileiros, oferecendo conteudo gratuito e de qualidade sobre economia pessoal, investimentos e financas.</p>
         </div>
         <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Links Uteis</h4>
-          <div class="footer-links-grid" style="margin-top:16px;">
+          <h4 class="footer-col-title">Links Uteis</h4>
+          <div class="footer-links-grid">
             <ul class="footer-links">
               <li><a href="index.html">Inicio</a></li>
               <li><a href="ferramentas.html">Ferramentas</a></li>
@@ -338,44 +364,24 @@
             </ul>
             <ul class="footer-links">
               <li><a href="sobre.html">Sobre Nos</a></li>
-              <li><a href="privacidade.html">Politica de Privacidade</a></li>
-              <li><a href="termos.html">Termos de Uso</a></li>
+              <li><a href="privacidade.html">Privacidade</a></li>
+              <li><a href="termos.html">Termos</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Artigos Principais</h4>
-          <ul class="footer-links" style="margin-top:16px;">
-            <li><a href="artigos/orcamento.html">Orcamento Pessoal</a></li>
-            <li><a href="artigos/investimentos.html">Investimentos</a></li>
-            <li><a href="artigos/imposto-renda.html">Imposto de Renda</a></li>
-            <li><a href="artigos/cartao.html">Cartao de Credito</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" style="color:var(--white);font-size:1.1rem;text-transform:none;letter-spacing:normal;">Categorias</h4>
-          <ul class="footer-links" style="margin-top:16px;">
+          <h4 class="footer-col-title">Categorias</h4>
+          <ul class="footer-links">
             <li><a href="investimentos.html">Investimentos</a></li>
-            <li><a href="dividas.html">Dividas e Credito</a></li>
+            <li><a href="dividas.html">Dividas</a></li>
             <li><a href="orcamento.html">Orcamento</a></li>
             <li><a href="economia.html">Economia</a></li>
           </ul>
         </div>
       </div>
-      <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:16px;">
-        <a href="https://www.instagram.com/fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:rgba(255,255,255,.6);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:rgba(255,255,255,.6);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="color:rgba(255,255,255,.6);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-      </div>
-      <div class="footer-bottom" style="flex-direction:column;text-align:center;justify-content:center;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;">
-        <p class="footer-disclaimer" style="margin-bottom:8px;">Este site tem carater informativo e educativo. Nao constitui recomendacao ou aconselhamento financeiro profissional.</p>
-        <p>&copy; 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      <div class="footer-bottom">
+        <p>Fazendo Dinheiro &copy; 2026. Todos os direitos reservados.</p>
+        <p>Educacao financeira de verdade.</p>
       </div>
     </div>
   </footer>
