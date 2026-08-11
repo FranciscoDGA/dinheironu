@@ -632,6 +632,9 @@ input { font-family: inherit; }
 }
 .tool-badge--blue  { background: var(--blue);  color: var(--white); }
 .tool-badge--green { background: var(--green); color: var(--white); }
+.tool-badge--popular { background: var(--gold); color: var(--navy-900); }
+.tool-badge--novo { background: var(--blue); color: var(--white); }
+.tool-badge--essencial { background: var(--green); color: var(--white); }
 
 .tool-title {
   font-family: var(--font-serif);
