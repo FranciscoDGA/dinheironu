@@ -66,23 +66,7 @@ if (mobileMenuBtn && navLinksEl) {
   });
 }
 
-/* ── Reveal animations on scroll ── */
-const revealEls = document.querySelectorAll(
-  '.article-card, .tool-card, .value-item, .sobre-stat, .section-header'
-);
-if (revealEls.length && 'IntersectionObserver' in window) {
-  revealEls.forEach(el => el.classList.add('reveal'));
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  revealEls.forEach(el => revealObserver.observe(el));
-}
+/* ── Reveal animations: all content remains immediately visible ── */
 
 /* ── Helpers numéricos e de erro ── */
 function formatBRL(value) {

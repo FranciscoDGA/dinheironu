@@ -1,10 +1,10 @@
-const CACHE_NAME = 'fazendo-dinheiro-v2';
+const CACHE_NAME = 'fazendo-dinheiro-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
   '/404.html',
-  '/css/style.css?v=4',
-  '/js/main.js',
+  '/css/style.css?v=5',
+  '/js/main.js?v=2',
   '/js/ticker.js',
   '/images/favicon.svg'
 ];
