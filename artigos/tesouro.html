@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/>
@@ -7,120 +7,8 @@
   <title>Tesouro Direto para quem tem medo de investir | Fazendo Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&family=" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css?v=3"/>
-  <style>
-    /* Article-specific styles */
-    .article-hero {
-      padding: 120px 0 60px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-    }
-    .article-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-    .article-category {
-      display: inline-block;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 4px 14px; border-radius: 9999px; margin-bottom: 20px;
-    }
-    .article-cat--gold   { background: #f59e0b; color: #0f172a; }
-    .article-cat--green  { background: #10b981; color: #fff; }
-    .article-cat--blue   { background: #2563eb; color: #fff; }
-    .article-cat--red    { background: #ef4444; color: #fff; }
-    .article-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800; color: #fff;
-      line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px;
-    }
-    .article-meta {
-      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-      font-size: 0.85rem; color: rgba(255,255,255,.55); margin-bottom: 32px;
-    }
-    .article-meta span { display: flex; align-items: center; gap: 6px; }
-    .article-summary {
-      font-size: 1.1rem; color: rgba(255,255,255,.75);
-      line-height: 1.7; border-left: 3px solid #f59e0b;
-      padding-left: 20px; margin-top: 24px;
-    }
-    .article-featured-img {
-      width: 100%; max-width: 800px; margin: 0 auto;
-      display: block; border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.3);
-      transform: translateY(40px);
-    }
-    .article-body-wrap {
-      max-width: 800px; margin: 0 auto; padding: 80px 24px 96px;
-    }
-    .article-content { font-size: 1.05rem; line-height: 1.85; color: #334155; }
-    .article-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem; font-weight: 800;
-      color: #0f172a; margin: 48px 0 18px;
-      letter-spacing: -0.02em; line-height: 1.2;
-    }
-    .article-content h3 {
-      font-size: 1.15rem; font-weight: 700;
-      color: #0f172a; margin: 32px 0 12px;
-    }
-    .article-content p { margin-bottom: 20px; }
-    .article-content strong { color: #0f172a; font-weight: 700; }
-    .article-content ul, .article-content ol {
-      margin: 0 0 20px 24px; display: flex; flex-direction: column; gap: 10px;
-    }
-    .article-content li { line-height: 1.7; }
-    .article-callout {
-      background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #2563eb;
-      border-radius: 8px; padding: 20px 24px; margin: 28px 0;
-    }
-    .article-callout--gold {
-      background: #fffbeb; border-color: #fde68a; border-left-color: #f59e0b;
-    }
-    .article-callout--green {
-      background: #f0fdf4; border-color: #bbf7d0; border-left-color: #10b981;
-    }
-    .article-callout--red {
-      background: #fff1f2; border-color: #fecdd3; border-left-color: #ef4444;
-    }
-    .article-callout p { margin: 0; font-size: 0.95rem; }
-    .article-callout strong { display: block; margin-bottom: 6px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .article-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
-    .article-table th {
-      background: #0f172a; color: #fff; padding: 12px 16px;
-      text-align: left; font-weight: 600; font-size: 0.82rem;
-    }
-    .article-table td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
-    .article-table tr:nth-child(even) td { background: #f8faff; }
-    .article-share {
-      margin: 60px 0 0; padding: 32px; background: #f8faff;
-      border-radius: 16px; text-align: center;
-      border: 1px solid rgba(15,23,42,.06);
-    }
-    .article-share h3 { font-size: 1.1rem; margin-bottom: 16px; color: #0f172a; }
-    .share-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .share-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 20px; border-radius: 9999px;
-      font-size: 0.85rem; font-weight: 600;
-      cursor: pointer; border: none; transition: all 0.2s;
-    }
-    .share-btn--whatsapp { background: #25d366; color: #fff; }
-    .share-btn--whatsapp:hover { background: #128C7E; }
-    .share-btn--copy { background: #0f172a; color: #fff; }
-    .share-btn--copy:hover { background: #1e293b; transform: translateY(-1px); }
-    .related-section { padding: 80px 0; background: #f8faff; }
-    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-    @media(max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
-    .article-card {
-      background: #fff; border-radius: 12px; overflow: hidden;
-      box-shadow: 0 10px 30px rgba(15,23,42,0.05); transition: transform 0.3s;
-      display: flex; flex-direction: column; text-decoration: none; color: inherit;
-    }
-    .article-card:hover { transform: translateY(-5px); }
-    .article-card-img { width: 100%; height: 180px; object-fit: cover; background: #e2e8f0; }
-    .article-card-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
-    .article-card-cat { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; }
-    .article-card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; color: #0f172a; font-family: 'Playfair Display', serif; }
-    .article-card-meta { font-size: 0.8rem; color: #64748b; margin-top: auto; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css?v=4"/>
 
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
   <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
@@ -147,12 +35,9 @@
     "description": "Descubra como o Tesouro Direto funciona e por que ele é a escolha mais segura para quem quer sair da poupança e começar a investir de verdade, sem sustos e com boa rentabilidade.",
     "image": "https://dinheironu.vercel.app/images/tesouro.jpg",
     "author": {
-      "@type": "Person",
-      "name": "Equipe Fazendo Dinheiro",
-      "jobTitle": "Especialistas em Educação Financeira",
-      "url": "https://dinheironu.vercel.app/sobre.html",
-      "name": "Fazendo Dinheiro",
-      "url": "https://dinheironu.vercel.app"
+      "@type": "Organization",
+      "name": "Redação Fazendo Dinheiro",
+      "url": "https://dinheironu.vercel.app/sobre.html"
     },
     "publisher": {
       "@type": "Organization",
@@ -205,10 +90,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "O Tesouro Direto é seguro?",
+        "name": "O Tesouro Direto tem algum risco?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, o Tesouro Direto é o investimento mais seguro do Brasil, pois é garantido pelo governo federal. O risco de default (calote) é praticamente zero."
+          "text": "Títulos públicos federais têm risco soberano do Governo Federal, considerado menor do que o risco de instituições privadas no país, mas não são livres de risco. Prefixado e IPCA+ sofrem marcação a mercado e podem ter prejuízo no resgate antecipado; mesmo o Tesouro Selic está sujeito a IOF nos primeiros 29 dias e raras oscilações pontuais de preço."
         }
       },
       {
@@ -232,6 +117,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 <div id="market-ticker"></div>
 
   <!-- NAVBAR -->
@@ -251,28 +137,20 @@
         <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
         <li><a href="../blog.html" class="nav-link">Blog</a></li>
         <li><a href="../ferramentas.html" class="nav-link">Ferramentas</a></li>
-        <li><a href="#footer" class="nav-link">Contato</a></li>
+        <li><a href="../contato.html" class="nav-link">Contato</a></li>
       </ul>
 
-      <form action="../busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
-        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
-        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      <form action="../busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
       </form>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- ARTICLE HERO -->
-  
-  <nav style="max-width:800px; margin:0 auto; padding:16px 24px 0; font-size:0.85rem; color:#64748b;">
-    <a href="../index.html" style="color:var(--primary); text-decoration:none;">Home</a>
-    <span style="margin:0 6px;">›</span>
-    <a href="../blog.html" style="color:var(--primary); text-decoration:none;">Artigos</a>
-    <span style="margin:0 6px;">›</span>
-    <span id="breadcrumb-title"></span>
-  </nav>
   <section class="article-hero">
     <div class="article-hero-inner">
       
@@ -289,16 +167,16 @@
       <h1 class="article-title">Tesouro Direto para quem tem medo de investir</h1>
       
       <div class="author-block" style="margin-top: 0; padding-bottom: 0; border-bottom: none; margin-bottom: 24px;">
-        <picture><source srcset="../images/webp/francisco.webp" type="image/webp"><img src="../images/francisco.jpg" alt="Equipe Fazendo Dinheiro" class="author-avatar" style="border: 2px solid rgba(255,255,255,0.2);"></picture>
+        <picture><source srcset="../images/webp/francisco.webp" type="image/webp"><img src="../images/francisco.jpg" alt="Redação Fazendo Dinheiro" class="author-avatar" style="border: 2px solid rgba(255,255,255,0.2);"></picture>
         <div class="author-info">
-          <span class="author-name" style="color: white;">Equipe Fazendo Dinheiro</span>
-          <span class="author-desc" style="color: rgba(255,255,255,0.7);">Especialistas em Educação Financeira</span>
-          <span class="author-meta" style="color: rgba(255,255,255,0.5);">07 Jul 2026 &bull; 7 min de leitura</span>
+          <span class="author-name" style="color: white;">Redação Fazendo Dinheiro</span>
+          <span class="author-desc">Conteúdo Informativo e Educativo</span>
+          <span class="author-meta" style="color: rgba(255,255,255,0.5);">07 Jul 2026 &bull; Revisado em 25 Nov 2026 &bull; 7 min de leitura</span>
         </div>
       </div>
 
-      <p class="article-summary">Descubra como o Tesouro Direto funciona e por que ele é a escolha mais segura para quem quer sair da poupança e começar a investir de verdade, sem sustos e com boa rentabilidade.</p>
-<div style="background-color: var(--bg-light); border-left: 4px solid var(--primary); padding: 16px; margin: 32px 0; border-radius: 4px;">
+      <p class="article-summary">Entenda como o Tesouro Direto funciona, a diferença entre Selic, Prefixado e IPCA+, impostos cobrados e os riscos envolvidos no resgate antes do vencimento.</p>
+<div class="article-callout" style="margin: 24px 0 0;">
   <strong>Leia também:</strong> <a href="investimentos.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Descubra mais sobre INVESTIMENTOS clicando aqui</a>
 </div>
 
@@ -306,90 +184,91 @@
   </section>
 
   <!-- IMAGE -->
-  <div style="background: linear-gradient(135deg,#0f172a,#1e3a5f); padding-bottom: 60px;">
+  <div style="background: linear-gradient(135deg, #0a1628 0%, #0f2248 55%, #080b14 100%); padding-bottom: 36px;">
     <div style="max-width:800px;margin:0 auto;padding:0 24px;">
       <picture><source srcset="../images/webp/tesouro.webp" type="image/webp"><img src="../images/tesouro.jpg" alt="Imagem representando investimentos seguros no Tesouro Direto" class="article-featured-img" /></picture>
     </div>
   </div>
 
   <!-- ARTICLE BODY -->
-  <main style="padding-top: 100px; padding-bottom: 60px; background: #f1f5f9;">
+  <main id="conteudo-principal" class="article-page-main">
   <div class="container article-layout">
     <div class="article-main">
     <div class="article-body-wrap">
       <article class="article-box">
         <h2>Você ainda tem dinheiro na Poupança por medo?</h2>
-        <p>Vamos ser sinceros: se você tem medo de investir e prefere deixar o seu suado dinheirinho na poupança porque "é mais seguro", você não está sozinho. Durante décadas, a caderneta de poupança foi vendida ao brasileiro como o lugar natural para se guardar dinheiro. No entanto, os tempos mudaram. Hoje, a poupança rende tão pouco que muitas vezes perde para a <a href="inflacao.html" style="color: var(--primary); text-decoration: underline; text-decoration-color: rgba(37,99,235,0.3); text-underline-offset: 2px;">inflação</a>. Isso significa que, na prática, seu dinheiro está perdendo o poder de compra ano após ano.</p>
+        <p>Vamos ser sinceros: se você tem medo de investir e prefere deixar o seu suado dinheirinho na poupança porque "é mais seguro", você não está sozinho. Durante décadas, a caderneta de poupança foi vendida ao brasileiro como o lugar natural para se guardar dinheiro. No entanto, os tempos mudaram. Hoje, a poupança rende tão pouco que muitas vezes perde para a <a href="inflacao.html">inflação</a>. Isso significa que, na prática, seu dinheiro está perdendo o poder de compra ano após ano.</p>
         <p>E a grande pergunta que fica é: "Se eu sair da poupança, para onde vou sem correr o risco de perder tudo?". A resposta, na grande maioria das vezes, tem um nome: <strong>Tesouro Direto</strong>.</p>
         <p>Se você tem medo da bolsa de valores, das ações que sobem e descem feito montanha-russa, ou não confia muito nos bancos menores, o Tesouro Direto foi feito exatamente para você. Ele é simples, extremamente acessível e rende muito mais que a caderneta de poupança com um grau de segurança ainda maior. Neste guia definitivo do <strong>Fazendo Dinheiro</strong>, vamos destrinchar tudo o que você precisa saber para comprar seu primeiro título do Tesouro e dormir tranquilo à noite.</p>
 
         <h2>O que é o Tesouro Direto? (Emprestar dinheiro para o governo)</h2>
-        <p>Quando você coloca dinheiro no banco (na poupança ou num <a href="cdb-liquidez.html" style="color: var(--primary); text-decoration: underline; text-decoration-color: rgba(37,99,235,0.3); text-underline-offset: 2px;">CDB</a>), você está basicamente emprestando dinheiro para o banco, e ele te paga uns juros por isso (geralmente muito baixos). O Tesouro Direto segue a mesma lógica, mas com um "detalhe" crucial: <strong>você está emprestando dinheiro para o Governo Federal</strong>.</p>
-        <p>O Tesouro Direto é um programa do Tesouro Nacional (o "caixa" do governo) desenvolvido em parceria com a B3 (a bolsa do Brasil) para permitir que qualquer pessoa compre títulos públicos de forma online. Em outras palavras, o governo emite uma "dívida" prometendo pagar os juros e o principal de volta no futuro. O dinheiro arrecadado é usado para pagar dívidas do governo, investir em infraestrutura, saúde, educação, etc.</p>
+        <p>Quando você coloca dinheiro no banco (na poupança ou num <a href="../cdb-liquidez.html">CDB</a>), está emprestando recursos para uma instituição financeira. No Tesouro Direto, a lógica é semelhante, mas <strong>você empresta dinheiro para o Governo Federal</strong>.</p>
+        <p>O Tesouro Direto é um programa do Tesouro Nacional desenvolvido em parceria com a B3 para permitir a compra e venda online de títulos públicos federais por pessoas físicas. Consulte taxas e títulos disponíveis sempre no site oficial <a href="https://www.tesourodireto.com.br/" target="_blank" rel="noopener noreferrer">tesourodireto.com.br</a>.</p>
 
         <div class="article-callout article-callout--green">
-          <strong>A MAIOR SEGURANÇA DO BRASIL</strong>
-          <p>Por que o Tesouro Direto é mais seguro que a poupança de qualquer banco grande? Porque o emissor da dívida é o próprio governo brasileiro. Se um banco quebra, quem tem conta sofre. Mas para o governo federal dar o "calote" na sua própria moeda (o Real), o país inteiro, incluindo todos os bancos, já teria quebrado antes. O governo tem o poder exclusivo de arrecadar impostos e imprimir dinheiro (emitir moeda). Por isso, no mercado financeiro, considera-se o Tesouro Nacional como o risco mais baixo possível (risco soberano) da economia brasileira.</p>
+          <strong>Risco soberano não significa risco zero</strong>
+          <p>Os títulos públicos contam com a garantia do Tesouro Nacional (risco de crédito soberano), considerado historicamente mais baixo no Brasil do que o risco de bancos ou empresas privadas. Ainda assim, existem riscos fiscais, econômicos, tributários (IR/IOF) e de preço de mercado quando você vende um título antes da data de vencimento.</p>
         </div>
 
         <h2>Os três grandes tipos de Tesouro Direto</h2>
-        <p>Uma das maiores confusões de quem começa é olhar o site do Tesouro e ver uma sopa de letrinhas: Tesouro Selic 2029, Tesouro IPCA+ 2035, Tesouro Prefixado 2031... Mas calma. Na verdade, só existem três grandes categorias de títulos, e entender como cada uma funciona é mais fácil do que parece.</p>
+        <p>Existem três grandes famílias de títulos disponíveis para o investidor pessoa física:</p>
 
-        <h3>1. Tesouro Selic (O substituto da Poupança)</h3>
-        <p>O Tesouro Selic acompanha a taxa básica de juros da economia (a Taxa Selic). Se a taxa Selic subir, ele rende mais. Se ela cair, ele rende menos, mas <strong>nunca dá prejuízo diário</strong>, ele só rende mais devagar.</p>
-        <p>Este é o título mais flexível de todos. Você pode pedir seu dinheiro de volta hoje mesmo, e ele cai na sua conta amanhã com toda a rentabilidade acumulada até aquele dia, sem sofrer perdas. Por isso, é o título ideal para a sua <strong><a href="reserva.html" style="color: var(--primary); text-decoration: underline; text-decoration-color: rgba(37,99,235,0.3); text-underline-offset: 2px;">Reserva de Emergência</a></strong> (aquele dinheiro para imprevistos como conserto do carro, demissão, problemas de saúde) e para o dinheiro que você pretende usar no curto prazo.</p>
+        <h3>1. Tesouro Selic (Foco em liquidez e reserva de emergência)</h3>
+        <p>O Tesouro Selic acompanha a taxa básica de juros da economia (Taxa Selic) mais uma pequena taxa fixa de ágio ou deságio. Embora apresente baixa volatilidade diária, <strong>não é imune a perdas</strong>: resgates nos primeiros 29 dias pagam IOF regressivo sobre o rendimento, e variações momentâneas no ágio/deságio podem gerar oscilações negativas raras e pontuais em prazos muito curtos.</p>
+        <p>Mesmo com essa ressalva, ele é amplamente estudado para compor a <strong><a href="reserva.html">Reserva de Emergência</a></strong> por oferecer liquidez diária (crédito normalmente no mesmo dia útil ou em D+1, conforme horário da solicitação) e sensibilidade muito menor às oscilações de mercado do que os títulos prefixados e atrelados à inflação.</p>
 
-        <h3>2. Tesouro IPCA+ (Para não perder da inflação)</h3>
-        <p>O IPCA é o índice oficial de inflação do Brasil. O Tesouro IPCA+ te paga a inflação do período MAIS uma taxa de juros fixa (por exemplo: IPCA + 6% ao ano).</p>
-        <p>Qual a vantagem? Você tem a <strong>garantia real de aumento do seu poder de compra</strong>. Se a inflação explodir para 10% ao ano, seu título vai pagar 10% + os 6% combinados (16% no total). Isso o torna o melhor título para objetivos de <strong>médio e longo prazo</strong> (como aposentadoria, juntar para comprar uma casa ou para a faculdade dos filhos). Mas atenção: para garantir a taxa acordada, você precisa deixar o dinheiro investido até a data de vencimento do título. Se você tentar tirar antes, o valor pode oscilar (para cima ou para baixo) dependendo das condições do mercado (fenômeno chamado de "marcação a mercado").</p>
+        <h3>2. Tesouro IPCA+ (Atenção ao prazo e à marcação a mercado)</h3>
+        <p>O IPCA é o índice oficial de inflação medido pelo IBGE. O Tesouro IPCA+ paga a variação do IPCA acrescida de uma taxa prefixada (por exemplo, hipótese ilustrativa de IPCA + 6% ao ano).</p>
+        <p><strong>Atenção essencial:</strong> a rentabilidade real contratada só é garantida <strong>se você mantiver o título até a data de vencimento</strong>. Se vender antecipadamente, o título sofre <em>marcação a mercado</em> e o preço pode cair bastante caso as taxas de juros futuras subam, resultando até em prejuízo nominal naquele resgate antecipado.</p>
 
-        <h3>3. Tesouro Prefixado (Saber exatamente quanto vai receber)</h3>
-        <p>Como o nome diz, a taxa é fixada no momento da compra. Por exemplo: 11% ao ano. Não importa se a inflação ou a Selic subirem ou caírem, você vai receber exatamente os 11% ao ano se segurar o título até o vencimento.</p>
-        <p>É bom quando os juros do país estão muito altos e há uma tendência de queda, pois você "trava" uma taxa excelente por muitos anos. O risco aqui é a inflação disparar e você acabar ganhando menos que ela. Assim como o IPCA+, se você tirar antes do vencimento, pode perder ou ganhar dinheiro devido à oscilação das taxas no momento.</p>
+        <h3>3. Tesouro Prefixado (Taxa fixa apenas no vencimento)</h3>
+        <p>A taxa é definida no momento da compra (por exemplo, hipótese ilustrativa de 11% ao ano). Essa remuneração combinada vale apenas na data de vencimento e antes do desconto de Imposto de Renda e taxa da B3. Se a inflação disparar, seu ganho real diminui; e, se resgatar antes do vencimento, o preço oscila conforme a marcação a mercado, podendo haver perda sobre o valor investido.</p>
 
-        <h2>Qual rende mais? Tesouro ou Poupança?</h2>
-        <p>A poupança tem uma regra clara: se a Selic estiver acima de 8,5% ao ano (o que ocorre na maior parte do tempo no Brasil), a poupança rende cravados 0,5% ao mês + Taxa Referencial (TR), o que dá em torno de 6,17% ao ano mais uma mixaria da TR.</p>
-        <p>O Tesouro Selic, em contrapartida, rende quase 100% da Selic. Vejamos uma tabela para deixar tudo mais claro e comparar os títulos do Tesouro Direto com a tão adorada (e ultrapassada) caderneta de poupança.</p>
+        <h2>Como comparar Poupança e Tesouro Direto na prática?</h2>
+        <p>Pela regra legal do <a href="https://www.bcb.gov.br/estatisticas/remuneracaopoupanca" target="_blank" rel="noopener noreferrer">Banco Central</a>, a poupança rende 0,5% ao mês + TR quando a Meta Selic está acima de 8,5% ao ano, ou 70% da Meta Selic + TR quando a Selic está igual ou abaixo de 8,5% ao ano, creditada apenas na data de aniversário mensal. Já o Tesouro Selic rende por dia útil e sofre retenção de IR (e IOF até o 29º dia).</p>
+        <p>A tabela abaixo usa <strong>taxas meramente hipotéticas</strong> apenas para ilustrar o funcionamento estrutural de cada opção (sem representar taxas vigentes):</p>
 
+        <div class="table-wrap">
         <table class="article-table">
           <thead>
             <tr>
-              <th>Investimento</th>
-              <th>Rentabilidade (exemplo cenário atual)</th>
-              <th>Liquidez (quando posso sacar?)</th>
-              <th>Risco de tirar antes?</th>
+              <th>Modalidade</th>
+              <th>Exemplo hipotético ilustrativo</th>
+              <th>Liquidez</th>
+              <th>Risco de perda antes do prazo</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>Poupança</strong></td>
-              <td>Baixa (~ 6% a 7% a.a.)</td>
-              <td>Imediata (mas só rende no "aniversário" mensal)</td>
-              <td>Nenhum (mas perde o rendimento dos dias "quebrados")</td>
+              <td>TR + 0,5% a.m. (se Selic &gt; 8,5% a.a.)</td>
+              <td>Imediata (perde rendimento do período se sacar antes do aniversário)</td>
+              <td>Perda do rendimento do mês em curso no saque antecipado e risco de perda real para inflação</td>
             </tr>
             <tr>
               <td><strong>Tesouro Selic</strong></td>
-              <td>Acompanha a Selic (ex: ~ 10,50% a.a.)</td>
-              <td>Diária (D+1)</td>
-              <td>Mínimo / Quase inexistente</td>
+              <td>Acompanha a Selic (ex. hipotético: 10,50% a.a. brutos)</td>
+              <td>Liquidez diária em dias úteis</td>
+              <td>Baixo, sujeito a IOF (&lt;30 dias), IR e raras oscilações pontuais de ágio/deságio</td>
             </tr>
             <tr>
               <td><strong>Tesouro IPCA+</strong></td>
-              <td>Inflação + Taxa (ex: IPCA + 6,0% a.a.)</td>
-              <td>No vencimento (ex: 2029, 2035)</td>
-              <td>Sim. Risco de Marcação a Mercado se tirar antes.</td>
+              <td>IPCA + taxa fixa (ex. hipotético: IPCA + 6,0% a.a. brutos)</td>
+              <td>Liquidez diária a preço de mercado</td>
+              <td>Alto: marcação a mercado pode gerar prejuízo no resgate antecipado</td>
             </tr>
             <tr>
               <td><strong>Tesouro Prefixado</strong></td>
-              <td>Taxa Fixa (ex: 11,5% a.a.)</td>
-              <td>No vencimento (ex: 2027, 2031)</td>
-              <td>Sim. Risco de Marcação a Mercado se tirar antes.</td>
+              <td>Taxa fixa (ex. hipotético: 11,5% a.a. brutos)</td>
+              <td>Liquidez diária a preço de mercado</td>
+              <td>Alto: marcação a mercado pode gerar prejuízo no resgate antecipado</td>
             </tr>
           </tbody>
         </table>
+        </div>
 
-        <h2>A mordida do Leão: Entendendo os Custos e Impostos</h2>
-        <p>Você pode estar pensando: "Ok, o Tesouro rende mais. Mas e os impostos? E as taxas?". Mesmo com os descontos, o Tesouro Direto ainda bate a poupança por uma margem muito folgada ao longo do tempo. Existem dois principais custos que você precisa conhecer:</p>
+        <h2>Entendendo os Custos e Impostos</h2>
+        <p>Antes de investir, contabilize todos os descontos que incidem sobre o Tesouro Direto (diferente da poupança para pessoa física, que é isenta de IR):</p>
 
         <h3>1. Imposto de Renda Regressivo (IR)</h3>
         <p>No Tesouro Direto (e na grande maioria dos investimentos de renda fixa no Brasil), você paga Imposto de Renda. Mas a boa notícia é dupla: primeiro, o imposto é cobrado <strong>apenas sobre o que rendeu</strong>, não sobre o valor que você colocou. Segundo, o desconto já é automático. Quando você resgata, o dinheiro já cai na conta com os impostos pagos, sem dor de cabeça de gerar guias na Receita Federal. O IR segue uma tabela regressiva, ou seja, quanto mais tempo você deixa investido, menos imposto você paga:</p>
@@ -410,41 +289,42 @@
           <p>Existe um outro imposto chamado IOF (Imposto sobre Operações Financeiras). Ele é um imposto "punitivo" para quem investe e saca o dinheiro muito rápido (antes de 30 dias). A tabela regressiva do IOF começa devorando 96% do seu lucro no primeiro dia, mas vai caindo todos os dias até zerar (0%) no 30º dia de investimento. Portanto, <strong>nunca invista no Tesouro um dinheiro que você vai precisar gastar na mesma semana ou no mesmo mês</strong>.</p>
         </div>
 
-        <h2>Exemplo Prático: Quanto rende R$ 1.000?</h2>
-        <p>Para você ter uma noção realista, vamos comparar a Poupança contra o Tesouro Selic. Suponha que a taxa Selic esteja em 10,50% ao ano (uma média comum na economia brasileira). A poupança estaria rendendo perto de 6,17% ao ano + TR.</p>
-        <p>Se você colocar <strong>R$ 1.000</strong> e deixar por <strong>3 anos (36 meses)</strong>, sem colocar mais nenhum centavo:</p>
+        <h2>Exemplo Hipotético Ilustrativo: R$ 1.000 em 36 meses</h2>
+        <p>Para visualizar como tributação e regras funcionam (sem que os números abaixo representem taxas vigentes ou promessa de retorno), suponha uma <strong>hipótese ilustrativa</strong> com taxa Selic constante de 10,50% ao ano (sem considerar variações de TR, alterações futuras da Selic, ágio/deságio ou taxa de custódia acima da faixa isenta):</p>
+        <p>Nesse cenário matemático simplificado, mantendo <strong>R$ 1.000</strong> aplicados por <strong>36 meses</strong> sem novos aportes:</p>
         <ul>
-          <li><strong>Na Poupança:</strong> Seus R$ 1.000 vão virar aproximadamente <strong>R$ 1.196,00</strong>. (Livre de imposto de renda, mas com rentabilidade bem fraca).</li>
-          <li><strong>No Tesouro Selic (após todos os impostos descontados!):</strong> Seus R$ 1.000 vão virar algo perto de <strong>R$ 1.285,00</strong> (lembrando que a alíquota de IR após 2 anos já caiu para o mínimo de 15%).</li>
+          <li><strong>Na Poupança (TR zerada, 0,5% a.m.):</strong> saldo próximo de <strong>R$ 1.196,68</strong>, isento de IR para pessoa física.</li>
+          <li><strong>No Tesouro Selic (hipótese bruta a 10,50% a.a., menos 15% de IR sobre o lucro no resgate):</strong> saldo líquido aproximado de <strong>R$ 1.297,00</strong> (considerando estoque dentro da faixa de isenção da custódia B3 de até R$ 10 mil no Tesouro Selic).</li>
         </ul>
-        <p>Parece pouco em 1.000 reais. Mas imagine isso em 10 mil, 50 mil ou 100 mil reais guardados por 10, 15 ou 20 anos. O efeito dos <a href="juros-compostos.html" style="color:#2563eb;text-decoration:underline;font-weight:600;">juros compostos</a> (os famosos juros sobre juros) é devastador para quem perde. Com o Tesouro Direto, esse juro composto joga totalmente ao seu favor. E esse é exatamente o motivo pelo qual dizem que a poupança deixa os brasileiros mais pobres todos os dias.</p>
+        <p>Lembre-se de que qualquer mudança na Taxa Selic ao longo do período altera esse resultado, e você pode testar outras hipóteses brutas usando nossa <a href="../ferramentas/juros-compostos.html">calculadora de juros compostos</a>.</p>
 
-        <h2>Passo a Passo: Como comprar pelo seu App</h2>
-        <p>Se você finalmente decidiu sair da poupança, parabéns! O processo para começar é bem mais simples do que no passado e dá para fazer tudo pelo celular. Vamos ao passo a passo:</p>
+        <h2>Passo a Passo: Como funciona a aplicação</h2>
         <ol>
-          <li><strong>Abra conta em uma <a href="corretoras.html" style="color: var(--primary); text-decoration: underline; text-decoration-color: rgba(37,99,235,0.3); text-underline-offset: 2px;">Corretora</a> ou Banco Digital:</strong> Instituições como Nubank, Inter, BTG, Rico, XP, Clear e muitas outras oferecem acesso ao Tesouro Direto com taxa zero. É de graça e leva poucos minutos para criar a conta.</li>
-          <li><strong>Transfira o dinheiro (PIX/TED):</strong> Mande o dinheiro da sua conta corrente onde você recebe o salário para essa sua nova conta de investimentos. (Importante: a conta deve estar em seu CPF).</li>
-          <li><strong>Acesse a aba "Investimentos" do App:</strong> Procure pela seção de "Renda Fixa" ou diretamente a opção "Tesouro Direto".</li>
-          <li><strong>Escolha o Título:</strong> Se for sua reserva para emergências (o dinheiro que você pode precisar sacar rápido sem perder nada), escola invariavelmente o <strong>Tesouro Selic</strong>. Se for dinheiro que você não vai tocar por pelo menos 4 ou 5 anos, considere o <strong>Tesouro IPCA+</strong> para te proteger da inflação.</li>
-          <li><strong>Digite o valor e Invista:</strong> Você não precisa de fortunas. Com cerca de R$ 35 ou R$ 40 você já consegue comprar uma fração de um título do Tesouro! Digite o valor, confirme com a sua senha e pronto! No dia útil seguinte, o título já constará na sua carteira rendendo todos os dias.</li>
+          <li><strong>Escolha uma corretora ou banco habilitado:</strong> instituições autorizadas oferecem acesso ao Tesouro Direto (consulte a lista de instituições e taxas de administração no site oficial do Tesouro).</li>
+          <li><strong>Transfira recursos de conta de mesma titularidade:</strong> envie o valor via PIX ou TED.</li>
+          <li><strong>Confira o vencimento e o tipo de título:</strong> estude se o objetivo exige liquidez de curto prazo (como o <strong>Tesouro Selic</strong>) ou tem horizonte longo compatível com o vencimento (como <strong>Tesouro IPCA+</strong> ou <strong>Prefixado</strong>).</li>
+          <li><strong>Consulte o investimento mínimo oficial:</strong> no portal do Tesouro Direto, os valores mínimos fracionados variam conforme o preço unitário de cada título na data da compra.</li>
         </ol>
 
-        <h2>Conclusão: O medo te custa caro</h2>
-        <p>Sentir medo ao lidar com dinheiro é perfeitamente normal, especialmente quando se trata de produtos que você não conhece profundamente. Mas deixar o dinheiro mofar na poupança por causa desse medo é uma decisão que pode te custar dezenas de milhares de reais ao longo da vida.</p>
-        <p>O Tesouro Direto é um investimento maduro, transparente e blindado contra quebras de bancos privados. É o degrau inicial perfeito para todo brasileiro que quer ver seu patrimônio crescer acima da inflação sem perder a paz de espírito.</p>
-        <p>O primeiro passo é sempre o mais difícil. Que tal começar pequeno? Pegue R$ 100 ou R$ 200, abra o seu aplicativo e invista no Tesouro Selic. Acompanhe pelo seu celular nas próximas semanas. Veja os centavos caindo na sua conta todo santo dia útil. Assim que você perceber como é fácil e seguro, o medo some, e você nunca mais vai querer voltar para a poupança.</p>
+        <h2>Conclusão</h2>
+        <p>Entender os tipos de título, os impostos (IR e IOF) e a marcação a mercado evita surpresas desagradáveis no resgate antecipado. Antes de decidir, confira as condições vigentes diretamente nas fontes oficiais.</p>
+
+        <div class="article-callout">
+          <strong>Fontes oficiais e revisão</strong>
+          <p>Tesouro Direto (<a href="https://www.tesourodireto.com.br/" target="_blank" rel="noopener noreferrer">tesourodireto.com.br</a>) e Banco Central do Brasil (<a href="https://www.bcb.gov.br/estatisticas/remuneracaopoupanca" target="_blank" rel="noopener noreferrer">bcb.gov.br</a>). Publicado em 07/07/2026 &bull; Última revisão: 25/11/2026.</p>
+        </div>
 
 
 </article>
     </div> <!-- close article-main -->
 
       
-  <div class="article-author-box" style="max-width: 700px; margin: 40px auto 0; padding: 24px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; display: flex; gap: 20px; align-items: flex-start;">
-    <div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1e40af); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem; flex-shrink: 0;">FD</div>
+  <div class="article-author-box" style="max-width: 820px; margin: 40px auto 0; padding: 24px; border-radius: 12px; display: flex; gap: 20px; align-items: flex-start;">
+    <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #1e40af); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.35rem; flex-shrink: 0;">FD</div>
     <div>
-      <p style="margin: 0 0 4px; font-weight: 700; color: #0f172a; font-size: 1rem;">Equipe Fazendo Dinheiro</p>
-      <p style="margin: 0 0 8px; font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Educação Financeira &amp; Planejamento</p>
-      <p style="margin: 0; font-size: 0.9rem; color: #475569; line-height: 1.6;">Conteúdo revisado por especialistas em finanças pessoais com experiência em investimentos, crédito e planejamento financeiro. Última atualização em Julho de 2026.</p>
+      <p style="margin: 0 0 4px; font-weight: 700; font-size: 1rem;">Redação Fazendo Dinheiro</p>
+      <p style="margin: 0 0 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Educação Financeira e Transparência</p>
+      <p style="margin: 0; font-size: 0.9rem; line-height: 1.6;">Conteúdo educativo para fins informativos. Não constitui recomendação financeira personalizada. Última revisão técnica: 25/11/2026.</p>
     </div>
   </div>
 
@@ -462,15 +342,10 @@
             <a href="renda-passiva.html" class="related-article-link">Renda passiva: o que é e como começar com pouco dinheiro</a>
             <p class="related-article-desc">Leia nosso guia completo sobre renda passiva: o que é e como começar com pouco dinheiro.</p>
         </div>
-
         <!-- Newsletter -->
-        <div class="sidebar-widget" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-color: #bbf7d0;">
-            <h3 class="sidebar-widget-title">Receba Dicas de Ouro</h3>
-            <p style="font-size: 0.85rem; color: #166534; margin-bottom: 16px;">Junte-se a milhares de pessoas e receba nossos guias práticos sobre finanças pessoais semanalmente.</p>
-            <form onsubmit="event.preventDefault(); handleSidebarNewsletter(this);">
-                <input type="email" placeholder="Seu melhor e-mail" class="newsletter-input" required>
-                <button type="submit" class="newsletter-btn" style="background: #16a34a;">Inscrever-se Grátis</button>
-            </form>
+        <div class="sidebar-widget newsletter-disabled-widget" role="status">
+            <strong>Newsletter em preparação</strong>
+            <p>O envio automático de boletins por e-mail está temporariamente desativado enquanto configuramos um provedor seguro com descadastro.</p>
         </div>
       </aside>
 
@@ -478,22 +353,22 @@
 
       <!-- SHARE -->
       
-  <div style="margin-top: 48px; padding: 32px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px;">
-    <h2 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 24px;">Perguntas Frequentes</h2>
+  <div class="article-faq-box">
+    <h2>Perguntas Frequentes</h2>
     
-    <details style="margin-bottom: 12px; background: white; border-radius: 8px; padding: 16px 20px; border: 1px solid #e2e8f0;">
-      <summary style="font-weight: 600; color: #0f172a; cursor: pointer; font-size: 1rem;">O Tesouro Direto é seguro?</summary>
-      <p style="margin-top: 12px; color: #475569; line-height: 1.7; font-size: 0.95rem;">Sim, o Tesouro Direto é o investimento mais seguro do Brasil, pois é garantido pelo governo federal. O risco de default (calote) é praticamente zero.</p>
+    <details>
+      <summary>O Tesouro Direto tem algum risco?</summary>
+      <p>Títulos públicos federais têm risco soberano do Governo Federal, menor que o de bancos privados no Brasil, mas não são livres de risco. Prefixado e IPCA+ sofrem marcação a mercado e podem dar prejuízo em resgates antecipados; mesmo o Tesouro Selic tem IOF até o 29º dia, IR e pode registrar raras oscilações pontuais no curto prazo.</p>
     </details>
 
-    <details style="margin-bottom: 12px; background: white; border-radius: 8px; padding: 16px 20px; border: 1px solid #e2e8f0;">
-      <summary style="font-weight: 600; color: #0f172a; cursor: pointer; font-size: 1rem;">Qual a diferença entre Tesouro Selic e Tesouro IPCA?</summary>
-      <p style="margin-top: 12px; color: #475569; line-height: 1.7; font-size: 0.95rem;">O Tesouro Selic acompanha a taxa Selic e é ideal para curto prazo. O Tesouro IPCA protege contra inflação e é melhor para longo prazo, garantindo o poder de compra do seu dinheiro.</p>
+    <details>
+      <summary>Qual a diferença entre Tesouro Selic e Tesouro IPCA?</summary>
+      <p>O Tesouro Selic acompanha a taxa Selic e é ideal para curto prazo. O Tesouro IPCA protege contra inflação e é melhor para longo prazo, garantindo o poder de compra do seu dinheiro.</p>
     </details>
 
-    <details style="margin-bottom: 12px; background: white; border-radius: 8px; padding: 16px 20px; border: 1px solid #e2e8f0;">
-      <summary style="font-weight: 600; color: #0f172a; cursor: pointer; font-size: 1rem;">Posso resgatar o Tesouro Direto a qualquer momento?</summary>
-      <p style="margin-top: 12px; color: #475569; line-height: 1.7; font-size: 0.95rem;">Sim, você pode resgatar antes do vencimento, mas poderá haver perdas se o título for marcação a mercado (como o Tesouro IPCA+). O Tesouro Selic tem baixa volatilidade no resgate antecipado.</p>
+    <details>
+      <summary>Posso resgatar o Tesouro Direto a qualquer momento?</summary>
+      <p>Sim, você pode resgatar antes do vencimento, mas poderá haver perdas se o título for marcação a mercado (como o Tesouro IPCA+). O Tesouro Selic tem baixa volatilidade no resgate antecipado.</p>
     </details>
   </div>
 <div class="article-share">
@@ -515,8 +390,8 @@
   <section class="recommended-tools">
     <div class="container">
       <div style="text-align: center;">
-        <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 10px;">Ferramentas Recomendadas</h2>
-        <p style="color: #64748b; font-size: 1.1rem;">As calculadoras mais utilizadas pelos nossos leitores para organizar a vida financeira.</p>
+        <h2 style="font-size: 2rem; color: var(--white); margin-bottom: 10px;">Ferramentas Recomendadas</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">As calculadoras mais utilizadas pelos nossos leitores para organizar a vida financeira.</p>
       </div>
       
       <div class="tools-grid">
@@ -549,7 +424,7 @@
       </div>
       
       <div style="text-align: center; margin-top: 40px;">
-        <a href="../ferramentas.html" class="btn btn-secondary" style="background: #1e293b; color: white;">Ver Todas as Ferramentas</a>
+        <a href="../ferramentas.html" class="btn btn-primary">Ver Todas as Ferramentas</a>
       </div>
     </div>
   </section>
@@ -633,8 +508,8 @@
           <ul class="footer-links" style="margin-top: 16px;">
             <li><a href="orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
             <li><a href="investimentos.html" id="footer-link-investir">Investimentos</a></li>
-            <li><a href="dividas.html" id="footer-link-dividas">Impostos</a></li>
-            <li><a href="tesouro.html" id="footer-link-tesouro">Crédito</a></li>
+            <li><a href="../imposto-renda.html" id="footer-link-dividas">Imposto de Renda</a></li>
+            <li><a href="../dividas.html" id="footer-link-tesouro">Dívidas e Crédito</a></li>
           </ul>
         </div>
 
@@ -657,7 +532,16 @@
       window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' - ' + window.location.href));
     }
     function copyLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiado!'));
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const btn = document.querySelector('.share-btn--copy');
+          if (btn) {
+            const orig = btn.textContent;
+            btn.textContent = '✓ Link copiado!';
+            setTimeout(() => { btn.textContent = orig; }, 2500);
+          }
+        });
+      }
     }
   </script>
 
@@ -665,10 +549,9 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>
-  <script>document.getElementById('breadcrumb-title').textContent = 'Tesouro Direto para quem tem medo de investir';</script>
 </body>
 </html>

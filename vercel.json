@@ -5,21 +5,74 @@
       "main": true
     }
   },
+  "redirects": [
+    { "source": "/artigos/imposto-renda.html", "destination": "/imposto-renda.html", "permanent": true },
+    { "source": "/artigos/cdb-liquidez.html", "destination": "/cdb-liquidez.html", "permanent": true },
+    { "source": "/artigos/fundos-imobiliarios.html", "destination": "/fundos-imobiliarios.html", "permanent": true },
+    { "source": "/artigos/financiamento-veiculo.html", "destination": "/financiamento-veiculo.html", "permanent": true },
+    { "source": "/artigos/bitcoin-2026.html", "destination": "/bitcoin-2026.html", "permanent": true },
+    { "source": "/artigos/cartao-black.html", "destination": "/cartao-black.html", "permanent": true },
+    { "source": "/artigos/compra-casa.html", "destination": "/compra-casa.html", "permanent": true },
+    { "source": "/artigos/dicas-mei.html", "destination": "/dicas-mei.html", "permanent": true },
+    { "source": "/artigos/economia-supermercado.html", "destination": "/economia-supermercado.html", "permanent": true },
+    { "source": "/artigos/fim-do-ted.html", "destination": "/fim-do-ted.html", "permanent": true },
+    { "source": "/artigos/milhas-aereas.html", "destination": "/milhas-aereas.html", "permanent": true },
+    { "source": "/artigos/psicologia-dinheiro.html", "destination": "/psicologia-dinheiro.html", "permanent": true },
+    { "source": "/ferramentas/regra-50-30-20.html", "destination": "/ferramentas/controle-50-30-20.html", "permanent": true },
+    { "source": "/artigos/novo-desenrola-2026.html", "destination": "/artigos/desenrola.html", "permanent": true },
+    { "source": "/artigos/juros-cartao-2026.html", "destination": "/artigos/juros-cartao.html", "permanent": true },
+    { "source": "/artigos/cobrancas-indevidas.html", "destination": "/artigos/cobranca-indevida.html", "permanent": true },
+    { "source": "/artigos/inflacao-2026.html", "destination": "/artigos/inflacao.html", "permanent": true },
+    { "source": "/artigos/investimentos-esg.html", "destination": "/artigos/esg.html", "permanent": true }
+  ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "source": "/(.*).html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/search_index.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
     }
   ]
 }

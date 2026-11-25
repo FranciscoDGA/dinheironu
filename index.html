@@ -12,11 +12,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
-  <link rel="manifest" href="../manifest.json" />
+  <link rel="manifest" href="manifest.json" />
 
   <link rel="canonical" href="https://dinheironu.vercel.app/" />
   <meta property="og:title" content="Fazendo Dinheiro | Finanças Sem Enrolação" />
@@ -41,11 +41,7 @@
       "@type": "Organization",
       "name": "Fazendo Dinheiro",
       "logo": "https://dinheironu.vercel.app/images/favicon.svg",
-      "url": "https://dinheironu.vercel.app",
-      "sameAs": [
-        "https://www.instagram.com/fazendodinheiro",
-        "https://www.youtube.com/@fazendodinheiro"
-      ]
+      "url": "https://dinheironu.vercel.app"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -59,6 +55,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 <div id="market-ticker"></div>
 
 
@@ -76,22 +73,24 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="sobre.html" class="nav-link">Sobre</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
       </ul>
 
-      <form action="busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
-        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
-        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      <form action="busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
       </form>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <main id="conteudo-principal">
 
 
 
@@ -126,7 +125,7 @@
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-number">50<span class="stat-plus">+</span></span>
+          <span class="stat-number">40<span class="stat-plus">+</span></span>
           <span class="stat-label">Artigos</span>
         </div>
         <div class="stat-divider"></div>
@@ -164,7 +163,7 @@
             <div class="card-meta">
               <span class="card-author">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg>
-                Francisco Gomes
+                Redação Fazendo Dinheiro
               </span>
               <span class="card-date">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg>
@@ -189,12 +188,12 @@
           </div>
           <div class="card-body">
             <div class="card-meta">
-              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Francisco Gomes</span>
+              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Redação Fazendo Dinheiro</span>
               <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 21 Jul 2026</span>
               <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 6 min</span>
             </div>
-            <h3 class="card-title"><a href="artigos/investimentos.html" id="article-link-invest">Os melhores investimentos para iniciantes em 2026</a></h3>
-            <p class="card-excerpt">Não precisa ser expert para começar. Descubra as opções mais seguras e rentáveis para quem está dando os primeiros passos no mundo dos investimentos.</p>
+            <h3 class="card-title"><a href="artigos/investimentos.html" id="article-link-invest">Primeiros passos nos investimentos para iniciantes</a></h3>
+            <p class="card-excerpt">Não precisa ser expert para começar. Conheça os principais conceitos de reserva de emergência, renda fixa, prazos e riscos para quem está dando os primeiros passos.</p>
             <a href="artigos/investimentos.html" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
           </div>
         </article>
@@ -207,7 +206,7 @@
           </div>
           <div class="card-body">
             <div class="card-meta">
-              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Francisco Gomes</span>
+              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Redação Fazendo Dinheiro</span>
               <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 14 Jul 2026</span>
               <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 5 min</span>
             </div>
@@ -225,12 +224,12 @@
           </div>
           <div class="card-body">
             <div class="card-meta">
-              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Francisco Gomes</span>
+              <span class="card-author"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2"/></svg> Redação Fazendo Dinheiro</span>
               <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 07 Jul 2026</span>
               <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 7 min</span>
             </div>
             <h3 class="card-title"><a href="artigos/tesouro.html" id="article-link-tesouro">Tesouro Direto para quem tem medo de investir</a></h3>
-            <p class="card-excerpt">O investimento mais seguro do Brasil explicado do zero. Descubra como funciona, quanto rende e por onde começar sem precisar entender nada de economia.</p>
+            <p class="card-excerpt">Os títulos públicos federais explicados do zero: tipos de título, tributação, riscos no resgate antecipado e o que observar antes de aplicar.</p>
             <a href="artigos/tesouro.html" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
           </div>
         </article>
@@ -266,36 +265,38 @@
           <div class="tool-form" id="form-juros">
             <div class="tool-input-group">
               <label for="juros-capital">Capital Inicial (R$)</label>
-              <input type="number" id="juros-capital" placeholder="1.000,00" min="0" />
+              <input type="number" id="juros-capital" placeholder="1000" min="0" step="0.01" />
             </div>
             <div class="tool-input-row">
               <div class="tool-input-group">
                 <label for="juros-taxa">Taxa mensal (%)</label>
-                <input type="number" id="juros-taxa" placeholder="1,0" step="0.1" min="0" />
+                <input type="number" id="juros-taxa" placeholder="1.0" step="0.01" min="0" />
               </div>
               <div class="tool-input-group">
                 <label for="juros-meses">Período (meses)</label>
-                <input type="number" id="juros-meses" placeholder="24" min="1" />
+                <input type="number" id="juros-meses" placeholder="24" min="1" step="1" />
               </div>
             </div>
             <div class="tool-input-group">
               <label for="juros-aporte">Aporte mensal (R$)</label>
-              <input type="number" id="juros-aporte" placeholder="200,00" min="0" />
+              <input type="number" id="juros-aporte" placeholder="200" min="0" step="0.01" />
             </div>
-            <button class="tool-btn" id="btn-calcular-juros" onclick="calcularJuros()">Calcular →</button>
+            <button type="button" class="tool-btn" id="btn-calcular-juros" onclick="calcularJuros()">Calcular →</button>
+            <div class="tool-inline-error" id="error-juros" role="alert" aria-live="polite" hidden></div>
             <div class="tool-result" id="result-juros" style="display:none;">
               <div class="result-row">
                 <span>Total Investido:</span>
                 <strong id="res-investido">—</strong>
               </div>
               <div class="result-row">
-                <span>Rendimento:</span>
+                <span>Rendimento bruto:</span>
                 <strong id="res-rendimento" class="result-green">—</strong>
               </div>
               <div class="result-row result-row--total">
-                <span>Montante Final:</span>
+                <span>Montante Final bruto:</span>
                 <strong id="res-montante">—</strong>
               </div>
+              <p class="tool-inline-note">Simulação bruta e simplificada (taxa constante). Não desconta IR, IOF, taxas de custódia nem inflação.</p>
             </div>
           </div>
         </div>
@@ -305,20 +306,22 @@
           <div class="tool-icon-wrap tool-icon--blue">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
-          <div class="tool-badge tool-badge--novo">NOVO</div>
+          <div class="tool-badge tool-badge--novo">ORÇAMENTO</div>
           <h3 class="tool-title">Controle de Gastos Mensais</h3>
-          <p class="tool-desc">Informe sua renda e distribua nos pilares essenciais com a regra 50-30-20 automática.</p>
+          <p class="tool-desc">Informe sua renda líquida para dividir os percentuais educativos da regra 50-30-20.</p>
 
           <div class="tool-form" id="form-gastos">
             <div class="tool-input-group">
               <label for="gastos-renda">Renda Líquida Mensal (R$)</label>
-              <input type="number" id="gastos-renda" placeholder="3.000,00" min="0" />
+              <input type="number" id="gastos-renda" placeholder="3000" min="0" step="0.01" />
             </div>
-            <button class="tool-btn tool-btn--blue" id="btn-calcular-gastos" onclick="calcularGastos()">Calcular →</button>
+            <button type="button" class="tool-btn tool-btn--blue" id="btn-calcular-gastos" onclick="calcularGastos()">Calcular →</button>
+            <div class="tool-inline-error" id="error-gastos" role="alert" aria-live="polite" hidden></div>
             <div class="tool-result" id="result-gastos" style="display:none;">
               <div class="result-row"><span>🏠 Necessidades (50%):</span><strong id="res-necessidades">—</strong></div>
               <div class="result-row"><span>🎉 Lazer (30%):</span><strong id="res-lazer">—</strong></div>
-              <div class="result-row result-row--total"><span>💰 Poupança (20%):</span><strong id="res-poupanca" class="result-green">—</strong></div>
+              <div class="result-row result-row--total"><span>💰 Reserva/Dívidas (20%):</span><strong id="res-poupanca" class="result-green">—</strong></div>
+              <p class="tool-inline-note">Referência educativa sobre renda líquida já livre de descontos em folha.</p>
             </div>
           </div>
 
@@ -331,7 +334,7 @@
             <div class="tool-progress-legend">
               <span><i class="leg-dot leg-dot--red"></i>Necessidades 50%</span>
               <span><i class="leg-dot leg-dot--yellow"></i>Lazer 30%</span>
-              <span><i class="leg-dot leg-dot--green"></i>Poupança 20%</span>
+              <span><i class="leg-dot leg-dot--green"></i>Reserva 20%</span>
             </div>
           </div>
         </div>
@@ -343,32 +346,34 @@
           </div>
           <div class="tool-badge tool-badge--essencial">ESSENCIAL</div>
           <h3 class="tool-title">Calculadora de Financiamento</h3>
-          <p class="tool-desc">Simule parcelas de financiamento imobiliário ou de veículo e saiba o custo real antes de assinar.</p>
+          <p class="tool-desc">Simule parcelas nominais pela Tabela Price para entender o peso dos juros antes de contratar crédito.</p>
 
           <div class="tool-form" id="form-financiamento">
             <div class="tool-input-group">
               <label for="fin-valor">Valor do bem (R$)</label>
-              <input type="number" id="fin-valor" placeholder="300.000,00" min="0" />
+              <input type="number" id="fin-valor" placeholder="300000" min="0" step="0.01" />
             </div>
             <div class="tool-input-row">
               <div class="tool-input-group">
                 <label for="fin-entrada">Entrada (R$)</label>
-                <input type="number" id="fin-entrada" placeholder="60.000,00" min="0" />
+                <input type="number" id="fin-entrada" placeholder="60000" min="0" step="0.01" />
               </div>
               <div class="tool-input-group">
                 <label for="fin-taxa">Taxa mensal (%)</label>
-                <input type="number" id="fin-taxa" placeholder="0,79" step="0.01" min="0" />
+                <input type="number" id="fin-taxa" placeholder="0.85" step="0.01" min="0" />
               </div>
             </div>
             <div class="tool-input-group">
               <label for="fin-meses">Prazo (meses)</label>
-              <input type="number" id="fin-meses" placeholder="360" min="1" />
+              <input type="number" id="fin-meses" placeholder="360" min="1" step="1" />
             </div>
-            <button class="tool-btn tool-btn--green" id="btn-calcular-fin" onclick="calcularFinanciamento()">Calcular →</button>
+            <button type="button" class="tool-btn tool-btn--green" id="btn-calcular-fin" onclick="calcularFinanciamento()">Calcular →</button>
+            <div class="tool-inline-error" id="error-financiamento" role="alert" aria-live="polite" hidden></div>
             <div class="tool-result" id="result-financiamento" style="display:none;">
-              <div class="result-row"><span>Parcela mensal:</span><strong id="res-parcela">—</strong></div>
-              <div class="result-row"><span>Total a pagar:</span><strong id="res-total-fin">—</strong></div>
-              <div class="result-row result-row--total"><span>Juros totais:</span><strong id="res-juros-fin" class="result-red">—</strong></div>
+              <div class="result-row"><span>Parcela mensal (Price):</span><strong id="res-parcela">—</strong></div>
+              <div class="result-row"><span>Total pago (entrada + parcelas):</span><strong id="res-total-fin">—</strong></div>
+              <div class="result-row result-row--total"><span>Juros nominais totais:</span><strong id="res-juros-fin" class="result-red">—</strong></div>
+              <p class="tool-inline-note">Modelo simplificado (parcelas fixas nominais). Não inclui seguros (MIP/DFI), IOF, tarifas nem TR/IPCA.</p>
             </div>
           </div>
         </div>
@@ -518,8 +523,8 @@
               <span class="card-date"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg> 10 Jun 2026</span>
               <span class="card-read"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 5 min</span>
             </div>
-            <h3 class="card-title"><a href="artigos/juros-cartao.html" id="recent-link-juros">Cartão de crédito em 2026: Como evitar os 400% de juros do rotativo</a></h3>
-            <p class="card-excerpt">O rotativo do cartão é o investimento mais caro do Brasil. Aprenda como fugir dessa armadilha e economizar milhares.</p>
+            <h3 class="card-title"><a href="artigos/juros-cartao.html" id="recent-link-juros">Cartão de crédito: como funciona o rotativo e o teto de juros</a></h3>
+            <p class="card-excerpt">Entenda por que o crédito rotativo está entre os mais caros do país, o que diz a regra do limite de 100% de juros e quais alternativas comparar.</p>
             <a href="artigos/juros-cartao.html" class="card-cta">Ler artigo <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
           </div>
         </article>
@@ -540,32 +545,17 @@
         <div class="newsletter-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#f59e0b" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#f59e0b" stroke-width="2"/></svg>
         </div>
-        <h2 class="newsletter-title">Receba Dicas Financeiras <span class="newsletter-accent">Semanais</span></h2>
-        <p class="newsletter-subtitle">Toda semana uma dica prática direto no seu e-mail. Sem spam, sem enrolação. Pode cancelar quando quiser.</p>
+        <h2 class="newsletter-title">Newsletter <span class="newsletter-accent">em preparação</span></h2>
+        <p class="newsletter-subtitle">Estamos configurando um serviço seguro de envio de e-mails com confirmação e descadastro. Enquanto isso, explore nossos artigos e simuladores gratuitamente.</p>
 
-        <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
-          <div class="newsletter-input-wrap">
-            <svg class="newsletter-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
-            <input type="email" id="newsletter-email" placeholder="seu@email.com.br" required />
-          </div>
-          <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">
-            <span id="newsletter-btn-text">Quero Receber!</span>
-            <svg id="newsletter-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-          </button>
-        </form>
-
-        <div class="newsletter-success" id="newsletterSuccess" style="display:none;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span>Perfeito! Você está na lista. Primeira dica chega em breve 🎉</span>
+        <div class="newsletter-status-card" role="status">
+          <strong>Newsletter em preparação</strong>
+          <p>O cadastro de e-mail está temporariamente desativado para não exibir confirmações sem envio real.</p>
         </div>
-
-        <p class="newsletter-guarantee">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/></svg>
-          Nós odiamos spam. Pode cancelar quando quiser.
-        </p>
       </div>
     </div>
   </section>
+  </main>
 
   
   
@@ -610,10 +600,11 @@
           <ul class="footer-links" style="margin-top: 16px;">
             <li><a href="artigos/orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
             <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos</a></li>
-            <li><a href="artigos/imposto-renda.html" id="footer-link-dividas">Imposto de Renda</a></li>
+            <li><a href="imposto-renda.html" id="footer-link-dividas">Imposto de Renda</a></li>
             <li><a href="artigos/cartao.html" id="footer-link-tesouro">Cartão de Crédito</a></li>
           </ul>
-        
+        </div>
+
         <div class="footer-col">
           <h4 class="footer-col-title" style="color: var(--white); font-size: 1.1rem; text-transform: none; letter-spacing: normal;">Categorias</h4>
           <ul class="footer-links" style="margin-top: 16px;">
@@ -626,20 +617,6 @@
 
       </div>
 
-      </div>
-
-      
-      <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 16px;">
-        <a href="https://www.instagram.com/fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255,255,255,0.6); transition: color 0.2s;" onmouseover="this.style.color='#E4405F'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color: rgba(255,255,255,0.6); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="color: rgba(255,255,255,0.6); transition: color 0.2s;" onmouseover="this.style.color='#25D366'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-      </div>
       <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
         <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
         <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
@@ -653,12 +630,11 @@
   </button>
 
   <script src="js/main.js"></script>
-
   <script src="js/ticker.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>

@@ -1,47 +1,34 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Orçamento para Autônomos (Salário Variável) | Fazendo Dinheiro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css?v=3"/>
-  <style>
-    body { background: #f8fafc; }
-    .tool-hero { padding: 120px 20px 60px; background: linear-gradient(135deg, #0f172a, #1e3a5f); color: #fff; text-align: center; }
-    .tool-hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
-    .tool-container { max-width: 600px; margin: -40px auto 60px; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #334155; }
-    .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; }
-    .btn { display: block; width: 100%; padding: 14px; background: #f59e0b; color: #0f172a; font-weight: 700; font-size: 1.1rem; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-    .btn:hover { background: #d97706; }
-    .result-box { display: none; margin-top: 32px; padding: 24px; border-radius: 8px; background: #f0fdf4; border: 1px solid #bbf7d0; text-align: center; }
-    .result-box.error { background: #fff1f2; border-color: #fecdd3; }
-    .result-value { font-size: 2.5rem; font-weight: 800; color: #166534; margin: 16px 0; }
-  </style>
+  <meta name="description" content="Defina um teto conservador para custos fixos e quanto reservar nos meses de maior faturamento quando sua renda varia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
   <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
   <link rel="manifest" href="../manifest.json" />
-
   <link rel="canonical" href="https://dinheironu.vercel.app/ferramentas/salario-variavel.html" />
   <meta property="og:title" content="Orçamento para Autônomos (Salário Variável) | Fazendo Dinheiro" />
-  <meta property="og:description" content="Ferramenta financeira gratuita." />
+  <meta property="og:description" content="Calculadora educativa para definir teto de gastos fixos e reserva de meses de alta para quem tem renda variável." />
   <meta property="og:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
   <meta property="og:url" content="https://dinheironu.vercel.app/ferramentas/salario-variavel.html" />
   <meta property="og:site_name" content="Fazendo Dinheiro" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Orçamento para Autônomos (Salário Variável) | Fazendo Dinheiro" />
-  <meta name="twitter:description" content="Ferramenta financeira gratuita." />
+  <meta name="twitter:description" content="Calculadora educativa para definir teto de gastos fixos e reserva de meses de alta para quem tem renda variável." />
   <meta name="twitter:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Orçamento para Autônomos (Salário Variável) | Fazendo Dinheiro",
-    "description": "Ferramenta financeira gratuita.",
+    "description": "Calculadora educativa de planejamento financeiro para renda variável.",
     "url": "https://dinheironu.vercel.app/ferramentas/salario-variavel.html",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
@@ -53,91 +40,199 @@
   }
   </script>
 </head>
-<body>
-<div id="market-ticker"></div>
-
+<body class="tool-page">
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <div id="market-ticker"></div>
 
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
         <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
         <li><a href="../blog.html" class="nav-link">Blog</a></li>
-        <li><a href="../ferramentas.html" class="nav-link">Ferramentas</a></li>
-        <li><a href="../contato.html">Contato</a></li>
+        <li><a href="../ferramentas.html" class="nav-link active">Ferramentas</a></li>
+        <li><a href="../contato.html" class="nav-link">Contato</a></li>
       </ul>
+      <form action="../busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
+      </form>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-    <header class="tool-hero">
-      <h1>Calculadora do Salário Variável</h1>
-      <p>Descubra seu "Padrão de Vida Seguro" baseado na sua média de ganhos.</p>
-    </header>
-    <main class="tool-container">
-      <div class="form-group">
-        <label>Qual foi seu PIOR mês de ganhos? (R$)</label>
-        <input type="number" id="piorMes" placeholder="Ex: 2000">
-      </div>
-      <div class="form-group">
-        <label>Qual foi seu MELHOR mês de ganhos? (R$)</label>
-        <input type="number" id="melhorMes" placeholder="Ex: 8000">
-      </div>
-      <button class="btn" onclick="calcularOrcamento()">Definir Orçamento</button>
-      
-      <div class="result-box" id="resultado" style="text-align:left;">
-        <p style="margin:0 0 8px;">O seu Custo de Vida Fixo NÃO deve passar de:</p>
-        <div class="result-value" id="tetoFixo" style="margin:0 0 24px;">R$ 0,00</div>
-        
-        <p style="margin:0 0 8px;">Nos meses de alta, guarde para a "Caixinha":</p>
-        <div class="result-value" id="valorGuarda" style="margin:0 0 0; color:#2563eb; font-size:1.8rem;">R$ 0,00</div>
-      </div>
-    </main>
-    <script>
-      function calcularOrcamento() {
-        const pior = parseFloat(document.getElementById('piorMes').value);
-        const melhor = parseFloat(document.getElementById('melhorMes').value);
-        const box = document.getElementById('resultado');
-        
-        if(isNaN(pior) || isNaN(melhor) || pior > melhor) {
-          box.style.display = 'block'; box.className = 'result-box error';
-          box.innerHTML = 'Preencha os valores corretamente.'; return;
-        }
-        
-        // Regra do autônomo: Despesa fixa <= Pior Mês
-        const teto = pior * 0.9; 
-        const media = (pior + melhor) / 2;
-        const excedente = melhor - media; // Guarda o excedente da média nos meses bons
-        
-        box.style.display = 'block'; box.className = 'result-box';
-        document.getElementById('tetoFixo').innerText = teto.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-        document.getElementById('valorGuarda').innerText = excedente.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-      }
-    </script>
-    
-  
-  <div style="max-width: 700px; margin: 40px auto 0; padding: 24px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px;">
-    <p style="margin: 0 0 8px; font-size: 0.85rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.05em;">Leia também</p>
-    <h3 style="margin: 0 0 8px; font-size: 1.1rem; font-weight: 700; color: #0f172a;">Orçamento com Salário Variável</h3>
-    <p style="margin: 0 0 16px; font-size: 0.9rem; color: #475569; line-height: 1.6;">Dicas para freelancers e comissionados organizarem suas finanças.</p>
-    <a href="../artigos/orcamento-variavel.html" style="display: inline-flex; align-items: center; gap: 6px; color: #2563eb; font-weight: 600; text-decoration: none; font-size: 0.9rem;">Ler artigo completo →</a>
-  </div>
+  <header class="tool-hero">
+    <h1>Calculadora do Salário Variável</h1>
+    <p>Estime um teto conservador para seus custos fixos e quanto reservar nos meses de maior ganho.</p>
+  </header>
 
-  <footer class="footer" id="footer" style="margin-top:80px; padding:40px; background:#0f172a; color:#fff; text-align:center;">
-    <a href="../index.html" style="color:#fff; margin:0 10px;">Home</a> | 
-    <a href="../sobre.html" style="color:#fff; margin:0 10px;">Sobre</a> | 
-    <a href="../cookies.html" style="color:#fff; margin:0 10px;">Cookies</a>
-    <p style="margin-top:20px; color:#94a3b8;">&copy; 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+  <main id="conteudo-principal">
+    <div class="tool-container">
+      <form id="variavel-form" novalidate>
+        <div class="tool-form-row">
+          <div class="tool-form-group">
+            <label for="piorMes">Pior mês recente de renda líquida (R$)</label>
+            <input type="number" id="piorMes" inputmode="decimal" step="0.01" min="0" max="1000000000000" placeholder="Ex: 2000" />
+          </div>
+          <div class="tool-form-group">
+            <label for="melhorMes">Melhor mês recente de renda líquida (R$)</label>
+            <input type="number" id="melhorMes" inputmode="decimal" step="0.01" min="0.01" max="1000000000000" placeholder="Ex: 8000" />
+          </div>
+        </div>
+        <span class="tool-hint" style="margin-bottom:20px;">Informe valores líquidos (já descontados impostos, DAS/MEI e custos diretos da atividade).</span>
+
+        <button type="submit" class="tool-btn-primary">Definir Referência de Orçamento</button>
+      </form>
+
+      <div id="erro-variavel" class="tool-error" role="alert" aria-live="polite" hidden></div>
+
+      <section id="resultado" class="tool-result-box" aria-live="polite" hidden>
+        <h2>Referência educativa para renda variável</h2>
+        <div class="tool-result-grid">
+          <div class="tool-metric">
+            <span class="tool-metric-label">Teto sugerido de custos fixos (90% do pior mês)</span>
+            <strong class="tool-metric-value" id="tetoFixo">R$ 0,00</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Reserva sugerida no mês de alta</span>
+            <strong class="tool-metric-value tool-metric-value--blue" id="valorGuarda">R$ 0,00</strong>
+          </div>
+        </div>
+        <div class="tool-metric" style="margin-bottom:12px;">
+          <span class="tool-metric-label">Média simples entre o pior e o melhor mês</span>
+          <strong class="tool-metric-value tool-metric-value--gold" id="mediaMes">R$ 0,00</strong>
+        </div>
+        <p class="tool-disclaimer">
+          <strong>Metodologia simplificada:</strong> o teto fixo corresponde a 90% da renda líquida do seu pior mês informado, deixando 10% de margem de segurança. A reserva sugerida nos meses de alta equivale ao excedente acima da média simples `(Melhor − (Pior + Melhor)/2)`. Não desconta impostos (INSS/IR/DAS) se você informou valores brutos, nem substitui uma reserva de emergência para períodos sem faturamento.
+        </p>
+      </section>
+    </div>
+
+    <aside class="tool-related-card">
+      <p class="tool-related-eyebrow">Leia também</p>
+      <h2>Orçamento com Salário Variável</h2>
+      <p>Dicas práticas para autônomos e comissionados separarem as contas pessoais das despesas do trabalho.</p>
+      <a href="../artigos/orcamento-variavel.html" class="tool-related-link">Ler artigo completo →</a>
+    </aside>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <p class="footer-tagline">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo informativo gratuito e ferramentas educativas.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Links Úteis</h4>
+          <div class="footer-links-grid">
+            <ul class="footer-links">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../ferramentas.html">Ferramentas</a></li>
+              <li><a href="../contato.html">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="../sobre.html">Sobre Nós</a></li>
+              <li><a href="../privacidade.html">Política de Privacidade</a></li>
+              <li><a href="../termos.html">Termos de Uso</a></li>
+              <li><a href="../cookies.html">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="../investimentos.html">Investimentos</a></li>
+            <li><a href="../dividas.html">Dívidas e Crédito</a></li>
+            <li><a href="../orcamento.html">Orçamento</a></li>
+            <li><a href="../economia.html">Economia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center;">
+        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
 
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
   <script src="../js/ticker.js"></script>
   <script>
+    (function () {
+      const form = document.getElementById('variavel-form');
+      const errBox = document.getElementById('erro-variavel');
+      const resBox = document.getElementById('resultado');
+
+      function parseField(id) {
+        const raw = String(document.getElementById(id).value || '').trim().replace(',', '.');
+        if (!raw) return NaN;
+        const val = Number(raw);
+        return Number.isFinite(val) ? val : NaN;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const pior = parseField('piorMes');
+        const melhor = parseField('melhorMes');
+
+        if (Number.isNaN(pior) || pior < 0 || pior > 1e12) {
+          resBox.hidden = true;
+          errBox.textContent = 'Informe uma renda líquida válida para o pior mês (zero ou positiva até R$ 1 trilhão).';
+          errBox.hidden = false;
+          document.getElementById('piorMes').focus();
+          return;
+        }
+        if (Number.isNaN(melhor) || melhor <= 0 || melhor > 1e12) {
+          resBox.hidden = true;
+          errBox.textContent = 'Informe uma renda líquida positiva para o melhor mês (até R$ 1 trilhão).';
+          errBox.hidden = false;
+          document.getElementById('melhorMes').focus();
+          return;
+        }
+        if (pior > melhor) {
+          resBox.hidden = true;
+          errBox.textContent = 'O valor do pior mês não pode ser maior que o do melhor mês.';
+          errBox.hidden = false;
+          document.getElementById('piorMes').focus();
+          return;
+        }
+
+        const teto = Math.round(pior * 0.9 * 100) / 100;
+        const media = Math.round(((pior + melhor) / 2) * 100) / 100;
+        const excedente = Math.round((melhor - media) * 100) / 100;
+
+        errBox.hidden = true;
+        errBox.textContent = '';
+
+        document.getElementById('tetoFixo').textContent = teto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        document.getElementById('mediaMes').textContent = media.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        document.getElementById('valorGuarda').textContent = excedente.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        resBox.hidden = false;
+      });
+    })();
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>
-</body></html>
+</body>
+</html>

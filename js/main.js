@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   DINHEIRO NU — JavaScript
+   FAZENDO DINHEIRO — JavaScript Principal
    ═══════════════════════════════════════════════════════ */
 
 /* ── Navbar: scroll effect + active link ── */
@@ -7,152 +7,249 @@ const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-window.addEventListener('scroll', () => {
-  // Navbar shadow on scroll
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
+if (navbar || scrollTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (navbar) {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }
+    if (scrollTopBtn) {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }
 
-  // Scroll-to-top button
-  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-
-  // Active nav link based on section
-  const sections = document.querySelectorAll('section[id]');
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (window.scrollY >= sectionTop) current = section.getAttribute('id');
-  });
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
-  });
-});
+    const sections = document.querySelectorAll('section[id]');
+    if (sections.length && navLinks.length) {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id') || '';
+        }
+      });
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          link.classList.toggle('active', href === `#${current}`);
+        }
+      });
+    }
+  }, { passive: true });
+}
 
 /* ── Mobile menu ── */
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navLinksEl = document.getElementById('navLinks');
 
-mobileMenuBtn.addEventListener('click', () => {
-  mobileMenuBtn.classList.toggle('open');
-  navLinksEl.classList.toggle('mobile-open');
-});
+if (mobileMenuBtn && navLinksEl) {
+  mobileMenuBtn.setAttribute('aria-expanded', 'false');
 
-// Close mobile menu when a link is clicked
-navLinksEl.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
+  const closeMobileMenu = () => {
     mobileMenuBtn.classList.remove('open');
     navLinksEl.classList.remove('mobile-open');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+  };
+
+  mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = navLinksEl.classList.toggle('mobile-open');
+    mobileMenuBtn.classList.toggle('open', isOpen);
+    mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
   });
-});
+
+  navLinksEl.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinksEl.classList.contains('mobile-open')) {
+      closeMobileMenu();
+      mobileMenuBtn.focus();
+    }
+  });
+}
 
 /* ── Reveal animations on scroll ── */
 const revealEls = document.querySelectorAll(
   '.article-card, .tool-card, .value-item, .sobre-stat, .section-header'
 );
-revealEls.forEach(el => el.classList.add('reveal'));
+if (revealEls.length && 'IntersectionObserver' in window) {
+  revealEls.forEach(el => el.classList.add('reveal'));
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+}
 
-revealEls.forEach(el => revealObserver.observe(el));
-
-/* ── Helper: format currency ── */
+/* ── Helpers numéricos e de erro ── */
 function formatBRL(value) {
   return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
+function parseNumericInput(id, fallbackZero = false) {
+  const el = document.getElementById(id);
+  if (!el) return NaN;
+  const raw = String(el.value || '').trim().replace(',', '.');
+  if (!raw) return fallbackZero ? 0 : NaN;
+  const num = Number(raw);
+  return Number.isFinite(num) ? num : NaN;
+}
+
+function showInlineError(errorId, resultId, message, focusId) {
+  const errEl = document.getElementById(errorId);
+  const resEl = document.getElementById(resultId);
+  if (resEl) resEl.style.display = 'none';
+  if (errEl) {
+    errEl.textContent = message;
+    errEl.hidden = false;
+  }
+  if (focusId) {
+    shakeInput(focusId);
+    const focusEl = document.getElementById(focusId);
+    if (focusEl) focusEl.focus();
+  }
+}
+
+function clearInlineError(errorId) {
+  const errEl = document.getElementById(errorId);
+  if (errEl) {
+    errEl.textContent = '';
+    errEl.hidden = true;
+  }
+}
+
 /* ══════════════════════════════════════════════════════
-   TOOL 1: Calculadora de Juros Compostos
+   TOOL 1 (HOME): Calculadora de Juros Compostos
 ══════════════════════════════════════════════════════ */
 function calcularJuros() {
-  const capital  = parseFloat(document.getElementById('juros-capital').value) || 0;
-  const taxa     = parseFloat(document.getElementById('juros-taxa').value) / 100 || 0;
-  const meses    = parseInt(document.getElementById('juros-meses').value) || 0;
-  const aporte   = parseFloat(document.getElementById('juros-aporte').value) || 0;
+  const capital = parseNumericInput('juros-capital', true);
+  const taxaPct = parseNumericInput('juros-taxa', false);
+  const mesesRaw = parseNumericInput('juros-meses', false);
+  const aporte = parseNumericInput('juros-aporte', true);
 
-  if (meses <= 0 || taxa <= 0) {
-    shakeInput('juros-taxa');
-    shakeInput('juros-meses');
+  if (Number.isNaN(capital) || capital < 0 || capital > 1e12) {
+    showInlineError('error-juros', 'result-juros', 'Informe um capital inicial válido (zero ou positivo até R$ 1 trilhão).', 'juros-capital');
+    return;
+  }
+  if (Number.isNaN(aporte) || aporte < 0 || aporte > 1e12) {
+    showInlineError('error-juros', 'result-juros', 'Informe um aporte mensal válido (zero ou positivo).', 'juros-aporte');
+    return;
+  }
+  if (capital === 0 && aporte === 0) {
+    showInlineError('error-juros', 'result-juros', 'Informe um capital inicial ou aporte mensal maior que zero.', 'juros-capital');
+    return;
+  }
+  if (Number.isNaN(taxaPct) || taxaPct < 0 || taxaPct > 100) {
+    showInlineError('error-juros', 'result-juros', 'Informe uma taxa mensal entre 0% e 100%.', 'juros-taxa');
+    return;
+  }
+  if (Number.isNaN(mesesRaw) || !Number.isInteger(mesesRaw) || mesesRaw < 1 || mesesRaw > 1200) {
+    showInlineError('error-juros', 'result-juros', 'Informe um período inteiro entre 1 e 1.200 meses.', 'juros-meses');
     return;
   }
 
-  // M = C*(1+i)^n + PMT * ((1+i)^n - 1) / i
-  const fator      = Math.pow(1 + taxa, meses);
-  const montante   = capital * fator + (taxa > 0 ? aporte * (fator - 1) / taxa : aporte * meses);
-  const investido  = capital + (aporte * meses);
+  const meses = mesesRaw;
+  const taxa = taxaPct / 100;
+  let montante;
+  if (taxa === 0) {
+    montante = capital + (aporte * meses);
+  } else {
+    const fator = Math.pow(1 + taxa, meses);
+    montante = capital * fator + aporte * ((fator - 1) / taxa);
+  }
+
+  if (!Number.isFinite(montante)) {
+    showInlineError('error-juros', 'result-juros', 'Os valores informados excedem o limite de cálculo. Reduza o prazo ou a taxa.', 'juros-meses');
+    return;
+  }
+
+  const investido = capital + (aporte * meses);
   const rendimento = montante - investido;
 
-  document.getElementById('res-investido').textContent  = formatBRL(investido);
+  clearInlineError('error-juros');
+  document.getElementById('res-investido').textContent = formatBRL(investido);
   document.getElementById('res-rendimento').textContent = formatBRL(rendimento);
-  document.getElementById('res-montante').textContent   = formatBRL(montante);
+  document.getElementById('res-montante').textContent = formatBRL(montante);
 
   const resultEl = document.getElementById('result-juros');
   resultEl.style.display = 'block';
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 /* ══════════════════════════════════════════════════════
-   TOOL 2: Controle de Gastos — Regra 50/30/20
+   TOOL 2 (HOME): Controle de Gastos — Regra 50/30/20
 ══════════════════════════════════════════════════════ */
 function calcularGastos() {
-  const renda = parseFloat(document.getElementById('gastos-renda').value) || 0;
+  const renda = parseNumericInput('gastos-renda', false);
 
-  if (renda <= 0) {
-    shakeInput('gastos-renda');
+  if (Number.isNaN(renda) || renda <= 0 || renda > 1e12) {
+    showInlineError('error-gastos', 'result-gastos', 'Informe uma renda líquida mensal positiva.', 'gastos-renda');
     return;
   }
 
-  const necessidades = renda * 0.50;
-  const lazer        = renda * 0.30;
-  const poupanca     = renda * 0.20;
+  const necessidades = Math.round(renda * 0.50 * 100) / 100;
+  const lazer = Math.round(renda * 0.30 * 100) / 100;
+  const poupanca = Math.round((renda - necessidades - lazer) * 100) / 100;
 
+  clearInlineError('error-gastos');
   document.getElementById('res-necessidades').textContent = formatBRL(necessidades);
-  document.getElementById('res-lazer').textContent        = formatBRL(lazer);
-  document.getElementById('res-poupanca').textContent     = formatBRL(poupanca);
+  document.getElementById('res-lazer').textContent = formatBRL(lazer);
+  document.getElementById('res-poupanca').textContent = formatBRL(poupanca);
 
   const resultEl = document.getElementById('result-gastos');
   resultEl.style.display = 'block';
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 /* ══════════════════════════════════════════════════════
-   TOOL 3: Calculadora de Financiamento (Price)
+   TOOL 3 (HOME): Calculadora de Financiamento (Price)
 ══════════════════════════════════════════════════════ */
 function calcularFinanciamento() {
-  const valor   = parseFloat(document.getElementById('fin-valor').value)   || 0;
-  const entrada = parseFloat(document.getElementById('fin-entrada').value)  || 0;
-  const taxa    = parseFloat(document.getElementById('fin-taxa').value) / 100 || 0;
-  const meses   = parseInt(document.getElementById('fin-meses').value)     || 0;
+  const valor = parseNumericInput('fin-valor', false);
+  const entrada = parseNumericInput('fin-entrada', true);
+  const taxaPct = parseNumericInput('fin-taxa', false);
+  const mesesRaw = parseNumericInput('fin-meses', false);
 
-  if (valor <= 0 || meses <= 0 || taxa <= 0) {
-    shakeInput('fin-taxa');
-    shakeInput('fin-meses');
+  if (Number.isNaN(valor) || valor <= 0 || valor > 1e12) {
+    showInlineError('error-financiamento', 'result-financiamento', 'Informe o valor do bem maior que zero.', 'fin-valor');
+    return;
+  }
+  if (Number.isNaN(entrada) || entrada < 0 || entrada >= valor) {
+    showInlineError('error-financiamento', 'result-financiamento', 'A entrada deve ser maior ou igual a zero e menor que o valor do bem.', 'fin-entrada');
+    return;
+  }
+  if (Number.isNaN(taxaPct) || taxaPct < 0 || taxaPct > 50) {
+    showInlineError('error-financiamento', 'result-financiamento', 'Informe uma taxa mensal válida entre 0% e 50%.', 'fin-taxa');
+    return;
+  }
+  if (Number.isNaN(mesesRaw) || !Number.isInteger(mesesRaw) || mesesRaw < 1 || mesesRaw > 600) {
+    showInlineError('error-financiamento', 'result-financiamento', 'Informe um prazo inteiro entre 1 e 600 meses.', 'fin-meses');
     return;
   }
 
   const principal = valor - entrada;
-  if (principal <= 0) {
-    alert('A entrada não pode ser maior ou igual ao valor do bem.');
+  const meses = mesesRaw;
+  const taxa = taxaPct / 100;
+  const parcela = taxa === 0
+    ? principal / meses
+    : (principal * taxa) / (1 - Math.pow(1 + taxa, -meses));
+
+  if (!Number.isFinite(parcela)) {
+    showInlineError('error-financiamento', 'result-financiamento', 'Não foi possível calcular com os parâmetros informados.', 'fin-taxa');
     return;
   }
 
-  // Tabela Price: PMT = PV * i / (1 - (1+i)^-n)
-  const parcela    = principal * taxa / (1 - Math.pow(1 + taxa, -meses));
   const totalPagar = parcela * meses + entrada;
-  const jurosTotais = totalPagar - valor;
+  const jurosTotais = Math.max(0, totalPagar - valor);
 
-  document.getElementById('res-parcela').textContent    = formatBRL(parcela);
-  document.getElementById('res-total-fin').textContent  = formatBRL(totalPagar);
-  document.getElementById('res-juros-fin').textContent  = formatBRL(jurosTotais);
+  clearInlineError('error-financiamento');
+  document.getElementById('res-parcela').textContent = formatBRL(parcela);
+  document.getElementById('res-total-fin').textContent = formatBRL(totalPagar);
+  document.getElementById('res-juros-fin').textContent = formatBRL(jurosTotais);
 
   const resultEl = document.getElementById('result-financiamento');
   resultEl.style.display = 'block';
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 /* ── Shake animation for invalid inputs ── */
@@ -161,7 +258,7 @@ function shakeInput(id) {
   if (!el) return;
   el.style.borderColor = 'var(--red)';
   el.style.animation = 'none';
-  el.offsetHeight; // reflow
+  void el.offsetHeight;
   el.style.animation = 'shake 0.4s ease';
   setTimeout(() => {
     el.style.borderColor = '';
@@ -169,7 +266,6 @@ function shakeInput(id) {
   }, 600);
 }
 
-// Add shake keyframe via JS
 const shakeStyle = document.createElement('style');
 shakeStyle.textContent = `
   @keyframes shake {
@@ -186,140 +282,133 @@ document.head.appendChild(shakeStyle);
 document.querySelectorAll('.tool-form input').forEach(input => {
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
+      e.preventDefault();
       const btn = input.closest('.tool-form').querySelector('.tool-btn');
       if (btn) btn.click();
     }
   });
 });
 
-/* ══════════════════════════════════════════════════════
-   Newsletter
-══════════════════════════════════════════════════════ */
+/* ── Desabilita qualquer envio legado de newsletter sem serviço configurado ── */
 function handleNewsletter(e) {
-  e.preventDefault();
-  const btn      = document.getElementById('newsletter-submit-btn');
-  const btnText  = document.getElementById('newsletter-btn-text');
-  const success  = document.getElementById('newsletterSuccess');
-  const form     = document.getElementById('newsletterForm');
-
-  // Loading state
-  btn.disabled = true;
-  btnText.textContent = 'Inscrevendo...';
-
-  // Simulate async operation
-  setTimeout(() => {
-    form.style.display = 'none';
-    success.style.display = 'flex';
-  }, 1200);
+  if (e && e.preventDefault) e.preventDefault();
+}
+function handleSidebarNewsletter() {
+  return false;
 }
 
 /* ── Smooth hover on article cards ── */
 document.querySelectorAll('.article-card').forEach(card => {
-  card.addEventListener('mouseenter', function() {
+  card.addEventListener('mouseenter', function () {
     this.style.willChange = 'transform';
   });
-  card.addEventListener('mouseleave', function() {
+  card.addEventListener('mouseleave', function () {
     this.style.willChange = 'auto';
   });
 });
 
 /* ── Lazy load images with fade ── */
 const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-const imageObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.style.opacity = '0';
-      img.style.transition = 'opacity 0.5s ease';
-      img.onload = () => { img.style.opacity = '1'; };
-      if (img.complete) img.style.opacity = '1';
-      imageObserver.unobserve(img);
-    }
+if (lazyImages.length && 'IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (!img.complete) {
+          img.style.opacity = '0';
+          img.style.transition = 'opacity 0.4s ease';
+          img.addEventListener('load', () => { img.style.opacity = '1'; }, { once: true });
+          img.addEventListener('error', () => { img.style.opacity = '1'; }, { once: true });
+        }
+        imageObserver.unobserve(img);
+      }
+    });
   });
-});
-lazyImages.forEach(img => imageObserver.observe(img));
+  lazyImages.forEach(img => imageObserver.observe(img));
+}
 
-console.log('%c💰 Fazendo Dinheiro', 'font-size:24px;font-weight:800;color:#f59e0b;');
-console.log('%cFinanças sem enrolação.', 'font-size:14px;color:#64748b;');
-
-
-// Cookie Consent Banner (LGPD)
+/* ── Aviso de Privacidade e Recursos Essenciais ── */
 document.addEventListener('DOMContentLoaded', () => {
-  if (!localStorage.getItem('fazendodinheiro_cookie_consent')) {
+  const storageKey = 'fazendodinheiro_privacy_notice';
+  if (!localStorage.getItem(storageKey)) {
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
-    // Find absolute path to privacidade.html based on current location
-    const inArtigos = window.location.pathname.includes('/artigos/');
-    const privLink = inArtigos ? '../privacidade.html' : 'privacidade.html';
-    
-    banner.innerHTML = `
-      <p>Este site usa cookies de análise para garantir que você obtenha a melhor experiência. Ao continuar navegando, você concorda com a nossa <a href="${privLink}">Política de Privacidade</a>.</p>
-      <button class="cookie-btn" id="accept-cookies">Concordar e Fechar</button>
-    `;
-    document.body.appendChild(banner);
-    
-    // trigger animation
-    setTimeout(() => banner.classList.add('show'), 500);
-    
-    document.getElementById('accept-cookies').addEventListener('click', () => {
-      localStorage.setItem('fazendodinheiro_cookie_consent', 'true');
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Aviso de privacidade e armazenamento local');
+
+    const msg = document.createElement('p');
+    msg.append('Utilizamos apenas recursos técnicos essenciais no navegador (preferência deste aviso e cache local). Não usamos cookies de publicidade ou analytics de terceiros no momento. Consulte ');
+
+    const linkPriv = document.createElement('a');
+    linkPriv.href = '/privacidade.html';
+    linkPriv.textContent = 'Privacidade';
+    msg.appendChild(linkPriv);
+    msg.append(' e ');
+
+    const linkCookies = document.createElement('a');
+    linkCookies.href = '/cookies.html';
+    linkCookies.textContent = 'Cookies';
+    msg.appendChild(linkCookies);
+    msg.append('.');
+
+    const actions = document.createElement('div');
+    actions.className = 'cookie-actions';
+
+    const btnEssential = document.createElement('button');
+    btnEssential.type = 'button';
+    btnEssential.className = 'cookie-btn cookie-btn--secondary';
+    btnEssential.textContent = 'Apenas essenciais';
+
+    const btnOk = document.createElement('button');
+    btnOk.type = 'button';
+    btnOk.className = 'cookie-btn';
+    btnOk.id = 'accept-cookies';
+    btnOk.textContent = 'Entendi e fechar';
+
+    const dismiss = (mode) => {
+      try {
+        localStorage.setItem(storageKey, mode);
+      } catch (_) {
+        // Ignora indisponibilidade de storage privado
+      }
       banner.classList.remove('show');
-      setTimeout(() => banner.remove(), 400);
-    });
+      setTimeout(() => banner.remove(), 350);
+    };
+
+    btnEssential.addEventListener('click', () => dismiss('essential'));
+    btnOk.addEventListener('click', () => dismiss('acknowledged'));
+
+    actions.appendChild(btnEssential);
+    actions.appendChild(btnOk);
+    banner.appendChild(msg);
+    banner.appendChild(actions);
+    document.body.appendChild(banner);
+
+    setTimeout(() => banner.classList.add('show'), 400);
   }
 });
 
-
-// Move search bar to mobile menu on small screens
+/* ── Move search bar to mobile menu on small screens ── */
 document.addEventListener('DOMContentLoaded', () => {
-  const searchForm = document.querySelector('.search-form');
-  const navLinksEl = document.getElementById('navLinks');
-  if (searchForm && navLinksEl) {
+  const searchForm = document.querySelector('.navbar .search-form');
+  const navLinksContainer = document.getElementById('navLinks');
+  const navContainer = document.querySelector('.nav-container');
+  if (searchForm && navLinksContainer && navContainer) {
     const mediaQuery = window.matchMedia('(max-width: 768px)');
     const handleMediaChange = (e) => {
       if (e.matches) {
-        // Move to navLinks
-        navLinksEl.appendChild(searchForm);
-      } else {
-        // Move back to nav-container
-        const navContainer = document.querySelector('.nav-container');
-        if (navContainer) {
-          navContainer.appendChild(searchForm);
+        if (searchForm.parentElement !== navLinksContainer) {
+          navLinksContainer.appendChild(searchForm);
         }
+      } else if (searchForm.parentElement !== navContainer) {
+        navContainer.appendChild(searchForm);
       }
     };
     if (mediaQuery.addEventListener) {
-        mediaQuery.addEventListener('change', handleMediaChange);
+      mediaQuery.addEventListener('change', handleMediaChange);
     } else {
-        mediaQuery.addListener(handleMediaChange); // older browsers
+      mediaQuery.addListener(handleMediaChange);
     }
-    handleMediaChange(mediaQuery); // initial check
+    handleMediaChange(mediaQuery);
   }
 });
-
-/* ── Newsletter Sidebar Handler ── */
-function handleSidebarNewsletter(form) {
-  const emailInput = form.querySelector('input[type="email"]');
-  if (!emailInput) return;
-  
-  const email = emailInput.value.trim();
-  if (!email || !email.includes('@')) {
-    emailInput.style.borderColor = '#ef4444';
-    emailInput.focus();
-    return;
-  }
-
-  // Store in localStorage
-  const subscribers = JSON.parse(localStorage.getItem('fd_subscribers') || '[]');
-  if (!subscribers.includes(email)) {
-    subscribers.push(email);
-    localStorage.setItem('fd_subscribers', JSON.stringify(subscribers));
-  }
-
-  // Show success message
-  const widget = form.closest('.sidebar-widget');
-  if (widget) {
-    widget.innerHTML = '<div style="text-align:center; padding:24px 16px;"><div style="font-size:2rem; margin-bottom:8px;">✅</div><h3 style="font-size:1rem; font-weight:700; color:#166534; margin-bottom:8px;">Inscrito com sucesso!</h3><p style="font-size:0.85rem; color:#166534;">Você receberá nossas dicas no email.</p></div>';
-  }
-}
-

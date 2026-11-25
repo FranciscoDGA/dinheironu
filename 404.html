@@ -1,39 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Página não encontrada | Fazendo Dinheiro</title>
-  <meta name="robots" content="noindex, nofollow"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: #fff; }
-    .container { text-align: center; padding: 40px 24px; max-width: 600px; }
-    .code { font-size: 6rem; font-weight: 700; color: #2563eb; line-height: 1; margin-bottom: 16px; }
-    h1 { font-size: 1.5rem; margin-bottom: 12px; }
-    p { color: #94a3b8; margin-bottom: 32px; line-height: 1.6; }
-    .btn { display: inline-block; padding: 14px 32px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background 0.2s; }
-    .btn:hover { background: #1d4ed8; }
-    .links { margin-top: 24px; }
-    .links a { color: #60a5fa; text-decoration: none; margin: 0 12px; font-size: 0.9rem; }
-    .links a:hover { text-decoration: underline; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Não Encontrada (404) | Fazendo Dinheiro</title>
+  <meta name="description" content="A página solicitada não foi encontrada no portal Fazendo Dinheiro. Use a busca ou retorne à página inicial." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css?v=4" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
 </head>
 <body>
-  <div class="container">
-    <div class="code">404</div>
-    <h1>Página não encontrada</h1>
-    <p>O link que você acessou não existe ou foi movido para outro endereço. Verifique a URL ou volte para a página inicial.</p>
-    <a href="index.html" class="btn">Voltar ao Início</a>
-    <div class="links">
-      <a href="blog.html">Blog</a>
-      <a href="ferramentas.html">Ferramentas</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <div id="market-ticker"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0f172a"/><path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html" class="nav-link">Home</a></li>
+        <li><a href="/sobre.html" class="nav-link">Sobre</a></li>
+        <li><a href="/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="/ferramentas.html" class="nav-link">Ferramentas</a></li>
+        <li><a href="/contato.html" class="nav-link">Contato</a></li>
+      </ul>
+      <form action="/busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
+      </form>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
+  </nav>
+
+  <main id="conteudo-principal" class="category-section" style="padding-top: 150px; min-height: 72vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="legal-card" style="text-align: center; max-width: 720px;">
+        <span class="section-eyebrow">Erro 404</span>
+        <h1 style="font-size: clamp(2.1rem, 5vw, 3.2rem); margin-bottom: 16px;">Página não encontrada</h1>
+        <p>O endereço acessado pode ter sido removido, renomeado ou digitado incorretamente. Use a pesquisa abaixo para localizar um conteúdo ou volte para uma das áreas principais do portal.</p>
+
+        <form action="/busca.html" method="GET" class="search-main-form" role="search" style="margin: 28px 0;">
+          <label for="notfound-search-input" class="sr-only">Buscar conteúdo no Fazendo Dinheiro</label>
+          <input type="text" id="notfound-search-input" name="q" placeholder="Ex.: juros, rotativo, Tesouro Direto, poupança..." required />
+          <button type="submit">Buscar no site</button>
+        </form>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+          <a href="/index.html" class="btn btn-primary">Voltar para o Início</a>
+          <a href="/busca.html" class="btn btn-secondary">Ir para a Busca</a>
+          <a href="/ferramentas.html" class="btn btn-secondary">Abrir Calculadoras</a>
+          <a href="/blog.html" class="btn btn-secondary">Explorar Artigos</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <p class="footer-tagline">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo informativo gratuito e ferramentas educativas.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Links Úteis</h4>
+          <div class="footer-links-grid">
+            <ul class="footer-links">
+              <li><a href="/index.html">Início</a></li>
+              <li><a href="/ferramentas.html">Ferramentas</a></li>
+              <li><a href="/contato.html">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="/sobre.html">Sobre Nós</a></li>
+              <li><a href="/privacidade.html">Política de Privacidade</a></li>
+              <li><a href="/termos.html">Termos de Uso</a></li>
+              <li><a href="/cookies.html">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="/investimentos.html">Investimentos</a></li>
+            <li><a href="/dividas.html">Dívidas e Crédito</a></li>
+            <li><a href="/orcamento.html">Orçamento</a></li>
+            <li><a href="/economia.html">Economia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center;">
+        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/ticker.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
 </body>
 </html>

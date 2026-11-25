@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -11,12 +11,12 @@
   <title>Glossário Financeiro | Fazendo Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&family=" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
-  <link rel="manifest" href="../manifest.json" />
+  <link rel="manifest" href="manifest.json" />
 
   <link rel="canonical" href="https://dinheironu.vercel.app/glossario.html" />
   <meta property="og:title" content="Glossário Financeiro | Fazendo Dinheiro" />
@@ -49,6 +49,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 <div id="market-ticker"></div>
 
 
@@ -70,67 +71,67 @@
         <li><a href="sobre.html" class="nav-link">Sobre</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="ferramentas.html" class="nav-link">Ferramentas</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
       </ul>
 
-      <form action="busca.html" method="GET" class="search-form" style="display:flex; align-items:center; margin-left:16px;">
-        <input type="text" name="q" placeholder="Buscar..." required style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none; font-size:0.9rem;" />
-        <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:6px 10px; border-radius:4px; margin-left:4px; cursor:pointer;">🔍</button>
+      <form action="busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
       </form>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-<main style="padding-top: 120px; padding-bottom: 80px;">
+<main id="conteudo-principal" class="category-section" style="padding-top: 120px; padding-bottom: 80px;">
 
   <section class="section">
-    <div class="container" style="max-width: 900px; margin: 0 auto; background: var(--white); padding: 56px; border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); border: 1px solid rgba(15,23,42,.06);">
+    <div class="container legal-card">
       
-<h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--text-dark); font-weight: 800; letter-spacing: -0.02em;">O Glossário Fazendo Dinheiro</h1>
-<p style="margin-bottom: 40px; font-size: 1.15rem; color: var(--text-muted); line-height: 1.7;">No mercado financeiro, as instituições adoram criar siglas difíceis para fazer você achar que investir é algo complicado e que você precisa da ajuda deles. Nossa missão aqui é quebrar esse muro. Abaixo, traduzimos o "economês" para o português claro, honesto e sem enrolação. Consulte sempre que encontrar um termo estranho por aí.</p>
+<h1 style="margin-bottom: 32px; font-size: 2.5rem; color: var(--white); font-weight: 800; letter-spacing: -0.02em;">O Glossário Fazendo Dinheiro</h1>
+<p style="margin-bottom: 40px; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7;">No mercado financeiro, as instituições adoram criar siglas difíceis para fazer você achar que investir é algo complicado e que você precisa da ajuda deles. Nossa missão aqui é quebrar esse muro. Abaixo, traduzimos o "economês" para o português claro, honesto e sem enrolação. Consulte sempre que encontrar um termo estranho por aí.</p>
 
 <div style="display: grid; gap: 32px; padding-bottom: 40px;">
   
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">CDB <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">(Certificado de Depósito Bancário)</span></h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">Em vez de pedir dinheiro emprestado ao banco (e pagar juros altíssimos), aqui é você quem empresta dinheiro para o banco. O banco pega o seu dinheiro, empresta para outra pessoa mais caro, e depois te devolve com uma pequena recompensa (os juros). É o investimento mais comum e seguro da Renda Fixa, sendo coberto pelo FGC.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">CDB <span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">(Certificado de Depósito Bancário)</span></h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Em vez de pedir dinheiro emprestado ao banco (e pagar juros altíssimos), aqui é você quem empresta dinheiro para o banco. O banco pega o seu dinheiro, empresta para outra pessoa mais caro, e depois te devolve com uma pequena recompensa (os juros). É o investimento mais comum e seguro da Renda Fixa, sendo coberto pelo FGC.</p>
   </div>
 
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">CDI <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">(Certificado de Depósito Interbancário)</span></h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">É a taxa de juros que os bancos cobram quando emprestam dinheiro uns para os outros de um dia para o outro. Para nós, reles mortais, o CDI funciona como a "régua" de rendimento da renda fixa. A regra de ouro do iniciante é procurar investimentos que paguem no mínimo <strong>100% do CDI</strong>. Hoje em dia, a poupança perde feio para ele.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">CDI <span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">(Certificado de Depósito Interbancário)</span></h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">É a taxa de juros que os bancos cobram quando emprestam dinheiro uns para os outros de um dia para o outro. Para nós, reles mortais, o CDI funciona como a "régua" de rendimento da renda fixa. A regra de ouro do iniciante é procurar investimentos que paguem no mínimo <strong>100% do CDI</strong>. Hoje em dia, a poupança perde feio para ele.</p>
   </div>
 
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px;">Taxa Selic</h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">É a taxa básica de juros da economia brasileira, definida pelo Banco Central. Pense nela como a "taxa-mãe" que influencia todas as outras taxas do país. Se a Selic sobe, os empréstimos e financiamentos ficam mais caros, mas em compensação, os seus investimentos em Renda Fixa passam a render muito mais. O valor da Selic e do CDI caminham praticamente juntos.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px;">Taxa Selic</h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">É a taxa básica de juros da economia brasileira, definida pelo Banco Central. Pense nela como a "taxa-mãe" que influencia todas as outras taxas do país. Se a Selic sobe, os empréstimos e financiamentos ficam mais caros, mas em compensação, os seus investimentos em Renda Fixa passam a render muito mais. O valor da Selic e do CDI caminham praticamente juntos.</p>
   </div>
 
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px;">IPCA <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">(Índice Nacional de Preços ao Consumidor Amplo)</span></h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">É o nome oficial da <strong>inflação</strong> no Brasil. É o índice que mede o quanto as coisas (arroz, gasolina, aluguel) ficaram mais caras. O grande objetivo de qualquer investimento é render mais do que o IPCA; caso contrário, seu dinheiro está, na prática, perdendo o poder de compra. Títulos chamados de "IPCA+" garantem que seu dinheiro vencerá a inflação.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px;">IPCA <span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">(Índice Nacional de Preços ao Consumidor Amplo)</span></h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">É o nome oficial da <strong>inflação</strong> no Brasil. É o índice que mede o quanto as coisas (arroz, gasolina, aluguel) ficaram mais caras. O grande objetivo de qualquer investimento é render mais do que o IPCA; caso contrário, seu dinheiro está, na prática, perdendo o poder de compra. Títulos chamados de "IPCA+" garantem que seu dinheiro vencerá a inflação.</p>
   </div>
 
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px;">Liquidez</h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">É a velocidade com que você consegue transformar um investimento de volta em dinheiro vivo na sua conta, sem sofrer grandes perdas. Uma aplicação com <strong>Liquidez Diária</strong> significa que você pode sacar o dinheiro a qualquer momento (ideal para Reserva de Emergência). Já um CDB com vencimento para 2 anos tem baixa liquidez: você só verá o dinheiro no final do prazo.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px;">Liquidez</h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">É a velocidade com que você consegue transformar um investimento de volta em dinheiro vivo na sua conta, sem sofrer grandes perdas. Uma aplicação com <strong>Liquidez Diária</strong> significa que você pode sacar o dinheiro a qualquer momento (ideal para Reserva de Emergência). Já um CDB com vencimento para 2 anos tem baixa liquidez: você só verá o dinheiro no final do prazo.</p>
   </div>
   
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px;">Juros Compostos</h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">O grande milagre da matemática financeira. São juros sendo cobrados (ou ganhos) sobre os juros acumulados dos meses anteriores, criando um efeito "bola de neve". É maravilhoso se o dinheiro estiver investido ao seu favor (seu patrimônio decola com o passar dos anos), mas é brutalmente destrutivo quando a bola de neve está girando contra você (em uma dívida de rotativo de cartão de crédito).</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px;">Juros Compostos</h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">O grande milagre da matemática financeira. São juros sendo cobrados (ou ganhos) sobre os juros acumulados dos meses anteriores, criando um efeito "bola de neve". É maravilhoso se o dinheiro estiver investido ao seu favor (seu patrimônio decola com o passar dos anos), mas é brutalmente destrutivo quando a bola de neve está girando contra você (em uma dívida de rotativo de cartão de crédito).</p>
   </div>
   
   <div style="border-bottom: 1px solid rgba(15,23,42,.08); padding-bottom: 24px;">
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px;">FGC <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">(Fundo Garantidor de Créditos)</span></h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">Um "seguro" gratuito para pequenos investidores. Se você investe em CDB, LCI, LCA ou até na poupança e o banco quebrar, o FGC devolve o seu dinheiro. O limite de proteção é de R$ 250 mil por banco e por CPF. Graças ao FGC, investir em bancos menores não é um bicho de sete cabeças.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px;">FGC <span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">(Fundo Garantidor de Créditos)</span></h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Um "seguro" gratuito para pequenos investidores. Se você investe em CDB, LCI, LCA ou até na poupança e o banco quebrar, o FGC devolve o seu dinheiro. O limite de proteção é de R$ 250 mil por banco e por CPF. Graças ao FGC, investir em bancos menores não é um bicho de sete cabeças.</p>
   </div>
   
   <div>
-    <h3 style="font-weight: 800; color: var(--primary); font-size: 1.5rem; margin-bottom: 12px;">Tesouro Direto</h3>
-    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">É um programa do Governo Federal que permite que você empreste dinheiro diretamente para o país em troca de juros. É considerado o investimento mais seguro do Brasil, pois é garantido pelo Tesouro Nacional. Uma excelente porta de entrada para quem quer sair da Poupança, sendo o <em>Tesouro Selic</em> a modalidade mais recomendada para iniciantes.</p>
+    <h3 style="font-weight: 800; color: var(--gold); font-size: 1.5rem; margin-bottom: 12px;">Tesouro Direto</h3>
+    <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">É um programa do Governo Federal que permite que você empreste dinheiro diretamente para o país em troca de juros. É considerado o investimento mais seguro do Brasil, pois é garantido pelo Tesouro Nacional. Uma excelente porta de entrada para quem quer sair da Poupança, sendo o <em>Tesouro Selic</em> a modalidade mais recomendada para iniciantes.</p>
   </div>
 
 </div>
@@ -180,7 +181,7 @@
           <ul class="footer-links" style="margin-top: 16px;">
             <li><a href="artigos/orcamento.html" id="footer-link-orcamento">Orçamento Pessoal</a></li>
             <li><a href="artigos/investimentos.html" id="footer-link-investir">Investimentos</a></li>
-            <li><a href="artigos/imposto-renda.html" id="footer-link-dividas">Imposto de Renda</a></li>
+            <li><a href="imposto-renda.html" id="footer-link-dividas">Imposto de Renda</a></li>
             <li><a href="artigos/cartao.html" id="footer-link-tesouro">Cartão de Crédito</a></li>
           </ul>
         
@@ -196,20 +197,6 @@
 
       </div>
 
-      </div>
-
-      
-      <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 16px;">
-        <a href="https://www.instagram.com/fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255,255,255,0.6); transition: color 0.2s;" onmouseover="this.style.color='#E4405F'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@fazendodinheiro" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color: rgba(255,255,255,0.6); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="color: rgba(255,255,255,0.6); transition: color 0.2s;" onmouseover="this.style.color='#25D366'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-      </div>
       <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px;">
         <p class="footer-disclaimer" style="margin-bottom: 8px;">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
         <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
@@ -228,7 +215,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>

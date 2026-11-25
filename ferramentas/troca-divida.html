@@ -1,47 +1,34 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simulador de Troca de Dívida | Fazendo Dinheiro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css?v=3"/>
-  <style>
-    body { background: #f8fafc; }
-    .tool-hero { padding: 120px 20px 60px; background: linear-gradient(135deg, #0f172a, #1e3a5f); color: #fff; text-align: center; }
-    .tool-hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
-    .tool-container { max-width: 600px; margin: -40px auto 60px; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #334155; }
-    .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; }
-    .btn { display: block; width: 100%; padding: 14px; background: #f59e0b; color: #0f172a; font-weight: 700; font-size: 1.1rem; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-    .btn:hover { background: #d97706; }
-    .result-box { display: none; margin-top: 32px; padding: 24px; border-radius: 8px; background: #f0fdf4; border: 1px solid #bbf7d0; text-align: center; }
-    .result-box.error { background: #fff1f2; border-color: #fecdd3; }
-    .result-value { font-size: 2.5rem; font-weight: 800; color: #166534; margin: 16px 0; }
-  </style>
+  <meta name="description" content="Compare parcelas e custo bruto de juros entre sua dívida atual e uma proposta alternativa pelo Sistema Price." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
   <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
   <link rel="manifest" href="../manifest.json" />
-
   <link rel="canonical" href="https://dinheironu.vercel.app/ferramentas/troca-divida.html" />
   <meta property="og:title" content="Simulador de Troca de Dívida | Fazendo Dinheiro" />
-  <meta property="og:description" content="Ferramenta financeira gratuita." />
+  <meta property="og:description" content="Compare de forma educativa os custos entre duas taxas de juros no mesmo prazo pelo Sistema Price." />
   <meta property="og:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
   <meta property="og:url" content="https://dinheironu.vercel.app/ferramentas/troca-divida.html" />
   <meta property="og:site_name" content="Fazendo Dinheiro" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Simulador de Troca de Dívida | Fazendo Dinheiro" />
-  <meta name="twitter:description" content="Ferramenta financeira gratuita." />
+  <meta name="twitter:description" content="Compare de forma educativa os custos entre duas taxas de juros no mesmo prazo pelo Sistema Price." />
   <meta name="twitter:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Simulador de Troca de Dívida | Fazendo Dinheiro",
-    "description": "Ferramenta financeira gratuita.",
+    "description": "Comparador educativo de taxas de juros para troca de dívida pelo Sistema Price.",
     "url": "https://dinheironu.vercel.app/ferramentas/troca-divida.html",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
@@ -53,102 +40,262 @@
   }
   </script>
 </head>
-<body>
-<div id="market-ticker"></div>
-
+<body class="tool-page">
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <div id="market-ticker"></div>
 
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
         <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
         <li><a href="../blog.html" class="nav-link">Blog</a></li>
-        <li><a href="../ferramentas.html" class="nav-link">Ferramentas</a></li>
-        <li><a href="../contato.html">Contato</a></li>
+        <li><a href="../ferramentas.html" class="nav-link active">Ferramentas</a></li>
+        <li><a href="../contato.html" class="nav-link">Contato</a></li>
       </ul>
+      <form action="../busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
+      </form>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-    <header class="tool-hero">
-      <h1>Troca de Dívida Inteligente</h1>
-      <p>Compare se vale a pena pegar um empréstimo para quitar seu cartão/cheque especial.</p>
-    </header>
-    <main class="tool-container">
-      <div class="form-group">
-        <label>Valor da Dívida Atual (R$)</label>
-        <input type="number" id="valorDivida" placeholder="Ex: 8000">
-      </div>
-      <div class="form-group">
-        <label>Taxa de Juros Atual (% ao mês) - Cartão/Cheque</label>
-        <input type="number" id="taxaAtual" placeholder="Ex: 14" value="14">
-      </div>
-      <div class="form-group">
-        <label>Taxa do Empréstimo Novo (% ao mês)</label>
-        <input type="number" id="taxaNova" placeholder="Ex: 3" value="3">
-      </div>
-      <div class="form-group">
-        <label>Meses para Pagar (Prazo)</label>
-        <input type="number" id="prazo" placeholder="Ex: 24" value="12">
-      </div>
-      <button class="btn" onclick="calcularTroca()">Simular Troca</button>
-      
-      <div class="result-box" id="resultado">
-        <h3 style="color:#0f172a; margin:0;">Economia Total (Juros não pagos):</h3>
-        <div class="result-value" id="valorEconomia">R$ 0,00</div>
-        <p style="color:#475569; margin:0;" id="comparacaoMensal">Parcela cai de X para Y.</p>
-      </div>
-    </main>
-    <script>
-      function calcularTroca() {
-        const valor = parseFloat(document.getElementById('valorDivida').value);
-        const tAtual = parseFloat(document.getElementById('taxaAtual').value) / 100;
-        const tNova = parseFloat(document.getElementById('taxaNova').value) / 100;
-        const prazo = parseInt(document.getElementById('prazo').value);
-        const box = document.getElementById('resultado');
-        
-        if(isNaN(valor) || isNaN(tAtual) || isNaN(tNova) || isNaN(prazo) || prazo <= 0) {
-          box.style.display = 'block'; box.className = 'result-box error';
-          box.innerHTML = 'Preencha todos os campos corretamente.'; return;
-        }
-        
-        // Cálculo de Parcela (Tabela Price)
-        const pmtAtual = (valor * tAtual) / (1 - Math.pow(1 + tAtual, -prazo));
-        const pmtNovo = (valor * tNova) / (1 - Math.pow(1 + tNova, -prazo));
-        
-        const totalAtual = pmtAtual * prazo;
-        const totalNovo = pmtNovo * prazo;
-        const economia = totalAtual - totalNovo;
-        
-        box.style.display = 'block'; box.className = 'result-box';
-        document.getElementById('valorEconomia').innerText = economia.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-        document.getElementById('comparacaoMensal').innerText = `A sua parcela mensal cairia de ${pmtAtual.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} para ${pmtNovo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}!`;
-      }
-    </script>
-    
-  
-  <div style="max-width: 700px; margin: 40px auto 0; padding: 24px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px;">
-    <p style="margin: 0 0 8px; font-size: 0.85rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.05em;">Leia também</p>
-    <h3 style="margin: 0 0 8px; font-size: 1.1rem; font-weight: 700; color: #0f172a;">Sair das Dívidas</h3>
-    <p style="margin: 0 0 16px; font-size: 0.9rem; color: #475569; line-height: 1.6;">O método que funciona para quitar todas as suas dívidas.</p>
-    <a href="../artigos/dividas.html" style="display: inline-flex; align-items: center; gap: 6px; color: #2563eb; font-weight: 600; text-decoration: none; font-size: 0.9rem;">Ler artigo completo →</a>
-  </div>
+  <header class="tool-hero">
+    <h1>Comparador de Troca de Dívida</h1>
+    <p>Compare de forma simplificada o custo bruto entre a taxa da sua dívida atual e a taxa de uma nova proposta.</p>
+  </header>
 
-  <footer class="footer" id="footer" style="margin-top:80px; padding:40px; background:#0f172a; color:#fff; text-align:center;">
-    <a href="../index.html" style="color:#fff; margin:0 10px;">Home</a> | 
-    <a href="../sobre.html" style="color:#fff; margin:0 10px;">Sobre</a> | 
-    <a href="../cookies.html" style="color:#fff; margin:0 10px;">Cookies</a>
-    <p style="margin-top:20px; color:#94a3b8;">&copy; 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+  <main id="conteudo-principal">
+    <div class="tool-container">
+      <form id="troca-form" novalidate>
+        <div class="tool-form-group">
+          <label for="valorDivida">Saldo para quitação da dívida atual (R$)</label>
+          <input type="number" id="valorDivida" inputmode="decimal" step="0.01" min="1" max="1000000000000" placeholder="Ex: 8000" />
+        </div>
+
+        <div class="tool-form-row">
+          <div class="tool-form-group">
+            <label for="taxaAtual">Taxa atual do contrato (% a.m.)</label>
+            <input type="number" id="taxaAtual" inputmode="decimal" step="0.01" min="0" max="100" placeholder="Ex: 10,5" />
+          </div>
+          <div class="tool-form-group">
+            <label for="taxaNova">Taxa da nova proposta (% a.m.)</label>
+            <input type="number" id="taxaNova" inputmode="decimal" step="0.01" min="0" max="100" placeholder="Ex: 3,2" />
+          </div>
+        </div>
+
+        <div class="tool-form-group">
+          <label for="prazo">Prazo de comparação (meses)</label>
+          <input type="number" id="prazo" inputmode="numeric" step="1" min="1" max="360" placeholder="Ex: 12" aria-describedby="hint-prazo-troca" />
+          <span class="tool-hint" id="hint-prazo-troca">Número inteiro entre 1 e 360 meses.</span>
+        </div>
+
+        <button type="submit" class="tool-btn-primary">Comparar Custos</button>
+      </form>
+
+      <div id="erro-troca" class="tool-error" role="alert" aria-live="polite" hidden></div>
+
+      <section id="resultado" class="tool-result-box" aria-live="polite" hidden>
+        <h2 id="tituloResultadoTroca">Comparação estimada (Sistema Price)</h2>
+        <div class="tool-result-grid">
+          <div class="tool-metric">
+            <span class="tool-metric-label" id="labelDiferenca">Diferença total estimada</span>
+            <strong class="tool-metric-value" id="valorEconomia">R$ 0,00</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Parcela na taxa atual vs. nova</span>
+            <strong class="tool-metric-value tool-metric-value--blue" id="comparacaoMensal">—</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Total estimado na dívida atual</span>
+            <strong class="tool-metric-value tool-metric-value--red" id="totalAtualOut">R$ 0,00</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Total estimado na nova proposta</span>
+            <strong class="tool-metric-value tool-metric-value--gold" id="totalNovoOut">R$ 0,00</strong>
+          </div>
+        </div>
+        <p id="detalheTroca" style="margin:0; font-size:0.92rem; color:var(--text-primary);"></p>
+        <p class="tool-disclaimer">
+          <strong>Comparação simplificada (bruta):</strong> os cálculos usam o Sistema Price no mesmo prazo apenas com as taxas informadas por você. <strong>Não consideram o Custo Efetivo Total (CET), IOF da nova operação, tarifas de contratação, seguros nem o teto legal de 100% aplicável ao rotativo e parcelamento de fatura do cartão (Lei nº 14.690/2023).</strong>
+        </p>
+      </section>
+    </div>
+
+    <aside class="tool-related-card">
+      <p class="tool-related-eyebrow">Leia também</p>
+      <h2>Como Organizar e Sair das Dívidas</h2>
+      <p>Entenda os métodos de priorização de dívidas e o que avaliar ao comparar taxas de diferentes linhas de crédito.</p>
+      <a href="../artigos/dividas.html" class="tool-related-link">Ler artigo completo →</a>
+    </aside>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <p class="footer-tagline">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo informativo gratuito e ferramentas educativas.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Links Úteis</h4>
+          <div class="footer-links-grid">
+            <ul class="footer-links">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../ferramentas.html">Ferramentas</a></li>
+              <li><a href="../contato.html">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="../sobre.html">Sobre Nós</a></li>
+              <li><a href="../privacidade.html">Política de Privacidade</a></li>
+              <li><a href="../termos.html">Termos de Uso</a></li>
+              <li><a href="../cookies.html">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="../investimentos.html">Investimentos</a></li>
+            <li><a href="../dividas.html">Dívidas e Crédito</a></li>
+            <li><a href="../orcamento.html">Orçamento</a></li>
+            <li><a href="../economia.html">Economia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center;">
+        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
 
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
   <script src="../js/ticker.js"></script>
   <script>
+    (function () {
+      const form = document.getElementById('troca-form');
+      const errBox = document.getElementById('erro-troca');
+      const resBox = document.getElementById('resultado');
+
+      function parseField(id) {
+        const raw = String(document.getElementById(id).value || '').trim().replace(',', '.');
+        if (!raw) return NaN;
+        const val = Number(raw);
+        return Number.isFinite(val) ? val : NaN;
+      }
+
+      function mostrarErro(msg, focusId) {
+        resBox.hidden = true;
+        errBox.textContent = msg;
+        errBox.hidden = false;
+        if (focusId) {
+          const el = document.getElementById(focusId);
+          if (el) el.focus();
+        }
+      }
+
+      function calcPrice(valor, taxaPct, prazo) {
+        if (taxaPct === 0) return valor / prazo;
+        const i = taxaPct / 100;
+        return (valor * i) / (1 - Math.pow(1 + i, -prazo));
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const valor = parseField('valorDivida');
+        const tAtualPct = parseField('taxaAtual');
+        const tNovaPct = parseField('taxaNova');
+        const prazo = parseField('prazo');
+
+        if (Number.isNaN(valor) || valor <= 0 || valor > 1e12) {
+          mostrarErro('Informe um saldo da dívida positivo (até R$ 1 trilhão).', 'valorDivida');
+          return;
+        }
+        if (Number.isNaN(tAtualPct) || tAtualPct < 0 || tAtualPct > 100) {
+          mostrarErro('Informe a taxa mensal atual entre 0% e 100%.', 'taxaAtual');
+          return;
+        }
+        if (Number.isNaN(tNovaPct) || tNovaPct < 0 || tNovaPct > 100) {
+          mostrarErro('Informe a nova taxa mensal entre 0% e 100%.', 'taxaNova');
+          return;
+        }
+        if (Number.isNaN(prazo) || !Number.isInteger(prazo) || prazo < 1 || prazo > 360) {
+          mostrarErro('Informe um prazo inteiro entre 1 e 360 meses.', 'prazo');
+          return;
+        }
+
+        const pmtAtual = calcPrice(valor, tAtualPct, prazo);
+        const pmtNovo = calcPrice(valor, tNovaPct, prazo);
+        const totalAtual = pmtAtual * prazo;
+        const totalNovo = pmtNovo * prazo;
+
+        if (![pmtAtual, pmtNovo, totalAtual, totalNovo].every(Number.isFinite)) {
+          mostrarErro('Não foi possível calcular com os valores informados.', 'prazo');
+          return;
+        }
+
+        const diferenca = totalAtual - totalNovo;
+        const fmt = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        const titleEl = document.getElementById('tituloResultadoTroca');
+        const labelDifEl = document.getElementById('labelDiferenca');
+        const valDifEl = document.getElementById('valorEconomia');
+        const detalheEl = document.getElementById('detalheTroca');
+
+        errBox.hidden = true;
+        errBox.textContent = '';
+
+        document.getElementById('comparacaoMensal').textContent = `${fmt(pmtAtual)} → ${fmt(pmtNovo)}`;
+        document.getElementById('totalAtualOut').textContent = fmt(totalAtual);
+        document.getElementById('totalNovoOut').textContent = fmt(totalNovo);
+
+        if (diferenca > 0.005) {
+          titleEl.textContent = 'A taxa informada na nova proposta é menor';
+          labelDifEl.textContent = 'Economia bruta estimada';
+          valDifEl.className = 'tool-metric-value';
+          valDifEl.textContent = fmt(diferenca);
+          detalheEl.textContent = `A parcela estimada cairia de ${fmt(pmtAtual)} para ${fmt(pmtNovo)} em ${prazo} meses (antes de considerar CET, IOF e tarifas da nova operação).`;
+        } else if (diferenca < -0.005) {
+          titleEl.textContent = 'Atenção: a nova proposta ficaria mais cara';
+          labelDifEl.textContent = 'Custo adicional estimado';
+          valDifEl.className = 'tool-metric-value tool-metric-value--red';
+          valDifEl.textContent = `+ ${fmt(Math.abs(diferenca))}`;
+          detalheEl.textContent = `Com a taxa nova maior que a atual, a parcela subiria de ${fmt(pmtAtual)} para ${fmt(pmtNovo)} em ${prazo} meses, resultando em custo adicional bruto de ${fmt(Math.abs(diferenca))}.`;
+        } else {
+          titleEl.textContent = 'Custo equivalente nas duas taxas';
+          labelDifEl.textContent = 'Diferença estimada';
+          valDifEl.className = 'tool-metric-value tool-metric-value--gold';
+          valDifEl.textContent = fmt(0);
+          detalheEl.textContent = `As duas opções resultam na mesma parcela bruta estimada de ${fmt(pmtAtual)} em ${prazo} meses.`;
+        }
+
+        resBox.hidden = false;
+      });
+    })();
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>
-</body></html>
+</body>
+</html>

@@ -1,47 +1,34 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora Teto do Rotativo | Fazendo Dinheiro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css?v=3"/>
-  <style>
-    body { background: #f8fafc; }
-    .tool-hero { padding: 120px 20px 60px; background: linear-gradient(135deg, #0f172a, #1e3a5f); color: #fff; text-align: center; }
-    .tool-hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
-    .tool-container { max-width: 600px; margin: -40px auto 60px; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #334155; }
-    .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; }
-    .btn { display: block; width: 100%; padding: 14px; background: #f59e0b; color: #0f172a; font-weight: 700; font-size: 1.1rem; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-    .btn:hover { background: #d97706; }
-    .result-box { display: none; margin-top: 32px; padding: 24px; border-radius: 8px; background: #f0fdf4; border: 1px solid #bbf7d0; text-align: center; }
-    .result-box.error { background: #fff1f2; border-color: #fecdd3; }
-    .result-value { font-size: 2.5rem; font-weight: 800; color: #166534; margin: 16px 0; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Educativo do Teto do Rotativo do Cartão | Fazendo Dinheiro</title>
+  <meta name="description" content="Entenda de forma simplificada a regra de limitação de juros e encargos financeiros no rotativo e parcelamento da fatura do cartão de crédito (Lei nº 14.690/2023 e Resolução CMN nº 5.112/2023)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=4" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
   <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
   <link rel="manifest" href="../manifest.json" />
-
   <link rel="canonical" href="https://dinheironu.vercel.app/ferramentas/rotativo.html" />
-  <meta property="og:title" content="Calculadora Teto do Rotativo | Fazendo Dinheiro" />
-  <meta property="og:description" content="Ferramenta financeira gratuita." />
+  <meta property="og:title" content="Simulador Educativo do Teto do Rotativo | Fazendo Dinheiro" />
+  <meta property="og:description" content="Simulação educativa e condições da regra de limitação de juros no rotativo e parcelado de fatura do cartão segundo o Banco Central." />
   <meta property="og:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
   <meta property="og:url" content="https://dinheironu.vercel.app/ferramentas/rotativo.html" />
   <meta property="og:site_name" content="Fazendo Dinheiro" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Calculadora Teto do Rotativo | Fazendo Dinheiro" />
-  <meta name="twitter:description" content="Ferramenta financeira gratuita." />
+  <meta name="twitter:title" content="Simulador Educativo do Teto do Rotativo | Fazendo Dinheiro" />
+  <meta name="twitter:description" content="Simulação educativa do teto de 100% sobre juros e encargos financeiros no rotativo do cartão (Lei nº 14.690/2023 e Resolução CMN nº 5.112/2023)." />
   <meta name="twitter:image" content="https://dinheironu.vercel.app/images/hero.jpg" />
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Calculadora Teto do Rotativo | Fazendo Dinheiro",
-    "description": "Ferramenta financeira gratuita.",
+    "name": "Simulador Educativo do Teto do Rotativo | Fazendo Dinheiro",
+    "description": "Simulação educativa sobre a regra de limitação de juros e encargos no crédito rotativo e parcelamento da fatura.",
     "url": "https://dinheironu.vercel.app/ferramentas/rotativo.html",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
@@ -53,97 +40,244 @@
   }
   </script>
 </head>
-<body>
-<div id="market-ticker"></div>
-
+<body class="tool-page">
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <div id="market-ticker"></div>
 
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo" id="nav-logo-link">
+        <div class="logo-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M16 8L8 16M16 8H9.5M16 8V14.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
         <span class="logo-text">Fazendo<span class="logo-accent">Dinheiro</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="../sobre.html" class="nav-link">Sobre</a></li>
         <li><a href="../blog.html" class="nav-link">Blog</a></li>
-        <li><a href="../ferramentas.html" class="nav-link">Ferramentas</a></li>
-        <li><a href="../contato.html">Contato</a></li>
+        <li><a href="../ferramentas.html" class="nav-link active">Ferramentas</a></li>
+        <li><a href="../contato.html" class="nav-link">Contato</a></li>
       </ul>
+      <form action="../busca.html" method="GET" class="search-form" role="search">
+        <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar no site" required />
+        <button type="submit" aria-label="Pesquisar">🔍</button>
+      </form>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-    <header class="tool-hero">
-      <h1>Teto do Rotativo (Lei 14.836)</h1>
-      <p>Veja a diferença da sua dívida antes e depois da nova lei limitadora.</p>
-    </header>
-    <main class="tool-container">
-      <div class="form-group">
-        <label>Valor da Fatura Atrasada (R$)</label>
-        <input type="number" id="valorFatura" placeholder="Ex: 2000">
-      </div>
-      <div class="form-group">
-        <label>Tempo de Atraso (Meses)</label>
-        <input type="number" id="mesesAtraso" placeholder="Ex: 12">
-      </div>
-      <button class="btn" onclick="calcularRotativo()">Comparar</button>
-      
-      <div class="result-box" id="resultado" style="text-align:left;">
-        <h3 style="color:#0f172a; margin-top:0;">Dívida pela REGRA ANTIGA:</h3>
-        <p style="margin:0; font-size:0.85rem; color:#64748b;">(Projeção baseada na média de 430% ao ano do cartão)</p>
-        <div class="result-value" id="valorAntigo" style="color:#ef4444; font-size:1.8rem; margin:8px 0 24px;">R$ 0,00</div>
-        
-        <h3 style="color:#0f172a; margin-top:0;">Dívida pela NOVA LEI (Teto 100%):</h3>
-        <div class="result-value" id="valorNovo" style="color:#10b981; font-size:1.8rem; margin:8px 0 0;">R$ 0,00</div>
-        <p style="margin-top:16px; font-weight:600; color:#334155;">O banco NUNCA poderá cobrar mais que o dobro do valor original!</p>
-      </div>
-    </main>
-    <script>
-      function calcularRotativo() {
-        const original = parseFloat(document.getElementById('valorFatura').value);
-        const meses = parseInt(document.getElementById('mesesAtraso').value);
-        const box = document.getElementById('resultado');
-        
-        if(isNaN(original) || original <= 0) {
-          box.style.display = 'block'; box.className = 'result-box error';
-          box.innerHTML = 'Preencha o valor da fatura.'; return;
-        }
-        
-        // Regra antiga (Média do BC: 430% a.a = ~14.8% a.m)
-        let montanteAntigo = original * Math.pow(1.148, meses || 1);
-        
-        // Nova regra: Max = original * 2
-        let montanteNovo = original * Math.pow(1.148, meses || 1); 
-        if(montanteNovo > original * 2) {
-            montanteNovo = original * 2;
-        }
-        
-        box.style.display = 'block'; box.className = 'result-box';
-        document.getElementById('valorAntigo').innerText = montanteAntigo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-        document.getElementById('valorNovo').innerText = montanteNovo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-      }
-    </script>
-    
-  
-  <div style="max-width: 700px; margin: 40px auto 0; padding: 24px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px;">
-    <p style="margin: 0 0 8px; font-size: 0.85rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.05em;">Leia também</p>
-    <h3 style="margin: 0 0 8px; font-size: 1.1rem; font-weight: 700; color: #0f172a;">Juros do Cartão</h3>
-    <p style="margin: 0 0 16px; font-size: 0.9rem; color: #475569; line-height: 1.6;">Como evitar os 400% de juros do rotativo do cartão.</p>
-    <a href="../artigos/juros-cartao.html" style="display: inline-flex; align-items: center; gap: 6px; color: #2563eb; font-weight: 600; text-decoration: none; font-size: 0.9rem;">Ler artigo completo →</a>
-  </div>
+  <header class="tool-hero">
+    <h1>Teto do Rotativo do Cartão (Simulação Educativa)</h1>
+    <p>Compare uma projeção hipotética sem limite com a regra da Lei nº 14.690/2023 e Resolução CMN nº 5.112/2023, usando a taxa do seu contrato ou uma hipótese informada por você.</p>
+  </header>
 
-  <footer class="footer" id="footer" style="margin-top:80px; padding:40px; background:#0f172a; color:#fff; text-align:center;">
-    <a href="../index.html" style="color:#fff; margin:0 10px;">Home</a> | 
-    <a href="../sobre.html" style="color:#fff; margin:0 10px;">Sobre</a> | 
-    <a href="../cookies.html" style="color:#fff; margin:0 10px;">Cookies</a>
-    <p style="margin-top:20px; color:#94a3b8;">&copy; 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+  <main id="conteudo-principal">
+    <div class="tool-container">
+      <div class="tool-notice tool-notice--info">
+        <strong>Condições legais para aplicação do teto de 100% (Banco Central)</strong>
+        A limitação de juros e encargos financeiros a 100% do valor original financiado aplica-se apenas a dívidas de <strong>crédito rotativo</strong> e de <strong>parcelamento do saldo devedor da fatura</strong> originadas a partir de <strong>3 de janeiro de 2024</strong>. Ela não se aplica retroativamente a dívidas anteriores a essa data, não abrange compras parceladas regulares nem novas compras, e <strong>não inclui tributos como o IOF</strong> no teto.
+      </div>
+
+      <form id="rotativo-form" novalidate>
+        <div class="tool-form-group">
+          <label for="valorFatura">Saldo original não pago da fatura (R$)</label>
+          <input type="number" id="valorFatura" inputmode="decimal" step="0.01" min="0.01" max="100000000" placeholder="Ex: 2000" aria-describedby="hint-fatura" />
+          <span class="tool-hint" id="hint-fatura">Valor principal que entrou no rotativo ou no parcelamento da fatura.</span>
+        </div>
+
+        <div class="tool-form-row">
+          <div class="tool-form-group">
+            <label for="taxaMensal">Taxa mensal do contrato / hipótese (% a.m.)</label>
+            <input type="number" id="taxaMensal" inputmode="decimal" step="0.01" min="0" max="100" placeholder="Ex: 12,5" aria-describedby="hint-taxa-rotativo" />
+            <span class="tool-hint" id="hint-taxa-rotativo">Informe a taxa da sua fatura ou consulte médias por banco no <a href="https://www.bcb.gov.br/estatisticas/txjuros" target="_blank" rel="noopener noreferrer">portal do Banco Central</a>.</span>
+          </div>
+
+          <div class="tool-form-group">
+            <label for="mesesAtraso">Período simulado (meses)</label>
+            <input type="number" id="mesesAtraso" inputmode="numeric" step="1" min="0" max="120" placeholder="Ex: 12" aria-describedby="hint-meses-rotativo" />
+            <span class="tool-hint" id="hint-meses-rotativo">Número inteiro entre 0 e 120 meses.</span>
+          </div>
+        </div>
+
+        <button type="submit" class="tool-btn-primary">Simular Comparação</button>
+      </form>
+
+      <div id="erro-rotativo" class="tool-error" role="alert" aria-live="polite" hidden></div>
+
+      <section id="resultado" class="tool-result-box" aria-live="polite" hidden>
+        <h2>Resultado da simulação simplificada</h2>
+        <div class="tool-result-grid">
+          <div class="tool-metric">
+            <span class="tool-metric-label">Projeção hipotética sem teto</span>
+            <strong class="tool-metric-value tool-metric-value--red" id="valorAntigo">R$ 0,00</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Com teto de 100% em juros e encargos</span>
+            <strong class="tool-metric-value" id="valorNovo">R$ 0,00</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Encargos financeiros limitados (estimativa)</span>
+            <strong class="tool-metric-value tool-metric-value--gold" id="encargosTeto">R$ 0,00</strong>
+          </div>
+          <div class="tool-metric">
+            <span class="tool-metric-label">Taxa anual equivalente (hipótese)</span>
+            <strong class="tool-metric-value tool-metric-value--blue" id="taxaAnualEquiv">0,00% a.a.</strong>
+          </div>
+        </div>
+        <p id="resumoRotativo" style="margin:0; font-size:0.92rem; color:var(--text-primary);"></p>
+        <p class="tool-disclaimer">
+          <strong>Simulação simplificada:</strong> este cálculo aplica capitalização mensal constante sobre a taxa informada por você apenas para fins educativos. Ele <strong>não inclui IOF (Imposto sobre Operações Financeiras)</strong>, multas contratuais específicas, amortizações parciais ou a regra de migração obrigatória após o ciclo do rotativo. <strong>Não substitui a fatura nem o cálculo oficial do banco emissor.</strong>
+        </p>
+      </section>
+
+      <div class="tool-sources">
+        <h3>Fontes oficiais e limites da regra</h3>
+        <ul>
+          <li><strong>Lei nº 14.690/2023</strong> e <strong>Resolução CMN nº 5.112/2023</strong> (em vigor desde 3 de janeiro de 2024).</li>
+          <li><strong>Teto:</strong> soma de juros remuneratórios, juros de mora, multas e encargos financeiros não pode exceder 100% do valor original da operação iniciada a partir de 03/01/2024.</li>
+          <li><strong>Exclusões importantes:</strong> dívidas anteriores a 03/01/2024, compras parceladas normais no estabelecimento/cartão, novas compras na fatura e tributos como IOF ficam fora desse limite.</li>
+          <li><strong>Referência oficial do Banco Central:</strong> <a href="https://www.bcb.gov.br/meubc/faqs/p/limitacao-dos-juros-e-encargos-financeiros-no-saldo-devedor-da-fatura-do-cartao" target="_blank" rel="noopener noreferrer">FAQ do BCB — Limitação dos juros e encargos financeiros no saldo devedor da fatura do cartão</a>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="tool-related-card">
+      <p class="tool-related-eyebrow">Leia também</p>
+      <h2>Cartão de Crédito e Rotativo: Como Funciona a Regra</h2>
+      <p>Entenda as diferenças entre rotativo, parcelamento da fatura e alternativas de menor custo conforme as normas vigentes.</p>
+      <a href="../artigos/juros-cartao.html" class="tool-related-link">Ler artigo completo →</a>
+    </aside>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sobre o Site</h4>
+          <p class="footer-tagline">Fazendo Dinheiro é um portal dedicado à educação financeira para brasileiros, oferecendo conteúdo informativo gratuito e ferramentas educativas.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Links Úteis</h4>
+          <div class="footer-links-grid">
+            <ul class="footer-links">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../ferramentas.html">Ferramentas</a></li>
+              <li><a href="../contato.html">Contato</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="../sobre.html">Sobre Nós</a></li>
+              <li><a href="../privacidade.html">Política de Privacidade</a></li>
+              <li><a href="../termos.html">Termos de Uso</a></li>
+              <li><a href="../cookies.html">Política de Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="../investimentos.html">Investimentos</a></li>
+            <li><a href="../dividas.html">Dívidas e Crédito</a></li>
+            <li><a href="../orcamento.html">Orçamento</a></li>
+            <li><a href="../economia.html">Economia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="flex-direction: column; text-align: center; justify-content: center;">
+        <p class="footer-disclaimer">Este site tem caráter informativo e educativo. Não constitui recomendação ou aconselhamento financeiro profissional.</p>
+        <p>© 2026 Fazendo Dinheiro. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
 
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
   <script src="../js/ticker.js"></script>
   <script>
+    (function () {
+      const form = document.getElementById('rotativo-form');
+      const errBox = document.getElementById('erro-rotativo');
+      const resBox = document.getElementById('resultado');
+
+      function parseField(id) {
+        const raw = String(document.getElementById(id).value || '').trim().replace(',', '.');
+        if (!raw) return NaN;
+        const val = Number(raw);
+        return Number.isFinite(val) ? val : NaN;
+      }
+
+      function mostrarErro(msg, focusId) {
+        resBox.hidden = true;
+        errBox.textContent = msg;
+        errBox.hidden = false;
+        if (focusId) {
+          const el = document.getElementById(focusId);
+          if (el) el.focus();
+        }
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const original = parseField('valorFatura');
+        const taxaPct = parseField('taxaMensal');
+        const meses = parseField('mesesAtraso');
+
+        if (Number.isNaN(original) || original <= 0 || original > 100000000) {
+          mostrarErro('Informe um saldo original da fatura maior que R$ 0,00 (até R$ 100.000.000,00).', 'valorFatura');
+          return;
+        }
+        if (Number.isNaN(taxaPct) || taxaPct < 0 || taxaPct > 100) {
+          mostrarErro('Informe a taxa mensal do contrato ou hipótese (entre 0% e 100% a.m.).', 'taxaMensal');
+          return;
+        }
+        if (Number.isNaN(meses) || !Number.isInteger(meses) || meses < 0 || meses > 120) {
+          mostrarErro('Informe um período inteiro entre 0 e 120 meses.', 'mesesAtraso');
+          return;
+        }
+
+        const i = taxaPct / 100;
+        const semTeto = original * Math.pow(1 + i, meses);
+        if (!Number.isFinite(semTeto)) {
+          mostrarErro('Os parâmetros informados excedem o limite numérico do cálculo. Reduza a taxa ou o prazo.', 'mesesAtraso');
+          return;
+        }
+
+        const teto = original * 2;
+        const comTeto = Math.min(semTeto, teto);
+        const encargos = Math.max(0, comTeto - original);
+        const taxaAnual = (Math.pow(1 + i, 12) - 1) * 100;
+
+        errBox.hidden = true;
+        errBox.textContent = '';
+
+        document.getElementById('valorAntigo').textContent = semTeto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        document.getElementById('valorNovo').textContent = comTeto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        document.getElementById('encargosTeto').textContent = encargos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        document.getElementById('taxaAnualEquiv').textContent = `${taxaAnual.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}% a.a.`;
+
+        const atingiuTeto = semTeto > teto;
+        document.getElementById('resumoRotativo').textContent = atingiuTeto
+          ? `Com a hipótese de ${taxaPct.toLocaleString('pt-BR', { maximumFractionDigits: 2 })}% a.m. em ${meses} mês(es), os encargos atingiriam o teto legal de 100% sobre o saldo original (${original.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} de principal + ${encargos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} de encargos financeiros), caso a operação se enquadre na Resolução CMN nº 5.112/2023 (sem considerar IOF).`
+          : `Com a hipótese de ${taxaPct.toLocaleString('pt-BR', { maximumFractionDigits: 2 })}% a.m. em ${meses} mês(es), os encargos simulados ainda ficariam abaixo do teto de 100% do valor original (IOF não incluído).`;
+
+        resBox.hidden = false;
+      });
+    })();
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js');
+        navigator.serviceWorker.register('/sw.js');
       });
     }
   </script>
-</body></html>
+</body>
+</html>
